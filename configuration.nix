@@ -136,6 +136,8 @@ in
   nixpkgs.config.allowUnfree = true;
   programs.chromium.enable = true;
   programs.command-not-found.enable = false;
+  documentation.doc.enable = false;
+  documentation.info.enable = false;
   environment.systemPackages = with pkgs; [
     # Tools
     dos2unix
@@ -212,6 +214,7 @@ in
     smartmontools
     tuptime
     update-systemd-resolved
+    zlib
     # Build essentials
     cmake
     gcc
