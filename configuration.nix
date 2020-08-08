@@ -143,7 +143,7 @@ in
   ];
 
   # Packages
-  # nix.nixPath = [ "nixpkgs=/nix/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" ];
+  nix.nixPath = [ "nixpkgs=/nix/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" ];
   nixpkgs.config.allowUnfree = true;
   programs.chromium.enable = true;
   programs.command-not-found.enable = false;
@@ -262,7 +262,7 @@ in
         uid = 1000;
         description = "Markus";
         isNormalUser = true;
-	group = "markus";
+        group = "markus";
         extraGroups = [ "wheel" "docker" "adbusers" "lp" "scanner" "vboxusers" ];
         hashedPassword = "$6$mFkTicworPz1frRb$L4ZpTQKCtWdsmndgunILqG9u6cy2qaF9PmxP3DGulpxnLbpDZpm98s/sxLHLDoDbogP8NwRdJM/IMdBckug0N/";
         shell = pkgs.fish;
