@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
 let
-  stable = import <nixos-stable> {};
   home-manager = import <home-manager> {};
 
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
@@ -39,6 +38,10 @@ in
     hostName = "nixos";
     interfaces.wlp2s0.useDHCP = true;
   };
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+  };
 
   # Localization
   i18n.defaultLocale = "en_US.UTF-8";
@@ -60,7 +63,15 @@ in
     videoDrivers = [ "nvidia" ];
   };
 
-  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl = {
+    driSupport32Bit = true;
+    enable = true;
+    extraPackages = with pkgs; [
+      vaapiIntel
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
   hardware.nvidia.nvidiaPersistenced = true;
   hardware.nvidia.prime = {
     offload.enable = true;
@@ -138,6 +149,8 @@ in
   programs.command-not-found.enable = false;
   documentation.doc.enable = false;
   documentation.info.enable = false;
+  documentation.nixos.enable = false;
+  nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
     # Tools
     dos2unix
@@ -198,6 +211,7 @@ in
     vulkan-tools
     weston
     xclip
+    xorg.xkill
     xwayland
     # Base packages
     bridge-utils
@@ -205,6 +219,7 @@ in
     dnsmasq
     ecryptfs
     file
+    libva-utils
     lm_sensors
     openvpn
     pciutils
@@ -225,6 +240,8 @@ in
     command-not-found
     nixos-packages
     nvidia-offload
+    # Kodi
+    kodi
   ];
 
   # Fonts
