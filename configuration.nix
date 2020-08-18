@@ -27,8 +27,15 @@ in
 
   # Boot loader
   boot.loader = {
-    efi.canTouchEfiVariables = false;
-    grub.device = "nodev";
+    efi = {
+      efiSysMountPoint = "/boot/efi";
+      canTouchEfiVariables = false;
+    };
+    grub = {
+      device = "nodev";
+      efiSupport = true;
+      efiInstallAsRemovable = false;
+    };
     generationsDir.enable = true;
     timeout = 5;
   };
