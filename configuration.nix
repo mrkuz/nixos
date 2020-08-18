@@ -149,7 +149,7 @@ in
   programs.command-not-found.enable = false;
   documentation.doc.enable = false;
   documentation.info.enable = false;
-  documentation.nixos.enable = false;
+  documentation.nixos.enable = true;
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
     # Tools
@@ -214,6 +214,7 @@ in
     xorg.xkill
     xwayland
     # Base packages
+    binutils
     bridge-utils
     cifs-utils
     dnsmasq
