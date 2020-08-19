@@ -26,6 +26,7 @@ in
   ];
 
   # Boot loader
+  boot.tmpOnTmpfs = true;
   boot.loader = {
     efi = {
       efiSysMountPoint = "/boot/efi";
@@ -36,8 +37,8 @@ in
       efiSupport = true;
       efiInstallAsRemovable = false;
     };
-    generationsDir.enable = true;
-    timeout = 5;
+    generationsDir.enable = false;
+    timeout = 3;
   };
 
   # Networking
@@ -59,6 +60,10 @@ in
 
   # Filesystem
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
+  fileSystems."/home" = {
+    device = "/dev/vg00/home";
+    fsType = "ext4";
+  };
   fileSystems."/data/user" = {
     device = "/dev/vg00/user";
     fsType = "ext4";
@@ -226,10 +231,12 @@ in
     cifs-utils
     dnsmasq
     ecryptfs
+    efibootmgr
     file
     libva-utils
     lm_sensors
     openvpn
+    parted
     pciutils
     psmisc
     python38Packages.cgroup-utils
