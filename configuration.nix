@@ -117,7 +117,7 @@ in
   virtualisation = {
     # anbox.enable = true;
     docker.enable = true;
-    # docker.enableNvidia = true;
+    docker.enableNvidia = true;
     virtualbox.host.enable = true;
     virtualbox.host.enableExtensionPack = true;
     virtualbox.host.headless = true;
@@ -220,10 +220,12 @@ in
     vagrant
     # X utilities
     glxinfo
+    vdpauinfo
     vulkan-tools
     weston
     xclip
     xorg.xkill
+    xpra
     xwayland
     # Base packages
     binutils
