@@ -276,15 +276,26 @@ in
   users = {
     mutableUsers = false;
     groups.markus.gid = 1000;
+    groups.enesa.gid = 1001;
     users = {
       markus = {
         uid = 1000;
         description = "Markus";
         isNormalUser = true;
         group = "markus";
-        extraGroups = [ "wheel" "docker" "adbusers" "lp" "scanner" "vboxusers" ];
+        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd"  "lp" "scanner" "vboxusers" ];
         hashedPassword = "$6$mFkTicworPz1frRb$L4ZpTQKCtWdsmndgunILqG9u6cy2qaF9PmxP3DGulpxnLbpDZpm98s/sxLHLDoDbogP8NwRdJM/IMdBckug0N/";
         shell = pkgs.fish;
+      };
+
+      enesa = {
+        uid = 1001;
+        description = "Enesa";
+        isNormalUser = true;
+        group = "enesa";
+        extraGroups = [ "lp" "scanner" ];
+        hashedPassword = "$6$7b8/r8wdK5n2gx$E0WZG8YvOQZfsyOtw3D23EqfhHvq/onstbDEcgXIAmsc1BcgV9dlteXkcrCqiXwB29AwkMkGMQ6LxaUZ2/Qfc/";
+        shell = pkgs.bash;
       };
 
       root = {
