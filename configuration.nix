@@ -118,6 +118,7 @@ in
     # anbox.enable = true;
     docker.enable = true;
     docker.enableNvidia = true;
+    libvirtd.enable = true;
     virtualbox.host.enable = true;
     virtualbox.host.enableExtensionPack = true;
     virtualbox.host.headless = true;
