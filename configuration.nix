@@ -84,11 +84,14 @@ in
       libvdpau-va-gl
     ];
   };
-  hardware.nvidia.nvidiaPersistenced = true;
-  hardware.nvidia.prime = {
-    offload.enable = true;
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
+  hardware.nvidia = {
+    nvidiaPersistenced = true;
+    modesetting.enable = true;
+    prime = {
+      offload.enable = true;
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
 
   # Sound
@@ -128,6 +131,7 @@ in
   services.xserver = {
     desktopManager.gnome3.enable = true;
     displayManager.gdm.enable = true;
+    displayManager.gdm.nvidiaWayland = true;
   };
   services.gnome3 = {
     core-utilities.enable = false;
@@ -267,6 +271,7 @@ in
     dejavu_fonts
     fira-code
     fira-code-symbols
+    google-fonts
     noto-fonts
     source-code-pro
     ubuntu_font_family
@@ -298,7 +303,7 @@ in
         shell = pkgs.bash;
       };
 
-      root = {
+     root = {
         packages = [ pkgs.emacs ];
         hashedPassword = "*";
       };
