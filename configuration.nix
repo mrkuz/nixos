@@ -56,7 +56,7 @@ in
   time.timeZone = "Europe/Vienna";
 
   # SMART
-  services.smartd.enable = false;
+  services.smartd.enable = true;
 
   # Filesystem
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
@@ -187,6 +187,7 @@ in
     unrar
     unzip
     vim
+    zip
     # Gnome core utilities
     baobab
     gnome3.eog
@@ -249,6 +250,7 @@ in
     python38Packages.cgroup-utils
     python38Packages.pip
     smartmontools
+    strace
     tuptime
     update-systemd-resolved
     zlib
@@ -303,9 +305,9 @@ in
         shell = pkgs.bash;
       };
 
-     root = {
-        packages = [ pkgs.emacs ];
+      root = {
         hashedPassword = "*";
+        packages = [ pkgs.emacs ];
       };
     };
   };
