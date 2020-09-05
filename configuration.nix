@@ -64,8 +64,8 @@ in
     device = "/dev/vg00/home";
     fsType = "ext4";
   };
-  fileSystems."/data/user" = {
-    device = "/dev/vg00/user";
+  fileSystems."/data" = {
+    device = "/dev/vg00/data";
     fsType = "ext4";
   };
 
