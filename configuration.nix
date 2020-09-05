@@ -122,6 +122,7 @@ in
     docker.enable = true;
     docker.enableNvidia = true;
     libvirtd.enable = true;
+    podman.enable = true;
     virtualbox.host.enable = true;
     virtualbox.host.enableExtensionPack = true;
     virtualbox.host.headless = true;
