@@ -68,6 +68,15 @@ in
     device = "/dev/vg00/data";
     fsType = "ext4";
   };
+  fileSystems."/data/overlay/home/mnt" = {
+    fsType = "overlay";
+    device = "overlay";
+    options = [
+      "lowerdir=/home"
+      "upperdir=/data/overlay/home/rw"
+      "workdir=/data/overlay/home/work"
+    ];
+  };
 
   # Graphics
   services.xserver = {
