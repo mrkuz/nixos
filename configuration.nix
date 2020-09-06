@@ -50,6 +50,8 @@ in
     enable = true;
     nssmdns = true;
   };
+  services.resolved.enable = true;
+  environment.etc.openvpn.source = "${pkgs.update-systemd-resolved}/libexec/openvpn";
 
   # Localization
   i18n.defaultLocale = "en_US.UTF-8";
