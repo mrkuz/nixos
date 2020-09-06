@@ -250,9 +250,11 @@ in
     dnsmasq
     ecryptfs
     efibootmgr
+    exfat
     file
     libva-utils
     lm_sensors
+    ntfs3g
     openvpn
     parted
     pciutils
