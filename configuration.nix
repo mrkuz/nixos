@@ -188,6 +188,7 @@ in
     mkpasswd
     nmap
     p7zip
+    powertop
     python38Packages.ansible
     python38Packages.ansible-lint
     python38Packages.wakeonlan
