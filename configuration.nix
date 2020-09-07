@@ -41,6 +41,8 @@ in
     timeout = 3;
   };
 
+  services.tuptime.enable = true;
+
   # Networking
   networking = {
     hostName = "nixos";
@@ -266,7 +268,6 @@ in
     python38Packages.pip
     smartmontools
     strace
-    tuptime
     update-systemd-resolved
     zlib
     # Build essentials
