@@ -176,7 +176,6 @@ in
   # Packages
   nix.nixPath = [ "nixpkgs=/nix/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" ];
   nixpkgs.config.allowUnfree = true;
-  programs.chromium.enable = true;
   programs.command-not-found.enable = false;
   documentation.doc.enable = false;
   documentation.info.enable = false;
