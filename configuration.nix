@@ -82,6 +82,11 @@ in
     ];
   };
 
+  system.activationScripts.lib64 = ''
+    mkdir /lib64 || true
+    ln -sf ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
+  '';
+
   # Graphics
   services.xserver = {
     enable = true;
