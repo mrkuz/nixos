@@ -261,6 +261,7 @@ in
     efibootmgr
     exfat
     file
+    inetutils
     libva-utils
     lm_sensors
     ntfs3g
