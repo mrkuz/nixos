@@ -79,6 +79,7 @@ in
       "lowerdir=/home"
       "upperdir=/data/overlay/home/rw"
       "workdir=/data/overlay/home/work"
+      "x-systemd.requires-mounts-for=/home"
     ];
   };
 
