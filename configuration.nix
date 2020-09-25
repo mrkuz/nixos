@@ -254,6 +254,7 @@ in
     xpra
     xwayland
     # Base packages
+    bind
     binutils
     bridge-utils
     cifs-utils
@@ -266,6 +267,7 @@ in
     libva-utils
     lm_sensors
     ntfs3g
+    openssl
     openvpn
     parted
     pciutils
