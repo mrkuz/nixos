@@ -41,8 +41,6 @@ in
     timeout = 3;
   };
 
-  services.tuptime.enable = true;
-
   # Networking
   networking = {
     hostName = "nixos";
@@ -131,6 +129,10 @@ in
 
   # Miscellanous hardware
   hardware.steam-hardware.enable = true;
+
+  # Miscellanous services
+  services.haveged.enable = true;
+  services.tuptime.enable = true;
 
   # Security
   # security.pam.enableEcryptfs = true;
