@@ -139,9 +139,9 @@ in
   virtualisation = {
     # anbox.enable = true;
     docker.enable = true;
-    docker.enableNvidia = true;
+    # docker.enableNvidia = true;
     libvirtd.enable = true;
-    podman.enable = true;
+    # podman.enable = true;
     virtualbox.host.enable = true;
     virtualbox.host.enableExtensionPack = true;
     virtualbox.host.headless = true;
@@ -154,6 +154,8 @@ in
     displayManager.gdm.nvidiaWayland = true;
   };
   services.gnome3 = {
+    core-os-services.enable = true;
+    core-shell.enable = true;
     core-utilities.enable = false;
     chrome-gnome-shell.enable = true;
     gnome-keyring.enable = true;
@@ -165,10 +167,6 @@ in
     gnome-terminal.enable = true;
     seahorse.enable = true;
   };
-
-  # Flatpak
-  xdg.portal.enable = true;
-  services.flatpak.enable = true;
 
   # fish
   programs.fish.enable = true;
@@ -198,6 +196,7 @@ in
     powertop
     python38Packages.ansible
     python38Packages.ansible-lint
+    python38Packages.pip
     python38Packages.wakeonlan
     pwgen
     rclone
@@ -241,7 +240,6 @@ in
     yaru-theme
     # Docker
     docker-compose
-    fuse-overlayfs
     # Virtualizaton
     vagrant
     # X utilities
@@ -273,7 +271,6 @@ in
     pciutils
     psmisc
     python38Packages.cgroup-utils
-    python38Packages.pip
     smartmontools
     strace
     update-systemd-resolved
