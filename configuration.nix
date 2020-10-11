@@ -296,7 +296,7 @@ in
     dejavu_fonts
     fira-code
     fira-code-symbols
-    google-fonts
+    # google-fonts
     noto-fonts
     source-code-pro
     ubuntu_font_family
