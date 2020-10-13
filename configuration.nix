@@ -25,7 +25,7 @@ in
     ./hardware-configuration.nix
   ];
 
-  # Boot loader
+  # Boot
   boot.tmpOnTmpfs = true;
   boot.loader = {
     efi = {
@@ -40,6 +40,11 @@ in
     generationsDir.enable = false;
     timeout = 3;
   };
+
+  # Speed up boot
+  systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.services.systemd-udev-settle.enable = false;
+  networking.dhcpcd.wait = "background";
 
   # Networking
   networking = {
@@ -56,9 +61,6 @@ in
   # Localization
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Vienna";
-
-  # SMART
-  services.smartd.enable = true;
 
   # Filesystem
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
@@ -81,6 +83,7 @@ in
     ];
   };
 
+  # FHS compatibility
   system.activationScripts.lib64 = ''
     mkdir /lib64 || true
     ln -sf ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
@@ -132,6 +135,7 @@ in
 
   # Miscellanous services
   services.haveged.enable = true;
+  services.smartd.enable = true;
   services.tuptime.enable = true;
 
   # Security
@@ -297,7 +301,7 @@ in
     fira-code
     fira-code-symbols
     # google-fonts
-    noto-fonts
+    # noto-fonts
     source-code-pro
     ubuntu_font_family
   ];
