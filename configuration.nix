@@ -1,3 +1,4 @@
+
 { config, lib, pkgs, ... }:
 
 let
@@ -45,7 +46,7 @@ in
   systemd.services.NetworkManager-wait-online.enable = false;
   systemd.services.systemd-udev-settle.enable = false;
   networking.dhcpcd.wait = "background";
-
+  
   # Networking
   networking = {
     hostName = "nixos";
@@ -184,7 +185,14 @@ in
   ];
 
   # Packages
-  nix.nixPath = [ "nixpkgs=/nix/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" ];
+  nix = {
+    nixPath = [ "nixpkgs=/nix/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" ];
+    package = pkgs.nixUnstable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
   nixpkgs.config.allowUnfree = true;
   programs.command-not-found.enable = false;
   documentation.doc.enable = false;
