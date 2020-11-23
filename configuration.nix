@@ -154,7 +154,6 @@ in
     # podman.enable = true;
     virtualbox.host.enable = true;
     virtualbox.host.enableExtensionPack = true;
-    virtualbox.host.headless = true;
   };
 
   # Gnome
