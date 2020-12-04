@@ -53,7 +53,7 @@ in
   # Networking
   networking = {
     hostName = "nixos";
-    interfaces.wlp2s0.useDHCP = true;
+    # interfaces.wlp2s0.useDHCP = true;
   };
   services.avahi = {
     enable = true;
@@ -109,7 +109,7 @@ in
     ];
   };
   hardware.nvidia = {
-    nvidiaPersistenced = true;
+    nvidiaPersistenced = false;
     modesetting.enable = true;
     prime = {
       offload.enable = true;
@@ -134,10 +134,10 @@ in
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
-  # Miscellanous hardware
+  # Miscellaneous hardware
   hardware.steam-hardware.enable = true;
 
-  # Miscellanous services
+  # Miscellaneous services
   services.haveged.enable = true;
   services.smartd.enable = true;
   services.tuptime.enable = true;
