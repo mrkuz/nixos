@@ -278,6 +278,7 @@ in
     exfat
     file
     inetutils
+    iproute
     libva-utils
     lm_sensors
     ntfs3g
