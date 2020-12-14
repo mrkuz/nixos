@@ -140,6 +140,7 @@ in
   # Miscellaneous services
   services.haveged.enable = true;
   services.smartd.enable = true;
+  services.thermald.enable = true;
   services.tuptime.enable = true;
 
   # Security
@@ -149,7 +150,7 @@ in
   virtualisation = {
     # anbox.enable = true;
     docker.enable = true;
-    # docker.enableNvidia = true;
+    docker.enableNvidia = true;
     libvirtd.enable = true;
     # podman.enable = true;
     virtualbox.host.enable = true;
@@ -272,6 +273,7 @@ in
     binutils
     bridge-utils
     cifs-utils
+    dmidecode
     dnsmasq
     ecryptfs
     efibootmgr
