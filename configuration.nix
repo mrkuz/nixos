@@ -24,6 +24,7 @@ in
 {
   imports = [
     ./hardware-configuration.nix
+    <home-manager/nixos>
   ];
 
   # Boot
@@ -195,6 +196,8 @@ in
       experimental-features = nix-command flakes
     '';
   };
+
+  home-manager.useGlobalPkgs = true;
 
   nixpkgs.config.allowUnfree = true;
   programs.command-not-found.enable = false;
