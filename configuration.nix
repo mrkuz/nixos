@@ -243,6 +243,7 @@ in
     gnome3.nautilus
     simple-scan
     # Gnome utilities
+    gnome3.dconf-editor
     gnome3.gnome-tweaks
     gnome3.libgnome-keyring
     # Gnome extensions
