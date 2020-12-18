@@ -248,6 +248,9 @@ in
     # Gnome extensions
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.impatience
+    gnomeExtensions.window-is-ready-remover
     # Default applications
     google-chrome
     thunderbird
