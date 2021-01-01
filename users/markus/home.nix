@@ -124,6 +124,7 @@ in {
     # Link some stuff
     [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
     [ -e $HOME/etc/dotfiles ] || ln -svf $HOME/etc/nixos/repos/dotfiles $HOME/etc/dotfiles
+    [ -e $HOME/etc/doom.d ] || ln -svf $HOME/etc/nixos/repos/doom.d $HOME/etc/doom.d
 
     # Clone repositories
     [ -e $HOME/etc/nix-shell ] || (cd $HOME/etc && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/nix-shell")
