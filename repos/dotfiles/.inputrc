@@ -1,0 +1,18 @@
+set bell-style visible
+set blink-matching-paren on
+set colored-completion-prefix on
+# Use colors to differ file types in completion
+set colored-stats on
+set completion-ignore-case on
+# Prevents command execution on paste
+set enable-bracketed-paste on
+# Immediate show possible completions
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+# Append file type to completions
+set visible-stats on
+
+# Cycle through completions
+TAB: menu-complete
+# Display completion prefix before cycling
+set menu-complete-display-prefix on

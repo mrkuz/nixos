@@ -1,0 +1,43 @@
+conky.config = {
+    alignment = 'bottom_right',
+    own_window = true,
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_type = 'desktop',
+    update_interval = 1.0,
+    double_buffer = true,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=11',
+    draw_shades = false,
+    gap_x = 20,
+    gap_y = 20,
+    minimum_width = 400,
+    default_color = 'grey',
+    no_buffers = true,
+}
+
+conky.text = [[
+Kernel: $alignr $kernel
+Uptime: $alignr $uptime
+UTC: $alignr $utime
+$hr
+Load: $alignr $loadavg
+CPU usage: $alignr $cpu%
+CPU speed: $alignr $freq MHz
+Memory used: $alignr $mem of $memmax
+Swap used: $alignr $swap of $swapmax
+$hr
+IP: $alignr ${addr wlp0s59}
+Download rate: $alignr ${downspeed wlp0s59}/s (${totaldown wlp0s59})
+Upload rate: $alignr ${upspeed wlp0s59}/s (${totalup wlp0s59})
+$hr
+Root FS free: $alignr ${fs_free /} of ${fs_size /}
+Home FS free: $alignr ${fs_free /home} of ${fs_size /home}
+Data FS free: $alignr ${fs_free /data/user} of ${fs_size /data/user}
+$hr
+dotfiles.git $alignr ${exec git -C ~/etc/dotfiles.git/ diff --quiet --exit-code && echo Clean || echo Dirty}
+doom.d $alignr ${exec git -C ~/etc/doom.d/ diff --quiet --exit-code && echo Clean || echo Dirty}
+nixos $alignr ${exec git -C ~/etc/nixos/ diff --quiet --exit-code && echo Clean || echo Dirty}
+nix-shell $alignr ${exec git -C ~/etc/nix-shell/ diff --quiet --exit-code && echo Clean || echo Dirty}
+dockerfiles $alignr ${exec git -C ~/src/dockerfiles/ diff --quiet --exit-code && echo Clean || echo Dirty}
+]]

@@ -1,0 +1,92 @@
+# Colors
+
+BLACK="\e[0;30m"
+RED="\[\e[0;31m\]"
+GREEN="\[\e[0;32m\]"
+YELLOW="\[\e[0;33m\]"
+BLUE="\[\e[0;34m\]"
+MAGENTA="\[\e[0;35m\]"
+CYAN="\[\e[0;36m\]"
+LIGHT_GRAY="\[\e[0;37m\]"
+DARK_GRAY="\[\e[0;90m\]"
+LIGHT_RED="\[\e[0;91m\]"
+LIGHT_GREEN="\[\e[0;92m\]"
+LIGHT_YELLOW="\[\e[0;93m\]"
+LIGHT_BLUE="\[\e[0;94m\]"
+LIGHT_MAGENTA="\[\e[0;95m\]"
+LIGHT_CYAN="\[\e[0;96m\]"
+WHITE="\[\e[0;97m\]"
+RESET="\[\e[0m\]"
+
+# Prompt
+
+function create_prompt() {
+  [[ $? -eq 0 ]] && prefix="$GREEN" || prefix="$RED"
+  PS1="${prefix}\u@\h${RESET} \w"
+  head="$(git rev-parse HEAD 2>/dev/null)"
+  if [[ -n "$head" && "$head" != "HEAD" ]]; then
+    pretty="<detached>"
+    branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+    if [[ -n "$branch" ]]; then
+      pretty="$branch"
+    else
+      local tag="$(git describe --exact-match HEAD 2>/dev/null)"
+      if [[ -n "$tag" ]]; then
+        pretty="$tag"
+      fi
+    fi
+    PS1="${PS1} [${YELLOW}${pretty}@${head:0:8}"
+    if ! git diff --quiet --exit-code; then
+      PS1="${PS1}*"
+    fi
+    if ! git diff --staged --quiet --exit-code; then
+      PS1="${PS1}^"
+    fi
+    if git rev-parse stash &>/dev/null; then
+      PS1="${PS1}!"
+    fi
+    PS1="${PS1}${RESET}]"
+  fi
+  if [[ -f /.dockerenv ]]; then
+    PS1="${PS1} [${LIGHT_RED}container${RESET}] "
+  fi
+  if [[ -f /.nixenv ]]; then
+    PS1="${PS1} [${LIGHT_RED}nix-shell${RESET}] "
+  fi
+  PS1="${PS1}\n\$ "
+}
+
+PROMPT_COMMAND="create_prompt"
+
+# Change directory without cd
+shopt -s autocd
+# Check for running jobs on exit
+shopt -s checkjobs
+# Save multiline commands as one history entry
+shopt -s cmdhist
+# Enable extended pattern matching
+shopt -s extglob
+# Enable **
+shopt -s globstar
+# Append to history file instead of replacing
+shopt -s histappend
+# Ignore case when matching file names
+shopt -s nocaseglob
+# Ignore case when matching patterns
+shopt -s nocasematch
+
+alias ec="emacsclient -n -a emacs -c"
+alias p="pushd ."
+alias pp="popd"
+
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
+export PATH=$HOME/bin/:$HOME/.local/bin:$PATH
+export EDITOR="$EMACS"
+export GIT_EDITOR=nano
+
+command -v kubectl >& /dev/null &&  source <(kubectl completion bash)
+
+alias pbash="bash --init-file <(echo '. ~/.bashrc; HISTFILE=/dev/null; HISTSIZE=0')"

@@ -1,0 +1,410 @@
+* Personal information
+
+#+BEGIN_SRC emacs-lisp :results none
+(setq user-full-name "Markus")
+(setq user-mail-address "markus@bitsandbobs.net")
+(setq smtpmail-smtp-user user-mail-address)
+(setq send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-server "smtp.gmail.com")
+(setq smtpmail-stream-type 'ssl)
+(setq smtpmail-smtp-service 465)
+#+END_SRC
+
+* Doom
+
+#+BEGIN_SRC emacs-lisp :results none
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 14))
+(setq doom-theme 'doom-one)
+#+END_SRC
+
+* Modeline
+
+#+BEGIN_SRC emacs-lisp :results none
+;; Show date/time in modeline
+(display-time-mode 1)
+;; ... but only calendar week
+(setq display-time-format " W%V")
+;; Hide system load
+(setq display-time-default-load-average nil)
+#+END_SRC
+
+* Buffers
+
+#+BEGIN_SRC emacs-lisp :results none
+(setq ibuffer-use-other-window t)
+(map! "C-x b" #'ivy-switch-buffer)
+(map! "C-x B" #'+ivy/switch-workspace-buffer)
+(map! "C-x C-b" #'ibuffer)
+#+END_SRC
+
+* Indention
+
+#+BEGIN_SRC emacs-lisp :results none
+;; Always use spaces
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq tab-stop-list '(0 tab-widht))
+#+END_SRC
+
+* Calendar
+
+#+BEGIN_SRC emacs-lisp :results none
+;; Start week with monday
+(setq calendar-week-start-day 1)
+(setq calendar-date-style 'iso)
+(setq calendar-holidays (append holiday-general-holidays holiday-christian-holidays))
+#+END_SRC
+
+* Terminal
+
+#+BEGIN_SRC emacs-lisp :results none
+;; Use bash as default shell
+(setq shell-file-name "bash")
+(setq explicit-shell-file-name "/usr/bin/env bash")
+(setenv "SHELL" shell-file-name)
+
+(after! multi-term
+  :config
+  (add-to-list 'term-bind-key-alist '("C-c C-j" . term-line-mode))
+  (add-to-list 'term-bind-key-alist '("C-c C-k" . term-char-mode)))
+#+END_SRC
+
+* Navigation
+
+#+BEGIN_SRC emacs-lisp :results none
+(after! ace-window
+  :config
+  ;; Use letters instead of numbers
+  (setq aw-keys '(?a ?b ?c ?d ?e ?f ?g ?h)))
+#+END_SRC
+
+* Completion
+
+#+BEGIN_SRC emacs-lisp :results none
+(after! company
+  (setq company-idle-delay 0.4)
+  (setq company-show-numbers t)
+  (setq company-tooltip-limit 9))
+
+(use-package! company-quickhelp
+  :hook (company-mode . company-quickhelp-mode)
+  :config
+  (setq company-quickhelp-delay 1.2)
+  (setq company-quickhelp-max-lines 20)
+  ;; Allow colors and fonts
+  (setq company-quickhelp-use-propertized-text t))
+#+END_SRC
+
+* Miscellaneous
+
+#+BEGIN_SRC emacs-lisp :results none
+;; Enable all disabled commands
+(setq disabled-command-hook nil)
+(setq-default frame-title-format '("Emacs - %b"))
+(setq-default fill-column 100)
+#+END_SRC
+
+* Doom packages
+
+#+BEGIN_SRC emacs-lisp :results none
+(after! anzu
+  (global-anzu-mode))
+
+(after! flyspell
+  (unbind-key "C-;" flyspell-mode-map))
+
+(after! gcmh
+  (setq gcmh-low-cons-threshold 80000000)
+  (setq gcmh-high-cons-threshold most-positive-fixnum))
+
+(after! plantuml-mode
+  (setq plantuml-jar-path "~/.nix-profile/lib/plantuml.jar")
+  (setq org-plantuml-jar-path plantuml-jar-path))
+
+(after! simple-httpd
+  (setq httpd-port 7070)
+  (setq httpd-host (system-name)))
+
+(after! treemacs
+  ;; Collapse directories
+  (setq treemacs-collapse-dirs 10)
+  ;; Customize face and icon of root item
+  (set-face-attribute 'treemacs-root-face nil :height 1.0 :underline nil)
+  (setq treemacs-icon-root-png
+        (concat " "
+                (all-the-icons-octicon "repo" :v-adjust -0.1 :height 1.2 :face 'font-lock-string-face)
+                " ")))
+
+(after! undo-tree
+  (setq undo-tree-auto-save-history nil)
+  (setq undo-tree-history-directory-alist nil))
+
+(after! org-roam
+  (setq org-roam-directory "~/Notes/")
+  ;; Disable automatic opening of org-roam buffer
+  (setq +org-roam-open-buffer-on-find-file nil))
+
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override nil))
+#+END_SRC
+
+* Custom packages
+
+#+BEGIN_SRC emacs-lisp :results none
+(use-package! ace-link
+  :commands ace-link)
+
+(use-package! bm
+  :bind (("<f2>" . bm-next)
+         ("S-<f2>" . bm-previous)
+         ("C-<f2>" . bm-toggle)))
+
+(use-package! flycheck-pos-tip
+  :commands flycheck-pos-tip-mode)
+
+(use-package! google-this
+  :commands google-this)
+
+(use-package! goto-last-change
+  :commands goto-last-change)
+
+(use-package! impatient-mode
+  :commands impatient-mode)
+
+(use-package! pandoc-mode
+  :commands pandoc-mode)
+#+END_SRC
+
+* Org mode
+** Configuration
+
+#+BEGIN_SRC emacs-lisp :results none
+(setq org-directory "~/org/")
+(after! org
+  (setq org-startup-folded t)
+  (setq org-agenda-files '("~/org" "~/org/calendar" "~/org/mobile" "~/org/projects"))
+  (setq diary-file "~/org/diary")
+  (setq org-archive-location "~/org/.archive.org::* File: %s")
+  ;; No header in archive file
+  (setq org-archive-file-header-format nil)
+  ;; Allow setting refile targets as local file variable
+  (put 'org-refile-targets 'safe-local-variable (lambda (_) t))
+  ;; Don't indent lines after editing
+  (setq org-edit-src-content-indentation 0)
+  ;; Insert log notes into drawer
+  (setq org-log-into-drawer t)
+  ;; TODO keywords
+  (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w!)" "|" "DONE(d!)" "CANCELED(c!)" "PAUSED(p!)")))
+  (add-hook 'org-capture-mode-hook 'my-org-protocol-capture-hook)
+  (add-hook 'org-capture-after-finalize-hook 'my-org-protocol-after-capture-hook)
+  (advice-add 'org-store-log-note :after #'+org/close-fold)
+
+  (setq org-capture-templates '(
+                                ("b" "Backlog" entry (file+olp "todo.org" "Backlog")
+                                 "* TODO %:link%?" :prepend t)
+                                ("n" "Next" entry (file+olp "todo.org" "Next")
+                                 "* TODO %?" :prepend t)
+                                ("J" "Journal" entry (file+olp+datetree "journal.org")
+                                 "** %<%H:%M> %?")
+                                )))
+#+END_SRC
+
+** Custom packages
+
+#+BEGIN_SRC emacs-lisp :results none
+(use-package! org-present
+  :commands org-present
+  :config
+  (add-hook 'org-present-mode-hook
+            (lambda ()
+              (org-present-big)
+              (org-display-inline-images)
+              (org-present-hide-cursor)
+              (org-present-read-only)))
+  (add-hook 'org-present-mode-quit-hook
+            (lambda ()
+              (org-present-small)
+              (org-remove-inline-images)
+              (org-present-show-cursor)
+              (org-present-read-write))))
+
+(use-package! org-reverse-datetree
+  :after org
+  :config
+  (setq org-reverse-datetree-date-format "%Y-%m-%d %A")
+  (setq org-reverse-datetree-week-format "%Y-%m W%V")
+  (setq org-reverse-datetree-year-format "%Y"))
+
+(use-package! org-sticky-header
+  :hook (org-mode . org-sticky-header-mode)
+  :config
+  (setq org-sticky-header-always-show-header nil)
+  (setq org-sticky-header-full-path 'full)
+  (setq org-sticky-header-outline-path-separator " → "))
+
+(use-package! ox-reveal
+  :after ox
+  :config
+  (setq org-reveal-root "file:///~/opt/reveal.js/"))
+#+END_SRC
+
+** Functions
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-org-protocol-capture-hook ()
+  (let ((name (cdr (assoc 'name (frame-parameters)))))
+    (when (equal name "org-protocol-capture")
+      (delete-other-windows)
+      (select-frame-set-input-focus (selected-frame)))))
+
+(defun my-org-protocol-after-capture-hook ()
+  (let ((name (cdr (assoc 'name (frame-parameters)))))
+    (when (equal name "org-protocol-capture")
+      (delete-frame))))
+#+END_SRC
+* Key bindings
+
+#+BEGIN_SRC emacs-lisp :results none
+(setq my-map (make-sparse-keymap))
+(global-set-key (kbd "C-;") my-map)
+(global-set-key (kbd "C-ö") my-map)
+(define-key my-map (kbd "M-c") 'string-inflection-lower-camelcase)
+(define-key my-map (kbd "M-C") 'string-inflection-camelcase)
+(define-key my-map (kbd "M-k") 'string-inflection-kebab-case)
+(define-key my-map (kbd "M-u") 'string-inflection-underscore)
+(define-key my-map (kbd "M-U") 'string-inflection-upcase)
+(define-key my-map (kbd "M-x") 'string-inflection-all-cycle)
+(define-key my-map (kbd "f c") 'my-open-config)
+(define-key my-map (kbd "f j") 'my-open-journal)
+(define-key my-map (kbd "f t") 'my-open-todos)
+(define-key my-map (kbd "l g") 'google-this)
+(define-key my-map (kbd "n") 'org-roam-find-file)
+(define-key my-map (kbd "s l") 'ace-link-addr)
+(define-key my-map (kbd "s p") 'goto-last-change)
+(define-key my-map (kbd "s w") 'avy-goto-line)
+(define-key my-map (kbd "s w") 'avy-goto-word-1)
+(define-key my-map (kbd "s W") 'ace-window)
+(define-key my-map (kbd "t t") 'toggle-truncate-lines)
+(define-key my-map (kbd "t a") 'goto-address-mode)
+(define-key my-map (kbd "t w") 'whitespace-mode)
+(define-key my-map (kbd "T") 'multi-term)
+(define-key my-map (kbd "v d") 'git-gutter:popup-hunk)
+(define-key my-map (kbd "v g") 'magit-file-dispatch)
+(define-key my-map (kbd "v G") 'magit-dispatch)
+(define-key my-map (kbd "TAB") 'fold/toggle)
+(define-key my-map (kbd "1") (lambda () (interactive ) (my-workspace-switch "main")))
+(define-key my-map (kbd "2") (lambda () (interactive ) (my-workspace-switch "2")))
+(define-key my-map (kbd "3") (lambda () (interactive ) (my-workspace-switch "3")))
+(define-key my-map (kbd "4") (lambda () (interactive ) (my-workspace-switch "4")))
+(define-key my-map (kbd "5") (lambda () (interactive ) (my-workspace-switch "5")))
+(define-key my-map (kbd "6") (lambda () (interactive ) (my-workspace-switch "6")))
+(define-key my-map (kbd "7") (lambda () (interactive ) (my-workspace-switch "7")))
+(define-key my-map (kbd "8") (lambda () (interactive ) (my-workspace-switch "8")))
+(define-key my-map (kbd "9") (lambda () (interactive ) (my-workspace-switch "9")))
+(define-key my-map (kbd ".") 'dumb-jump-go)
+(define-key my-map (kbd ",") 'dumb-jump-back)
+(define-key my-map (kbd "$ ;") 'flyspell-auto-correct-previous-word)
+(define-key my-map (kbd "& i") 'company-yasnippet)
+(define-key my-map (kbd "& t") 'yas-describe-tables)
+(define-key my-map (kbd "?") 'which-key-show-top-level)
+(define-key my-map (kbd "SPC") 'company-complete)
+#+END_SRC
+
+* Functions
+** Files
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-open-config ()
+  "Open config file."
+  (interactive)
+  (find-file "~/.doom.d/config.org"))
+
+(defun my-open-journal ()
+  "Open journal."
+  (interactive)
+  (find-file (concat org-directory "/journal.org")))
+
+(defun my-open-todos ()
+  "Open todos."
+  (interactive)
+  (find-file (concat org-directory "/todo.org")))
+#+END_SRC
+
+** Workspace
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-workspace-switch (name)
+  (if (+workspace-exists-p name)
+      (+workspace-switch name)
+    (progn
+      (+workspace-switch name t)
+      (my-create-scratch name))))
+
+(defun my-create-scratch (name)
+  (let ((scratch (generate-new-buffer (concat "*scratch<" name ">*"))))
+    (switch-to-buffer scratch)
+    (funcall initial-major-mode)
+    scratch))
+#+END_SRC
+
+** Ediff
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-prepare-diff ()
+  "Prepare two buffers for diff."
+  (interactive)
+  (let ((a (generate-new-buffer "*A*"))
+        (b (generate-new-buffer "*B*")))
+    (delete-other-windows)
+    (switch-to-buffer a)
+    (split-window-horizontally)
+    (switch-to-buffer-other-window b)
+    (other-window 1)))
+#+END_SRC
+
+** Live preview
+
+*** Markdown
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-markdown-preview ()
+  "Preview markdown."
+  (interactive)
+  (unless (process-status "httpd")
+    (httpd-start))
+  (impatient-mode)
+  (imp-set-user-filter 'my-markdown-filter)
+  (imp-visit-buffer))
+
+(defun my-markdown-filter (buffer)
+  (princ
+   (with-temp-buffer
+     (let ((tmp (buffer-name)))
+       (set-buffer buffer)
+       (set-buffer (markdown tmp))
+       (format "<!DOCTYPE html><html><title>Markdown preview</title><link rel=\"stylesheet\" href = \"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css\"/>
+<body><article class=\"markdown-body\" style=\"box-sizing: border-box;min-width: 200px;max-width: 980px;margin: 0 auto;padding: 45px;\">%s</article></body></html>" (buffer-string))))
+   (current-buffer)))
+#+END_SRC
+
+*** Org
+
+#+BEGIN_SRC emacs-lisp :results none
+(defun my-org-preview ()
+  "Preview org buffer as HTML."
+  (interactive)
+  (unless (process-status "httpd")
+    (httpd-start))
+  (impatient-mode)
+  (imp-set-user-filter 'my-org-filter)
+  (imp-visit-buffer))
+
+(defun my-org-filter (buffer)
+  (princ
+   (with-temp-buffer
+     (insert-buffer-substring buffer)
+     (shell-command-on-region (point-min) (point-max) "pandoc -s -f org -t html5" nil t)
+     (format "<!DOCTYPE html><html><title>Markdown preview</title><link rel=\"stylesheet\" href = \"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css\"/>
+<body><article class=\"markdown-body\" style=\"box-sizing: border-box;min-width: 200px;max-width: 980px;margin: 0 auto;padding: 45px;\">%s</article></body></html>" (buffer-string)))
+   (current-buffer)))
+#+END_SRC

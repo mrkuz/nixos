@@ -1,0 +1,13 @@
+[user]
+    name = mrkuz
+    email = markus@bitsandbobs.net
+[core]
+    commentchar = ";"
+[merge]
+    ff = false
+[pull]
+    rebase = true
+[credential]
+    helper = store
+[alias]
+    sdiff = "diff --staged"

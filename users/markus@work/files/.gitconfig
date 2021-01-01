@@ -1,0 +1,13 @@
+[user]
+    name = Markus Opitz
+    email = mo@appradar.com
+[core]
+    commentchar = ";"
+[merge]
+    ff = false
+[pull]
+    rebase = true
+[credential]
+    helper = store
+[alias]
+    sdiff = "diff --staged"

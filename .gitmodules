@@ -1,0 +1,6 @@
+[submodule "repos/dotfiles"]
+	path = repos/dotfiles
+	url = https://github.com/mrkuz/dotfiles
+[submodule "repos/doom.d"]
+	path = repos/doom.d
+	url = https://github.com/mrkuz/doom.d

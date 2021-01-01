@@ -1,0 +1,99 @@
+{
+  "nodes": {
+    "credentials": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-/DB6iKk4nve6YuFhfqXAFeX6Dmr1ew65cnDBgLd03p4=",
+        "path": "/home/user/nixos.git/credentials.nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/user/nixos.git/credentials.nix",
+        "type": "path"
+      }
+    },
+    "doomd": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-r10irft+UOCRqAmS1Sg8UNWhPo7vMgjkmqBBOK9JiJM=",
+        "path": "/home/user/nixos.git/repos/doom.d",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/user/nixos.git/repos/doom.d",
+        "type": "path"
+      }
+    },
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-Q0cqBpz34VFBiMETQtBEoJce4unsyyoQm08VmAc4w4g=",
+        "path": "/home/user/nixos.git/repos/dotfiles",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/user/nixos.git/repos/dotfiles",
+        "type": "path"
+      }
+    },
+    "emacs-overlay": {
+      "locked": {
+        "lastModified": 1609488804,
+        "narHash": "sha256-x+YSVkwAJoe/VFI7wUmDbxpRpcUFHSeqTlngTSc7A7E=",
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "rev": "c686515f2723ecc7e5ffffe596475d59d80f5738",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1609491086,
+        "narHash": "sha256-jOdmHZPBgq6J0YumeYfve7Zd07QFzTbaWhLmoKfXFII=",
+        "owner": "rycee",
+        "repo": "home-manager",
+        "rev": "6acc6bc651ae2a097ba115b5855fc7820d104aba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rycee",
+        "ref": "master",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "narHash": "sha256-FwZH/et+yNTgBy518vJ6UGbDKe8m0CQM/ewXLpa4F34=",
+        "path": "/nix/nixpkgs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/nixpkgs",
+        "type": "path"
+      }
+    },
+    "root": {
+      "inputs": {
+        "credentials": "credentials",
+        "doomd": "doomd",
+        "dotfiles": "dotfiles",
+        "emacs-overlay": "emacs-overlay",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

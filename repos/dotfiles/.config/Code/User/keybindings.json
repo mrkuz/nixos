@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus"
+    }
+]

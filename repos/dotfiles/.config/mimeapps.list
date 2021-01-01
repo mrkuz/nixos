@@ -1,0 +1,8 @@
+[Default Applications]
+text/html=chromium-browser.desktop
+inode/directory=org.gnome.Nautilus.desktop
+
+[Added Associations]
+application/pdf=org.gnome.Evince.desktop;
+text/plain=org.gnome.gedit.desktop;
+image/png=org.gnome.eog.desktop;

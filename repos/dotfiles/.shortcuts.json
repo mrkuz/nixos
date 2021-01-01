@@ -1,0 +1,176 @@
+[
+    {
+        "name" : "Desktop",
+        "shortcuts" : [
+            {
+                "key" : "Super + A",
+                "description" : "Show applications"
+            },
+            {
+                "key" : "Super + D",
+                "description" : "Show desktop"
+            },
+            {
+                "key" : "Super + L",
+                "description" : "Lock screen"
+            },
+            {
+                "key" : "Super + N",
+                "description" : "Show notifications"
+            },
+            {
+                "key" : "Super + S",
+                "description" : "Show shortcuts overview"
+            },
+            {
+                "key" : "L ⇧ + R ⇧",
+                "description" : "Switch input language"
+            }
+        ]
+    },
+    {
+        "name" : "Launch",
+        "shortcuts" : [
+            {
+                "key" : "Super + X",
+                "description" : "Show launcher"
+            },
+            {
+                "key" : "Super + E",
+                "description" : "Launch Emacs"
+            },
+            {
+                "key" : "Super + H",
+                "description" : "Open home folder"
+            },
+            {
+                "key" : "Super + T",
+                "description" : "Launch terminal"
+            }
+        ]
+    },
+    {
+        "name" : "Terminal",
+        "shortcuts" : [
+            {
+                "key" : "Alt + T",
+                "description" : "New tab"
+            },
+            {
+                "key" : "Alt + N",
+                "description" : "New window"
+            },
+            {
+                "key" : "Alt + D",
+                "description" : "Dettach tab"
+            },
+            {
+                "key" : "Alt + Q",
+                "description" : "Close tab"
+            },
+            {
+                "key" : "Alt + ←/→",
+                "description" : "Switch to previous/next tab"
+            },
+            {
+                "key" : "Alt + 1",
+                "description" : "Switch to tab 1"
+            },
+            {
+                "key" : "Alt + ⇧ + ←/→",
+                "description" : "Move tab to the left/right"
+            }
+        ]
+    },
+   {
+        "name" : "Navigation",
+        "shortcuts" : [
+            {
+                "key" : "Super + 1",
+                "description" : "Switch to workspace 1"
+            },
+            {
+                "key" : "Super + ↑/↓",
+                "description" : "Switch to workspace above/below"
+            },
+            {
+                "key" : "Super + ⇧ + 1",
+                "description" : "Move window to workspace 1"
+            },
+            {
+                "key" : "Super + ⇧ + ↑/↓",
+                "description" : "Move window one workspace up/down"
+            },
+            {
+                "key" : "Super + ⇧ + ←/→",
+                "description" : "Move window one monitor left/right"
+            },
+            {
+                "key" : "Super + W",
+                "description" : "Switch to window ..."
+            },
+            {
+                "key" : "Alt + Tab",
+                "description" : "Switch windows"
+            },
+            {
+                "key" : "Super + Tab",
+                "description" : "Switch applications"
+            }
+        ]
+    },
+    {
+        "name" : "Windows",
+        "shortcuts" : [
+            {
+                "key" : "Alt + Space",
+                "description" : "Activate menu"
+            },
+            {
+                "key" : "Alt + F4",
+                "description" : "Close Window"
+            },
+            {
+                "key" : "Alt + F7",
+                "description" : "Move window"
+            },
+            {
+                "key" : "Alt + F8",
+                "description" : "Resize window"
+            },
+            {
+                "key" : "Super + Ctrl + ↑",
+                "description" : "Maximize window"
+            },
+            {
+                "key" : "Super + Ctrl + ↓",
+                "description" : "Restore window"
+            },
+            {
+                "key" : "Super + Ctrl + ←/→",
+                "description" : "Split to left/right"
+            }
+        ]
+    },
+    {
+        "name" : "Screenshots",
+        "shortcuts" : [
+            {
+                "key" : "Print",
+                "description" : "Take screenshot"
+            },
+            {
+                "key" : "⇧ + Print",
+                "description" : "Take screenshot of an area"
+            },
+            {
+                "key" : "Alt + Print",
+                "description" : "Take screenshot of a window"
+            },
+            {
+                "key" : "Super + R",
+                "description" : "Start/stop screen recording"
+            }
+        ]
+    }
+]
