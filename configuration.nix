@@ -54,6 +54,7 @@ in
   # Networking
   networking = {
     hostName = "nixos";
+    useDHCP = false;
     # interfaces.wlp2s0.useDHCP = true;
   };
   services.avahi = {
