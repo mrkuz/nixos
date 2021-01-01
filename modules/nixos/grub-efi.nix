@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.grub-efi;
+  cfg = config.modules.grubEfi;
 in {
-  options.modules.grub-efi = {
+  options.modules.grubEfi = {
     enable = mkOption {
       default = false;
       type = types.bool;
@@ -15,7 +15,7 @@ in {
     boot.loader = {
       efi = {
         efiSysMountPoint = "/boot/efi";
-	canTouchEfiVariables = false;
+        canTouchEfiVariables = false;
       };
       grub = {
         device = "nodev";

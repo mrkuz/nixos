@@ -4,11 +4,11 @@
       "flake": false,
       "locked": {
         "narHash": "sha256-/DB6iKk4nve6YuFhfqXAFeX6Dmr1ew65cnDBgLd03p4=",
-        "path": "/home/user/nixos.git/credentials.nix",
+        "path": "/home/markus/etc/nixos/credentials.nix",
         "type": "path"
       },
       "original": {
-        "path": "/home/user/nixos.git/credentials.nix",
+        "path": "/home/markus/etc/nixos/credentials.nix",
         "type": "path"
       }
     },
@@ -16,11 +16,11 @@
       "flake": false,
       "locked": {
         "narHash": "sha256-r10irft+UOCRqAmS1Sg8UNWhPo7vMgjkmqBBOK9JiJM=",
-        "path": "/home/user/nixos.git/repos/doom.d",
+        "path": "/home/markus/etc/nixos/repos/doom.d",
         "type": "path"
       },
       "original": {
-        "path": "/home/user/nixos.git/repos/doom.d",
+        "path": "/home/markus/etc/nixos/repos/doom.d",
         "type": "path"
       }
     },
@@ -28,11 +28,11 @@
       "flake": false,
       "locked": {
         "narHash": "sha256-Q0cqBpz34VFBiMETQtBEoJce4unsyyoQm08VmAc4w4g=",
-        "path": "/home/user/nixos.git/repos/dotfiles",
+        "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
       "original": {
-        "path": "/home/user/nixos.git/repos/dotfiles",
+        "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       }
     },
@@ -74,7 +74,7 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-FwZH/et+yNTgBy518vJ6UGbDKe8m0CQM/ewXLpa4F34=",
+        "narHash": "sha256-lwhopToze8Kk7f2j3/tSN4F1ngkdQ6ZlyVCdEyvrayo=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },
