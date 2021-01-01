@@ -27,7 +27,7 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-Q0cqBpz34VFBiMETQtBEoJce4unsyyoQm08VmAc4w4g=",
+        "narHash": "sha256-eTuYIZE3tY3+qCQPFSIxxrPjt+JvGaTnsi2dZjjY9yU=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
@@ -38,11 +38,11 @@
     },
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1609488804,
-        "narHash": "sha256-x+YSVkwAJoe/VFI7wUmDbxpRpcUFHSeqTlngTSc7A7E=",
+        "lastModified": 1609517633,
+        "narHash": "sha256-heJIO+ccQrCr2qpnpckuRpi5AKhIGMNgVCz/YjsW+Zo=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "c686515f2723ecc7e5ffffe596475d59d80f5738",
+        "rev": "48680e98f1d790127b822a0ae4cd5c607dbafd36",
         "type": "github"
       },
       "original": {
@@ -74,7 +74,7 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-lwhopToze8Kk7f2j3/tSN4F1ngkdQ6ZlyVCdEyvrayo=",
+        "narHash": "sha256-N3pBkQRrbbdhy5q/Hu4hLH52JzHUk7mf5jimacRtDDY=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },
