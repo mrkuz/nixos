@@ -27,6 +27,7 @@ in {
       fi
 
       cd $HOME/.emacs.d
+      git fetch
       git checkout ${sources.doom-emacs.rev}
       ./bin/doom sync
       '';
