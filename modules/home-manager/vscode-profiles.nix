@@ -4,21 +4,26 @@ with lib;
 let
   cfg = config.modules.vscodeProfiles;
   createExtAttrs = name: extension: {
-    name = ".vscode/${name}/extensions/${extension.vscodeExtUniqueId}";
-    value = {
-      source = "${extension}/share/vscode/extensions/${extension.vscodeExtUniqueId}";
-      recursive = true;
-    };
+    name = "${name}-${extension.name}";
+    value = ''
+      ln -sfv ${extension} /tmp/extension.vsix
+      ${pkgs.vscode}/bin/code \
+        --user-data-dir "$HOME/.vscode/${name}" \
+        --extensions-dir "$HOME/.vscode/${name}/extensions" \
+        --install-extension /tmp/extension.vsix \
+        --force
+      rm /tmp/extension.vsix
+    '';
   };
   createProfileAttrs = configSource: profile:
     [
       {
-        name = ".vscode/${profile.name}/User/settings.json";
-        value = { source = "${configSource}/settings.json"; };
-      }
-      {
-        name = ".vscode/${profile.name}/User/keybindings.json";
-        value = { source = "${configSource}/keybindings.json"; };
+        name = "${profile.name}";
+        value = ''
+          [ -d "$HOME/.vscode/${profile.name}/User/" ] || mkdir -p "$HOME/.vscode/${profile.name}/User/"
+          install -m 665 ${configSource}/settings.json "$HOME/.vscode/${profile.name}/User/"
+          install -m 665 ${configSource}/keybindings.json "$HOME/.vscode/${profile.name}/User/"
+        '';
       }
     ] ++ map (createExtAttrs profile.name) profile.extensions;
 in {
@@ -36,6 +41,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.file = listToAttrs (concatLists (map (createProfileAttrs cfg.configSource) cfg.profiles));
+    home.activation = listToAttrs (concatLists (map (createProfileAttrs cfg.configSource) cfg.profiles));
   };
 }

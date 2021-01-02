@@ -1,16 +1,15 @@
 { pkgs, inputs, ... }:
 let
-  vscodeExtensions = with pkgs; [
-    vscode-extensions.ms-vsliveshare.vsliveshare
-    (callPackage ../../pkgs/vscode/bracket-pair-colorizer-2.nix {})
-    (callPackage ../../pkgs/vscode/vscode-emacs-friendly.nix {})
-    (callPackage ../../pkgs/vscode/vscode-theme-darcula.nix {})
-    (callPackage ../../pkgs/vscode/vscode-icons.nix {})
-    (callPackage ../../pkgs/vscode/vscodeintellicode.nix {})
-    (callPackage ../../pkgs/vscode/vscode-status-bar-format-toggle.nix {})
+  sources = import ../../nix/sources.nix;
+  vscodeExtensions = with sources; [
+    bracket-pair-colorizer-2
+    vscode-emacs-friendly
+    vscode-theme-darcula
+    vscode-icons
+    vscodeintellicode
+    vscode-status-bar-format-toggle
   ];
   hm = inputs.home-manager.lib.hm;
-  sources = import ../../nix/sources.nix;
 in {
   imports = [
     ../_all/home.nix
@@ -32,35 +31,35 @@ in {
       profiles = [
         {
           name = "Java";
-          extensions = with pkgs; [
-            (callPackage ../../pkgs/vscode/vscode-lombok.nix {})
-            (callPackage ../../pkgs/vscode/vscode-boot-dev-pack.nix {})
-            (callPackage ../../pkgs/vscode/vscode-xml.nix {})
-            (callPackage ../../pkgs/vscode/vscode-java-pack.nix {})
-            (callPackage ../../pkgs/vscode/sonarlint-vscode.nix {})
-            (callPackage ../../pkgs/vscode/java.nix {})
-            (callPackage ../../pkgs/vscode/vscode-java-debug.nix {})
-            (callPackage ../../pkgs/vscode/vscode-java-dependency.nix {})
-            (callPackage ../../pkgs/vscode/vscode-java-test.nix {})
-            (callPackage ../../pkgs/vscode/vscode-maven.nix {})
-            (callPackage ../../pkgs/vscode/vscode-spring-boot-dashboard.nix {})
-            (callPackage ../../pkgs/vscode/vscode-spring-boot.nix {})
+          extensions = with sources; [
+            vscode-lombok
+            vscode-boot-dev-pack
+            vscode-xml
+            vscode-java-pack
+            sonarlint-vscode
+            java
+            vscode-java-debug
+            vscode-java-dependency
+            vscode-java-test
+            vscode-maven
+            vscode-spring-boot-dashboard
+            vscode-spring-boot
           ] ++ vscodeExtensions;
         }
         {
           name = "JavaScript";
-          extensions = with pkgs; [
-            (callPackage ../../pkgs/vscode/vuejs-extension-pack.nix {})
-            (callPackage ../../pkgs/vscode/color-highlight.nix {})
+          extensions = with sources; [
+            vuejs-extension-pack
+            color-highlight
           ] ++ vscodeExtensions;
         }
         {
           name = "DevOps";
-          extensions = with pkgs; [
-            (callPackage ../../pkgs/vscode/terraform.nix {})
-            (callPackage ../../pkgs/vscode/vscode-docker.nix {})
-            (callPackage ../../pkgs/vscode/vscode-kubernetes-tools.nix {})
-            (callPackage ../../pkgs/vscode/vscode-ansible.nix {})
+          extensions = with sources; [
+            terraform
+            vscode-docker
+            vscode-kubernetes-tools
+            vscode-ansible
           ] ++ vscodeExtensions;
         }
       ];
@@ -100,7 +99,6 @@ in {
 
   programs.vscode = {
     enable = true;
-    extensions = vscodeExtensions;
   };
 
   programs.chromium = {
