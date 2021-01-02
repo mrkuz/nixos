@@ -23,6 +23,15 @@
         "rev": "0c9256411d6bdb6cfc920bcce2216d99ff28a0c5",
         "type": "git"
     },
+    "java": {
+        "name": "java",
+        "publisher": "redhat",
+        "sha256": "0hs45133kwpq8c2bp1gwpggf2xnbnkxrmswbivpk4x9fml8yw9rg",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
@@ -116,12 +125,39 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },
+    "vscode-java-debug": {
+        "name": "vscode-java-debug",
+        "publisher": "vscjava",
+        "sha256": "0dawszx8bclvn6qg9vagxhjfh8d2h9paas6775m6p182flq7ap38",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscode-java-dependency": {
+        "name": "vscode-java-dependency",
+        "publisher": "vscjava",
+        "sha256": "10i76bv1jhkpnv8v7xi4lwqsfvkzf5l1rzwixpklygnfwwzx5yjw",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
         "sha256": "1xx84qg1jvhdxlrr3iki5zaggzm25a41vpdkxjdbkzfq41l1w6p1",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscode-java-test": {
+        "name": "vscode-java-test",
+        "publisher": "vscjava",
+        "sha256": "0hyvdg3sdr5bmjjkx4p80vkckf8y4qwjlq9zx5a61nm8rib2krkg",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },
@@ -140,6 +176,33 @@
         "sha256": "1hc7p7an3yd2ssq1laixr0z8cn9yz7aq25hdw6k2fakgklzis6y6",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/GabrielBB/vsextensions/vscode-lombok/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscode-maven": {
+        "name": "vscode-maven",
+        "publisher": "vscjava",
+        "sha256": "12rk1v2jj8w2n6w2mm7a4ylw71y0pmc0zgbymjp1mn6rarriv9kg",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscode-spring-boot": {
+        "name": "vscode-spring-boot",
+        "publisher": "pivotal",
+        "sha256": "10wigxzi8gc2aqr35wlm8vddvjh2s7xp44xfijr3s92a3b5a80jm",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pivotal/vsextensions/vscode-spring-boot/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscode-spring-boot-dashboard": {
+        "name": "vscode-spring-boot-dashboard",
+        "publisher": "vscjava",
+        "sha256": "0m08v48p6554a1g7ynpzv1v0a6p5adaac95s8i07vp7y117g85a3",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-boot-dashboard/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },
@@ -167,6 +230,15 @@
         "sha256": "04rk7gy660saccqn89m93dzw3hkpkdj66sbsk1wb125bfignmq4c",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
+    "vscodeintellicode": {
+        "name": "vscodeintellicode",
+        "publisher": "visualstudioexptteam",
+        "sha256": "1l980w4r18613hzwvqgnzm9csi72r9ngyzl94p39rllpiqy7xrhi",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },

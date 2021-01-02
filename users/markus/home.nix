@@ -6,6 +6,7 @@ let
     (callPackage ../../pkgs/vscode/vscode-emacs-friendly.nix {})
     (callPackage ../../pkgs/vscode/vscode-theme-darcula.nix {})
     (callPackage ../../pkgs/vscode/vscode-icons.nix {})
+    (callPackage ../../pkgs/vscode/vscodeintellicode.nix {})
     (callPackage ../../pkgs/vscode/vscode-status-bar-format-toggle.nix {})
   ];
   hm = inputs.home-manager.lib.hm;
@@ -37,6 +38,13 @@ in {
             (callPackage ../../pkgs/vscode/vscode-xml.nix {})
             (callPackage ../../pkgs/vscode/vscode-java-pack.nix {})
             (callPackage ../../pkgs/vscode/sonarlint-vscode.nix {})
+            (callPackage ../../pkgs/vscode/java.nix {})
+            (callPackage ../../pkgs/vscode/vscode-java-debug.nix {})
+            (callPackage ../../pkgs/vscode/vscode-java-dependency.nix {})
+            (callPackage ../../pkgs/vscode/vscode-java-test.nix {})
+            (callPackage ../../pkgs/vscode/vscode-maven.nix {})
+            (callPackage ../../pkgs/vscode/vscode-spring-boot-dashboard.nix {})
+            (callPackage ../../pkgs/vscode/vscode-spring-boot.nix {})
           ] ++ vscodeExtensions;
         }
         {
