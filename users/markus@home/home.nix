@@ -16,6 +16,7 @@
    pkgs.imagemagick
    pkgs.html-tidy
    pkgs.mkvtoolnix-cli
+   pkgs.nodejs
    pkgs.potrace
    pkgs.protobuf
    # Applications
