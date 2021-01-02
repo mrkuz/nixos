@@ -27,7 +27,7 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-eTuYIZE3tY3+qCQPFSIxxrPjt+JvGaTnsi2dZjjY9yU=",
+        "narHash": "sha256-gbEB7NLjQAbrfLAaFRnzf+iUsBjwYm1Xkr0XXiQaUvo=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
@@ -74,7 +74,7 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-y7VEVCexXFa6BiQmiincRiNdi87+I4Ve46BLOTktlok=",
+        "narHash": "sha256-1aMpm180XyZhmwnHG7YD3eK4wjEdgz9pEMO7rmlnqCs=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },
