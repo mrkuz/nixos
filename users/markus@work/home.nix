@@ -27,7 +27,6 @@
    pkgs.postman
    pkgs.robo3t
    pkgs.skypeforlinux
-   pkgs.vscode
    pkgs.zoom-us
   ];
 }

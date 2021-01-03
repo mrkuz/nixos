@@ -30,6 +30,5 @@
    pkgs.spotify
    pkgs.steam
    pkgs.steam-run
-   pkgs.vscode
   ];
 }

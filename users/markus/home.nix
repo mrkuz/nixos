@@ -27,7 +27,6 @@ in {
     javaPackages.enable = true;
     vscodeProfiles = {
       enable = true;
-      configSource = "${inputs.dotfiles}/.config/Code/User";
       profiles = [
         {
           name = "Java";
@@ -95,10 +94,6 @@ in {
   home.file."/opt/reveal.js" = {
     source = sources.revealjs;
     recursive = true;
-  };
-
-  programs.vscode = {
-    enable = true;
   };
 
   programs.chromium = {
