@@ -22,9 +22,13 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
       setUp = name: nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         modules = [
           {
             _module.args.rev = self.rev or "dirty";

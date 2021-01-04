@@ -15,6 +15,16 @@ in {
     ../_all/home.nix
   ];
 
+  home.file."/" = {
+    source = inputs.dotfiles;
+    recursive = true;
+  };
+
+  home.file.".doom.d" = {
+    source = inputs.doomd;
+    recursive = true;
+  };
+
   modules = {
     bash.enable = true;
     cloudPackages.enable = true;
@@ -30,6 +40,7 @@ in {
       profiles = [
         {
           name = "Java";
+          alias = "jcode";
           extensions = with sources; [
             vscode-lombok
             vscode-boot-dev-pack
@@ -47,6 +58,7 @@ in {
         }
         {
           name = "JavaScript";
+          alias = "jscode";
           extensions = with sources; [
             vuejs-extension-pack
             color-highlight
@@ -54,6 +66,7 @@ in {
         }
         {
           name = "DevOps";
+          alias = "dcode";
           extensions = with sources; [
             terraform
             vscode-docker
@@ -63,16 +76,6 @@ in {
         }
       ];
     };
-  };
-
-  home.file."/" = {
-    source = inputs.dotfiles;
-    recursive = true;
-  };
-
-  home.file.".doom.d" = {
-    source = inputs.doomd;
-    recursive = true;
   };
 
   services.emacs = {
