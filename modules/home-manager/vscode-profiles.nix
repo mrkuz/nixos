@@ -6,7 +6,7 @@ let
   createActivation = profile:
     {
       name = "${profile.name}";
-      value = hm.dag.entryAfter [ "installPackages" ]
+      value = hm.dag.entryAfter [ "writeBoundary" ]
         ''
           [ -d "$HOME/.vscode/${profile.name}/User/" ] || mkdir -p "$HOME/.vscode/${profile.name}/User/"
           [ -e "$HOME/.vscode/${profile.name}/User/settings.json" ] || install -m 665 "$HOME/.config/Code/User/settings.json" "$HOME/.vscode/${profile.name}/User/"

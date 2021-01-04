@@ -20,7 +20,7 @@ in {
       sqlite
     ];
 
-    home.activation.doomEmacs = hm.dag.entryAfter [ "installPackages" ]
+    home.activation.doomEmacs = hm.dag.entryAfter [ "writeBoundary" ]
       ''
       if [ ! -d $HOME/.emacs.d ]; then
         git clone --depth 1 ${sources.doom-emacs.repo} $HOME/.emacs.d

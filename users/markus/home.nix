@@ -112,7 +112,7 @@ in {
 
   programs.fzf.enable = true;
 
-  home.activation.activate = hm.dag.entryAfter [ "installPackages" ]
+  home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
     ''
     # Create directories
     [ -e $HOME/bin ] || mkdir $HOME/bin

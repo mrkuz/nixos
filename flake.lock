@@ -27,7 +27,7 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-y52jAwK0Ag9DWzx6Y4E44ivdLYMgEMcbObozoAlGB9w=",
+        "narHash": "sha256-TepsQ8kma8vGadwvCjGV8hFn+E2LwBG0y8tAvU2YDHU=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
