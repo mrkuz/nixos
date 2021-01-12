@@ -14,7 +14,7 @@ in {
   config = mkIf cfg.enable {
     home.packages = [
       pkgs.gradle
-      pkgs.jdk14
+      pkgs.jdk
       pkgs.maven
     ];
   };

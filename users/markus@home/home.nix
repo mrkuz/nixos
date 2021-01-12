@@ -14,6 +14,7 @@
    pkgs.gitAndTools.gitFull
    pkgs.gocr
    pkgs.imagemagick
+   pkgs.jq
    pkgs.html-tidy
    pkgs.mkvtoolnix-cli
    pkgs.nodejs

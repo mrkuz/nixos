@@ -14,7 +14,7 @@ function ask() {
   done
 }
 
-BRANCH="nixos-unstable"
+BRANCH="nixos-unstable-small"
 REMOTE="origin"
 NIXPKGS="/nix/nixpkgs"
 
