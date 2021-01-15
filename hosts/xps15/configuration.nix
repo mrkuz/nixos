@@ -24,8 +24,6 @@
     x11.enable = true;
   };
 
-  boot.tmpOnTmpfs = true;
-
   hardware.opengl = {
     extraPackages = with pkgs; [
       vaapiIntel

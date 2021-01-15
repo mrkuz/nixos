@@ -21,6 +21,7 @@
   ];
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.cleanTmpDir = true;
 
   networking.useDHCP = false;
   time.timeZone = "Europe/Vienna";
