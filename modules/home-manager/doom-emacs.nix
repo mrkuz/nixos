@@ -27,9 +27,11 @@ in {
       fi
 
       cd $HOME/.emacs.d
-      git fetch
-      git checkout ${sources.doom-emacs.rev}
-      ./bin/doom sync
+      if [ $(git rev-parse HEAD) != ${sources.doom-emacs.rev} ]; then
+        git fetch
+        git checkout ${sources.doom-emacs.rev}
+        ./bin/doom sync
+      fi
       '';
   };
 }
