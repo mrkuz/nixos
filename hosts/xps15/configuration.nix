@@ -39,6 +39,7 @@
 
   services.smartd.enable = true;
   services.thermald.enable = true;
+  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
 
   virtualisation = {
     libvirtd.enable = true;
