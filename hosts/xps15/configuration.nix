@@ -40,6 +40,7 @@
   services.smartd.enable = true;
   services.thermald.enable = true;
   systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
+  systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   virtualisation = {
     libvirtd.enable = true;

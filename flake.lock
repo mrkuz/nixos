@@ -27,7 +27,7 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-h7BOLLZQCI33AU9h1jQZnr5Xh3plH4p2xv2QbCqtRTk=",
+        "narHash": "sha256-VaBgs2XUxEmcamsaSiB9N4bjlKXwf+3GC/+sx1yl8zA=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
@@ -38,11 +38,11 @@
     },
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1611245586,
-        "narHash": "sha256-0r9rJyivMIxn303zAmoh5nX3vkE3lznhPAoPJl9u9G4=",
+        "lastModified": 1612066691,
+        "narHash": "sha256-k7io7REbu6JoflFCTY2Z6kUuTnZdc+HH1ldWGTi8ZbE=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "a2d42ca78eefa726690d31fb304e347b82201feb",
+        "rev": "53351a963ba040b64d423a525bde1718b590b02f",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1611168555,
-        "narHash": "sha256-hYdfa/4DPj916E9zBtCx31vDWwie8QOMOKnGXhBay38=",
+        "lastModified": 1611994408,
+        "narHash": "sha256-9lF/96lCtwJXE9r9r3gVbFX4tVa85nyG93oRfweDkEo=",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "9d680ec66280d7843164f12be3d1f182b27cb198",
+        "rev": "98d030f723e0a4a446e56b276573efb8bef422f5",
         "type": "github"
       },
       "original": {
@@ -74,7 +74,7 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-HQVahjctecnSS0Tnedyz4tFvGj6N1XtKXur7eCNllEw=",
+        "narHash": "sha256-7HTppbAaHqG7XmNO0PMlfXNstHluvOiiZ3NmuOxe54c=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },
