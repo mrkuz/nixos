@@ -15,6 +15,7 @@
    pkgs.imagemagick
    pkgs.html-tidy
    pkgs.mongodb-tools
+   pkgs.mongodb-4_2
    pkgs.potrace
    pkgs.protobuf
    # Applications
@@ -27,6 +28,7 @@
    pkgs.postman
    pkgs.robo3t
    pkgs.skypeforlinux
+   pkgs.wkhtmltopdf
    pkgs.zoom-us
   ];
 }
