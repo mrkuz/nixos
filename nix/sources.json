@@ -233,6 +233,15 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },
+    "vscode-yaml": {
+        "name": "vscode-yaml",
+        "publisher": "redhat",
+        "sha256": "05n7nzxbcjs8lz7mbynfllfzqnzy0zqvcc4l8jzfj0vxcvjhnbhh",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
         "publisher": "visualstudioexptteam",

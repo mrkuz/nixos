@@ -72,6 +72,7 @@ in {
             vscode-docker
             vscode-kubernetes-tools
             vscode-ansible
+            vscode-yaml
           ] ++ vscodeExtensions;
         }
       ];
