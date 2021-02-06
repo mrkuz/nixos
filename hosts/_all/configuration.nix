@@ -34,6 +34,9 @@
   systemd.services.NetworkManager-wait-online.enable = false;
   networking.dhcpcd.wait = "background";
 
+  # Use cgroups v1
+  systemd.enableUnifiedCgroupHierarchy = false;
+
   documentation = {
     doc.enable = false;
     info.enable = false;
