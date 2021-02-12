@@ -16,6 +16,7 @@ in {
       pkgs.gradle
       pkgs.jdk
       pkgs.maven
+      pkgs.visualvm
     ];
   };
 }
