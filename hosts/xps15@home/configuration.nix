@@ -42,6 +42,7 @@
 
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
+    libreoffice
     thunderbird
     kodi
   ];

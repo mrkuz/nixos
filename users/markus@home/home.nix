@@ -22,7 +22,6 @@
    pkgs.protobuf
    # Applications
    pkgs.android-studio
-   pkgs.google-chrome
    pkgs.jetbrains.idea-community
    pkgs.netbeans
    pkgs.postman
