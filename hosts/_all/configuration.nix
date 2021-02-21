@@ -12,8 +12,11 @@
     ../../modules/nixos/emacs.nix
     ../../modules/nixos/gnome3.nix
     ../../modules/nixos/grub-efi.nix
+    ../../modules/nixos/kvm.nix
+    ../../modules/nixos/libreoffice.nix
     ../../modules/nixos/nvidia.nix
     ../../modules/nixos/opengl.nix
+    ../../modules/nixos/pipewire.nix
     ../../modules/nixos/resolved.nix
     ../../modules/nixos/virtualbox.nix
     ../../modules/nixos/wayland.nix

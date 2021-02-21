@@ -6,6 +6,16 @@
     ../xps15/configuration.nix
   ];
 
+  modules = {
+    libreoffice.enable = true;
+    # pipewire.enable = true;
+  };
+
+  boot.loader.systemd-boot = {
+    enable = true;
+    configurationLimit = 3;
+  };
+
   networking.hostName = "nixos";
 
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
@@ -42,9 +52,6 @@
 
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
-    libreoffice
-    hunspellDicts.en_US
-    hunspellDicts.de_AT
     thunderbird
     kodi
   ];

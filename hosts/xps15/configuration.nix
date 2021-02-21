@@ -16,8 +16,11 @@
     emacs.enable = true;
     gnome3.enable = true;
     grubEfi.enable = true;
+    kvm.enable = true;
+    # libreoffice.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
+    # pipewire.enable = true;
     resolved.enable = true;
     virtualbox.enable = true;
     wayland.enable = true;
@@ -40,7 +43,5 @@
   services.smartd.enable = true;
   services.thermald.enable = true;
 
-  virtualisation = {
-    libvirtd.enable = true;
-  };
+  # virtualisation.libvirtd.enable = true;
 }
