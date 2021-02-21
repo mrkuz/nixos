@@ -31,13 +31,13 @@
   modules = {
     bash.enable = true;
     # cloudPackages.enable = true;
-    conky.enable = true;
+    # conky.enable = true;
     # javaPackages.enable = true;
-    dconf = {
-      enable = true;
-      iniFile = ../markus/files/dconf.ini;
-    };
-    doomEmacs.enable = true;
+    # dconf = {
+    #  enable = true;
+    #  iniFile = ../markus/files/dconf.ini;
+    # };
+    # doomEmacs.enable = true;
     # vscodeProfiles.enable = true;
   };
 }

@@ -31,7 +31,6 @@
 
   users = {
     groups.user.gid = 1000;
-    groups.markus.gid = 1001;
     users = {
       user = {
         uid = 1000;
@@ -42,24 +41,10 @@
         password = credentials.user.password;
         shell = pkgs.fish;
       };
-      markus = {
-        uid = 1001;
-        description = "Markus";
-        isNormalUser = true;
-        group = "markus";
-        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd"  "lp" "scanner" "vboxusers" ];
-        hashedPassword = credentials."markus@home".hashedPassword;
-        shell = pkgs.fish;
-      };
     };
   };
 
   home-manager.users.user = import ../../users/user/home.nix {
-    inherit pkgs;
-    inherit inputs;
-  };
-
-  home-manager.users.markus = import (./. + "/../../users/markus@home/home.nix") {
     inherit pkgs;
     inherit inputs;
   };
@@ -73,13 +58,13 @@
     compatibility.enable = true;
     # docker.enable = true;
     emacs.enable = true;
-    gnome3.enable = true;
+    # gnome3.enable = true;
     # grubEfi.enable true;
     # nvidia.enable = true;
     # opengl.enable = true;
     # resolved.enable = true;
     # virtualbox.enable = true;
     # wayland.enable = true;
-    x11.enable = true;
+    # x11.enable = true;
   };
 }
