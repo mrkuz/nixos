@@ -16,9 +16,9 @@
    pkgs.imagemagick
    pkgs.jq
    pkgs.html-tidy
-   pkgs.mkvtoolnix-cli
+   # pkgs.mkvtoolnix-cli
    pkgs.nodejs
-   pkgs.potrace
+   # pkgs.potrace
    pkgs.protobuf
    # Applications
    pkgs.android-studio

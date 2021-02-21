@@ -18,7 +18,7 @@ in {
 
     environment.systemPackages = with pkgs; [
       docker-compose
-      x11docker
+      # x11docker
     ];
   };
 }

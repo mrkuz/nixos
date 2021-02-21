@@ -24,17 +24,17 @@ in {
       bridge-utils
       cifs-utils
       curl
-      curlftpfs
+      # curlftpfs
       dmidecode
       dnsmasq
       dos2unix
-      ecryptfs
+      # ecryptfs
       efibootmgr
       exfat
       file
       git
       # home-manager-package
-      htop
+      # htop
       inetutils
       iproute
       lm_sensors
@@ -52,7 +52,7 @@ in {
       psmisc
       pwgen
       python38Packages.cgroup-utils
-      python38Packages.wakeonlan
+      # python38Packages.wakeonlan
       rclone
       ripgrep
       rsync

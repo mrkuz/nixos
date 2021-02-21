@@ -12,7 +12,7 @@
   ];
 
   modules = {
-      hideApplications = {
+    hideApplications = {
       enable = true;
       names = [
         "android-file-transfer"

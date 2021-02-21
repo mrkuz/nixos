@@ -42,7 +42,7 @@
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
-  hardware.steam-hardware.enable = true;
+  # hardware.steam-hardware.enable = true;
 
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [

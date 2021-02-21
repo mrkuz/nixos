@@ -16,7 +16,7 @@
     emacs.enable = true;
     gnome3.enable = true;
     grubEfi.enable = true;
-    kvm.enable = true;
+    # kvm.enable = true;
     # libreoffice.enable = true;
     nvidia.enable = true;
     opengl.enable = true;

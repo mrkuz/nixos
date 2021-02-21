@@ -20,7 +20,7 @@ in {
     environment.systemPackages = with pkgs; [
       xclip
       xorg.xkill
-      xpra
+      # xpra
     ];
   };
 }
