@@ -14,15 +14,29 @@
     efi.canTouchEfiVariables = true;
   };
 
+  systemd.network = {
+    enable = true;
+    networks = {
+      "01-nat" = {
+        matchConfig = {
+	        Name = "enp0s3";
+	      };
+	      DHCP = "yes";
+      };
+      "02-host-only" = {
+        matchConfig = {
+	        Name = "enp0s8";
+	      };
+        address = [
+          "192.168.56.101/24"
+        ];
+      };
+    };
+  };
+
   networking = {
     hostName = "virtualbox";
-    interfaces = {
-      enp0s3.useDHCP = true;
-      enp0s8.ipv4.addresses = [ {
-        address = "192.168.56.101";
-        prefixLength = 24;
-      } ];
-    };
+    dhcpcd.enable = false;
   };
 
   services.openssh = {
@@ -62,7 +76,7 @@
     # grubEfi.enable true;
     # nvidia.enable = true;
     # opengl.enable = true;
-    # resolved.enable = true;
+    resolved.enable = true;
     # virtualbox.enable = true;
     # wayland.enable = true;
     # x11.enable = true;
