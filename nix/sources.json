@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "cf5b7adb6352ff17c00d24febe4a4545c3a1170b",
+        "rev": "47925933dfbeeedc5601b0b83f49edcbd974fb21",
         "type": "git"
     },
     "java": {
@@ -101,7 +101,7 @@
     "vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "1l7pm3s5kbf2vark164ykz4qbpa1ac9ls691hham36f6v91dmff9",
+        "sha256": "0kryrvs1gm2d3kj378gsszhn4dkkgv34vir4gky7347jw2rmg7rb",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -164,7 +164,7 @@
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
         "publisher": "ms-kubernetes-tools",
-        "sha256": "1ax5jg3znz2zjbhrk6wirrn8vld6813xp4i6jdddcg67bx3s7wn3",
+        "sha256": "0zdhyy8xpv12dgs3s14cidz0vxcjd75q3k9gh68gl9x81sc3swwr",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
