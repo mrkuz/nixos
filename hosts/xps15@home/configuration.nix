@@ -43,6 +43,8 @@
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
     libreoffice
+    hunspellDicts.en_US
+    hunspellDicts.de_AT
     thunderbird
     kodi
   ];

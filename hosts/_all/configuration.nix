@@ -20,7 +20,7 @@
     ../../modules/nixos/x11.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.cleanTmpDir = true;
   boot.consoleLogLevel = 0;
   boot.kernelParams = [ "udev.log_priority=3" ];
