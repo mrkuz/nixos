@@ -37,6 +37,10 @@
   # Use cgroups v1
   systemd.enableUnifiedCgroupHierarchy = false;
 
+  # systemd configuration
+  systemd.additionalUpstreamSystemUnits = [ "debugshell.service" ];
+  systemd.extraConfig = "DefaultTimeoutStopSec=30s";
+
   documentation = {
     doc.enable = false;
     info.enable = false;

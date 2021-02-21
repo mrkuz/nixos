@@ -7,7 +7,7 @@
 
   modules = {
     android.enable = true;
-    ansible.enable = true;
+    # ansible.enable = true;
     avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
@@ -39,8 +39,6 @@
 
   services.smartd.enable = true;
   services.thermald.enable = true;
-  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
-  systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   virtualisation = {
     libvirtd.enable = true;
