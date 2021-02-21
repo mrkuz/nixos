@@ -8,12 +8,6 @@
 
   modules = {
     libreoffice.enable = true;
-    # pipewire.enable = true;
-  };
-
-  boot.loader.systemd-boot = {
-    enable = true;
-    configurationLimit = 3;
   };
 
   networking.hostName = "nixos";
