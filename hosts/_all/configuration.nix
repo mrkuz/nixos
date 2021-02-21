@@ -38,7 +38,7 @@
   systemd.enableUnifiedCgroupHierarchy = false;
 
   # systemd configuration
-  systemd.additionalUpstreamSystemUnits = [ "debugshell.service" ];
+  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   documentation = {
