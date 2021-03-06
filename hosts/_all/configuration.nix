@@ -32,16 +32,10 @@
   time.timeZone = "Europe/Vienna";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Speed up boot
+  # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;
   networking.dhcpcd.wait = "background";
-
-  # Use cgroups v1
-  systemd.enableUnifiedCgroupHierarchy = false;
-
-  # systemd configuration
-  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   documentation = {

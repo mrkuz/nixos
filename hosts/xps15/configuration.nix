@@ -27,6 +27,11 @@
     x11.enable = true;
   };
 
+  # Use cgroups v1
+  systemd.enableUnifiedCgroupHierarchy = false;
+
+  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
+
   hardware.opengl = {
     extraPackages = with pkgs; [
       vaapiIntel

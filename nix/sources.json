@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "6cb5c381b826535520f0bcfe15439a2505aa9d57",
+        "rev": "5d9efe89b32579f9e5043b524963915c516e3bad",
         "type": "git"
     },
     "java": {
@@ -68,7 +68,7 @@
     "switcher": {
         "branch": "master",
         "repo": "https://github.com/daniellandau/switcher",
-        "rev": "94cc0fbdccaa791831d9d8cb7d03d5f3957ca053",
+        "rev": "b7caffdf462957f7c14cd1eba67162382d570dc8",
         "type": "git"
     },
     "terraform": {
