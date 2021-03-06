@@ -12,6 +12,7 @@
   home.packages = [
    # Miscellaneous
    pkgs.gitAndTools.gitFull
+   pkgs.go
    pkgs.gocr
    pkgs.imagemagick
    pkgs.jq
@@ -20,6 +21,7 @@
    pkgs.nodejs
    # pkgs.potrace
    pkgs.protobuf
+   pkgs.python3
    # Applications
    pkgs.android-studio
    pkgs.jetbrains.idea-community

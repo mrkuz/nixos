@@ -16,6 +16,7 @@
    pkgs.html-tidy
    pkgs.mongodb-tools
    pkgs.mongodb-4_2
+   pkgs.mysql
    pkgs.potrace
    pkgs.protobuf
    # Applications
