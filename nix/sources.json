@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "1e7fb8b915592e10fb4c0ed924966212979b9e18",
+        "rev": "fe6981b24541c0062b809d6d4973bb6771d00c00",
         "type": "git"
     },
     "java": {
@@ -47,7 +47,7 @@
     "revealjs": {
         "branch": "master",
         "repo": "https://github.com/hakimel/reveal.js",
-        "rev": "0582f57517c97a4c7bfeb58762138c78883f94c5",
+        "rev": "cf8e64bd8504737912b39e4153390cffbf443ed7",
         "type": "git"
     },
     "shortcuts-gnome-extension": {
