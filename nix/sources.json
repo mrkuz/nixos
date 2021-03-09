@@ -146,7 +146,7 @@
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "1xx84qg1jvhdxlrr3iki5zaggzm25a41vpdkxjdbkzfq41l1w6p1",
+        "sha256": "1mn8wqhsxkrvzzlan5nqkryb3rsz5bxnq0b180960i493273fkw4",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -155,7 +155,7 @@
     "vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "1cfjzc53dv2paidrfvllk6m0k1fdfaz47wsdz59aadn8ga484672",
+        "sha256": "1ry2rhk79zhyslqccbf50y067plgpmf6n0yalzmd9sbm4a0vbs3q",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -182,7 +182,7 @@
     "vscode-maven": {
         "name": "vscode-maven",
         "publisher": "vscjava",
-        "sha256": "0f3cq09hjds3rrpbyijm4z1fwy92l62cdbr8nkb3sayjxskci39q",
+        "sha256": "11s16jg2yr888hikb6p8q2lm8jra0gbzg3msmzdzlbk3ipy6wnim",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
