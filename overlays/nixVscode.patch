@@ -1,0 +1,12 @@
+diff --git a/src/libstore/filetransfer.cc b/src/libstore/filetransfer.cc
+index 8ea5cdc9d..7eb5e02a0 100644
+--- a/src/libstore/filetransfer.cc
++++ b/src/libstore/filetransfer.cc
+@@ -116,6 +116,7 @@ struct curlFileTransfer : public FileTransfer
+             for (auto it = request.headers.begin(); it != request.headers.end(); ++it){
+                 requestHeaders = curl_slist_append(requestHeaders, fmt("%s: %s", it->first, it->second).c_str());
+             }
++            requestHeaders = curl_slist_append(requestHeaders, "Cookie: Gallery-Service-UserIdentifier=53854b7b-47c0-44de-b33e-ccd858a2fa08");
+         }
+ 
+         ~TransferItem()
