@@ -20,13 +20,13 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "5d9efe89b32579f9e5043b524963915c516e3bad",
+        "rev": "1e7fb8b915592e10fb4c0ed924966212979b9e18",
         "type": "git"
     },
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "0angi2c22bqni7cymcsxsvr2p4735xa204f00153i2xmsnfw4y3i",
+        "sha256": "0xb9brki4s00piv4kqgz6idm16nk6x1j6502jljz7y9pif38z32y",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -74,7 +74,7 @@
     "terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "1zg90x2asl6gakd2w8fn4imllqgrzdb1dn3728s63blmml42a1xp",
+        "sha256": "0lpsng7rd88ppjybmypzw42czr6swwin5cyl78v36z3wjwqx26xp",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -137,7 +137,7 @@
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
         "publisher": "vscjava",
-        "sha256": "0prd2j01j23a8rfdiw47idf1hq6lx07zqjwfpc2rbclzx18sz58n",
+        "sha256": "0nwgrvjziz4m136j9n0vxrrpynrxjxygl011ihxnj2600pq7qbqg",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
@@ -236,7 +236,7 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "02n1pfn80c2sd0chipgrpc668kvc3jjj5mza6ywb7ygl7whqbby8",
+        "sha256": "0fvc33gmyskvd7hgar5xnwck42bc8fbdyx1i7fqmnkk69k1yjd3a",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
