@@ -41,7 +41,7 @@ sudo git pull
 popd
 
 git submodule update --recursive --remote
-nix flake update --recreate-lock-file
+nix flake update
 git diff flake.lock
 niv update
 git diff nix/sources.json

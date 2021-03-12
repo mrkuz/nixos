@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "fe6981b24541c0062b809d6d4973bb6771d00c00",
+        "rev": "d667a2a2929c758193286c5888ff499ca2c4a31e",
         "type": "git"
     },
     "java": {

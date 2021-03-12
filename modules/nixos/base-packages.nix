@@ -37,6 +37,7 @@ in {
       # htop
       inetutils
       iproute
+      jq
       lm_sensors
       lzip
       mkpasswd
