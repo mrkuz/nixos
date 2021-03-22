@@ -15,6 +15,7 @@
    pkgs.go
    pkgs.gocr
    pkgs.imagemagick
+   pkgs.hey
    pkgs.html-tidy
    # pkgs.mkvtoolnix-cli
    pkgs.nodejs
