@@ -35,9 +35,9 @@
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
             nixpkgs.overlays = [
-	      inputs.emacs-overlay.overlay
-	      (import ./overlays/nixFlakes.nix)
-	    ];
+              inputs.emacs-overlay.overlay
+              (import ./overlays/nixFlakes.nix)
+            ];
           }
           inputs.home-manager.nixosModules.home-manager
           (./hosts + "/${name}" + /configuration.nix)

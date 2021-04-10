@@ -4,4 +4,4 @@ if [ $# -ne 1 ]; then
   exit 1;
 fi
 
-sudo nixos-rebuild -vv --flake ".#$1" switch
+sudo nixos-rebuild -vv --keep-going -j 2 --flake ".#$1" switch

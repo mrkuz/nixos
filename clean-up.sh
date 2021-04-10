@@ -2,7 +2,7 @@
 
 set -e
 
-KEEP_GENERATIONS="2"
+KEEP_GENERATIONS="1"
 
 nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/$USER/home-manager
 nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/$USER/channels

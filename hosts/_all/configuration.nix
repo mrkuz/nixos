@@ -54,6 +54,9 @@
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
+      narinfo-cache-positive-ttl = 3600
+      auto-optimise-store = true
+      repeat = 0
     '';
 
     binaryCaches = [
