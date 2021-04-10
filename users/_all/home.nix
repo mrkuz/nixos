@@ -18,6 +18,7 @@
         "android-file-transfer"
         "conky"
         "cups"
+        "fish"
         "hplip"
         "htop"
         "nixos-manual"
