@@ -67,8 +67,9 @@ in {
       gnomeExtensions.dash-to-panel
       gnomeExtensions.impatience
       gnomeExtensions.window-is-ready-remover
-      (callPackage ../../pkgs/gnome3/switcher.nix {})
       (callPackage ../../pkgs/gnome3/shortcuts.nix {})
+      (callPackage ../../pkgs/gnome3/straight-top-bar.nix {})
+      (callPackage ../../pkgs/gnome3/switcher.nix {})
       # Ubuntu look & feel
       yaru-theme
     ];

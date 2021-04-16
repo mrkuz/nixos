@@ -65,6 +65,18 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
     },
+    "straight-top-bar": {
+        "branch": "master",
+        "description": "GNOME Shell extensions",
+        "homepage": "https://peclu.net",
+        "owner": "jpec",
+        "repo": "gnome-shell-extensions",
+        "rev": "dcceb8c1f397d1e3f900b7c7d111039ddba72741",
+        "sha256": "1abfybr0w172whdlvi7wm4q8dl98gri9igm6wfmg2q13yaxnrw3l",
+        "type": "tarball",
+        "url": "https://github.com/jpec/gnome-shell-extensions/archive/dcceb8c1f397d1e3f900b7c7d111039ddba72741.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "switcher": {
         "branch": "master",
         "repo": "https://github.com/daniellandau/switcher",
