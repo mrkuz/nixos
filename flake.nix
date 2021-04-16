@@ -42,7 +42,8 @@
             _module.args.pkgs-local = pkgs-local;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
-              (import ./overlays/nixFlakes.nix)
+              (import ./overlays/nixFlakes)
+              (import ./overlays/gnome-terminal)
             ];
           }
           inputs.home-manager.nixosModules.home-manager

@@ -2,8 +2,8 @@ self: super:
 {
   nixFlakes = super.nixFlakes.overrideAttrs (old: {
     patches = (old.patches or []) ++ [
-      ./nixFlakes.patch
-      ./nixVscode.patch
+      ./subpaths.patch
+      ./vscode.patch
     ];
   });
 }
