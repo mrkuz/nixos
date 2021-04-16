@@ -27,7 +27,7 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-cXqSyPYvUW9SbDKuooCqDlPZ+Iu3Eeec50537R9qWJc=",
+        "narHash": "sha256-kaVAw3OsIV6yBo62HE1AursKIwWs/cSDXMIpzhrrpQk=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },
@@ -38,11 +38,11 @@
     },
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1618077757,
-        "narHash": "sha256-117/IcsuzKkgA+duqYUNHQ3T3h2T97Xl5Q4+zHE/EsM=",
+        "lastModified": 1618537271,
+        "narHash": "sha256-owKecDtyi+VGgxEhBqDRRlx/gI75OE57OTHtrhrALsE=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "ef0447c0edd403e798816b91f197ce59b5ab8de6",
+        "rev": "119b923e4da2b716e46dce7aeade32576a282427",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1618041827,
-        "narHash": "sha256-17Fzc8rmT6HOarCp+8k9RhmgMorNtzTk/rzew+FqHrA=",
+        "lastModified": 1618469593,
+        "narHash": "sha256-fNdt+Q3irnT3pId7PKSSVeR8/9inBrAEg4gpItoRowU=",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "f567ea8228e0ce718871d7346e444dd15ad702e5",
+        "rev": "ebbbd4f2b50703409543941e7445138dc1e7392e",
         "type": "github"
       },
       "original": {
@@ -74,7 +74,22 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-VKug+xE/OZ8zO7TPzPok/fdp24YSG5MJ9XOSmezAXGQ=",
+        "lastModified": 1618343055,
+        "narHash": "sha256-yux3woyNtMt6ynYRq7+DYe19CC+SoI/LJW+zSJd0UOs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e019872af81e4013fd518fcacfba74b1de21a50e",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-local": {
+      "locked": {
+        "narHash": "sha256-bZ2VyLZidRGldkwfNkx9stLxwFmONCU6ljD+fd+buzE=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },
@@ -90,7 +105,8 @@
         "dotfiles": "dotfiles",
         "emacs-overlay": "emacs-overlay",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-local": "nixpkgs-local"
       }
     }
   },

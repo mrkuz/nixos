@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "/nix/nixpkgs/";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-local.url = "/nix/nixpkgs/";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
@@ -20,10 +21,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-local, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      pkgs-local = import nixpkgs-local {
         inherit system;
         config.allowUnfree = true;
       };
@@ -34,6 +39,7 @@
             _module.args.rev = self.rev or "dirty";
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
+            _module.args.pkgs-local = pkgs-local;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
               (import ./overlays/nixFlakes.nix)
