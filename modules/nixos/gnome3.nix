@@ -74,7 +74,7 @@ in {
       yaru-theme
       # More themes
       (callPackage ../../pkgs/vimix-gtk-themes {})
-      (callPackage ../../pkgs/vimix-icon-theme {})
+      (callPackage ../../pkgs/flatery-icon-theme {})
     ];
 
     # Fonts

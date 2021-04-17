@@ -23,6 +23,18 @@
         "rev": "06089340f890fa3aa1a50ba560613790b6cabedd",
         "type": "git"
     },
+    "flatery-icon-theme": {
+        "branch": "master",
+        "description": "Flatery is icon theme for linux in flat style licensed under the CC BY-NC-SA 3.0 ",
+        "homepage": null,
+        "owner": "cbrnix",
+        "repo": "Flatery",
+        "rev": "b46e4133e35a53ad4d549e76a9fbaea03ce3d5c6",
+        "sha256": "02azxan02i5l5pccdam6kva7nn1j0pq9xr5fvsf75p0i4qlg742y",
+        "type": "tarball",
+        "url": "https://github.com/cbrnix/Flatery/archive/b46e4133e35a53ad4d549e76a9fbaea03ce3d5c6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "java": {
         "name": "java",
         "publisher": "redhat",
