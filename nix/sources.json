@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "193382e2e32011c06a1b5018f5581851437a6e3b",
+        "rev": "06089340f890fa3aa1a50ba560613790b6cabedd",
         "type": "git"
     },
     "java": {
@@ -91,6 +91,30 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
+    },
+    "vimix-gtk-themes": {
+        "branch": "master",
+        "description": "Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell etc.",
+        "homepage": "https://vinceliuice.github.io/",
+        "owner": "vinceliuice",
+        "repo": "vimix-gtk-themes",
+        "rev": "6fdfc45642fc6bf45d656596d89a75fe1abff595",
+        "sha256": "1wmvr4yrc4ivb4x008nldrkcfx2dw7wcddhbj7mfp5j5aa5zxap5",
+        "type": "tarball",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/6fdfc45642fc6bf45d656596d89a75fe1abff595.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vimix-icon-theme": {
+        "branch": "master",
+        "description": "vimix-icon-theme",
+        "homepage": null,
+        "owner": "vinceliuice",
+        "repo": "vimix-icon-theme",
+        "rev": "2d72cf4b185dadf72bffad481e39826e5c556b79",
+        "sha256": "1imy5f5l0aiz3m36qfqb31n1y9as3y96bjg17rfcyjv85s0mzgx3",
+        "type": "tarball",
+        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/2d72cf4b185dadf72bffad481e39826e5c556b79.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {
         "name": "vscode-ansible",

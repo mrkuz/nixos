@@ -72,6 +72,9 @@ in {
       (callPackage ../../pkgs/gnome3/switcher.nix {})
       # Ubuntu look & feel
       yaru-theme
+      # More themes
+      (callPackage ../../pkgs/vimix-gtk-themes {})
+      (callPackage ../../pkgs/vimix-icon-theme {})
     ];
 
     # Fonts
@@ -79,6 +82,12 @@ in {
       dejavu_fonts
       fira-code
       fira-code-symbols
+      inconsolata
+      # google-fonts
+      # mplus-outline-fonts
+      # noto-fonts
+      roboto
+      roboto-mono
       source-code-pro
       ubuntu_font_family
     ];
