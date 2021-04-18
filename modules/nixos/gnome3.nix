@@ -63,18 +63,16 @@ in {
       vlc
       # Gnome extensions
       gnomeExtensions.appindicator
-      gnomeExtensions.dash-to-dock
       gnomeExtensions.dash-to-panel
-      gnomeExtensions.impatience
       gnomeExtensions.window-is-ready-remover
+      (callPackage ../../pkgs/gnome3/dynamic-panel-transparency.nix {})
+      (callPackage ../../pkgs/gnome3/just-perfection.nix {})
       (callPackage ../../pkgs/gnome3/shortcuts.nix {})
-      (callPackage ../../pkgs/gnome3/straight-top-bar.nix {})
       (callPackage ../../pkgs/gnome3/switcher.nix {})
       # Ubuntu look & feel
       yaru-theme
       # More themes
       (callPackage ../../pkgs/vimix-gtk-themes {})
-      (callPackage ../../pkgs/flatery-icon-theme {})
     ];
 
     # Fonts

@@ -23,6 +23,18 @@
         "rev": "06089340f890fa3aa1a50ba560613790b6cabedd",
         "type": "git"
     },
+    "dynamic-panel-transparency": {
+        "branch": "main",
+        "description": "Adds Transparency To The Gnome Shell Panel",
+        "homepage": null,
+        "owner": "ewlsh",
+        "repo": "dynamic-panel-transparency",
+        "rev": "f9e720e98e40c7a2d87928d09a7313c9ef2e832c",
+        "sha256": "0njykxjiwlcmk0q8bsgqaznsryaw43fspfs6rzsjjz5p0xaq04nw",
+        "type": "tarball",
+        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/f9e720e98e40c7a2d87928d09a7313c9ef2e832c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "flatery-icon-theme": {
         "branch": "master",
         "description": "Flatery is icon theme for linux in flat style licensed under the CC BY-NC-SA 3.0 ",
@@ -43,6 +55,12 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
+    },
+    "just-perfection": {
+        "branch": "master",
+        "repo": "https://gitlab.com/justperfection.channel/just-perfection-gnome-shell-desktop",
+        "rev": "de973a8d212e403ea83d6035cc06b412a2764420",
+        "type": "git"
     },
     "niv": {
         "branch": "master",
@@ -307,5 +325,17 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mubaidr/vsextensions/vuejs-extension-pack/latest/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "latest"
+    },
+    "yaru-colors-themes": {
+        "branch": "master",
+        "description": "A fork of Ubuntu's Yaru theme -  in different colors",
+        "homepage": null,
+        "owner": "Jannomag",
+        "repo": "Yaru-Colors",
+        "rev": "c75336645af1257cb4d8cd8f286e96188a8c934f",
+        "sha256": "1r6qk4sadcjlvi6zdkkhd8ihdlnjymjyiy7a0ix0vra5y21ijk2n",
+        "type": "tarball",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/c75336645af1257cb4d8cd8f286e96188a8c934f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
