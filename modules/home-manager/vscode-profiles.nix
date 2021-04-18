@@ -14,7 +14,7 @@ let
         '';
       };
   createPackage = profile:
-    (pkgs.callPackage ../../pkgs/vscode/vscode-plus.nix {
+    (pkgs.callPackage ../../pkgs/misc/vscode-extensions/vscode-plus.nix {
       name = "${profile.alias}";
       userDataDir = ".vscode/${profile.name}";
       extensions = profile.extensions;

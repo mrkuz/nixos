@@ -7,7 +7,6 @@
 
   modules = {
     android.enable = true;
-    # ansible.enable = true;
     avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;

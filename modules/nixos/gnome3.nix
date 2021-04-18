@@ -65,10 +65,10 @@ in {
       gnomeExtensions.appindicator
       gnomeExtensions.dash-to-panel
       gnomeExtensions.window-is-ready-remover
-      (callPackage ../../pkgs/gnome3/dynamic-panel-transparency.nix {})
-      (callPackage ../../pkgs/gnome3/just-perfection.nix {})
-      (callPackage ../../pkgs/gnome3/shortcuts.nix {})
-      (callPackage ../../pkgs/gnome3/switcher.nix {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/dynamic-panel-transparency {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/shortcuts {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
       # Ubuntu look & feel
       yaru-theme
     ];

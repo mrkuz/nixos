@@ -3,7 +3,6 @@
 {
   imports = [
     ../../modules/nixos/android.nix
-    ../../modules/nixos/ansible.nix
     ../../modules/nixos/avahi.nix
     ../../modules/nixos/base-packages.nix
     ../../modules/nixos/command-not-found.nix

@@ -27,6 +27,7 @@ in {
 
   modules = {
     bash.enable = true;
+    chromium.enable = true;
     cloudPackages.enable = true;
     conky.enable = true;
     dconf = {
@@ -34,6 +35,7 @@ in {
       iniFile = ../markus/files/dconf.ini;
     };
     doomEmacs.enable = true;
+    emacs.enable = true;
     javaPackages.enable = true;
     vscodeProfiles = {
       enable = true;
@@ -79,36 +81,9 @@ in {
     };
   };
 
-  services.emacs = {
-    enable = true;
-    client.enable = true;
-  };
-
-  home.packages = with pkgs; [
-    # Emacs dependencies
-    graphviz
-    hugo
-    pandoc
-    pdftk
-    plantuml
-    silver-searcher
-    texlive.combined.scheme-basic
-  ];
-
   home.file."/opt/reveal.js" = {
     source = sources.revealjs;
     recursive = true;
-  };
-
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      { id = "gphhapmejobijbbhgpjhcjognlahblep"; } # GNOME Shell integration
-      { id = "chklaanhfefbnpoihckbnefhakgolnmc"; } # JSONView
-      { id = "jnihajbhpnppcggbcgedagnkighmdlei"; } # LiveReload
-      { id = "nlbjncdgjeocebhnmkbbbdekmmmcbfjd"; } # RSS Subscription extension
-      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
-    ];
   };
 
   programs.fzf.enable = true;
