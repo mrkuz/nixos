@@ -71,8 +71,6 @@ in {
       (callPackage ../../pkgs/gnome3/switcher.nix {})
       # Ubuntu look & feel
       yaru-theme
-      # More themes
-      (callPackage ../../pkgs/vimix-gtk-themes {})
     ];
 
     # Fonts
