@@ -36,6 +36,7 @@
         inherit system;
         modules = [
           {
+            _module.args.nixpkgs = nixpkgs;
             _module.args.rev = self.rev or "dirty";
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;

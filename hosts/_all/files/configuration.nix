@@ -2,7 +2,7 @@
 
 {
   nix = {
-    nixPath = [ "nixpkgs=/nix/nixpkgs" ];
+    nixPath = [ "nixpkgs=/nix/channels/nixos" ];
   };
 
   system.stateVersion = "20.09";

@@ -1,4 +1,4 @@
-{ config, pkgs, rev, ... }:
+{ config, pkgs, nixpkgs, rev, ... }:
 
 {
   imports = [
@@ -68,6 +68,14 @@
   };
 
   environment.etc."nixos/configuration.nix".source = ./files/configuration.nix;
+  environment.extraInit = ''
+    export NIX_PATH="nixpkgs=/nix/channels/nixos"
+  '';
+  system.activationScripts.nixpath = ''
+    [ -d /nix/channels ] || mkdir /nix/channels
+    rm -f /nix/channels/nixos
+    ln -s ${nixpkgs} /nix/channels/nixos
+  '';
 
   users = {
     mutableUsers = false;
