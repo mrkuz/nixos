@@ -9,28 +9,30 @@
     enable = true;
   };
 
-  home.packages = [
+  home.packages = with pkgs; [
    # Miscellaneous
-   pkgs.gitAndTools.gitFull
-   pkgs.go
-   pkgs.gocr
-   pkgs.imagemagick
-   pkgs.hey
-   pkgs.html-tidy
-   # pkgs.mkvtoolnix-cli
-   pkgs.nodejs
-   # pkgs.potrace
-   pkgs.protobuf
-   pkgs.python3
+   gitAndTools.gitFull
+   go
+   gocr
+   imagemagick
+   hey
+   html-tidy
+   # mkvtoolnix-cli
+   nodejs
+   # potrace
+   protobuf
+   python3
    # Applications
-   pkgs.android-studio
-   pkgs.jetbrains.idea-community
-   pkgs.netbeans
-   pkgs.postman
-   pkgs.robo3t
-   pkgs.skypeforlinux
-   pkgs.spotify
-   pkgs.steam
-   pkgs.steam-run
+   android-studio
+   jetbrains.idea-community
+   netbeans
+   postman
+   robo3t
+   skypeforlinux
+   spotify
+   steam
+   steam-run
+   (callPackage ../../pkgs/shell/fhs-shell {})
+   (callPackage ../../pkgs/shell/jdk11-shell {})
   ];
 }
