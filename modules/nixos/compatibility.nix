@@ -17,5 +17,9 @@ in {
       rm -f /lib64/ld-linux-x86-64.so.2
       ln -s ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
     '';
+
+    environment.systemPackages = with pkgs; [
+      (callPackage ../../pkgs/shell/fhs-shell {})
+    ];
   };
 }

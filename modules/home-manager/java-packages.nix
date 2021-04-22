@@ -12,11 +12,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [
-      pkgs.gradle
-      pkgs.jdk
-      pkgs.maven
-      pkgs.visualvm
+    home.packages = with pkgs; [
+      gradle
+      jdk
+      maven
+      visualvm
+      (callPackage ../../pkgs/shell/jdk11-shell {})
     ];
   };
 }

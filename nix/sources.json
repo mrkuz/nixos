@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "f3748b29775cc6dab0ddf577c3f71a25f3cb26e1",
+        "rev": "f621ff80471e8d08a72e5ece00641c70b121873a",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "cbrnix",
         "repo": "Flatery",
-        "rev": "b46e4133e35a53ad4d549e76a9fbaea03ce3d5c6",
-        "sha256": "02azxan02i5l5pccdam6kva7nn1j0pq9xr5fvsf75p0i4qlg742y",
+        "rev": "fa2875ae92498192ecdb6e26fa5cb3b7496c6962",
+        "sha256": "1dgwrahj5pm6j73jhszhzc3bd8jcnvj9gk2812g0wsnnqgqb848r",
         "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/b46e4133e35a53ad4d549e76a9fbaea03ce3d5c6.tar.gz",
+        "url": "https://github.com/cbrnix/Flatery/archive/fa2875ae92498192ecdb6e26fa5cb3b7496c6962.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "java": {
