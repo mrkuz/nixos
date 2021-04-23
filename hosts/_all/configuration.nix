@@ -37,6 +37,9 @@
   networking.dhcpcd.wait = "background";
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
+  # Clear old logs
+  services.journald.extraConfig = "MaxRetentionSec=14day";
+
   documentation = {
     doc.enable = false;
     info.enable = false;
