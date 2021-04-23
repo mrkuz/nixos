@@ -1,12 +1,31 @@
 #!/usr/bin/env bash
 
-extensions=$(jq '.[] | select(.url | length > 0)  | select(.url | test("marketplace.visualstudio")) | .name' nix/sources.json)
+extensions=$(jq -r '.[] | select(.url | length > 0)  | select(.url | test("marketplace.visualstudio")) | .name' nix/sources.json)
+
+function get_details {
+  curl -s -X POST 'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery' \
+    --header 'accept: application/json;api-version=3.0-preview.1' \
+    --header 'content-type: application/json' \
+    --data-raw "{
+      \"filters\": [{
+        \"criteria\": [{
+          \"filterType\": 8,
+          \"value\": \"Microsoft.VisualStudio.Code\"
+        }, {
+          \"filterType\": 7,
+          \"value\": \"$1\"
+        }],
+        \"pageNumber\": 1,
+        \"pageSize\": 1
+      }],
+      \"flags\": 1
+    }"
+}
 
 for ext in $extensions; do
-  echo "Updating $ext..."
-  url=$(jq -r ".$ext | .url" nix/sources.json)
-  hash=$(nix-prefetch-url --type sha256 "$url")
-  jq --indent 4 ".$ext.sha256 = \"$hash\"" nix/sources.json > nix/sources.new.json
-  mv nix/sources.new.json nix/sources.json
-  sleep 10
+  fqn=$(jq -r ".\"$ext\" | .publisher + \".\" + .name" nix/sources.json)
+  echo "Updating $fqn..."
+  version=$(get_details $fqn | jq -r '.results[0].extensions[0].versions[0].version')
+  niv update $ext -v $version
+  sleep 1
 done;
