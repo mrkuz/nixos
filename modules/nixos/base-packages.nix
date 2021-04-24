@@ -19,28 +19,32 @@ in {
     services.tuptime.enable = true;
 
     environment.systemPackages = with pkgs; [
+      bat
       bind
       binutils
       bridge-utils
       cifs-utils
       curl
-      # curlftpfs
       dmidecode
       dnsmasq
       dos2unix
       # ecryptfs
       efibootmgr
       exfat
+      fd
       file
+      fzf
       git
+      gitAndTools.diff-so-fancy
       # home-manager-package
-      # htop
+      htop
       inetutils
       iproute
       jq
       lm_sensors
       lzip
       mkpasswd
+      most
       niv
       nmap
       ntfs3g
@@ -59,7 +63,9 @@ in {
       rsync
       smartmontools
       strace
+      tldr
       tmux
+      tree
       unrar
       unzip
       vim

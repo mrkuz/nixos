@@ -22,8 +22,6 @@
     client.enable = true;
   };
 
-  programs.fzf.enable = true;
-
   home.packages = with pkgs; [
     gitAndTools.gitFull
   ];

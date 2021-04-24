@@ -11,6 +11,7 @@
 
   home.packages = with pkgs; [
    # Miscellaneous
+   # curlftpfs
    gitAndTools.gitFull
    go
    gocr
