@@ -1,0 +1,13 @@
+diff --git a/scripts/extrakto.sh b/scripts/extrakto.sh
+index 8c8420c..eff301f 100755
+--- a/scripts/extrakto.sh
++++ b/scripts/extrakto.sh
+@@ -89,7 +89,7 @@ copy() {
+ 
+ open() {
+     if [[ -n "$open_tool" ]]; then
+-        tmux run-shell -b "cd -- $PWD; $open_tool $1"
++        tmux run-shell -b "$open_tool $1"
+         return 0
+     fi
+ }

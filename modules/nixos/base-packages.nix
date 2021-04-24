@@ -35,7 +35,6 @@ in {
       file
       fzf
       git
-      gitAndTools.diff-so-fancy
       # home-manager-package
       htop
       inetutils

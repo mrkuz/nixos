@@ -35,6 +35,18 @@
         "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/f9e720e98e40c7a2d87928d09a7313c9ef2e832c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "extrakto": {
+        "branch": "master",
+        "description": "tmux - quickly select, copy/insert/complete text without a mouse",
+        "homepage": "",
+        "owner": "laktak",
+        "repo": "extrakto",
+        "rev": "de8ac3e8a9fa887382649784ed8cae81f5757f77",
+        "sha256": "0mkp9r6mipdm7408w7ls1vfn6i3hj19nmir2bvfcp12b69zlzc47",
+        "type": "tarball",
+        "url": "https://github.com/laktak/extrakto/archive/de8ac3e8a9fa887382649784ed8cae81f5757f77.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "flatery-icon-theme": {
         "branch": "master",
         "description": "Flatery is icon theme for linux in flat style licensed under the CC BY-NC-SA 3.0 ",
