@@ -86,6 +86,15 @@
         "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix": {
+        "name": "nix",
+        "publisher": "bbenoist",
+        "sha256": "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/bbenoist/vsextensions/nix/1.0.1/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "1.0.1"
+    },
     "revealjs": {
         "branch": "master",
         "repo": "https://github.com/hakimel/reveal.js",

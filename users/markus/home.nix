@@ -70,6 +70,7 @@ in {
           name = "DevOps";
           alias = "dcode";
           extensions = with sources; [
+            nix
             terraform
             vscode-docker
             vscode-kubernetes-tools
