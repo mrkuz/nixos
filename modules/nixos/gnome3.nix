@@ -33,8 +33,6 @@ in {
       tracker-miners.enable = false;
     };
 
-    services.packagekit.enable = mkForce false;
-
     security.pam.services.gdm.enableGnomeKeyring = true;
 
     programs = {
@@ -92,6 +90,7 @@ in {
 
     # Fonts
     fonts.fonts = with pkgs; [
+      cantarell-fonts
       dejavu_fonts
       fira-code
       fira-code-symbols
@@ -102,6 +101,7 @@ in {
       roboto
       roboto-mono
       source-code-pro
+      source-sans-pro
       ubuntu_font_family
     ];
   };

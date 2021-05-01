@@ -18,23 +18,33 @@ in {
 
     sound.enable = true;
 
-    hardware.pulseaudio.enable = true;
-    hardware.bluetooth.enable = true;
+    hardware = {
+      pulseaudio.enable = true;
+      bluetooth.enable = true;
+    };
 
     programs.dconf.enable = true;
-
-    # services.system-config-printer.enable = true;
-    services.printing.enable = true;
-
-    # services.accounts-daemon.enable = true;
-    # services.bamf.enable = true;
-    # services.colord.enable = true;
     security.polkit.enable = true;
-    services.smartd.enable = true;
-    # services.telepathy.enable
-    services.thermald.enable = true;
-    # services.udisks2.enable = true;
-    # services.upower.enable = true;
-    # services.tumbler.enable = true;
+
+    services = {
+      # accounts-daemon.enable = true;
+      # bamf.enable = true;
+      # colord.enable = true;
+      # hardware.bolt.enable
+      printing.enable = true;
+      smartd.enable = true;
+      # telepathy.enable
+      thermald.enable = true;
+      # udisks2.enable = true;
+      # upower.enable = true;
+      # system-config-printer.enable = true;
+      # tumbler.enable = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      desktop-file-utils
+      shared-mime-info
+      xdg-user-dirs
+    ];
   };
 }

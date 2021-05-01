@@ -23,10 +23,12 @@
     ../../modules/nixos/x11.nix
   ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.cleanTmpDir = true;
-  boot.consoleLogLevel = 0;
-  boot.kernelParams = [ "udev.log_priority=3" ];
+  boot = {
+    cleanTmpDir = true;
+    consoleLogLevel = 0;
+    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [ "udev.log_priority=3" ];
+  };
 
   networking.useDHCP = false;
   time.timeZone = "Europe/Vienna";
@@ -34,8 +36,8 @@
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
-  networking.dhcpcd.wait = "background";
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
+  networking.dhcpcd.wait = "background";
 
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
