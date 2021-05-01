@@ -24,11 +24,18 @@ in {
       core-utilities.enable = false;
       chrome-gnome-shell.enable = true;
       gnome-keyring.enable = true;
+      sushi.enable = true;
+      # Disabled core OS services
+      evolution-data-server.enable = mkForce false;
+      gnome-online-accounts.enable = false;
+      gnome-online-miners.enable = mkForce false;
     };
 
     security.pam.services.gdm.enableGnomeKeyring = true;
+    security.polkit.enable = true;
 
     programs = {
+      dconf.enable = true;
       evince.enable = true;
       file-roller.enable = true;
       gnome-terminal.enable = true;
@@ -38,19 +45,27 @@ in {
     environment.systemPackages = with pkgs; [
       # Gnome core utilities
       baobab
+      # gnome3.cheese
       gnome3.eog
+      # gnome3.epiphany
       gnome3.gedit
       gnome3.gnome-calculator
-      gnome3.gnome-calendar
+      # gnome3.gnome-calendar
       gnome3.gnome-characters
       gnome3.gnome-clocks
+      # gnome3.gnome-contacts
       gnome3.gnome-font-viewer
+      # gnome3.gnome-logs
+      # gnome3.gnome-maps
+      # gnome3.gnome-music
+      # gnome-photos
       gnome3.gnome-screenshot
-      gnome3.gnome-software
       gnome3.gnome-system-monitor
       gnome3.gnome-weather
       gnome3.nautilus
       simple-scan
+      # gnome3.totem
+      # gnome3.yelp
       # Gnome utilities
       gnome3.dconf-editor
       gnome3.gnome-tweaks
