@@ -29,7 +29,11 @@ in {
       evolution-data-server.enable = mkForce false;
       gnome-online-accounts.enable = false;
       gnome-online-miners.enable = mkForce false;
+      tracker.enable = false;
+      tracker-miners.enable = false;
     };
+
+    services.packagekit.enable = mkForce false;
 
     security.pam.services.gdm.enableGnomeKeyring = true;
     security.polkit.enable = true;
