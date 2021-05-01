@@ -36,10 +36,8 @@ in {
     services.packagekit.enable = mkForce false;
 
     security.pam.services.gdm.enableGnomeKeyring = true;
-    security.polkit.enable = true;
 
     programs = {
-      dconf.enable = true;
       evince.enable = true;
       file-roller.enable = true;
       gnome-terminal.enable = true;

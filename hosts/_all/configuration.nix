@@ -7,6 +7,7 @@
     ../../modules/nixos/base-packages.nix
     ../../modules/nixos/command-not-found.nix
     ../../modules/nixos/compatibility.nix
+    ../../modules/nixos/desktop.nix
     ../../modules/nixos/docker.nix
     ../../modules/nixos/emacs.nix
     ../../modules/nixos/gnome3.nix
@@ -33,11 +34,10 @@
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
-  systemd.services.NetworkManager-wait-online.enable = false;
   networking.dhcpcd.wait = "background";
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
-  # Clear old logs
+  # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
 
   documentation = {
@@ -56,7 +56,7 @@
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
-      narinfo-cache-positive-ttl = 3600
+      narinfo-cache-positive-ttl = 86400
       auto-optimise-store = true
       repeat = 0
     '';

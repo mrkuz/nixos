@@ -32,10 +32,7 @@
     ];
   };
 
-  services.printing = {
-    enable = true;
-    drivers = [ pkgs.hplipWithPlugin ];
-  };
+  services.printing.drivers = [ pkgs.hplipWithPlugin ];
 
   hardware.sane = {
     enable = true;

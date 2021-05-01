@@ -11,15 +11,13 @@
     basePackages.enable = true;
     commandNotFound.enable = true;
     compatibility.enable = true;
+    desktop.enable = true;
     docker.enable = true;
     emacs.enable = true;
     gnome3.enable = true;
     grubEfi.enable = true;
-    # kvm.enable = true;
-    # libreoffice.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
-    # pipewire.enable = true;
     resolved.enable = true;
     virtualbox.enable = true;
     wayland.enable = true;
@@ -29,25 +27,8 @@
   # Use cgroups v1
   systemd.enableUnifiedCgroupHierarchy = false;
 
-  systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
+  hardware.opengl.extraPackages = [ pkgs.vaapiIntel ];
 
-  hardware.opengl = {
-    extraPackages = with pkgs; [
-      vaapiIntel
-    ];
-  };
-
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  hardware.bluetooth.enable = true;
-
-  services.printing = {
-    enable = true;
-  };
-
-  services.smartd.enable = true;
-  services.thermald.enable = true;
-
+  # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
   # virtualisation.libvirtd.enable = true;
 }

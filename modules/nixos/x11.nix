@@ -15,6 +15,8 @@ in {
     services.xserver = {
       enable = true;
       desktopManager.xterm.enable = true;
+      libinput.enable = true;
+      # updateDbusEnvironment = true;
     };
 
     environment.systemPackages = with pkgs; [
