@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "f621ff80471e8d08a72e5ece00641c70b121873a",
+        "rev": "4ad1c6a494bc001f334a31457067dacf6b69283d",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -71,7 +71,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.com/justperfection.channel/just-perfection-gnome-shell-desktop",
-        "rev": "31d203e93cf1d2119bb46fd83869d60dd3df6532",
+        "rev": "f0969343d164b066061f001e5100c376ebdd61d6",
         "type": "git"
     },
     "niv": {
@@ -140,10 +140,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "6fdfc45642fc6bf45d656596d89a75fe1abff595",
-        "sha256": "1wmvr4yrc4ivb4x008nldrkcfx2dw7wcddhbj7mfp5j5aa5zxap5",
+        "rev": "a276f80b242bde4dd512f30cb2ea36d1d9a94653",
+        "sha256": "07x0jxk46hj0znwjz37ag0fand6xki90xfkhzvq778walzcskira",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/6fdfc45642fc6bf45d656596d89a75fe1abff595.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/a276f80b242bde4dd512f30cb2ea36d1d9a94653.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {
@@ -344,10 +344,10 @@
         "homepage": null,
         "owner": "Jannomag",
         "repo": "Yaru-Colors",
-        "rev": "c75336645af1257cb4d8cd8f286e96188a8c934f",
-        "sha256": "1r6qk4sadcjlvi6zdkkhd8ihdlnjymjyiy7a0ix0vra5y21ijk2n",
+        "rev": "7e4a84d8a646d3210616a7f8a9faa0dfe7063c77",
+        "sha256": "0ghbp49g3cx53d5faa6mvxvdfkd0i8i60mpzyqn8g6cd8g639jq7",
         "type": "tarball",
-        "url": "https://github.com/Jannomag/Yaru-Colors/archive/c75336645af1257cb4d8cd8f286e96188a8c934f.tar.gz",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/7e4a84d8a646d3210616a7f8a9faa0dfe7063c77.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
