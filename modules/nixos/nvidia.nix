@@ -26,7 +26,7 @@ in {
     };
 
     hardware.nvidia = {
-      nvidiaPersistenced = false;
+      nvidiaPersistenced = true;
       modesetting.enable = true;
       prime.offload.enable = true;
     };

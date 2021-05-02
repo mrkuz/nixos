@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "4ad1c6a494bc001f334a31457067dacf6b69283d",
+        "rev": "a8871abda0bdc62d5e25e47cc62a4419bee6888f",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -353,10 +353,10 @@
         "homepage": null,
         "owner": "Jannomag",
         "repo": "Yaru-Colors",
-        "rev": "7e4a84d8a646d3210616a7f8a9faa0dfe7063c77",
-        "sha256": "0ghbp49g3cx53d5faa6mvxvdfkd0i8i60mpzyqn8g6cd8g639jq7",
+        "rev": "f0c981669183103f0c0671628e9cbbd72e6191c7",
+        "sha256": "1f0s0gkda0fr5nqqs1agk4hg54i3q57s456fb0zfr4s485i0kx94",
         "type": "tarball",
-        "url": "https://github.com/Jannomag/Yaru-Colors/archive/7e4a84d8a646d3210616a7f8a9faa0dfe7063c77.tar.gz",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/f0c981669183103f0c0671628e9cbbd72e6191c7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
