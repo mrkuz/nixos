@@ -22,6 +22,7 @@ in {
         efiSupport = true;
       };
       timeout = 3;
+      systemd-boot.enable = false;
     };
   };
 }

@@ -28,11 +28,7 @@ in {
     hardware.nvidia = {
       nvidiaPersistenced = false;
       modesetting.enable = true;
-      prime = {
-        offload.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
+      prime.offload.enable = true;
     };
 
     hardware.opengl.driSupport32Bit = mkIf config.modules.docker.enable true;

@@ -24,10 +24,30 @@
     x11.enable = true;
   };
 
+  boot.initrd.kernelModules = [ "i915" ];
+  boot.kernelModules = [ "kvm-intel" ];
+
+  hardware.nvidia = {
+    prime = {
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
+
+  hardware.opengl.extraPackages = [
+    pkgs.intel-media-driver
+    pkgs.vaapiIntel
+  ];
+
+  services = {
+    fstrim.enable = true;
+    smartd.enable = true;
+    thermald.enable = true;
+    tlp.enable = true;
+  };
+
   # Use cgroups v1
   systemd.enableUnifiedCgroupHierarchy = false;
-
-  hardware.opengl.extraPackages = [ pkgs.vaapiIntel ];
 
   # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
   # virtualisation.libvirtd.enable = true;

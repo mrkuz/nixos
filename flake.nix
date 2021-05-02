@@ -4,6 +4,7 @@
     nixpkgs-local.url = "/nix/nixpkgs/";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     dotfiles = {
       # url = "github:mrkuz/dotfiles";

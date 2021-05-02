@@ -32,9 +32,7 @@ in {
       # colord.enable = true;
       # hardware.bolt.enable
       printing.enable = true;
-      smartd.enable = true;
       # telepathy.enable
-      thermald.enable = true;
       # udisks2.enable = true;
       # upower.enable = true;
       # system-config-printer.enable = true;
