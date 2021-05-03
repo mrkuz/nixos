@@ -18,6 +18,7 @@
     ../../modules/nixos/opengl.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/resolved.nix
+    ../../modules/nixos/sshd.nix
     ../../modules/nixos/virtualbox.nix
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/x11.nix
@@ -32,6 +33,8 @@
       "vm.swappiness" = 10;
     };
   };
+
+  networking.firewall.enable = true;
 
   networking.useDHCP = false;
   time.timeZone = "Europe/Vienna";

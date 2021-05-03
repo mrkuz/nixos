@@ -39,10 +39,6 @@
     dhcpcd.enable = false;
   };
 
-  services.openssh = {
-    enable = true;
-  };
-
   users = {
     groups.user.gid = 1000;
     users = {
@@ -69,5 +65,6 @@
     compatibility.enable = true;
     emacs.enable = true;
     resolved.enable = true;
+    sshd.enable = true;
   };
 }

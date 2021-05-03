@@ -8,9 +8,11 @@
 
   modules = {
     libreoffice.enable = true;
+    sshd.enable = true;
   };
 
   networking.hostName = "nixos";
+  services.openssh.passwordAuthentication = false;
 
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
 
