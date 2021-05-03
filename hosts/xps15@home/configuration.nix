@@ -8,6 +8,7 @@
 
   modules = {
     libreoffice.enable = true;
+    pipewire.enable = true;
     sshd.enable = true;
   };
 
