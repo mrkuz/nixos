@@ -19,6 +19,7 @@ in {
     };
 
     services.gnome3 = {
+      experimental-features.realtime-scheduling = true;
       # Disable some core OS services
       evolution-data-server.enable = mkForce false;
       gnome-online-accounts.enable = false;
