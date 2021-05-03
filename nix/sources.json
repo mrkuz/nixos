@@ -96,10 +96,11 @@
         "version": "1.0.1"
     },
     "revealjs": {
-        "branch": "master",
-        "repo": "https://github.com/hakimel/reveal.js",
-        "rev": "cf8e64bd8504737912b39e4153390cffbf443ed7",
-        "type": "git"
+        "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
+        "type": "file",
+        "url": "https://github.com/hakimel/reveal.js/archive/refs/tags/4.1.0.tar.gz",
+        "url_template": "https://github.com/hakimel/reveal.js/archive/refs/tags/<version>.zip",
+        "version": "4.1.0"
     },
     "shortcuts-gnome-extension": {
         "branch": "master",

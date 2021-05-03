@@ -82,11 +82,6 @@ in {
     };
   };
 
-  home.file."/opt/reveal.js" = {
-    source = sources.revealjs;
-    recursive = true;
-  };
-
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
     ''
     # Create directories

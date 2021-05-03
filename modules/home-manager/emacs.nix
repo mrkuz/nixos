@@ -26,6 +26,7 @@ in {
       plantuml
       silver-searcher
       texlive.combined.scheme-basic
+      (callPackage ../../pkgs/misc/revealjs {})
     ];
   };
 }
