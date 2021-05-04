@@ -7,9 +7,7 @@ in stdenv.mkDerivation rec {
   src = sources.shortcuts-gnome-extension;
   uuid = "Shortcuts@kyle.aims.ac.za";
 
-  buildInputs = [
-    glib
-  ];
+  buildInputs = [ glib ];
 
   buildPhase = ''
     runHook preBuild

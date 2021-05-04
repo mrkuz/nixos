@@ -12,13 +12,13 @@ in {
   };
 
   config = mkIf cfg.enable {
+    hardware.pulseaudio.enable = mkForce false;
+
     services.pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-
-    hardware.pulseaudio.enable = mkForce false;
   };
 }

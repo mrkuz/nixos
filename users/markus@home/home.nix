@@ -23,7 +23,6 @@
     # potrace
     protobuf
     python3
-
     # Applications
     android-studio
     jetbrains.idea-community
@@ -34,7 +33,6 @@
     spotify
     steam
     steam-run
-
     (callPackage ../../pkgs/misc/tmux-plugins/extrakto {})
   ];
 }

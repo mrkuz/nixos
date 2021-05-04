@@ -12,11 +12,11 @@ in {
   };
 
   config = mkIf cfg.enable {
-    programs.adb.enable = true;
     services.udev.packages = [
       pkgs.android-udev-rules
     ];
 
+    programs.adb.enable = true;
     environment.systemPackages = with pkgs; [
       android-file-transfer
     ];

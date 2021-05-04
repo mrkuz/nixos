@@ -15,8 +15,6 @@ in {
   config = mkIf cfg.enable {
 
     programs.fish.enable = true;
-    services.haveged.enable = true;
-    services.tuptime.enable = true;
 
     environment.systemPackages = with pkgs; [
       bat

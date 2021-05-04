@@ -1,4 +1,5 @@
 { pkgs, inputs, ... }:
+
 let
   sources = import ../../nix/sources.nix;
   vscodeExtensions = with sources; [
@@ -14,16 +15,6 @@ in {
   imports = [
     ../_all/home.nix
   ];
-
-  home.file."/" = {
-    source = inputs.dotfiles;
-    recursive = true;
-  };
-
-  home.file.".doom.d" = {
-    source = inputs.doomd;
-    recursive = true;
-  };
 
   modules = {
     bash.enable = true;
@@ -80,6 +71,16 @@ in {
         }
       ];
     };
+  };
+
+  home.file."/" = {
+    source = inputs.dotfiles;
+    recursive = true;
+  };
+
+  home.file.".doom.d" = {
+    source = inputs.doomd;
+    recursive = true;
   };
 
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]

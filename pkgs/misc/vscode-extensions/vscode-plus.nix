@@ -15,8 +15,10 @@ let
 in stdenv.mkDerivation {
   inherit name;
   src = ./.;
+
   dontPatchELF = true;
   dontStrip = true;
+
   installPhase = ''
     mkdir -p $out/{bin,share/$name/extensions}
 

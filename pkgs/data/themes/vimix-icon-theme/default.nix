@@ -7,6 +7,7 @@ in stdenv.mkDerivation rec {
   src = sources.vimix-icon-theme;
 
   nativeBuildInputs = [ pkgs.gtk3 ];
+
   dontFixup = true;
 
   installPhase = ''

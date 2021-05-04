@@ -21,10 +21,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.xserver = {
-      videoDrivers = [ "nvidia" ];
-    };
-
     hardware.nvidia = {
       nvidiaPersistenced = true;
       modesetting.enable = true;
@@ -32,8 +28,12 @@ in {
     };
 
     hardware.opengl.driSupport32Bit = mkIf config.modules.docker.enable true;
+
+    services.xserver = {
+      videoDrivers = [ "nvidia" ];
+      displayManager.gdm.nvidiaWayland = mkIf config.modules.gnome3.enable true;
+    };
     # virtualisation.docker.enableNvidia = mkIf config.modules.docker.enable true;
-    services.xserver.displayManager.gdm.nvidiaWayland = mkIf config.modules.gnome3.enable true;
 
     environment.systemPackages = with pkgs; [
       nvidia-offload

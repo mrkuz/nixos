@@ -39,16 +39,18 @@
     pkgs.vaapiIntel
   ];
 
+  # Use cgroups v1
+  systemd.enableUnifiedCgroupHierarchy = false;
+  # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
+
   services = {
     fstrim.enable = true;
+    haveged.enable = true;
     smartd.enable = true;
     thermald.enable = true;
     tlp.enable = true;
+    tuptime.enable = true;
   };
 
-  # Use cgroups v1
-  systemd.enableUnifiedCgroupHierarchy = false;
-
-  # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
   # virtualisation.libvirtd.enable = true;
 }

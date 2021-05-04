@@ -34,30 +34,19 @@
     };
   };
 
-  networking.firewall.enable = true;
-
-  networking.useDHCP = false;
   time.timeZone = "Europe/Vienna";
   i18n.defaultLocale = "en_US.UTF-8";
+
+  networking.firewall.enable = true;
+  networking.useDHCP = false;
+  networking.dhcpcd.wait = "background";
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
-  networking.dhcpcd.wait = "background";
 
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
-
-  documentation = {
-    doc.enable = false;
-    info.enable = false;
-    nixos.enable = true;
-  };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = false;
-  };
 
   nixpkgs.config.allowUnfree = true;
   nix = {
@@ -87,6 +76,17 @@
     rm -f /nix/channels/nixos
     ln -s ${nixpkgs} /nix/channels/nixos
   '';
+
+  documentation = {
+    doc.enable = false;
+    info.enable = false;
+    nixos.enable = true;
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = false;
+  };
 
   users = {
     mutableUsers = false;

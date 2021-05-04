@@ -12,19 +12,14 @@ in {
   };
 
   config = mkIf cfg.enable {
-
     networking.networkmanager.enable = true;
     systemd.services.NetworkManager-wait-online.enable = false;
 
     sound.enable = true;
-
     hardware = {
       pulseaudio.enable = true;
       bluetooth.enable = true;
     };
-
-    programs.dconf.enable = true;
-    security.polkit.enable = true;
 
     services = {
       # accounts-daemon.enable = true;
@@ -39,6 +34,9 @@ in {
       # tumbler.enable = true;
     };
 
+    security.polkit.enable = true;
+
+    programs.dconf.enable = true;
     environment.systemPackages = with pkgs; [
       desktop-file-utils
       shared-mime-info

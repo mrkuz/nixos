@@ -12,11 +12,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.emacs = {
-      enable = true;
-      client.enable = true;
-    };
-
     home.packages = with pkgs; [
       # Dependencies
       graphviz
@@ -28,5 +23,10 @@ in {
       texlive.combined.scheme-basic
       (callPackage ../../pkgs/misc/revealjs {})
     ];
+
+    services.emacs = {
+      enable = true;
+      client.enable = true;
+    };
   };
 }

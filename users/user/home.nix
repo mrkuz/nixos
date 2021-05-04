@@ -5,6 +5,19 @@
     ../_all/home.nix
   ];
 
+  modules = {
+    bash.enable = true;
+    # cloudPackages.enable = true;
+    # conky.enable = true;
+    # javaPackages.enable = true;
+    # dconf = {
+    #  enable = true;
+    #  iniFile = ../markus/files/dconf.ini;
+    # };
+    # doomEmacs.enable = true;
+    # vscodeProfiles.enable = true;
+  };
+
   home.file."/" = {
     source = inputs.dotfiles;
     recursive = true;
@@ -25,17 +38,4 @@
   home.packages = with pkgs; [
     gitAndTools.gitFull
   ];
-
-  modules = {
-    bash.enable = true;
-    # cloudPackages.enable = true;
-    # conky.enable = true;
-    # javaPackages.enable = true;
-    # dconf = {
-    #  enable = true;
-    #  iniFile = ../markus/files/dconf.ini;
-    # };
-    # doomEmacs.enable = true;
-    # vscodeProfiles.enable = true;
-  };
 }

@@ -6,12 +6,26 @@
     ../_all/configuration.nix
   ];
 
+  modules = {
+    basePackages.enable = true;
+    commandNotFound.enable = true;
+    compatibility.enable = true;
+    emacs.enable = true;
+    resolved.enable = true;
+    sshd.enable = true;
+  };
+
   boot.loader = {
     systemd-boot = {
       enable = true;
       configurationLimit = 3;
     };
     efi.canTouchEfiVariables = true;
+  };
+
+  networking = {
+    hostName = "virtualbox";
+    dhcpcd.enable = false;
   };
 
   systemd.network = {
@@ -34,11 +48,6 @@
     };
   };
 
-  networking = {
-    hostName = "virtualbox";
-    dhcpcd.enable = false;
-  };
-
   users = {
     groups.user.gid = 1000;
     users = {
@@ -57,14 +66,5 @@
   home-manager.users.user = import ../../users/user/home.nix {
     inherit pkgs;
     inherit inputs;
-  };
-
-  modules = {
-    basePackages.enable = true;
-    commandNotFound.enable = true;
-    compatibility.enable = true;
-    emacs.enable = true;
-    resolved.enable = true;
-    sshd.enable = true;
   };
 }

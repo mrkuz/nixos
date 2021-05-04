@@ -32,7 +32,7 @@ in {
 
   config = mkIf cfg.enable {
     programs.vscode.enable = true;
-    home.activation = listToAttrs (map createActivation cfg.profiles);
     home.packages = (map createPackage cfg.profiles);
+    home.activation = listToAttrs (map createActivation cfg.profiles);
   };
 }

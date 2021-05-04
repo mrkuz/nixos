@@ -7,9 +7,7 @@ in stdenv.mkDerivation rec {
   src = sources.just-perfection;
   uuid = "just-perfection-desktop@just-perfection";
 
-  buildInputs = [
-    glib
-  ];
+  buildInputs = [ glib ];
 
   buildPhase = ''
     runHook preBuild

@@ -13,10 +13,8 @@
   };
 
   networking.hostName = "nixos";
-  services.openssh.passwordAuthentication = false;
 
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
-
   fileSystems."/home" = {
     device = "/dev/vg00/home";
     fsType = "ext4";
@@ -36,14 +34,15 @@
     ];
   };
 
-  services.printing.drivers = [ pkgs.hplipWithPlugin ];
-
   hardware.sane = {
     enable = true;
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
   # hardware.steam-hardware.enable = true;
+
+  services.printing.drivers = [ pkgs.hplipWithPlugin ];
+  services.openssh.passwordAuthentication = false;
 
   nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [

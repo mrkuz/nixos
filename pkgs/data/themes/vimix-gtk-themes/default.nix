@@ -8,6 +8,7 @@ in stdenv.mkDerivation rec {
 
   buildInputs = [ pkgs.sassc pkgs.which ];
   patches = [ ./ubuntu.patch ];
+
   dontFixup = true;
 
   buildPhase = ''
