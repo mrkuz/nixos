@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.grubEfi;
+  cfg = config.modules.systemdBoot;
 in {
-  options.modules.grubEfi = {
+  options.modules.systemdBoot = {
     enable = mkOption {
       default = false;
       type = types.bool;
@@ -17,9 +17,10 @@ in {
         efiSysMountPoint = "/boot/efi";
         canTouchEfiVariables = false;
       };
-      grub = {
-        device = "nodev";
-        efiSupport = true;
+      systemd-boot = {
+        enable = true;
+        editor = true;
+        configurationLimit = 3;
       };
       timeout = 3;
     };

@@ -19,6 +19,7 @@
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/resolved.nix
     ../../modules/nixos/sshd.nix
+    ../../modules/nixos/systemd-boot.nix
     ../../modules/nixos/virtualbox.nix
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/x11.nix

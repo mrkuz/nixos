@@ -10,6 +10,7 @@
     libreoffice.enable = true;
     pipewire.enable = true;
     sshd.enable = true;
+    systemdBoot.enable = true;
   };
 
   networking.hostName = "nixos";
