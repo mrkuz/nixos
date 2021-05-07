@@ -10,6 +10,7 @@
     ../../modules/nixos/compatibility.nix
     ../../modules/nixos/desktop.nix
     ../../modules/nixos/docker.nix
+    ../../modules/nixos/ecryptfs.nix
     ../../modules/nixos/emacs.nix
     ../../modules/nixos/gnome3.nix
     ../../modules/nixos/grub-efi.nix
