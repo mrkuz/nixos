@@ -42,16 +42,6 @@
     fsType = "btrfs";
     options = [ "subvol=data" "compress=zstd:1" "noatime" ];
   };
-  fileSystems."/data/overlay/home/mnt" = {
-    fsType = "overlay";
-    device = "overlay";
-    options = [
-      "lowerdir=/home"
-      "upperdir=/data/overlay/home/rw"
-      "workdir=/data/overlay/home/work"
-      "x-systemd.requires-mounts-for=/home"
-    ];
-  };
 
   hardware.sane = {
     enable = true;
