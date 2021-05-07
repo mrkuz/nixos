@@ -5,6 +5,7 @@
     ../../modules/nixos/android.nix
     ../../modules/nixos/avahi.nix
     ../../modules/nixos/base-packages.nix
+    ../../modules/nixos/btrfs.nix
     ../../modules/nixos/command-not-found.nix
     ../../modules/nixos/compatibility.nix
     ../../modules/nixos/desktop.nix

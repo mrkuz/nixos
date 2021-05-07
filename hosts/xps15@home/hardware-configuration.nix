@@ -9,18 +9,12 @@
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/boot/efi" =
     { device = "/dev/disk/by-uuid/F29C-27AB";
       fsType = "vfat";
-    };
-
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/95228e40-a047-4876-95d6-142268682d85";
-      fsType = "ext4";
     };
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
