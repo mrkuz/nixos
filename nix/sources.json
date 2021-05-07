@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "b65d8ae3acd4d5b1f822a59b0e3b678756ac29cc",
+        "rev": "b2c4e0f1688e6db338910d11d3d5e2b3a3db5a17",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "laktak",
         "repo": "extrakto",
-        "rev": "de8ac3e8a9fa887382649784ed8cae81f5757f77",
-        "sha256": "0mkp9r6mipdm7408w7ls1vfn6i3hj19nmir2bvfcp12b69zlzc47",
+        "rev": "2f0c1e3e1b2eb18b099a68966a58bbe8415fe3ff",
+        "sha256": "1p3rp9xayv1p57mqcpga3ki7aq5xymyy5wkh9b515gc1d444bysh",
         "type": "tarball",
-        "url": "https://github.com/laktak/extrakto/archive/de8ac3e8a9fa887382649784ed8cae81f5757f77.tar.gz",
+        "url": "https://github.com/laktak/extrakto/archive/2f0c1e3e1b2eb18b099a68966a58bbe8415fe3ff.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "flatery-icon-theme": {
