@@ -18,7 +18,10 @@ in {
     sound.enable = true;
     hardware = {
       pulseaudio.enable = true;
-      bluetooth.enable = true;
+      bluetooth = {
+        enable = true;
+        powerOnBoot = false;
+      };
     };
 
     services = {

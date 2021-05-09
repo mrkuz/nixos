@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "1c549f21d688f78a129d27d4c417f4fae2b227ce",
+        "rev": "a4a64b9c6ca9a073dd18c3e2fce27ade833f4d0f",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -71,7 +71,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "f0969343d164b066061f001e5100c376ebdd61d6",
+        "rev": "86abb93c6731710abd948453bca02b1a916a0edc",
         "type": "git"
     },
     "niv": {
@@ -354,10 +354,10 @@
         "homepage": null,
         "owner": "Jannomag",
         "repo": "Yaru-Colors",
-        "rev": "f0c981669183103f0c0671628e9cbbd72e6191c7",
-        "sha256": "1f0s0gkda0fr5nqqs1agk4hg54i3q57s456fb0zfr4s485i0kx94",
+        "rev": "013f8dc03e7b712d569f07b43b80c067e440c979",
+        "sha256": "0b5zfcr4jc1a5hn1fnympa18xrzbxw3i2b2inv389gkf1rcq6fh3",
         "type": "tarball",
-        "url": "https://github.com/Jannomag/Yaru-Colors/archive/f0c981669183103f0c0671628e9cbbd72e6191c7.tar.gz",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/013f8dc03e7b712d569f07b43b80c067e440c979.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

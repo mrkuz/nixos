@@ -48,6 +48,11 @@
     };
   };
 
+  virtualisation.virtualbox.guest = {
+      enable = true;
+      x11 = true;
+  };
+
   users = {
     groups.user.gid = 1000;
     users = {
