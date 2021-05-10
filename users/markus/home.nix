@@ -25,6 +25,7 @@ in {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
     };
+    disableBluetooth.enable = true;
     doomEmacs.enable = true;
     emacs.enable = true;
     javaPackages.enable = true;
@@ -81,20 +82,6 @@ in {
   home.file.".doom.d" = {
     source = inputs.doomd;
     recursive = true;
-  };
-
-  systemd.user.services.rfkill = {
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-
-    Service = {
-      ExecStart= "${pkgs.util-linux}/bin/rfkill block bluetooth";
-    };
-
-    Unit = {
-      Description = "Disable bluetooth";
-    };
   };
 
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
