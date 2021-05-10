@@ -20,7 +20,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "a4a64b9c6ca9a073dd18c3e2fce27ade833f4d0f",
+        "rev": "ea9753a5f2e9654068fbafa73f3bb475cc26a964",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -71,7 +71,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "86abb93c6731710abd948453bca02b1a916a0edc",
+        "rev": "56a12afa1c06ad6cce1c3ca4e4206310908a6686",
         "type": "git"
     },
     "niv": {
@@ -150,10 +150,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "a276f80b242bde4dd512f30cb2ea36d1d9a94653",
-        "sha256": "07x0jxk46hj0znwjz37ag0fand6xki90xfkhzvq778walzcskira",
+        "rev": "aea85e04a4eb197484ea9f78bc028757a0a5723c",
+        "sha256": "1693dwkwww85af4ygfanbybapk4phzybbc8nqk3ryiggyyvajlhd",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/a276f80b242bde4dd512f30cb2ea36d1d9a94653.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/aea85e04a4eb197484ea9f78bc028757a0a5723c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {

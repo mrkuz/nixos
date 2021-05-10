@@ -83,6 +83,20 @@ in {
     recursive = true;
   };
 
+  systemd.user.services.rfkill = {
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+
+    Service = {
+      ExecStart= "${pkgs.util-linux}/bin/rfkill block bluetooth";
+    };
+
+    Unit = {
+      Description = "Disable bluetooth";
+    };
+  };
+
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
     ''
     # Create directories

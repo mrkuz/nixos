@@ -26,6 +26,7 @@ in {
 
     services.emacs = {
       enable = true;
+      package = pkgs.emacsPgtkGcc;
       client.enable = true;
     };
   };
