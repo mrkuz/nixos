@@ -64,6 +64,7 @@ in {
       (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/shortcuts {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/workspaces-bar {})
       # Ubuntu look & feel
       yaru-theme
     ];

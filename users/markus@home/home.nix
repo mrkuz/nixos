@@ -26,6 +26,7 @@
     # Applications
     android-studio
     jetbrains.idea-community
+    lens
     netbeans
     postman
     robo3t

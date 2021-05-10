@@ -42,6 +42,7 @@ in {
     programs.dconf.enable = true;
     environment.systemPackages = with pkgs; [
       desktop-file-utils
+      libnotify
       shared-mime-info
       xdg-user-dirs
     ];

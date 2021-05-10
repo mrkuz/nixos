@@ -348,6 +348,18 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.2.1"
     },
+    "workspaces-bar": {
+        "branch": "main",
+        "description": "GNOME Shell extension that shows workspaces buttons in top panel",
+        "homepage": null,
+        "owner": "mrkuz",
+        "repo": "workspaces-bar",
+        "rev": "7e8f6349aaadf88fc7af6dad118f266b2b9fbb0b",
+        "sha256": "1kbd5npv1p1mk3wm7y4iqmzgqm738kh5lpglqlbqyxslpniq4b51",
+        "type": "tarball",
+        "url": "https://github.com/mrkuz/workspaces-bar/archive/7e8f6349aaadf88fc7af6dad118f266b2b9fbb0b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "yaru-colors-themes": {
         "branch": "master",
         "description": "A fork of Ubuntu's Yaru theme -  in different colors",
