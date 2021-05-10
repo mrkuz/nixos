@@ -46,6 +46,7 @@
   services = {
     fstrim.enable = true;
     haveged.enable = true;
+    power-profiles-daemon.enable = false;
     smartd.enable = true;
     thermald.enable = true;
     tlp.enable = true;
