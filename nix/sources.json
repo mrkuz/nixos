@@ -74,11 +74,11 @@
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "1knb618fgzsbq4k5gfs7nblvb78s59anwldm2my880kx8yfha13l",
+        "sha256": "1mxarsyqp87n5wjcd0vk9x4npwqcjxd6ld1k3bc8z2jnnw395nsi",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/0.77.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/0.79.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.77.0"
+        "version": "0.79.1"
     },
     "just-perfection": {
         "branch": "master",
@@ -92,10 +92,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "af958e8057f345ee1aca714c1247ef3ba1c15f5e",
-        "sha256": "1qjavxabbrsh73yck5dcq8jggvh3r2jkbr6b5nlz5d9yrqm9255n",
+        "rev": "94080ae8286024820c570a2a24ed7c36d7ad04a9",
+        "sha256": "0wlk52zwlrq727x3z1vg9d9qq4zw62ab5jzg4068iqb6hyb0cr0w",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/94080ae8286024820c570a2a24ed7c36d7ad04a9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nix": {
@@ -174,11 +174,11 @@
     "terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "1xhypy4vvrzxj3qwkzpfx8b48hddf72mxmh0hgz7iry6bch6sh5f",
+        "sha256": "0fkkjkybjshgzbkc933jscxyxqwmqnhq3718pnw9hsac8qv0grrz",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.10.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.10.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.10.0"
+        "version": "2.10.2"
     },
     "vimix-gtk-themes": {
         "branch": "master",
@@ -252,11 +252,11 @@
     "vscode-java-debug": {
         "name": "vscode-java-debug",
         "publisher": "vscjava",
-        "sha256": "0qmm3r7m23n674biw2cm6khisgkydq69ikwbyppdrxvz6jsj51xi",
+        "sha256": "1spi2r17d8fyi4pfn73zs4iwimq89acfci0pgq9lcjf9fb6f2sgg",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.32.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.33.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.32.1"
+        "version": "0.33.1"
     },
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
@@ -279,20 +279,20 @@
     "vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "1ry2rhk79zhyslqccbf50y067plgpmf6n0yalzmd9sbm4a0vbs3q",
+        "sha256": "0s7x6ssllasmvf0vy4ng5s4mmmdsv76c507vlh7h8xllzbalxgc8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.28.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.29.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.28.1"
+        "version": "0.29.0"
     },
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
         "publisher": "ms-kubernetes-tools",
-        "sha256": "0zdhyy8xpv12dgs3s14cidz0vxcjd75q3k9gh68gl9x81sc3swwr",
+        "sha256": "0malibnnyxhr0kjjia9m170jca5iva08sgv1r69iq98qxkhh35rm",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.3.0"
+        "version": "1.3.2"
     },
     "vscode-lombok": {
         "name": "vscode-lombok",
@@ -306,11 +306,11 @@
     "vscode-maven": {
         "name": "vscode-maven",
         "publisher": "vscjava",
-        "sha256": "082mr1sl3c7i15ndwpan521rw0qqf0shmk9634gayg7zwk1qnyqr",
+        "sha256": "1z7r0f5vrwjzwnw20rvf8jhq4w3w3v7mnlaa84x875cjl5ybnmh2",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.29.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.30.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.29.0"
+        "version": "0.30.1"
     },
     "vscode-spring-boot": {
         "name": "vscode-spring-boot",
@@ -369,11 +369,11 @@
     "vscodeintellicode": {
         "name": "vscodeintellicode",
         "publisher": "visualstudioexptteam",
-        "sha256": "1xfvdwylq18660sxcnczr6b8hdww90n998hscqsac2fwambbx2mn",
+        "sha256": "0h7miz8mfbpwww36yfrdg5k2ri55hlnbslxzk9bq7nb2zm10m5nj",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/1.2.12/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/1.2.13/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.2.12"
+        "version": "1.2.13"
     },
     "vuejs-extension-pack": {
         "name": "vuejs-extension-pack",
