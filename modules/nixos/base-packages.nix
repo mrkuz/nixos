@@ -33,6 +33,7 @@ in {
       file
       fzf
       git
+      groff
       # home-manager-package
       htop
       inetutils
