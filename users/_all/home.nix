@@ -28,6 +28,7 @@
         "htop"
         "nixos-manual"
         "nvidia-settings"
+        "org.gnome.Tour"
         "xpra-gui"
         "xterm"
         "ca.desrt.dconf-editor"
