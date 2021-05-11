@@ -62,7 +62,6 @@ in {
       gnomeExtensions.window-is-ready-remover
       (callPackage ../../pkgs/desktops/gnome-3/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/shortcuts {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/workspaces-bar {})
       # Ubuntu look & feel

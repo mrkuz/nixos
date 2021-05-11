@@ -15,7 +15,7 @@
     "doomd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-TDFZ1M7MC4/Ff+govfupGgeO/Y+OTuJ57iHdU7xr8Og=",
+        "narHash": "sha256-/RnUflN1dEK+WSI79k3RmV2oCmcRYgVDpMMquWTVfWA=",
         "path": "/home/markus/etc/nixos/repos/doom.d",
         "type": "path"
       },
@@ -38,11 +38,11 @@
     },
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1620642838,
-        "narHash": "sha256-fH0kkihExhh4V89/zvlD1Ga3oMstqkpn7qZa7BYeXHw=",
+        "lastModified": 1620702602,
+        "narHash": "sha256-Y2YVLZLXvLEJxguQA22uatoWTu1mKCqz4NbYsLhh4fs=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "47ddceb7736476ebafdc90851647a2d1dedb4ccc",
+        "rev": "964f93d602b1b484a51bfeeda4e8aa510acde1cb",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1620598390,
-        "narHash": "sha256-Ue/lBfM+q5jZCC9xpElXH7NJET1v9NC1AgmeNCUC0BE=",
+        "lastModified": 1620692082,
+        "narHash": "sha256-s/eBXs4OI47yPWNTKoAg4f/H7wMLyO+VEMmobXkzfI8=",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "3b799f6ea42f850316ae4741ff323dc74ce09467",
+        "rev": "23769994e8f7b212d9a257799173b120ed87736b",
         "type": "github"
       },
       "original": {
@@ -89,7 +89,7 @@
     },
     "nixpkgs-local": {
       "locked": {
-        "narHash": "sha256-X3iXjJ72xHQAvd8GfCoyLimbPvrCL5FB35kPS83Da+M=",
+        "narHash": "sha256-xKQiwFED2xBfSBpDVfR4vWEmnNL4Lj1lwfQ2kROSubc=",
         "path": "/nix/nixpkgs",
         "type": "path"
       },

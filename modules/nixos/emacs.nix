@@ -13,8 +13,8 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      emacsPgtkGcc
-      # emacs
+      # emacsPgtkGcc
+      emacs
     ];
 
     fonts.fonts = with pkgs; [
