@@ -17,6 +17,18 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "2.3.0"
     },
+    "dash-to-panel": {
+        "branch": "master",
+        "description": "An icon taskbar for the Gnome Shell. This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to that found in KDE Plasma and Windows 7+. A separate dock is no longer needed for easy access to running and favorited applications.",
+        "homepage": "",
+        "owner": "home-sweet-gnome",
+        "repo": "dash-to-panel",
+        "rev": "3fb7bdb83b69478341ec1568b31ef6829d004715",
+        "sha256": "0pnmfv88rgg9v3lsqpa2q3vwbd3yb5x3wi41i88x02gvwcq7cz5l",
+        "type": "tarball",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/3fb7bdb83b69478341ec1568b31ef6829d004715.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
@@ -94,6 +106,18 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/bbenoist/vsextensions/nix/1.0.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.1"
+    },
+    "pop-shell": {
+        "branch": "master",
+        "description": "Pop!_OS Shell",
+        "homepage": "",
+        "owner": "pop-os",
+        "repo": "shell",
+        "rev": "9507dc38f75f56e657cf071d5f8dc578c5dc9352",
+        "sha256": "161946y5nk1nlxafhkxyshqn4va10rk911bdbcwxjnak1w7557gm",
+        "type": "tarball",
+        "url": "https://github.com/pop-os/shell/archive/9507dc38f75f56e657cf071d5f8dc578c5dc9352.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "revealjs": {
         "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",

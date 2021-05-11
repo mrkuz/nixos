@@ -58,8 +58,8 @@ in {
       vlc
       # Gnome extensions
       gnomeExtensions.appindicator
-      gnomeExtensions.dash-to-panel
       gnomeExtensions.window-is-ready-remover
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/dash-to-panel {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
