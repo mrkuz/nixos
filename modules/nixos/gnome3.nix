@@ -57,12 +57,13 @@ in {
       remmina
       vlc
       # Gnome extensions
-      gjs
+      # gjs
       gnomeExtensions.appindicator
       gnomeExtensions.window-is-ready-remover
       (callPackage ../../pkgs/desktops/gnome-3/extensions/dash-to-panel {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
+      (callPackage ../../pkgs/desktops/gnome-3/extensions/no-overview {})
       # (callPackage ../../pkgs/desktops/gnome-3/extensions/pop-shell {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
       (callPackage ../../pkgs/desktops/gnome-3/extensions/workspaces-bar {})

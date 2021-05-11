@@ -107,6 +107,18 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.1"
     },
+    "no-overview": {
+        "branch": "main",
+        "description": null,
+        "homepage": null,
+        "owner": "fthx",
+        "repo": "no-overview",
+        "rev": "db2ee30311677df3557430049abe44ff04be151c",
+        "sha256": "0x618y9l1chqzghdq6hq1yhzgikwya68vjdmi6573afcqs2b14bm",
+        "type": "tarball",
+        "url": "https://github.com/fthx/no-overview/archive/db2ee30311677df3557430049abe44ff04be151c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "pop-shell": {
         "branch": "master",
         "description": "Pop!_OS Shell",
