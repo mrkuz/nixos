@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "cachix": {
+      "locked": {
+        "lastModified": 1620493630,
+        "narHash": "sha256-cFcs9Hyc1kTO37JiBlyMJc3XRC/5wkrVQCDhWOMVIf8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1b688ca59ba78525308e963548eff6f3bebc221e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-20.09",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "credentials": {
       "flake": false,
       "locked": {
@@ -98,6 +114,27 @@
         "type": "path"
       }
     },
+    "nixpkgs-wayland": {
+      "inputs": {
+        "cachix": "cachix",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1620638878,
+        "narHash": "sha256-Pc+xwkbKC7qL2RRQ7W49f/LjcKEDYMTxQ9v+a7rBMxU=",
+        "owner": "colemickens",
+        "repo": "nixpkgs-wayland",
+        "rev": "a09b5f0c0f52d8edc2effa372309a136d704903f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "colemickens",
+        "repo": "nixpkgs-wayland",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "credentials": "credentials",
@@ -106,7 +143,8 @@
         "emacs-overlay": "emacs-overlay",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-local": "nixpkgs-local"
+        "nixpkgs-local": "nixpkgs-local",
+        "nixpkgs-wayland": "nixpkgs-wayland"
       }
     }
   },

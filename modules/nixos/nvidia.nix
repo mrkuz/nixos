@@ -29,6 +29,11 @@ in {
 
     hardware.opengl.driSupport32Bit = mkIf config.modules.docker.enable true;
 
+    programs.sway.extraOptions = mkIf config.modules.sway.enable [
+      "--unsupported-gpu"
+      "--my-next-gpu-wont-be-nvidia"
+    ];
+
     services.xserver = {
       videoDrivers = [ "nvidia" ];
       displayManager.gdm.nvidiaWayland = mkIf config.modules.gnome3.enable true;

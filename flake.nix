@@ -4,6 +4,8 @@
     nixpkgs-local.url = "/nix/nixpkgs/";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-wayland.url = "github:colemickens/nixpkgs-wayland";
+    nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     dotfiles = {
@@ -44,6 +46,7 @@
             _module.args.pkgs-local = pkgs-local;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
+              # inputs.nixpkgs-wayland.overlay
               (import ./overlays/tools/package-management/nix)
               (import ./overlays/desktops/gnome-3/core/gnome-terminal)
             ];
