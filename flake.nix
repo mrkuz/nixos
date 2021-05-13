@@ -48,7 +48,7 @@
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay
               (import ./overlays/tools/package-management/nix)
-              (import ./overlays/desktops/gnome-3/core/gnome-terminal)
+              (import ./overlays/desktops/gnome/core/gnome-terminal)
             ];
           }
           inputs.home-manager.nixosModules.home-manager

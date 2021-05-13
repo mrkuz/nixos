@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.gnome3;
+  cfg = config.modules.gnome;
 in {
-  options.modules.gnome3 = {
+  options.modules.gnome = {
     enable = mkOption {
       default = false;
       type = types.bool;
@@ -13,12 +13,12 @@ in {
 
   config = mkIf cfg.enable {
     services.xserver = {
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome.enable = true;
       displayManager.gdm.enable = true;
       desktopManager.xterm.enable = mkForce false;
     };
 
-    services.gnome3 = {
+    services.gnome = {
       experimental-features.realtime-scheduling = true;
       # Disable some core OS services
       evolution-data-server.enable = mkForce false;
@@ -30,7 +30,7 @@ in {
 
     security.pam.services.gdm.enableGnomeKeyring = true;
 
-    environment.gnome3.excludePackages = with pkgs; [
+    environment.gnome.excludePackages = with pkgs; [
       gnome3.cheese
       gnome3.gnome-disk-utility
       gnome3.epiphany
@@ -60,13 +60,13 @@ in {
       # gjs
       gnomeExtensions.appindicator
       gnomeExtensions.window-is-ready-remover
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/dash-to-panel {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/dynamic-panel-transparency {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/just-perfection {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/no-overview {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/pop-shell {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/switcher {})
-      (callPackage ../../pkgs/desktops/gnome-3/extensions/workspaces-bar {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/dash-to-panel {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/just-perfection {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/no-overview {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/pop-shell {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/switcher {})
+      (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar {})
       # Ubuntu look & feel
       yaru-theme
     ];

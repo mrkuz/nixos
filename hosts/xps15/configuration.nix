@@ -14,7 +14,7 @@
     desktop.enable = true;
     docker.enable = true;
     emacs.enable = true;
-    gnome3.enable = true;
+    gnome.enable = true;
     grubEfi.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
