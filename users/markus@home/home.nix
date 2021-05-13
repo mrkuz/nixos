@@ -34,6 +34,5 @@
     spotify
     steam
     steam-run
-    (callPackage ../../pkgs/misc/tmux-plugins/extrakto {})
   ];
 }
