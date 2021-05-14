@@ -10,7 +10,10 @@ in stdenv.mkDerivation rec {
   nativeBuildInputs = with pkgs; [ glib nodePackages.typescript ];
   buildInputs = with pkgs; [ gjs ];
 
-  patches = [ ./fix-paths.patch ];
+  patches = [
+    ./fix-paths.patch
+    ./customize.patch
+  ];
   makeFlags = [
     "INSTALLBASE=$(out)/share/gnome-shell/extensions"
     "PLUGIN_BASE=$(out)/lib/pop-shell/launcher"

@@ -1,0 +1,118 @@
+diff --git a/src/wayland/meta-wayland-window-configuration.c b/src/wayland/meta-wayland-window-configuration.c
+index c3de8a777bebdc71909db2faca6fb3a4ca1f46d4..6a91a7141e37c6ef7ae16416913060468cf9a88d 100644
+--- a/src/wayland/meta-wayland-window-configuration.c
++++ b/src/wayland/meta-wayland-window-configuration.c
+@@ -22,8 +22,6 @@
+ 
+ #include "wayland/meta-wayland-window-configuration.h"
+ 
+-#include "wayland/meta-window-wayland.h"
+-
+ static uint32_t global_serial_counter = 0;
+ 
+ static gboolean
+@@ -53,13 +51,6 @@ meta_wayland_window_configuration_new (MetaWindow          *window,
+                                        MetaGravity          gravity)
+ {
+   MetaWaylandWindowConfiguration *configuration;
+-  MetaWindowWayland *wl_window = META_WINDOW_WAYLAND (window);
+-  int pending_width;
+-  int pending_height;
+-
+-  meta_window_wayland_get_pending_size (wl_window,
+-                                        &pending_width,
+-                                        &pending_height);
+ 
+   configuration = g_new0 (MetaWaylandWindowConfiguration, 1);
+   *configuration = (MetaWaylandWindowConfiguration) {
+@@ -81,8 +72,8 @@ meta_wayland_window_configuration_new (MetaWindow          *window,
+ 
+   if (flags & META_MOVE_RESIZE_RESIZE_ACTION ||
+       is_window_size_fixed (window) ||
+-      pending_width != width ||
+-      pending_height != height)
++      window->rect.width != width ||
++      window->rect.height != height)
+     {
+       configuration->has_size = TRUE;
+       configuration->width = width;
+diff --git a/src/wayland/meta-window-wayland.c b/src/wayland/meta-window-wayland.c
+index b37b13efbcfe8ef085ab6fd2abfba1c30352aece..31e0ef10328d8f5e54de2901e4b6c5da715a2ba3 100644
+--- a/src/wayland/meta-window-wayland.c
++++ b/src/wayland/meta-window-wayland.c
+@@ -301,12 +301,6 @@ meta_window_wayland_move_resize_internal (MetaWindow                *window,
+     }
+   else
+     {
+-      int pending_width;
+-      int pending_height;
+-      meta_window_wayland_get_pending_size (wl_window,
+-                                            &pending_width,
+-                                            &pending_height);
+-
+       if (window->placement.rule)
+         {
+           switch (window->placement.state)
+@@ -321,8 +315,8 @@ meta_window_wayland_move_resize_internal (MetaWindow                *window,
+                 if (flags & META_MOVE_RESIZE_PLACEMENT_CHANGED ||
+                     rel_x != wl_window->last_sent_rel_x ||
+                     rel_y != wl_window->last_sent_rel_y ||
+-                    constrained_rect.width != pending_width ||
+-                    constrained_rect.height != pending_height)
++                    constrained_rect.width != window->rect.width ||
++                    constrained_rect.height != window->rect.height)
+                   {
+                     MetaWaylandWindowConfiguration *configuration;
+ 
+@@ -355,8 +349,8 @@ meta_window_wayland_move_resize_internal (MetaWindow                *window,
+               break;
+             }
+         }
+-      else if (constrained_rect.width != pending_width ||
+-               constrained_rect.height != pending_height ||
++      else if (constrained_rect.width != window->rect.width ||
++               constrained_rect.height != window->rect.height ||
+                flags & META_MOVE_RESIZE_STATE_CHANGED)
+         {
+           MetaWaylandWindowConfiguration *configuration;
+@@ -1210,27 +1204,3 @@ meta_window_wayland_get_max_size (MetaWindow *window,
+   scale = 1.0 / (float) meta_window_wayland_get_geometry_scale (window);
+   scale_size (width, height, scale);
+ }
+-
+-void
+-meta_window_wayland_get_pending_size (MetaWindowWayland *wl_window,
+-                                      int               *width,
+-                                      int               *height)
+-{
+-  MetaWindow *window = META_WINDOW (wl_window);
+-  GList *l;
+-
+-  for (l = wl_window->pending_configurations; l; l = l->next)
+-    {
+-      MetaWaylandWindowConfiguration *configuration = l->data;
+-
+-      if (configuration->has_size)
+-        {
+-          *width = configuration->width;
+-          *height = configuration->height;
+-          return;
+-        }
+-    }
+-
+-  *width = window->rect.width;
+-  *height = window->rect.height;
+-}
+diff --git a/src/wayland/meta-window-wayland.h b/src/wayland/meta-window-wayland.h
+index c242757dfb0afe0b4876748325bcad126354c667..db152daaa7643bafbfb4071be0c80d8536995664 100644
+--- a/src/wayland/meta-window-wayland.h
++++ b/src/wayland/meta-window-wayland.h
+@@ -77,8 +77,4 @@ void meta_window_wayland_get_max_size (MetaWindow *window,
+                                        int        *width,
+                                        int        *height);
+ 
+-void meta_window_wayland_get_pending_size (MetaWindowWayland *wl_window,
+-                                           int               *width,
+-                                           int               *height);
+-
+ #endif

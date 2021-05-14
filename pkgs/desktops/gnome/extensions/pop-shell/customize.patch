@@ -1,0 +1,210 @@
+diff --git a/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml b/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
+index 02345cb..1a4967c 100644
+--- a/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
++++ b/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
+@@ -71,28 +71,28 @@
+ 
+         <!-- Launcher -->
+         <key type="as" name="activate-launcher">
+-            <default><![CDATA[['<Super>slash']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Search key combo</summary>
+         </key>
+ 
+         <!-- Window Management Keys -->
+         <key type="as" name="toggle-stacking">
+-            <default><![CDATA[['s']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Toggle stacking mode inside management mode</summary>
+         </key>
+ 
+         <key type="as" name="toggle-stacking-global">
+-            <default><![CDATA[['<Super>s']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Toggle stacking mode outside management mode</summary>
+         </key>
+ 
+         <key type="as" name="management-orientation">
+-            <default><![CDATA[['o']]]></default>
++            <default><![CDATA[['Space']]]></default>
+             <summary>Toggle tiling orientation</summary>
+         </key>
+ 
+         <key type="as" name="tile-enter">
+-            <default><![CDATA[['<Super>Return','<Super>KP_Enter']]]></default>
++            <default><![CDATA[['<Super><Shift>Return','<Super><Shift>KP_Enter']]]></default>
+             <summary>Enter tiling mode</summary>
+         </key>
+ 
+@@ -107,13 +107,13 @@
+         </key>
+ 
+         <key type="as" name="toggle-floating">
+-            <default><![CDATA[['<Super>g']]]></default>
++            <default><![CDATA[['<Super><Shift>Space']]]></default>
+             <summary>Toggles a window between floating and tiling</summary>
+         </key>
+ 
+         <!-- Tiling Mode -->
+         <key type="as" name="toggle-tiling">
+-            <default><![CDATA[['<Super>y']]]></default>
++            <default><![CDATA[['<Super>Space']]]></default>
+             <summary>Toggles auto-tiling on and off</summary>
+         </key>
+ 
+@@ -139,7 +139,7 @@
+         </key>
+ 
+         <key type="as" name="tile-orientation">
+-            <default><![CDATA[['<Super>o']]]></default>
++            <default><![CDATA[['<Primary><Super>Space']]]></default>
+             <summary>Toggle tiling orientation</summary>
+         </key>
+ 
+@@ -188,32 +188,32 @@
+         <!-- Workspace Management -->
+ 
+         <key type="as" name="pop-workspace-down">
+-            <default><![CDATA[['<Super><Shift>Down','<Super><Shift>KP_Down','<Super><Shift>j']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the lower workspace</summary>
+         </key>
+ 
+         <key type="as" name="pop-workspace-up">
+-            <default><![CDATA[['<Super><Shift>Up','<Super><Shift>KP_Up','<Super><Shift>k']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the upper workspace</summary>
+         </key>
+ 
+         <key type="as" name="pop-monitor-down">
+-            <default><![CDATA[['<Super><Shift><Primary>Down','<Super><Shift><Primary>KP_Down','<Super><Shift><Primary>j']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the lower monitor</summary>
+         </key>
+ 
+         <key type="as" name="pop-monitor-up">
+-            <default><![CDATA[['<Super><Shift><Primary>Up','<Super><Shift><Primary>KP_Up','<Super><Shift><Primary>k']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the upper monitor</summary>
+         </key>
+ 
+         <key type="as" name="pop-monitor-left">
+-            <default><![CDATA[['<Super><Shift>Left','<Super><Shift>KP_Left','<Super><Shift>h']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the leftward monitor</summary>
+         </key>
+ 
+         <key type="as" name="pop-monitor-right">
+-            <default><![CDATA[['<Super><Shift>Right','<Super><Shift>KP_Right','<Super><Shift>l']]]></default>
++            <default><![CDATA[[]]]></default>
+             <summary>Move window to the rightward monitor</summary>
+         </key>
+ 
+diff --git a/src/extension.ts b/src/extension.ts
+index 39fe4e6..2bdb1d1 100644
+--- a/src/extension.ts
++++ b/src/extension.ts
+@@ -2345,7 +2345,7 @@ function enable() {
+ 
+     if (!indicator) {
+         indicator = new PanelSettings.Indicator(ext);
+-        panel.addToStatusArea('pop-shell', indicator.button);
++        panel.addToStatusArea('pop-shell', indicator.button, 1);
+     }
+ 
+     ext.keybindings.enable(ext.keybindings.global)
+diff --git a/src/panel_settings.ts b/src/panel_settings.ts
+index 46c2136..df2d0ce 100644
+--- a/src/panel_settings.ts
++++ b/src/panel_settings.ts
+@@ -68,10 +68,6 @@ export class Indicator {
+ 
+         bm.addMenuItem(this.toggle_tiled);
+         bm.addMenuItem(floating_window_exceptions(ext, bm));
+-
+-        bm.addMenuItem(menu_separator(''));
+-        bm.addMenuItem(shortcuts(bm));
+-        bm.addMenuItem(settings_button(bm));
+         bm.addMenuItem(menu_separator(''));
+ 
+         if (!Utils.is_wayland()) {
+@@ -96,24 +92,6 @@ function menu_separator(text: any): any {
+     return new PopupSeparatorMenuItem(text);
+ }
+ 
+-function settings_button(menu: any): any {
+-    let item = new PopupMenuItem(_('View All'));
+-    item.connect('activate', () => {
+-        let path: string | null = GLib.find_program_in_path('pop-shell-shortcuts');
+-        if (path) {
+-            imports.misc.util.spawn([path]);
+-        } else {
+-            imports.misc.util.spawn(['xdg-open', 'https://support.system76.com/articles/pop-keyboard-shortcuts/']);
+-        }
+-
+-        menu.close();
+-    })
+-
+-    item.label.get_clutter_text().set_margin_left(12);
+-
+-    return item;
+-}
+-
+ function floating_window_exceptions(ext: Ext, menu: any): any {
+     let label = new St.Label({ text: "Floating Window Exceptions" })
+     label.set_x_expand(true)
+@@ -139,54 +117,6 @@ function floating_window_exceptions(ext: Ext, menu: any): any {
+     return base;
+ }
+ 
+-function shortcuts(menu: any): any {
+-    let layout_manager = new Clutter.GridLayout({ orientation: Clutter.Orientation.HORIZONTAL });
+-    let widget = new St.Widget({ layout_manager, x_expand: true });
+-
+-    let item = new PopupBaseMenuItem();
+-    item.add_child(widget);
+-    item.connect('activate', () => {
+-        let path: string | null = GLib.find_program_in_path('pop-shell-shortcuts');
+-        if (path) {
+-            imports.misc.util.spawn([path]);
+-        } else {
+-            imports.misc.util.spawn(['xdg-open', 'https://support.system76.com/articles/pop-keyboard-shortcuts/']);
+-        }
+-
+-        menu.close();
+-    })
+-
+-    function create_label(text: string): any {
+-        return new St.Label({ text });
+-    }
+-
+-    function create_shortcut_label(text: string): any {
+-        let label = create_label(text);
+-        label.set_x_align(Clutter.ActorAlign.END);
+-        return label;
+-    }
+-
+-    layout_manager.set_row_spacing(12);
+-    layout_manager.set_column_spacing(30);
+-    layout_manager.attach(create_label(_('Shortcuts')), 0, 0, 2, 1);
+-
+-    [
+-        [_('Launcher'), _('Super + /')],
+-        [_('Navigate Windows'), _('Super + Arrow Keys')],
+-        [_('Toggle Tiling'), _('Super + Y')],
+-    ].forEach((section, idx) => {
+-        let key = create_label(section[0]);
+-        key.get_clutter_text().set_margin_left(12);
+-
+-        let val = create_shortcut_label(section[1]);
+-
+-        layout_manager.attach(key, 0, idx + 1, 1, 1);
+-        layout_manager.attach(val, 1, idx + 1, 1, 1);
+-    });
+-
+-    return item;
+-}
+-
+ function clamp(input: number): number {
+     return Math.min(Math.max(0, input), 128);
+ }
