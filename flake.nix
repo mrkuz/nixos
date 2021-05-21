@@ -49,7 +49,6 @@
               # inputs.nixpkgs-wayland.overlay
               (import ./overlays/tools/package-management/nix)
               (import ./overlays/desktops/gnome/core/gnome-terminal)
-              (import ./overlays/desktops/gnome/core/mutter)
             ];
           }
           inputs.home-manager.nixosModules.home-manager
