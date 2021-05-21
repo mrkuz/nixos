@@ -32,7 +32,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "abbbc9eafe22ec47db6c512ec960189aed4f4476",
+        "rev": "deefb0b0e7458f4d0ed3089214fe1a193a21dddb",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -69,6 +69,18 @@
         "sha256": "0dkl9m9x619d0gcm4xgrc78ildwk62m4zfdgfcywk1cp5zn14wgn",
         "type": "tarball",
         "url": "https://github.com/cbrnix/Flatery/archive/e06c61d0f89be85d5dbd66b62cfe9c72e95477b2.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "instant-workspace-switcher": {
+        "branch": "master",
+        "description": "A GNOME 40 shell extension to disable the workspace switch animation. Instantly switch workspaces with keyborad shortcuts.",
+        "homepage": null,
+        "owner": "amalantony",
+        "repo": "gnome-shell-extension-instant-workspace-switcher",
+        "rev": "8f186660d203cebe65b6054a22d0b43c4bff46ca",
+        "sha256": "0jxg1widd0cvpjhwqapa7py9k8bgbi2115m40rhc438bavzlmzg5",
+        "type": "tarball",
+        "url": "https://github.com/amalantony/gnome-shell-extension-instant-workspace-switcher/archive/8f186660d203cebe65b6054a22d0b43c4bff46ca.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "java": {
