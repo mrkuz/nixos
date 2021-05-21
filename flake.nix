@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-20.09";
     nixpkgs-local.url = "/nix/nixpkgs/";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -35,6 +36,10 @@
         inherit system;
         config.allowUnfree = true;
       };
+      pkgs-stable = import nixpkgs-local {
+        inherit system;
+        config.allowUnfree = true;
+      };
       setUp = name: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -44,6 +49,7 @@
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
             _module.args.pkgs-local = pkgs-local;
+            _module.args.pkgs-stable = pkgs-stable;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay

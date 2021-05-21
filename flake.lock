@@ -114,6 +114,21 @@
         "type": "path"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1621511390,
+        "narHash": "sha256-isDpLGr73ejAiksS1eW0dOMjEIB+j8b1lyAN++5KmrA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a7064e23973b0f3e1dd56cf4601758fedc38423c",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-20.09",
+        "type": "indirect"
+      }
+    },
     "nixpkgs-wayland": {
       "inputs": {
         "cachix": "cachix",
@@ -144,6 +159,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-local": "nixpkgs-local",
+        "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-wayland": "nixpkgs-wayland"
       }
     }
