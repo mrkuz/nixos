@@ -53,6 +53,7 @@
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay
+              (import ./overlays/applications/networking/browsers/chromium)
               (import ./overlays/tools/package-management/nix)
               (import ./overlays/desktops/gnome/core/gnome-terminal)
             ];
