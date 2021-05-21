@@ -9,6 +9,7 @@
   modules = {
     btrfs.enable = true;
     libreoffice.enable = true;
+    kodi.enable = true;
     pipewire.enable = true;
     sshd.enable = true;
     systemdBoot.enable = true;
@@ -53,10 +54,8 @@
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
   services.openssh.passwordAuthentication = false;
 
-  nixpkgs.config.kodi.enableInputStreamAdaptive = true;
   environment.systemPackages = with pkgs; [
     thunderbird
-    kodi
   ];
 
   users = {

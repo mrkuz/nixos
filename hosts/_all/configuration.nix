@@ -14,6 +14,7 @@
     ../../modules/nixos/emacs.nix
     ../../modules/nixos/gnome.nix
     ../../modules/nixos/grub-efi.nix
+    ../../modules/nixos/kodi.nix
     ../../modules/nixos/kvm.nix
     ../../modules/nixos/libreoffice.nix
     ../../modules/nixos/nvidia.nix
