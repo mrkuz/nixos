@@ -28,6 +28,7 @@ in {
     disableBluetooth.enable = true;
     doomEmacs.enable = true;
     emacs.enable = true;
+    fish.enable = true;
     javaPackages.enable = true;
     vscodeProfiles = {
       enable = true;
@@ -83,6 +84,13 @@ in {
     source = inputs.doomd;
     recursive = true;
   };
+
+  programs.fish.plugins = [
+      {
+          name = "fish-kubectl-completions";
+          src = sources.fish-kubectl-completions;
+      }
+  ];
 
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
     ''

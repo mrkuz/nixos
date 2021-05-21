@@ -59,6 +59,18 @@
         "url": "https://github.com/laktak/extrakto/archive/2f0c1e3e1b2eb18b099a68966a58bbe8415fe3ff.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "fish-kubectl-completions": {
+        "branch": "master",
+        "description": "kubectl completions for fish shell",
+        "homepage": "",
+        "owner": "evanlucas",
+        "repo": "fish-kubectl-completions",
+        "rev": "bbe3b831bcf8c0511fceb0607e4e7511c73e8c71",
+        "sha256": "1r6wqvvvb755jkmlng1i085s7cj1psxmddqghm80x5573rkklfps",
+        "type": "tarball",
+        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/bbe3b831bcf8c0511fceb0607e4e7511c73e8c71.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "flatery-icon-theme": {
         "branch": "master",
         "description": "Flatery is icon theme for linux in flat style licensed under the CC BY-NC-SA 3.0 ",
