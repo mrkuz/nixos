@@ -88,4 +88,9 @@
     inherit pkgs;
     inherit inputs;
   };
+
+  home-manager.users.enesa = import (./. + "/../../users/enesa/home.nix") {
+    inherit pkgs;
+    inherit inputs;
+  };
 }
