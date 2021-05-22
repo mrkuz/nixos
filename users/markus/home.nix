@@ -20,7 +20,6 @@ in {
     bash.enable = true;
     chromium.enable = true;
     cloudPackages.enable = true;
-    conky.enable = true;
     dconf = {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
