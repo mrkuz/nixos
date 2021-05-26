@@ -32,7 +32,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "f015a5ec7ad80b90ce4be52689003c852c0c95d2",
+        "rev": "e5b52e2a505e44fe6b087e6ac698407b9efe0377",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -107,7 +107,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "584701b7348c68a11e2f38a7700de30ca21e85e3",
+        "rev": "33586230ed06a11a89a4435a0d6d2d6c14c06e2c",
         "type": "git"
     },
     "niv": {
