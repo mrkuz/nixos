@@ -34,7 +34,6 @@ in {
       fzf
       git
       groff
-      gnumake
       # home-manager-package
       htop
       inetutils

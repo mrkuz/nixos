@@ -8,6 +8,7 @@
 
   modules = {
     btrfs.enable = true;
+    buildPackages.enable = true;
     libreoffice.enable = true;
     kodi.enable = true;
     pipewire.enable = true;
