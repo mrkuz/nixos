@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, rev, ... }:
+{ config, pkgs, nixpkgs, self, ... }:
 
 {
   imports = [
@@ -87,6 +87,7 @@
     [ -d /nix/channels ] || mkdir /nix/channels
     rm -f /nix/channels/nixos
     ln -s ${nixpkgs} /nix/channels/nixos
+    ln -s ${self} /nix/current
   '';
 
   documentation = {
@@ -110,5 +111,5 @@
   };
 
   system.stateVersion = "20.09";
-  system.configurationRevision = rev;
+  system.configurationRevision = self.rev or "dirty";
 }

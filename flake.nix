@@ -45,7 +45,7 @@
         modules = [
           {
             _module.args.nixpkgs = nixpkgs;
-            _module.args.rev = self.rev or "dirty";
+            _module.args.self = self;
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
             _module.args.pkgs-local = pkgs-local;
