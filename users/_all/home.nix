@@ -24,6 +24,7 @@
         "android-file-transfer"
         "conky"
         "cups"
+        "eclipse-mat"
         "fish"
         "hplip"
         "htop"

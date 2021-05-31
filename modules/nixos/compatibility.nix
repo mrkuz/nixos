@@ -13,9 +13,9 @@ in {
 
   config = mkIf cfg.enable {
     system.activationScripts.lib64 = ''
-      [ -d /lib64 ] || mkdir /lib64
-      rm -f /lib64/ld-linux-x86-64.so.2
-      ln -s ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
+      # [ -d /lib64 ] || mkdir /lib64
+      # rm -f /lib64/ld-linux-x86-64.so.2
+      # ln -s ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
     '';
 
     environment.systemPackages = with pkgs; [
