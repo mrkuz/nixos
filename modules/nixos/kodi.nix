@@ -12,10 +12,10 @@ in {
   };
 
   config = mkIf cfg.enable {
-    nixpkgs.config.kodi.enableInputStreamAdaptive = true;
-
     environment.systemPackages = with pkgs; [
-      kodi
+      (pkgs.kodi.withPackages (p: with p; [
+        inputstream-adaptive
+      ]))
     ];
   };
 }
