@@ -1,6 +1,6 @@
-{ stdenv, pkgs, name, userDataDir, extensions, ...}:
+{ stdenv, lib, pkgs, name, userDataDir, extensions, ...}:
 
-with stdenv.lib;
+with lib;
 
 let
   makeVsix = source:
