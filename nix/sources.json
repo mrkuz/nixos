@@ -23,10 +23,10 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "2a8b2ffec54403012448501b2e9e25f057383542",
-        "sha256": "13vax70fw4brkrlm9xbcqx4gxp6zpcp9jxv8rwpyxzj1j9pnnc98",
+        "rev": "3fb7bdb83b69478341ec1568b31ef6829d004715",
+        "sha256": "0pnmfv88rgg9v3lsqpa2q3vwbd3yb5x3wi41i88x02gvwcq7cz5l",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/2a8b2ffec54403012448501b2e9e25f057383542.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/3fb7bdb83b69478341ec1568b31ef6829d004715.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
@@ -107,7 +107,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "9a68d68ec21a8e939be7916f2d6c9a6aebd017bd",
+        "rev": "0cfdcf30b9a3e6aa379f8532125a8eec360210d3",
         "type": "git"
     },
     "niv": {

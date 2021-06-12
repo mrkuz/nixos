@@ -64,7 +64,6 @@ in {
       (callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome/extensions/instant-workspace-switcher {})
       (callPackage ../../pkgs/desktops/gnome/extensions/just-perfection {})
-      (callPackage ../../pkgs/desktops/gnome/extensions/no-overview {})
       (callPackage ../../pkgs/desktops/gnome/extensions/pop-shell {})
       (callPackage ../../pkgs/desktops/gnome/extensions/switcher {})
       (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar {})
