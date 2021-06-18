@@ -11,7 +11,6 @@ in stdenv.mkDerivation rec {
   buildInputs = with pkgs; [ gjs ];
 
   patches = [
-    ./fix-paths.patch
     ./customize.patch
   ];
   makeFlags = [

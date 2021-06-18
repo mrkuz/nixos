@@ -149,10 +149,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "a336b7bbe763c4bb568e363d6808c714fe10913d",
-        "sha256": "03c3fqqw12c3zsvlb4g38mhzqw71bpykd8zg8g2y75gwhz562dq7",
+        "rev": "4c693492d6f656d5dca93dbf10a9aa7aea3d6517",
+        "sha256": "1hn0mv07p2g73llp7dr5blq09x7fmis02hfr7zprvnm285xxiymk",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/a336b7bbe763c4bb568e363d6808c714fe10913d.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/4c693492d6f656d5dca93dbf10a9aa7aea3d6517.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "revealjs": {
