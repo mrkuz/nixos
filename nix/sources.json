@@ -23,10 +23,10 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "67b1978785382f65ed9d09ddff57562201141038",
-        "sha256": "08n6lwcj943p0vzi2vif7j3nza6xg5z1yka68vwc34ia9ys352m7",
+        "rev": "957898a542b1c91e66ce2b284198e619245db13e",
+        "sha256": "0j0fdrqss1kyd1sdbblnf4gzdlibg1vnf9cpza0air22nyw9bz52",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/67b1978785382f65ed9d09ddff57562201141038.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/957898a542b1c91e66ce2b284198e619245db13e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
@@ -107,7 +107,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "52cb3c1fe8736015a8ca8394d2ebf46756979145",
+        "rev": "812aa80ad3fb6bfab788eeed11861f648b6b1a48",
         "type": "git"
     },
     "niv": {
@@ -149,10 +149,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "4c693492d6f656d5dca93dbf10a9aa7aea3d6517",
-        "sha256": "1hn0mv07p2g73llp7dr5blq09x7fmis02hfr7zprvnm285xxiymk",
+        "rev": "47d48291dfaed86b43011871b07b91d01aa0d2f6",
+        "sha256": "0c3i6ad072fj5ccmxn7pzp8kjiyl0j57l3p9k2jyq7qn57vp8di2",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/4c693492d6f656d5dca93dbf10a9aa7aea3d6517.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/47d48291dfaed86b43011871b07b91d01aa0d2f6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "revealjs": {
@@ -210,10 +210,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "a9a9cfb78a8ed107d9929cf4b157fd9fddcd19ab",
-        "sha256": "0qq08s9zx6na78n7pp2xj0kca12j4d54sv2is6h3xqw4z3xp35c3",
+        "rev": "88a3337d1c4d494160c41fe662d8e91616cd0c4b",
+        "sha256": "16c6rq8zafqmfz2aya8jci2jxlzpwlmix8ar8w47wlvdkvd06lsi",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/a9a9cfb78a8ed107d9929cf4b157fd9fddcd19ab.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/88a3337d1c4d494160c41fe662d8e91616cd0c4b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {
