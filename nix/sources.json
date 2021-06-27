@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "cbrnix",
         "repo": "Flatery",
-        "rev": "cb93eef4e7a02877fa534ec1b514d9deef6571fe",
-        "sha256": "0ygz0hdacb4l6zggzlri0zqf0ib12w9lz4hmlxa2wdgk56avrlv8",
+        "rev": "df2e0b86089f13330d757d09d591cb939670c7bb",
+        "sha256": "1c8c4p31lp6m40v9d7fjq7dwp1850c5mc04k9yccwvafn1w8s5l4",
         "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/cb93eef4e7a02877fa534ec1b514d9deef6571fe.tar.gz",
+        "url": "https://github.com/cbrnix/Flatery/archive/df2e0b86089f13330d757d09d591cb939670c7bb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "instant-workspace-switcher": {
@@ -107,7 +107,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "812aa80ad3fb6bfab788eeed11861f648b6b1a48",
+        "rev": "4d3cee2c7b8cbd8dbb763c10ba69a35659733ff8",
         "type": "git"
     },
     "niv": {
@@ -149,10 +149,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "47d48291dfaed86b43011871b07b91d01aa0d2f6",
-        "sha256": "0c3i6ad072fj5ccmxn7pzp8kjiyl0j57l3p9k2jyq7qn57vp8di2",
+        "rev": "d59e373a7aaf3cc570f5b91a3efc9e6581da90c3",
+        "sha256": "1yay6przglwa6agd7r8ivjmfx1svncg4y5lwxsi4005ap04zw3fi",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/47d48291dfaed86b43011871b07b91d01aa0d2f6.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/d59e373a7aaf3cc570f5b91a3efc9e6581da90c3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "revealjs": {
@@ -198,11 +198,11 @@
     "terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "0mna2agv2g0fw17m2swlzvj5qdqkr074n630x8yibi4ihv6z3l3y",
+        "sha256": "1wc4jl4h3ja4ivynf20yxzwqssi6yd7alvqvcjrkksic98480qcz",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.12.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.13.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.12.1"
+        "version": "2.13.0"
     },
     "vimix-gtk-themes": {
         "branch": "master",
@@ -249,11 +249,11 @@
     "vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "09iq528m3f8xa67daxyxddmg6xkzbbs2jps4hdni68j7jn0724y7",
+        "sha256": "0wc0k3hf9yfjcx7cw9vm528v5f4bk968bgc98h8fwmlx14vhapzp",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.13.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.14.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.13.0"
+        "version": "1.14.0"
     },
     "vscode-emacs-friendly": {
         "name": "vscode-emacs-friendly",
@@ -339,11 +339,11 @@
     "vscode-spring-boot": {
         "name": "vscode-spring-boot",
         "publisher": "pivotal",
-        "sha256": "191447bxjkk2s8adba3mqsvf8wlhcc4sd52gj24xsr515r4mskcl",
+        "sha256": "1bpg8almbjzwnkn4qxmyjq0d1mq4f1mlirp86janimbk0lnrv292",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pivotal/vsextensions/vscode-spring-boot/1.25.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pivotal/vsextensions/vscode-spring-boot/1.26.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.25.1"
+        "version": "1.26.0"
     },
     "vscode-spring-boot-dashboard": {
         "name": "vscode-spring-boot-dashboard",
@@ -384,11 +384,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "14rb6r09myakj2amhadnafk8abq4in5q6h4wrnksmzn0b6khk3dl",
+        "sha256": "14dzr1b0dfc4iv0cc45ix3f21xhah8x15zas6mdg6qjp0labmh4c",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/0.19.2/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/0.20.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.19.2"
+        "version": "0.20.0"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
