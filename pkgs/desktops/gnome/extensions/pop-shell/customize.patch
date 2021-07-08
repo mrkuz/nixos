@@ -127,10 +127,10 @@ index 9522499..16968b9 100644
 \ No newline at end of file
 +launch_color_dialog()
 diff --git a/src/extension.ts b/src/extension.ts
-index ac18c08..1dd03b2 100644
+index 440c9a7..6d4b444 100644
 --- a/src/extension.ts
 +++ b/src/extension.ts
-@@ -513,7 +513,7 @@ export class Ext extends Ecs.System<ExtEvent> {
+@@ -517,7 +517,7 @@ export class Ext extends Ecs.System<ExtEvent> {
      exception_dialog() {
          let path = Me.dir.get_path() + "/floating_exceptions/main.js";
  
@@ -139,7 +139,7 @@ index ac18c08..1dd03b2 100644
              .then(output => {
                  log.debug(`Floating Window Dialog Event: ${output}`)
                  switch (output.trim()) {
-@@ -2378,7 +2378,7 @@ function enable() {
+@@ -2440,7 +2440,7 @@ function enable() {
  
      if (!indicator) {
          indicator = new PanelSettings.Indicator(ext);
@@ -159,10 +159,10 @@ index 719c29b..7423d95 100644
  imports.gi.versions.Gtk = '3.0'
  
 diff --git a/src/launcher_service.ts b/src/launcher_service.ts
-index 2f47a18..92c0c00 100644
+index 2672af2..943ab5c 100644
 --- a/src/launcher_service.ts
 +++ b/src/launcher_service.ts
-@@ -52,7 +52,7 @@ export var BUILTINS: Array<PluginType.Source> = [
+@@ -84,7 +84,7 @@ export var BUILTINS: Array<PluginType.Source> = [
  const LOCAL_PLUGINS: string = GLib.get_home_dir() + "/.local/share/pop-shell/launcher/"
  
  /** Launcher plugins that are installed system-wide */
@@ -170,12 +170,20 @@ index 2f47a18..92c0c00 100644
 +const SYSTEM_PLUGINS: string = "/run/current-system/sw/lib/pop-shell/launcher/"
  
  export class LauncherService {
-     private plugins: Map<string, PluginType.Source> = new Map()
+     plugins: Map<string, PluginType.Source> = new Map()
 diff --git a/src/panel_settings.ts b/src/panel_settings.ts
-index a2e9662..df2d0ce 100644
+index f71fc88..df2d0ce 100644
 --- a/src/panel_settings.ts
 +++ b/src/panel_settings.ts
-@@ -68,10 +68,6 @@ export class Indicator {
+@@ -2,7 +2,6 @@ const Me = imports.misc.extensionUtils.getCurrentExtension();
+ 
+ // import * as auto_tiler from 'auto_tiler';
+ import * as Utils from 'utils';
+-import { Launcher } from './dialog_launcher';
+ 
+ //import type { Entity } from './ecs';
+ import type { Ext } from './extension';
+@@ -69,10 +68,6 @@ export class Indicator {
  
          bm.addMenuItem(this.toggle_tiled);
          bm.addMenuItem(floating_window_exceptions(ext, bm));
@@ -186,7 +194,7 @@ index a2e9662..df2d0ce 100644
          bm.addMenuItem(menu_separator(''));
  
          if (!Utils.is_wayland()) {
-@@ -96,24 +92,6 @@ function menu_separator(text: any): any {
+@@ -97,24 +92,6 @@ function menu_separator(text: any): any {
      return new PopupSeparatorMenuItem(text);
  }
  
@@ -211,7 +219,7 @@ index a2e9662..df2d0ce 100644
  function floating_window_exceptions(ext: Ext, menu: any): any {
      let label = new St.Label({ text: "Floating Window Exceptions" })
      label.set_x_expand(true)
-@@ -139,54 +117,6 @@ function floating_window_exceptions(ext: Ext, menu: any): any {
+@@ -140,62 +117,6 @@ function floating_window_exceptions(ext: Ext, menu: any): any {
      return base;
  }
  
@@ -246,8 +254,16 @@ index a2e9662..df2d0ce 100644
 -    layout_manager.set_column_spacing(30);
 -    layout_manager.attach(create_label(_('Shortcuts')), 0, 0, 2, 1);
 -
+-    let launcher_shortcut = _("Super + /")
+-    const cosmic_settings = Me.imports.settings.settings_new_id('org.gnome.shell.extensions.pop-cosmic')
+-    if (cosmic_settings) {
+-        if (cosmic_settings.get_enum('overlay-key-action') === 2) {
+-            launcher_shortcut = _("Super")
+-        }
+-    }
+-
 -    [
--        [_('Launcher'), _('Super + /')],
+-        [_('Launcher'), launcher_shortcut],
 -        [_('Navigate Windows'), _('Super + Arrow Keys')],
 -        [_('Toggle Tiling'), _('Super + Y')],
 -    ].forEach((section, idx) => {
@@ -266,7 +282,7 @@ index a2e9662..df2d0ce 100644
  function clamp(input: number): number {
      return Math.min(Math.max(0, input), 128);
  }
-@@ -332,7 +262,7 @@ function color_selector(ext: Ext, menu: any) {
+@@ -341,7 +262,7 @@ function color_selector(ext: Ext, menu: any) {
      color_selector_item.add_child(color_button);
      color_button.connect('button-press-event', () => {
          let path = Me.dir.get_path() + "/color_dialog/main.js";
@@ -275,7 +291,7 @@ index a2e9662..df2d0ce 100644
          if (!resp) {
  
              return null;
-@@ -347,4 +277,4 @@ function color_selector(ext: Ext, menu: any) {
+@@ -356,4 +277,4 @@ function color_selector(ext: Ext, menu: any) {
      });
  
      return color_selector_item;
@@ -313,7 +329,7 @@ index 3139f6d..713a38f 100755
  const { GLib, Gio } = imports.gi;
  
 diff --git a/src/plugins/files/main.js b/src/plugins/files/main.js
-index ba1a210..efa94e5 100755
+index ee659c0..7f35da2 100755
 --- a/src/plugins/files/main.js
 +++ b/src/plugins/files/main.js
 @@ -1,4 +1,4 @@
@@ -333,7 +349,7 @@ index 1392ca6..df2e6d8 100755
  const { GLib, Gio } = imports.gi;
  
 diff --git a/src/plugins/recent/main.js b/src/plugins/recent/main.js
-index 91ad102..288f19d 100755
+index 0d19dcd..2a7a428 100755
 --- a/src/plugins/recent/main.js
 +++ b/src/plugins/recent/main.js
 @@ -1,4 +1,4 @@

@@ -23,16 +23,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "957898a542b1c91e66ce2b284198e619245db13e",
-        "sha256": "0j0fdrqss1kyd1sdbblnf4gzdlibg1vnf9cpza0air22nyw9bz52",
+        "rev": "28e7817323e72ac96a1535bc99bece9101f14230",
+        "sha256": "0adkxbysa62bw3z4k1ix2869kfcs43yzwgpnhyhy3m4b158xx6zs",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/957898a542b1c91e66ce2b284198e619245db13e.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/28e7817323e72ac96a1535bc99bece9101f14230.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "2731685095d1e6101b3215aa689426e1834ce00f",
+        "rev": "e7fd26aaa6b74ba203d7bae655a18b228eb6f2ee",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "cbrnix",
         "repo": "Flatery",
-        "rev": "df2e0b86089f13330d757d09d591cb939670c7bb",
-        "sha256": "1c8c4p31lp6m40v9d7fjq7dwp1850c5mc04k9yccwvafn1w8s5l4",
+        "rev": "8fbeb7a7f3204e936d19ffd27fa95f347b15f66a",
+        "sha256": "0y602qjxfrpaax17jw6g3k4x10d4696q5brlhibsf7qa9v9h8gjk",
         "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/df2e0b86089f13330d757d09d591cb939670c7bb.tar.gz",
+        "url": "https://github.com/cbrnix/Flatery/archive/8fbeb7a7f3204e936d19ffd27fa95f347b15f66a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "instant-workspace-switcher": {
@@ -98,16 +98,25 @@
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "08dcy108gnhq5z0i7fhgclwq67p956l4csl5xrmsa2vsqfn00q4z",
+        "sha256": "0gyp0sw6n6qbhww9liwv153cp9cy717hl1vr7z6zy5mbaanmyyrb",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/0.79.2/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/0.80.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.79.2"
+        "version": "0.80.0"
+    },
+    "javascriptsnippets": {
+        "name": "javascriptsnippets",
+        "publisher": "xabikos",
+        "sha256": "19xg24alxsvq8pvafprshg7qxzx8p37bzk7qz6kjgkpvandrdpl6",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/xabikos/vsextensions/javascriptsnippets/1.8.0/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "1.8.0"
     },
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "4d3cee2c7b8cbd8dbb763c10ba69a35659733ff8",
+        "rev": "701bfd40674e3ce62dfaed5c904516a98b11078d",
         "type": "git"
     },
     "niv": {
@@ -149,11 +158,20 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "d59e373a7aaf3cc570f5b91a3efc9e6581da90c3",
-        "sha256": "1yay6przglwa6agd7r8ivjmfx1svncg4y5lwxsi4005ap04zw3fi",
+        "rev": "3873fc5bbe84c392d1ed424760dc6134aafcbced",
+        "sha256": "1xchlvjc15kxrljngzhhazn5g7mlyj3ha00krsgfchxm07mxbrjn",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/d59e373a7aaf3cc570f5b91a3efc9e6581da90c3.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/3873fc5bbe84c392d1ed424760dc6134aafcbced.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "prettier-vscode": {
+        "name": "prettier-vscode",
+        "publisher": "esbenp",
+        "sha256": "017lqpmzjxq5f1zr49akcm9gfki0qq8v7pj7gks6a3szjdx16mnl",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/esbenp/vsextensions/prettier-vscode/8.0.1/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "8.0.1"
     },
     "revealjs": {
         "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
@@ -204,6 +222,15 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "2.13.0"
     },
+    "vetur": {
+        "name": "vetur",
+        "publisher": "octref",
+        "sha256": "09w3bik1mxs7qac67wgrc58vl98ham3syrn2anycpwd7135wlpby",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/octref/vsextensions/vetur/0.34.1/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.34.1"
+    },
     "vimix-gtk-themes": {
         "branch": "master",
         "description": "Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell etc.",
@@ -222,10 +249,10 @@
         "homepage": null,
         "owner": "vinceliuice",
         "repo": "vimix-icon-theme",
-        "rev": "0c3f3d1ea35837d0741f25de2f7380999254e0d5",
-        "sha256": "1qi8105garbgxykxf4jdhbs9lfxjwg8xb3cn6y0xnw5yhiijp5ac",
+        "rev": "ee23625ea4706570c964db7938a77cc7761b076c",
+        "sha256": "188xjna1qrr3hwbazb5pj1ia76l96vbg52qwrwigl7pfbbkzkhl5",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/0c3f3d1ea35837d0741f25de2f7380999254e0d5.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/ee23625ea4706570c964db7938a77cc7761b076c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {
@@ -264,6 +291,15 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "0.9.0"
     },
+    "vscode-eslint": {
+        "name": "vscode-eslint",
+        "publisher": "dbaeumer",
+        "sha256": "1wqcnbj1ckifxfw951sfhq2vyliac10i9101mk46jli36mihkjgi",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/dbaeumer/vsextensions/vscode-eslint/2.1.23/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "2.1.23"
+    },
     "vscode-icons": {
         "name": "vscode-icons",
         "publisher": "vscode-icons-team",
@@ -285,29 +321,29 @@
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
         "publisher": "vscjava",
-        "sha256": "1wr0r8banrlhkdfhgwrgcd63ig56bycz6fzdw6qcwfmp0qs12shn",
+        "sha256": "0ynx8781ani42hrqdxnfdh0bqsb31z314j3616a5s6fak1ai1b87",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.18.4/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.18.5/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.4"
+        "version": "0.18.5"
     },
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "182gqg683v5w83vpcxbxicy4cs8xpafwxq88gr6v2zj9j0qhz40i",
+        "sha256": "0c22aws48rw3n5k7l4nqr50ahywiac6qiyyic7vyhzw585gc6fi5",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.16.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.17.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.16.0"
+        "version": "0.17.0"
     },
     "vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "0vzkm0r4lz1cbf4z3zxysqgwxs7qfgq498isxmil033dbav9iy0j",
+        "sha256": "11j5yxgwji7jqdbcvwc6csp13yasbwxmxkyz94zhv94b54y104i6",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.30.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.30.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.30.0"
+        "version": "0.30.1"
     },
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
@@ -375,11 +411,11 @@
     "vscode-xml": {
         "name": "vscode-xml",
         "publisher": "redhat",
-        "sha256": "04c8fj2ng7fiafib2p7gxyxw1l7mvys0057wwgqgyasrq9i7jd3g",
+        "sha256": "0r8bq8g5f9r97f1jhqlypz18r89v88yjhk9n6gx6cm4g4apfybv3",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.16.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.17.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.16.1"
+        "version": "0.17.0"
     },
     "vscode-yaml": {
         "name": "vscode-yaml",

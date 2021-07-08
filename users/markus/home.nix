@@ -55,6 +55,10 @@ in {
           alias = "jscode";
           extensions = with sources; [
             vuejs-extension-pack
+            vscode-eslint
+            prettier-vscode
+            vetur
+            javascriptsnippets
             color-highlight
           ] ++ vscodeExtensions;
         }
@@ -74,7 +78,7 @@ in {
     };
   };
 
-  home.file."/" = {
+  home.file."tmp/../" = {
     source = inputs.dotfiles;
     recursive = true;
   };
