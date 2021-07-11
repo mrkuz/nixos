@@ -23,16 +23,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "28e7817323e72ac96a1535bc99bece9101f14230",
-        "sha256": "0adkxbysa62bw3z4k1ix2869kfcs43yzwgpnhyhy3m4b158xx6zs",
+        "rev": "2fcd0433019eef840f06ed8ac76fcc817577f5c5",
+        "sha256": "1cqi93zhzhbchly9ywyqfwqs0ahi04d8vsbim59g3a1clggqh5p9",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/28e7817323e72ac96a1535bc99bece9101f14230.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/2fcd0433019eef840f06ed8ac76fcc817577f5c5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "e7fd26aaa6b74ba203d7bae655a18b228eb6f2ee",
+        "rev": "933dcc4d195da3c32cfbbde54a96f9a5e10da166",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -116,7 +116,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "701bfd40674e3ce62dfaed5c904516a98b11078d",
+        "rev": "ade98b311888474b11c58f6a2fd8431ffc24277f",
         "type": "git"
     },
     "niv": {
@@ -158,10 +158,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "3873fc5bbe84c392d1ed424760dc6134aafcbced",
-        "sha256": "1xchlvjc15kxrljngzhhazn5g7mlyj3ha00krsgfchxm07mxbrjn",
+        "rev": "f4894c801900f55f3fc4a8bccb36c19fae188a8c",
+        "sha256": "11ayq2r0wk0q3vf2sbwdlk4ayz7wg6g82cwcv3xd3yn4n8ss53p8",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/3873fc5bbe84c392d1ed424760dc6134aafcbced.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/f4894c801900f55f3fc4a8bccb36c19fae188a8c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
