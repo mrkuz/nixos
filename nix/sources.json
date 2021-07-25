@@ -23,16 +23,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "2fcd0433019eef840f06ed8ac76fcc817577f5c5",
-        "sha256": "1cqi93zhzhbchly9ywyqfwqs0ahi04d8vsbim59g3a1clggqh5p9",
+        "rev": "b27a941719b84f2e18beea5f3c87443265746b30",
+        "sha256": "120h9qimyr5fxj0ii348b53r7vq71rc4zq1yrda8lvch6klifj6m",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/2fcd0433019eef840f06ed8ac76fcc817577f5c5.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/b27a941719b84f2e18beea5f3c87443265746b30.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "4230ab9ae618194e347a89230857cd38d687a3bd",
+        "rev": "cb4e13e387bd470667e04f71ee7e446b9d5afde6",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "cbrnix",
         "repo": "Flatery",
-        "rev": "386a9a57fe295aba080fecc32199b356bfaca86c",
-        "sha256": "03vrd7q6izp9nnbhmcb21gh8glvvk8lm6lcx0fjgqdx86xf48rmw",
+        "rev": "83852287c8af817014b374607b91ff059cf38791",
+        "sha256": "1jf8z234446xzrln3bc8glkl627g4ql7d5d5pgqllx5ya67k3qck",
         "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/386a9a57fe295aba080fecc32199b356bfaca86c.tar.gz",
+        "url": "https://github.com/cbrnix/Flatery/archive/83852287c8af817014b374607b91ff059cf38791.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "instant-workspace-switcher": {
@@ -116,7 +116,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "3e8cf0a80b9a0a4f6f85ea5efadd1503d666cae4",
+        "rev": "9080db1b49269b1b1096070ca7b3009f7ee086b4",
         "type": "git"
     },
     "niv": {
@@ -158,10 +158,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "c1f2ea499dc5e4892ba5558f60ba3276463cb06b",
-        "sha256": "1645ca2n29f619lfds53zypnl4d53932ddig7yg19fj78kb85ww5",
+        "rev": "9616931a2f8da33ff60d6332cbb1e4036c9ae2b3",
+        "sha256": "1ddff4g471823m06c8hdq1jwl3sf711s77k942azgr4yzh2yrxcm",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/c1f2ea499dc5e4892ba5558f60ba3276463cb06b.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/9616931a2f8da33ff60d6332cbb1e4036c9ae2b3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -216,11 +216,11 @@
     "terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "1l7gsb28yj2z1zfzgb8xiyf166v4blxfdkyiixlm1pqnn2lj6yb6",
+        "sha256": "1q43a28l6xfp3yw6wlr1kcidik0dbp8b7lg9vc83rhw4rjgvjsfm",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.13.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.14.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.13.1"
+        "version": "2.14.0"
     },
     "vetur": {
         "name": "vetur",
@@ -276,11 +276,11 @@
     "vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "0wc0k3hf9yfjcx7cw9vm528v5f4bk968bgc98h8fwmlx14vhapzp",
+        "sha256": "0rbd2pp4k4q2781jxfc87mxxj4m0gs4nrl2d1fa0aljgw4fln17j",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.14.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.15.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.14.0"
+        "version": "1.15.0"
     },
     "vscode-emacs-friendly": {
         "name": "vscode-emacs-friendly",
@@ -462,10 +462,10 @@
         "homepage": null,
         "owner": "Jannomag",
         "repo": "Yaru-Colors",
-        "rev": "013f8dc03e7b712d569f07b43b80c067e440c979",
-        "sha256": "0b5zfcr4jc1a5hn1fnympa18xrzbxw3i2b2inv389gkf1rcq6fh3",
+        "rev": "7de9aa19339146ec1358ed3c27b83a4b89ce9a91",
+        "sha256": "16halh77z227cbl5vbriasz3ljg7smjqi679qrva16jnhvzzgiif",
         "type": "tarball",
-        "url": "https://github.com/Jannomag/Yaru-Colors/archive/013f8dc03e7b712d569f07b43b80c067e440c979.tar.gz",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/7de9aa19339146ec1358ed3c27b83a4b89ce9a91.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

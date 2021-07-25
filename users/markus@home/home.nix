@@ -29,6 +29,7 @@
     lens
     netbeans
     postman
+    qbittorrent
     robo3t
     skypeforlinux
     spotify
