@@ -60,7 +60,7 @@ in {
       # Gnome extensions
       # gjs
       gnomeExtensions.appindicator
-      gnomeExtensions.window-is-ready-remover
+      # gnomeExtensions.window-is-ready-remover
       (callPackage ../../pkgs/desktops/gnome/extensions/dash-to-panel {})
       (callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome/extensions/instant-workspace-switcher {})

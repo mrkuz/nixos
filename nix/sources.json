@@ -32,7 +32,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "cb4e13e387bd470667e04f71ee7e446b9d5afde6",
+        "rev": "f9b47ed38a8bce63197b94b20e89bc7b014af554",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -116,7 +116,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "9080db1b49269b1b1096070ca7b3009f7ee086b4",
+        "rev": "4999de37e2c5e9b3845299bf105697449dc45f4b",
         "type": "git"
     },
     "niv": {
@@ -158,10 +158,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "9616931a2f8da33ff60d6332cbb1e4036c9ae2b3",
-        "sha256": "1ddff4g471823m06c8hdq1jwl3sf711s77k942azgr4yzh2yrxcm",
+        "rev": "475b49dc02386e26fbe6b91a559c77515d96caaf",
+        "sha256": "12f905yx8bl1qhsbzpfl93r04z3bailbfbv49p954cy4qz2b0w45",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/9616931a2f8da33ff60d6332cbb1e4036c9ae2b3.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/475b49dc02386e26fbe6b91a559c77515d96caaf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
