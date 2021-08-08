@@ -32,7 +32,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "dd55ebb67a51c73939a606159f55fffbd38bed47",
+        "rev": "6678f3833b5c237b8bf4a0a65449244bec5554e5",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "cbrnix",
         "repo": "Flatery",
-        "rev": "83852287c8af817014b374607b91ff059cf38791",
-        "sha256": "1jf8z234446xzrln3bc8glkl627g4ql7d5d5pgqllx5ya67k3qck",
+        "rev": "e82b763ecc5ba41aa4f5f64a0a5018c048f04a78",
+        "sha256": "1aflqiv9zizqmpilgd3wjy85v971r33xidq0b8h78m6i8ham698s",
         "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/83852287c8af817014b374607b91ff059cf38791.tar.gz",
+        "url": "https://github.com/cbrnix/Flatery/archive/e82b763ecc5ba41aa4f5f64a0a5018c048f04a78.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "instant-workspace-switcher": {
@@ -116,7 +116,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "0958ba6501783e5c18be6451e88a6433c853bdc9",
+        "rev": "80c0a9930b6de74a2db434b6efb9dc7a6dfb682b",
         "type": "git"
     },
     "niv": {
@@ -158,10 +158,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "10244d787c1f3a1940510e7adca36469bbfe9f5a",
-        "sha256": "13iy2nhsrhhc29nzc6cx47rxi6l8j94i8h9lw85lb7z8f3lzc7vm",
+        "rev": "b76b83b0fbb9d4ad4987a1fe11c2ca0983ee2835",
+        "sha256": "1f1yg3239kz7bfjaphx254i6g1n6ilwslmvmd3ak65aqmhk5zahg",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/10244d787c1f3a1940510e7adca36469bbfe9f5a.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/b76b83b0fbb9d4ad4987a1fe11c2ca0983ee2835.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -366,11 +366,11 @@
     "vscode-maven": {
         "name": "vscode-maven",
         "publisher": "vscjava",
-        "sha256": "1y85pmgvya1s2i67l6a3hsa4hv8ywxdn7j15kaildk24i04q4wjj",
+        "sha256": "0hn37li6wv5w0m92svr1bmmspwrwcn7k7bm59a58kfgs5j8sccax",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.32.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.32.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.32.1"
+        "version": "0.32.2"
     },
     "vscode-spring-boot": {
         "name": "vscode-spring-boot",

@@ -15,6 +15,8 @@ in {
     services.resolved.enable = true;
     environment.etc.openvpn.source = "${pkgs.update-systemd-resolved}/libexec/openvpn";
 
+    services.resolved.extraConfig = mkIf config.modules.avahi.enable "MulticastDNS=false";
+
     environment.systemPackages = with pkgs; [
       update-systemd-resolved
     ];
