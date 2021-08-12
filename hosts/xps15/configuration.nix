@@ -7,7 +7,6 @@
 
   modules = {
     android.enable = true;
-    avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
     compatibility.enable = true;
