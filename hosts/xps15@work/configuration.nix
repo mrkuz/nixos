@@ -13,6 +13,7 @@
   };
 
   swapDevices = [ { device = "/dev/vg00/swap"; } ];
+
   fileSystems."/home" = {
     device = "/dev/vg00/home";
     fsType = "ext4";

@@ -20,6 +20,7 @@ in {
       pdftk
       plantuml
       silver-searcher
+      sqlite
       texlive.combined.scheme-basic
       (callPackage ../../pkgs/misc/revealjs {})
     ];

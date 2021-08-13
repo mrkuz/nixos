@@ -12,10 +12,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.resolved.enable = true;
-    environment.etc.openvpn.source = "${pkgs.update-systemd-resolved}/libexec/openvpn";
+    services.resolved = {
+      enable = true;
+      extraConfig = mkIf config.modules.avahi.enable "MulticastDNS=false";
+    };
 
-    services.resolved.extraConfig = mkIf config.modules.avahi.enable "MulticastDNS=false";
+    environment.etc.openvpn.source = "${pkgs.update-systemd-resolved}/libexec/openvpn";
 
     environment.systemPackages = with pkgs; [
       update-systemd-resolved

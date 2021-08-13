@@ -29,9 +29,9 @@ in {
       # accounts-daemon.enable = true;
       # bamf.enable = true;
       # colord.enable = true;
-      # hardware.bolt.enable
+      # hardware.bolt.enable = true;
       printing.enable = true;
-      # telepathy.enable
+      # telepathy.enable = true;
       # udisks2.enable = true;
       # upower.enable = true;
       # system-config-printer.enable = true;

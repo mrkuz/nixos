@@ -18,6 +18,10 @@ in {
         gtk = true;
       };
       extraPackages = with pkgs; [ swaybg swayidle swaylock ];
+      extraOptions = mkIf config.modules.nvidia.enable [
+        "--unsupported-gpu"
+        "--my-next-gpu-wont-be-nvidia"
+      ];
     };
 
     environment.systemPackages = with pkgs; [

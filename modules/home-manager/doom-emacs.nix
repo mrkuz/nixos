@@ -16,10 +16,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      sqlite
-    ];
-
     home.activation.doomEmacs = hm.dag.entryAfter [ "writeBoundary" ]
       ''
       if [ ! -d $HOME/.emacs.d ]; then

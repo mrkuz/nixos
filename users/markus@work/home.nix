@@ -8,28 +8,28 @@
   home.file.".gitconfig".source = ./files/.gitconfig;
   home.file.".conkyrc".source = ./files/.conkyrc;
 
-  home.packages = [
-   # Miscellaneous
-   pkgs.gitAndTools.gitFull
-   pkgs.gocr
-   pkgs.imagemagick
-   pkgs.html-tidy
-   pkgs.mongodb-tools
-   pkgs.mongodb-4_2
-   pkgs.mysql
-   pkgs.potrace
-   pkgs.protobuf
-   # Applications
-   pkgs.android-studio
-   pkgs.charles
-   pkgs.firefox
-   pkgs.google-chrome
-   pkgs.jetbrains.idea-community
-   pkgs.netbeans
-   pkgs.postman
-   pkgs.robo3t
-   pkgs.skypeforlinux
-   pkgs.wkhtmltopdf
-   pkgs.zoom-us
+  home.packages = with pkgs; [
+    # Miscellaneous
+    gitAndTools.gitFull
+    gocr
+    imagemagick
+    html-tidy
+    mongodb-tools
+    mongodb-4_2
+    mysql
+    potrace
+    protobuf
+    # Applications
+    android-studio
+    charles
+    firefox
+    google-chrome
+    jetbrains.idea-community
+    netbeans
+    postman
+    robo3t
+    skypeforlinux
+    wkhtmltopdf
+    zoom-us
   ];
 }

@@ -12,13 +12,13 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [
-      pkgs.google-cloud-sdk
-      pkgs.kubernetes-helm
-      pkgs.kubectl
-      pkgs.kubetail
-      pkgs.minikube
-      pkgs.terraform
+    home.packages = with pkgs; [
+      google-cloud-sdk
+      kubernetes-helm
+      kubectl
+      kubetail
+      minikube
+      terraform
     ];
   };
 }

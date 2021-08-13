@@ -26,6 +26,8 @@
   boot.initrd.kernelModules = [ "i915" ];
   boot.kernelModules = [ "kvm-intel" ];
 
+  powerManagement.cpuFreqGovernor = "powersave";
+
   hardware.nvidia = {
     prime = {
       intelBusId = "PCI:0:2:0";
