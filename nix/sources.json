@@ -1,4 +1,13 @@
 {
+    "auto-complete-tag": {
+        "name": "auto-complete-tag",
+        "publisher": "formulahendry",
+        "sha256": "14xmglw17wlzsil9dpbnn96kvzavfds6xmyf4s9crxydm1swpgsz",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/formulahendry/vsextensions/auto-complete-tag/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
     "bracket-pair-colorizer-2": {
         "name": "bracket-pair-colorizer-2",
         "publisher": "CoenraadS",
@@ -390,6 +399,15 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "0.2.0"
     },
+    "vscode-spring-initializr": {
+        "name": "vscode-spring-initializr",
+        "publisher": "vscjava",
+        "sha256": "0kgjl5rc1ncqy7inkgxar2jpnv41cfzj9hpb3byyaad94pdvcp9k",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-initializr/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
+    },
     "vscode-status-bar-format-toggle": {
         "name": "vscode-status-bar-format-toggle",
         "publisher": "tombonnike",
@@ -434,6 +452,15 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/1.2.14/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.2.14"
+    },
+    "vue-vscode-snippets": {
+        "name": "vue-vscode-snippets",
+        "publisher": "sdras",
+        "sha256": "1b8grhv0d50bckf0fv73abvfxzw5rnsdy44xv03vmkw9zq8l5p2d",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sdras/vsextensions/vue-vscode-snippets/latest/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "latest"
     },
     "vuejs-extension-pack": {
         "name": "vuejs-extension-pack",

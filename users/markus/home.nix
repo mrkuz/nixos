@@ -35,44 +35,49 @@ in {
         {
           name = "Java";
           alias = "jcode";
-          extensions = with sources; [
-            vscode-lombok
-            vscode-boot-dev-pack
-            vscode-xml
-            vscode-java-pack
+          extensions = with sources; vscodeExtensions ++ [
             sonarlint-vscode
-            java
-            vscode-java-debug
-            vscode-java-dependency
-            vscode-java-test
-            vscode-maven
-            vscode-spring-boot-dashboard
-            vscode-spring-boot
-          ] ++ vscodeExtensions;
+            vscode-lombok
+            vscode-xml
+            java  # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            vscode-java-debug  # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            vscode-java-dependency # dependency for vscode-java-pack
+            vscode-java-test # dependency for vscode-java-pack
+            vscode-maven # dependency for vscode-java-pack
+            vscode-spring-boot # dependency for vscode-spring-boot-dashboard, vscode-boot-dev-pack
+            vscode-spring-initializr # dependency for vscode-boot-dev-pack
+            vscode-spring-boot-dashboard  # dependency for vscode-boot-dev-pack
+            # vscode-boot-dev-pack
+            vscode-java-pack
+          ];
         }
         {
           name = "JavaScript";
           alias = "jscode";
-          extensions = with sources; [
-            vuejs-extension-pack
-            vscode-eslint
-            prettier-vscode
-            vetur
-            javascriptsnippets
+          extensions = with sources; vscodeExtensions ++ [
             color-highlight
-          ] ++ vscodeExtensions;
+            auto-close-tag # dependency auto-complete-tag
+            auto-rename-tag # dependency auto-complete-tag
+            auto-complete-tag # dependency for vuejs-extension-pack
+            javascriptsnippets # dependency for vuejs-extension-pack
+            prettier-vscode # dependency for vuejs-extension-pack
+            vetur # dependency for vuejs-extension-pack
+            vscode-eslint # dependency for vuejs-extension-pack
+            vue-vscode-snippets # dependency for vuejs-extension-pack
+            vuejs-extension-pack
+          ];
         }
         {
           name = "DevOps";
           alias = "dcode";
-          extensions = with sources; [
+          extensions = with sources; vscodeExtensions ++ [
             nix
             terraform
+            vscode-ansible
+            vscode-yaml # dependency for vscode-docker, vscode-kubernetes-tools
             vscode-docker
             vscode-kubernetes-tools
-            vscode-ansible
-            vscode-yaml
-          ] ++ vscodeExtensions;
+          ];
         }
       ];
     };
