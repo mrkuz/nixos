@@ -8,6 +8,7 @@
 
   modules = {
     basePackages.enable = true;
+    btrfs.enable = true;
     commandNotFound.enable = true;
     compatibility.enable = true;
     emacs.enable = true;
@@ -47,6 +48,8 @@
       };
     };
   };
+
+  swapDevices = [ { device = "/.swapfile"; } ];
 
   virtualisation.virtualbox.guest = {
       enable = true;

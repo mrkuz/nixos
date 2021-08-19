@@ -6,6 +6,10 @@ BRANCH="master"
 REMOTE="origin"
 NIXPKGS="/nix/nixpkgs"
 
+if [[ ! -e "$NIXPKGS" ]]; then
+  sudo git clone https://github.com/NixOS/nixpkgs.git "$NIXPKGS"
+fi
+
 pushd . >& /dev/null
 cd "$NIXPKGS"
 
