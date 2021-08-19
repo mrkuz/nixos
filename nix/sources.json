@@ -50,16 +50,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "b27a941719b84f2e18beea5f3c87443265746b30",
-        "sha256": "120h9qimyr5fxj0ii348b53r7vq71rc4zq1yrda8lvch6klifj6m",
+        "rev": "81af73b23911cbbdce807566ed6ef2a864417d6c",
+        "sha256": "1bkyj1gzkx9djbgaqdz03qdrpidy8v4yrzngps3x308cjl06y1pf",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/b27a941719b84f2e18beea5f3c87443265746b30.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/81af73b23911cbbdce807566ed6ef2a864417d6c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "9687c04a847d7661bc335afdd85ab94281d106ab",
+        "rev": "782de48e0b1f9f4fa152a7033e225f7b2c1383f7",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -87,15 +87,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "fish-kubectl-completions": {
-        "branch": "master",
+        "branch": "main",
         "description": "kubectl completions for fish shell",
         "homepage": "",
         "owner": "evanlucas",
         "repo": "fish-kubectl-completions",
-        "rev": "bbe3b831bcf8c0511fceb0607e4e7511c73e8c71",
-        "sha256": "1r6wqvvvb755jkmlng1i085s7cj1psxmddqghm80x5573rkklfps",
+        "rev": "ced676392575d618d8b80b3895cdc3159be3f628",
+        "sha256": "09qcj82qfs4y4nfwvy90y10xmx6vc9yp33nmyk1mpvx0dx6ri21r",
         "type": "tarball",
-        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/bbe3b831bcf8c0511fceb0607e4e7511c73e8c71.tar.gz",
+        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "flatery-icon-theme": {
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "master",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "16d0bb400cf56089a3633cf288090697d43f8341",
+        "rev": "4a746b54eb15ee0f1efe2fa8138329eb7f50f648",
         "type": "git"
     },
     "niv": {
@@ -210,7 +210,7 @@
     "shortcuts-gnome-extension": {
         "branch": "master",
         "repo": "https://gitlab.com/paddatrapper/shortcuts-gnome-extension",
-        "rev": "c6fffce4cc9bf05d79e2985724896cf880e91db8",
+        "rev": "0698c98ce4db49810e645db1d1f1b87fc2c7a3a6",
         "type": "git"
     },
     "sonarlint-vscode": {
@@ -264,10 +264,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "e5c553fb00a95c7f610f7cbca8d216d2350a0952",
-        "sha256": "0j6sq7z4zqc9q4hqcq4y9vh4qpgl0v1i353l6rcd6bh1r594rwjm",
+        "rev": "174569429dda74ba704585582a9a4d6082704e35",
+        "sha256": "1a0f7ys7vq9an1j0v29b3d5i93sbpgh36j5scg36gwsgdz5x87m1",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/e5c553fb00a95c7f610f7cbca8d216d2350a0952.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/174569429dda74ba704585582a9a4d6082704e35.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {
@@ -276,10 +276,10 @@
         "homepage": null,
         "owner": "vinceliuice",
         "repo": "vimix-icon-theme",
-        "rev": "ee23625ea4706570c964db7938a77cc7761b076c",
-        "sha256": "188xjna1qrr3hwbazb5pj1ia76l96vbg52qwrwigl7pfbbkzkhl5",
+        "rev": "3426e4a94b63488b4c08fa6970d7ba864d255200",
+        "sha256": "10ibf2lcy8y7162asz4yw5gqnap985plz1ngzrw6wr1zn1rc84nb",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/ee23625ea4706570c964db7938a77cc7761b076c.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/3426e4a94b63488b4c08fa6970d7ba864d255200.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {

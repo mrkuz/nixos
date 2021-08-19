@@ -1,4 +1,4 @@
-{ stdenv, glib, ... }:
+{ stdenv, pkgs, ... }:
 
 let
   sources = import ../../../../../nix/sources.nix;
@@ -7,15 +7,13 @@ in stdenv.mkDerivation rec {
   src = sources.just-perfection;
   uuid = "just-perfection-desktop@just-perfection";
 
-  buildInputs = [ glib ];
+  buildInputs = with pkgs; [ gnome.gnome-shell glib unzip ];
 
   buildPhase = ''
     runHook preBuild
     patchShebangs scripts/
-    echo "Compiling schemas..."
-    glib-compile-schemas schemas/
-    echo "Generating translations..."
-    scripts/generate-mo.sh
+    scripts/build.sh
+    unzip -o *.zip
     runHook postBuild
   '';
 
