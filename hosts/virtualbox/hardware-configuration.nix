@@ -37,6 +37,4 @@
     fsType = "btrfs";
     options = [ "subvol=data" "compress=zstd:1" "noatime" ];
   };
-
-  swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
 }

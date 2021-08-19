@@ -7,6 +7,7 @@
 
   modules = {
     bash.enable = true;
+    fish.enable = true;
   };
 
   home.file."tmp/../" = {
