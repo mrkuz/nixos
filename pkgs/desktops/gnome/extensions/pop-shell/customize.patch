@@ -1,8 +1,33 @@
 diff --git a/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml b/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
-index 02345cb..1a4967c 100644
+index b74ff81..79d6b7a 100644
 --- a/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
 +++ b/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml
-@@ -71,28 +71,28 @@
+@@ -55,49 +55,49 @@
+ 
+         <!-- Focus Shifting -->
+         <key type="as" name="focus-left">
+-            <default><![CDATA[['<Super>Left','<Super>KP_Left','<Super>h']]]></default>
++            <default><![CDATA[['<Super>Left','<Super>KP_Left']]]></default>
+             <summary>Focus left window</summary>
+         </key>
+ 
+         <key type="as" name="focus-down">
+-            <default><![CDATA[['<Super>Down','<Super>KP_Down','<Super>j']]]></default>
++            <default><![CDATA[['<Super>Down','<Super>KP_Down']]]></default>
+             <summary>Focus down window</summary>
+         </key>
+ 
+         <key type="as" name="focus-up">
+-            <default><![CDATA[['<Super>Up','<Super>KP_Up','<Super>k']]]></default>
++            <default><![CDATA[['<Super>Up','<Super>KP_Up']]]></default>
+             <summary>Focus up window</summary>
+         </key>
+ 
+         <key type="as" name="focus-right">
+-            <default><![CDATA[['<Super>Right','<Super>KP_Right','<Super>l']]]></default>
++            <default><![CDATA[['<Super>Right','<Super>KP_Right']]]></default>
+             <summary>Focus right window</summary>
+         </key>
  
          <!-- Launcher -->
          <key type="as" name="activate-launcher">
@@ -36,7 +61,7 @@ index 02345cb..1a4967c 100644
              <summary>Enter tiling mode</summary>
          </key>
  
-@@ -107,13 +107,13 @@
+@@ -112,13 +112,13 @@
          </key>
  
          <key type="as" name="toggle-floating">
@@ -52,7 +77,7 @@ index 02345cb..1a4967c 100644
              <summary>Toggles auto-tiling on and off</summary>
          </key>
  
-@@ -139,7 +139,7 @@
+@@ -144,7 +144,7 @@
          </key>
  
          <key type="as" name="tile-orientation">
@@ -61,7 +86,7 @@ index 02345cb..1a4967c 100644
              <summary>Toggle tiling orientation</summary>
          </key>
  
-@@ -188,32 +188,32 @@
+@@ -193,32 +193,32 @@
          <!-- Workspace Management -->
  
          <key type="as" name="pop-workspace-down">
@@ -127,10 +152,10 @@ index 9522499..16968b9 100644
 \ No newline at end of file
 +launch_color_dialog()
 diff --git a/src/extension.ts b/src/extension.ts
-index 440c9a7..6d4b444 100644
+index c1af4d4..fcf21f5 100644
 --- a/src/extension.ts
 +++ b/src/extension.ts
-@@ -517,7 +517,7 @@ export class Ext extends Ecs.System<ExtEvent> {
+@@ -535,7 +535,7 @@ export class Ext extends Ecs.System<ExtEvent> {
      exception_dialog() {
          let path = Me.dir.get_path() + "/floating_exceptions/main.js";
  
@@ -139,7 +164,7 @@ index 440c9a7..6d4b444 100644
              .then(output => {
                  log.debug(`Floating Window Dialog Event: ${output}`)
                  switch (output.trim()) {
-@@ -2440,7 +2440,7 @@ function enable() {
+@@ -2460,7 +2460,7 @@ function enable() {
  
      if (!indicator) {
          indicator = new PanelSettings.Indicator(ext);
@@ -149,7 +174,7 @@ index 440c9a7..6d4b444 100644
  
      ext.keybindings.enable(ext.keybindings.global)
 diff --git a/src/floating_exceptions/src/main.ts b/src/floating_exceptions/src/main.ts
-index 719c29b..7423d95 100644
+index b3964e0..bd08623 100644
 --- a/src/floating_exceptions/src/main.ts
 +++ b/src/floating_exceptions/src/main.ts
 @@ -1,4 +1,4 @@
@@ -159,31 +184,21 @@ index 719c29b..7423d95 100644
  imports.gi.versions.Gtk = '3.0'
  
 diff --git a/src/launcher_service.ts b/src/launcher_service.ts
-index 2672af2..943ab5c 100644
+index 9da6587..0d0cb49 100644
 --- a/src/launcher_service.ts
 +++ b/src/launcher_service.ts
-@@ -84,7 +84,7 @@ export var BUILTINS: Array<PluginType.Source> = [
- const LOCAL_PLUGINS: string = GLib.get_home_dir() + "/.local/share/pop-shell/launcher/"
+@@ -165,4 +165,4 @@ export namespace JsonIPC {
+     }
  
- /** Launcher plugins that are installed system-wide */
--const SYSTEM_PLUGINS: string = "/usr/lib/pop-shell/launcher/"
-+const SYSTEM_PLUGINS: string = "/run/current-system/sw/lib/pop-shell/launcher/"
- 
- export class LauncherService {
-     plugins: Map<string, PluginType.Source> = new Map()
+     export type GpuPreference = "Default" | "NonDefault"
+-}
+\ No newline at end of file
++}
 diff --git a/src/panel_settings.ts b/src/panel_settings.ts
-index f71fc88..df2d0ce 100644
+index 83ff56c..1515ab4 100644
 --- a/src/panel_settings.ts
 +++ b/src/panel_settings.ts
-@@ -2,7 +2,6 @@ const Me = imports.misc.extensionUtils.getCurrentExtension();
- 
- // import * as auto_tiler from 'auto_tiler';
- import * as Utils from 'utils';
--import { Launcher } from './dialog_launcher';
- 
- //import type { Entity } from './ecs';
- import type { Ext } from './extension';
-@@ -69,10 +68,6 @@ export class Indicator {
+@@ -66,10 +66,6 @@ export class Indicator {
  
          bm.addMenuItem(this.toggle_tiled);
          bm.addMenuItem(floating_window_exceptions(ext, bm));
@@ -194,7 +209,7 @@ index f71fc88..df2d0ce 100644
          bm.addMenuItem(menu_separator(''));
  
          if (!Utils.is_wayland()) {
-@@ -97,24 +92,6 @@ function menu_separator(text: any): any {
+@@ -94,24 +90,6 @@ function menu_separator(text: any): any {
      return new PopupSeparatorMenuItem(text);
  }
  
@@ -219,7 +234,7 @@ index f71fc88..df2d0ce 100644
  function floating_window_exceptions(ext: Ext, menu: any): any {
      let label = new St.Label({ text: "Floating Window Exceptions" })
      label.set_x_expand(true)
-@@ -140,62 +117,6 @@ function floating_window_exceptions(ext: Ext, menu: any): any {
+@@ -137,62 +115,6 @@ function floating_window_exceptions(ext: Ext, menu: any): any {
      return base;
  }
  
@@ -282,7 +297,7 @@ index f71fc88..df2d0ce 100644
  function clamp(input: number): number {
      return Math.min(Math.max(0, input), 128);
  }
-@@ -341,7 +262,7 @@ function color_selector(ext: Ext, menu: any) {
+@@ -338,7 +260,7 @@ function color_selector(ext: Ext, menu: any) {
      color_selector_item.add_child(color_button);
      color_button.connect('button-press-event', () => {
          let path = Me.dir.get_path() + "/color_dialog/main.js";
@@ -291,80 +306,10 @@ index f71fc88..df2d0ce 100644
          if (!resp) {
  
              return null;
-@@ -356,4 +277,4 @@ function color_selector(ext: Ext, menu: any) {
+@@ -353,4 +275,4 @@ function color_selector(ext: Ext, menu: any) {
      });
  
      return color_selector_item;
 -}
 \ No newline at end of file
 +}
-diff --git a/src/plugin_scripts.ts b/src/plugin_scripts.ts
-index 94c874a..377000b 100644
---- a/src/plugin_scripts.ts
-+++ b/src/plugin_scripts.ts
-@@ -12,7 +12,7 @@ import type { Response } from 'launcher_plugins'
- const LOCAL: string = GLib.get_home_dir() + "/.local/share/pop-shell/scripts/"
- 
- /** Scripts maintained by this project, or the distribution */
--const SYSTEM: string = "/usr/lib/pop-shell/scripts/"
-+const SYSTEM: string = "/run/current-system/sw/lib/pop-shell/scripts/"
- 
- interface ScriptData {
-     name: string
-@@ -142,4 +142,4 @@ export class ScriptsBuiltin extends plugins.Builtin {
- 
-         return { event: "noop" }
-     }
--}
-\ No newline at end of file
-+}
-diff --git a/src/plugins/calc/main.js b/src/plugins/calc/main.js
-index 3139f6d..713a38f 100755
---- a/src/plugins/calc/main.js
-+++ b/src/plugins/calc/main.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/gjs
-+#!/usr/bin/env gjs
- 
- const { GLib, Gio } = imports.gi;
- 
-diff --git a/src/plugins/files/main.js b/src/plugins/files/main.js
-index ee659c0..7f35da2 100755
---- a/src/plugins/files/main.js
-+++ b/src/plugins/files/main.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/gjs
-+#!/usr/bin/env gjs
- 
- const { GLib, Gio } = imports.gi;
- 
-diff --git a/src/plugins/pulse/main.js b/src/plugins/pulse/main.js
-index 1392ca6..df2e6d8 100755
---- a/src/plugins/pulse/main.js
-+++ b/src/plugins/pulse/main.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/gjs
-+#!/usr/bin/env gjs
- 
- const { GLib, Gio } = imports.gi;
- 
-diff --git a/src/plugins/recent/main.js b/src/plugins/recent/main.js
-index 0d19dcd..2a7a428 100755
---- a/src/plugins/recent/main.js
-+++ b/src/plugins/recent/main.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/gjs
-+#!/usr/bin/env gjs
- 
- const { GLib, Gio, Gtk } = imports.gi
- 
-diff --git a/src/plugins/terminal/main.js b/src/plugins/terminal/main.js
-index 7446340..0564443 100755
---- a/src/plugins/terminal/main.js
-+++ b/src/plugins/terminal/main.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/gjs
-+#!/usr/bin/env gjs
- 
- const { GLib, Gio } = imports.gi;
- 
