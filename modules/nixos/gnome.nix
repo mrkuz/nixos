@@ -53,7 +53,6 @@ in {
       gnome3.libgnome-keyring
       # Miscellaneous applications
       chromium
-      gimp
       gparted
       remmina
       vlc

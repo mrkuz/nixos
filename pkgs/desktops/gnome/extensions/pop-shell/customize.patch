@@ -152,29 +152,20 @@ index 9522499..16968b9 100644
 \ No newline at end of file
 +launch_color_dialog()
 diff --git a/src/extension.ts b/src/extension.ts
-index c1af4d4..fcf21f5 100644
+index 6d3e460..174ba80 100644
 --- a/src/extension.ts
 +++ b/src/extension.ts
-@@ -535,7 +535,7 @@ export class Ext extends Ecs.System<ExtEvent> {
-     exception_dialog() {
-         let path = Me.dir.get_path() + "/floating_exceptions/main.js";
+@@ -533,7 +533,7 @@ export class Ext extends Ecs.System<ExtEvent> {
+             return true
+         }
  
--        utils.async_process(["gjs", path], null, null)
-+        utils.async_process([path], null, null)
-             .then(output => {
-                 log.debug(`Floating Window Dialog Event: ${output}`)
-                 switch (output.trim()) {
-@@ -2460,7 +2460,7 @@ function enable() {
+-        const ipc = utils.async_process_ipc(["gjs", path])
++        const ipc = utils.async_process_ipc([path])
  
-     if (!indicator) {
-         indicator = new PanelSettings.Indicator(ext);
--        panel.addToStatusArea('pop-shell', indicator.button);
-+        panel.addToStatusArea('pop-shell', indicator.button, 1);
-     }
- 
-     ext.keybindings.enable(ext.keybindings.global)
+         if (ipc) {
+             const generator = (stdout: any, res: any) => {
 diff --git a/src/floating_exceptions/src/main.ts b/src/floating_exceptions/src/main.ts
-index b3964e0..bd08623 100644
+index f298ec7..cf9f383 100644
 --- a/src/floating_exceptions/src/main.ts
 +++ b/src/floating_exceptions/src/main.ts
 @@ -1,4 +1,4 @@

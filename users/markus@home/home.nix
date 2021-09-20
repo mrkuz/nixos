@@ -23,15 +23,16 @@
     # potrace
     protobuf
     python3
+    youtube-dl
     # Applications
     android-studio
+    calibre
+    gimp
     jetbrains.idea-community
     lens
     netbeans
     postman
     qbittorrent
-    robo3t
-    skypeforlinux
     spotify
     steam
     steam-run
