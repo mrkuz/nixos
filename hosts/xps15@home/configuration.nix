@@ -30,10 +30,6 @@
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
   services.openssh.passwordAuthentication = false;
 
-  environment.systemPackages = with pkgs; [
-    thunderbird
-  ];
-
   users = {
     groups.markus.gid = 1000;
     groups.enesa.gid = 1001;
