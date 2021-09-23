@@ -18,8 +18,8 @@ in {
       jdk
       maven
       visualvm
-      (callPackage ../../pkgs/shell/jdk8-shell {})
       (callPackage ../../pkgs/shell/jdk11-shell {})
+      (callPackage ../../pkgs/shell/graalvm-shell {})
     ];
   };
 }
