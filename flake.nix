@@ -11,16 +11,16 @@
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     dotfiles = {
       # url = "github:mrkuz/dotfiles";
-      url = "/home/markus/etc/nixos/repos/dotfiles";
+      url = "./repos/dotfiles";
       flake = false;
     };
     doomd = {
       # url = "github:mrkuz/doom.d";
-      url = "/home/markus/etc/nixos/repos/doom.d";
+      url = "./repos/doom.d";
       flake = false;
     };
     credentials = {
-      url = "/home/markus/etc/nixos/credentials.nix";
+      url = "./credentials.nix";
       flake = false;
     };
   };
