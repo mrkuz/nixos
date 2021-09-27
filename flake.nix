@@ -9,6 +9,10 @@
     nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
     dotfiles = {
       # url = "github:mrkuz/dotfiles";
       url = "/home/markus/etc/nixos/repos/dotfiles";
@@ -50,6 +54,7 @@
             _module.args.credentials = import inputs.credentials;
             _module.args.pkgs-local = pkgs-local;
             _module.args.pkgs-stable = pkgs-stable;
+            _module.args.config-name = name;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay

@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, self, ... }:
+{ config, pkgs, nixpkgs, self, config-name, ... }:
 
 {
   imports = [
@@ -94,6 +94,10 @@
     [ -d /nix/share ] || mkdir /nix/share
     ln -sf ${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json /nix/share/options.json
   '';
+
+  environment.systemPackages = with pkgs; [
+    (callPackage ../../pkgs/tools/nix/nixos-option { inherit config-name; })
+  ];
 
   documentation = {
     doc.enable = false;
