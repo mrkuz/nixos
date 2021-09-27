@@ -15,6 +15,7 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
 - `/nix/nixpkgs` - A clone of the [nixpkgs repository](https://github.com/NixOS/nixpkgs)
 - `/nix/current` - The active configuration
 - `/nix/channels/nixos` - Local copy of the unstable channel, used as the default Nix expression search path
+- `/nix/share/options.json` - JSON file of all available NixOS options
 
 # Files & directories
 

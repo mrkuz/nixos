@@ -91,6 +91,8 @@
     ln -s ${nixpkgs} /nix/channels/nixos
     rm -f /nix/current
     ln -s ${self} /nix/current
+    [ -d /nix/share ] || mkdir /nix/share
+    ln -sf ${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json /nix/share/options.json
   '';
 
   documentation = {

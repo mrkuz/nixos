@@ -50,16 +50,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "ab730b9270f1130154baeeb8fb1116ca7fba9741",
-        "sha256": "1m3hdlzhkysz7llvqshw273j9gr743fly7cc94cm6kbax5gvs5q6",
+        "rev": "b7213be14c346872ff41d26da8ed15acee9c4fbe",
+        "sha256": "1m4yqjs3v5iqki6sy894ssckjj212xgd2sv619n7ma5smngnlkd5",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/ab730b9270f1130154baeeb8fb1116ca7fba9741.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/b7213be14c346872ff41d26da8ed15acee9c4fbe.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "595a5e665cfa3acbbf46ee121712aeb1da2794c2",
+        "rev": "2084eddf5f18163b27158f82dc81180b2d8e8ff3",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -237,7 +237,7 @@
     "switcher": {
         "branch": "master",
         "repo": "https://github.com/daniellandau/switcher",
-        "rev": "427171cfd37d657801d48539e1f35645d14fcd7e",
+        "rev": "0901778e3b53379e35cc177f7360de749635cfa5",
         "type": "git"
     },
     "terraform": {
@@ -264,10 +264,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "f6d1a08cf111a7587751fa89d25b8b892352cd2b",
-        "sha256": "0qa0dxf889w84aiim6klrqr7i8cfzh4hwa4f66gk6rgk49mscpyk",
+        "rev": "e008342fa204af86a0a55f6f986e34ae1341ae9b",
+        "sha256": "18r2rbfnj5jxc19rm2jrlgizkh0m7hg8qdic2fpv1didgk2n8x1r",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/f6d1a08cf111a7587751fa89d25b8b892352cd2b.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/e008342fa204af86a0a55f6f986e34ae1341ae9b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {

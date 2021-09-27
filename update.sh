@@ -33,3 +33,9 @@ nix flake update
 git diff flake.lock
 niv update
 git diff nix/sources.json
+
+if [[ -e "/nix/share/options.json" ]]; then
+  nix-build /nix/nixpkgs/nixos/release.nix -A options -o tmp/options
+  diff -u --color=always <(jq keys /nix/share/options.json) <(jq keys tmp/options/share/doc/nixos/options.json) | less
+  rm tmp/options
+fi
