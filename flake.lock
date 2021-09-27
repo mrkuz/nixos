@@ -133,11 +133,11 @@
     },
     "nixpkgs-local": {
       "locked": {
-        "lastModified": 1632733991,
-        "narHash": "sha256-fbgyoIdT1//s3b3/PbWBGBxoRPesuGhXL0cmhUKuubg=",
-        "ref": "master",
-        "rev": "5086684eadd9577b374522a767368fb6b1dd2f1d",
-        "revCount": 319391,
+        "lastModified": 1632660378,
+        "narHash": "sha256-sjA8eQlnyDjDLyAyq3XlJmN0nqW0ftl/pb7VnMg86L0=",
+        "ref": "nixos-unstable",
+        "rev": "31ffc50c571e6683e9ecc9dbcbd4a8e9914b4497",
+        "revCount": 319271,
         "type": "git",
         "url": "file:///nix/nixpkgs"
       },

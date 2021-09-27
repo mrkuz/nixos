@@ -2,7 +2,7 @@
 
 set -e
 
-BRANCH="master"
+BRANCH="nixos-unstable"
 REMOTE="origin"
 NIXPKGS="/nix/nixpkgs"
 
