@@ -19,46 +19,58 @@
     "credentials": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-/DB6iKk4nve6YuFhfqXAFeX6Dmr1ew65cnDBgLd03p4=",
-        "path": "/home/markus/etc/nixos/credentials.nix",
-        "type": "path"
+        "lastModified": 1632748625,
+        "narHash": "sha256-XlV9IiWEv/5Cl5o54TV+2zfKfboaqzsnXDCblrDKus0=",
+        "ref": "main",
+        "rev": "10f823099798f93f39ff43dc15a7bc3212dcd8b5",
+        "revCount": 1,
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/credentials"
       },
       "original": {
-        "path": "/home/markus/etc/nixos/credentials.nix",
-        "type": "path"
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/credentials"
       }
     },
     "doomd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-/RnUflN1dEK+WSI79k3RmV2oCmcRYgVDpMMquWTVfWA=",
-        "path": "/home/markus/etc/nixos/repos/doom.d",
-        "type": "path"
+        "lastModified": 1620716989,
+        "narHash": "sha256-dft6QEpz+kcloyCCJ/g0kUyLNQEgqs3oYGlWw2gCMRo=",
+        "ref": "HEAD",
+        "rev": "98cbc196c31b2e0c2a900559209057a190eab376",
+        "revCount": 59,
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/doom.d"
       },
       "original": {
-        "path": "/home/markus/etc/nixos/repos/doom.d",
-        "type": "path"
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/doom.d"
       }
     },
     "dotfiles": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-tHqIDe2xGJvw1R1pxh4cXwjcETLLVyq3+cPaMPdygVY=",
-        "path": "/home/markus/etc/nixos/repos/dotfiles",
-        "type": "path"
+        "lastModified": 1627203344,
+        "narHash": "sha256-+xBuyA6HYf2mXHJ9rMvMBZ7+VZfqrp+2+jwcYUmQh/8=",
+        "ref": "HEAD",
+        "rev": "94f07e6a1743650e0f8741daa73bd13a2d95dd36",
+        "revCount": 223,
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/dotfiles"
       },
       "original": {
-        "path": "/home/markus/etc/nixos/repos/dotfiles",
-        "type": "path"
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/dotfiles"
       }
     },
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1632706853,
-        "narHash": "sha256-ssgnd5grFcM57rk0FcqKkHAQ7Nu4P9fI+BWhWXP8H0s=",
+        "lastModified": 1632733875,
+        "narHash": "sha256-Gd17hViKBh2fSpXlr5w1rno/o51RdP4CLth91GgyCLU=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "9e413d8ce53b287d72dc4a6acb20d8ded68514bf",
+        "rev": "61252f6d58c14eae1d67724c515bc27006df7999",
         "type": "github"
       },
       "original": {
@@ -105,13 +117,17 @@
     },
     "nixpkgs-local": {
       "locked": {
-        "narHash": "sha256-sYfTQMD/4KBIoxFEuAZXOwkxVea0b47fk+m+mXINfUQ=",
-        "path": "/nix/nixpkgs",
-        "type": "path"
+        "lastModified": 1632733991,
+        "narHash": "sha256-fbgyoIdT1//s3b3/PbWBGBxoRPesuGhXL0cmhUKuubg=",
+        "ref": "master",
+        "rev": "5086684eadd9577b374522a767368fb6b1dd2f1d",
+        "revCount": 319391,
+        "type": "git",
+        "url": "file:///nix/nixpkgs"
       },
       "original": {
-        "path": "/nix/nixpkgs",
-        "type": "path"
+        "type": "git",
+        "url": "file:///nix/nixpkgs"
       }
     },
     "nixpkgs-stable": {

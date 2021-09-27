@@ -49,19 +49,6 @@ Scripts to simplify the work with VSCode extensions.
 
 - `update-vscode-extensions.sh` - Updates all extensions to the latest version
 
-### Other
-
-- `credentials.nix` - Used to store the passwords for users
-
-  _Example_
-
-  ```nix
-  {
-    user.password = "password";
-    # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'
-  }
-  ```
-
 ## `hosts/`
 
 - `_all` - Base expression, imported by all other hosts
@@ -140,7 +127,18 @@ Contains a bunch of extra packages.
 
 ## `repos/`
 
-Other repostories used, added as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+- `credentials` - Local repository with one file `default.nix`, which is used to store the passwords for users. Must be created manually.
+
+  _Example_
+
+  ```nix
+  {
+    user.password = "password";
+    # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'
+  }
+  ```
+
+These repositories are added as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 - `doom.d` - My Doom Emacs [configuration](https://github.com/mrkuz/doom.d)
 - `dotfiles` - My [dotfiles](https://github.com/mrkuz/dotfiles)
@@ -149,7 +147,6 @@ Other repostories used, added as [Git submodules](https://git-scm.com/book/en/v2
 ## `examples/docker/`
 
 Demonstrates how to build a Docker image from Nix expressions.
-
 
 ```shell
 nix build --impure
@@ -259,13 +256,26 @@ nix develop
   }
   ```
 
-- Create `credentials.nix` and set password for the user `user`.
+- Create credentials repository
+
+  ```shell
+  mkdir repos/credentials
+  cd repos/credentials
+  git init
+  ```
+
+- Create `repos/credentials/default.nix` and set password for the user `user`.
 
   ```nix
   {
     user.password = "...";
     # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'sha-512'
   }
+  ```
+
+  ```shell
+  git add default.nix
+  git commit -m"Add credentials"
   ```
 
 - Update `credentials.url` in `flake.nix`. Must be an absolute path.
@@ -296,20 +306,20 @@ nix develop
   git submodule update
   ```
 
-- Replace `dotfiles.url`, `doomd.url` and `credentials.url` in `flake.nix` with relative paths.
+- Replace `dotfiles.url`, `doomd.url` and `credentials.url` in `flake.nix` with absolute paths.
 
   ```nix
   {
     dotfiles = {
-      url = "./repos/dotfiles";
+      url = "/home/user/etc/nixos/repos/dotfiles";
       flake = false;
     };
     doomd = {
-      url = "./repos/doom.d";
+      url = "/home/user/etc/nixos/repos/doom.d";
       flake = false;
     };
     credentials = {
-      url = "./credentials.nix";
+      url = "/home/user/etc/nixos/repos/credentials";
       flake = false;
     };
   }
