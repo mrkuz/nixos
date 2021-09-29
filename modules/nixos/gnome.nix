@@ -36,7 +36,6 @@ in {
       gnome3.epiphany
       gnome3.geary
       gnome3.gnome-calendar
-      gnome-connections
       gnome3.gnome-contacts
       gnome3.gnome-logs
       gnome3.gnome-maps
@@ -54,7 +53,6 @@ in {
       # Miscellaneous applications
       chromium
       gparted
-      remmina
       vlc
       # Gnome extensions
       # gjs
