@@ -15,6 +15,10 @@ in {
     virtualisation.docker = {
       enable = true;
       enableOnBoot = false;
+      autoPrune = {
+        enable = true;
+        dates = "daily";
+      };
     };
 
     environment.systemPackages = with pkgs; [
