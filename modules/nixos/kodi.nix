@@ -12,10 +12,9 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      (pkgs.kodi.withPackages (p: with p; [
-        inputstream-adaptive
-      ]))
-    ];
+    services.xserver.desktopManager.kodi = {
+      enable = true;
+      package = pkgs.kodi.withPackages (p: with p; [ inputstream-adaptive ]);
+    };
   };
 }
