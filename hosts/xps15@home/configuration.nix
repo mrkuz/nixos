@@ -13,6 +13,7 @@
     kodi.enable = true;
     pipewire.enable = true;
     sshd.enable = true;
+    steam.enable = true;
     systemdBoot.enable = true;
   };
 
@@ -24,8 +25,6 @@
     enable = true;
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
-
-  # hardware.steam-hardware.enable = true;
 
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
   services.openssh.passwordAuthentication = false;

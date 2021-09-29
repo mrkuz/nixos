@@ -35,8 +35,6 @@
     qbittorrent
     spotify
     skypeforlinux
-    steam
-    steam-run
     thunderbird-bin
   ];
 }

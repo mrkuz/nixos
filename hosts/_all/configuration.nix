@@ -23,6 +23,7 @@
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/resolved.nix
     ../../modules/nixos/sshd.nix
+    ../../modules/nixos/steam.nix
     ../../modules/nixos/sway.nix
     ../../modules/nixos/systemd-boot.nix
     ../../modules/nixos/virtualbox.nix
