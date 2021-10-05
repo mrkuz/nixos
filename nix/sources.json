@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "c92937f8909656e496aca50f81e04381b9be37e9",
+        "rev": "0ca2e791f7e428c092ac5cc3b5f0d00fc8d718ba",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "41c6e56bb39de82b187defe5dabd54b5b134b679",
+        "rev": "f4b9c028bc06e383144158b978c384949b6ddc44",
         "type": "git"
     },
     "niv": {
@@ -216,11 +216,11 @@
     "sonarlint-vscode": {
         "name": "sonarlint-vscode",
         "publisher": "sonarsource",
-        "sha256": "0fpw9in2bd07g547rl1fd7g7z8d10kvi34wyiiffmpnya6kp4jr8",
+        "sha256": "08akvidnrnyrbbb8chb6gidc2rjlnjpr40yy2pgw2550vr0rnf80",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/2.2.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/2.3.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.2.0"
+        "version": "2.3.0"
     },
     "straight-top-bar": {
         "branch": "master",
@@ -264,10 +264,10 @@
         "homepage": "https://vinceliuice.github.io/",
         "owner": "vinceliuice",
         "repo": "vimix-gtk-themes",
-        "rev": "e008342fa204af86a0a55f6f986e34ae1341ae9b",
-        "sha256": "18r2rbfnj5jxc19rm2jrlgizkh0m7hg8qdic2fpv1didgk2n8x1r",
+        "rev": "f83a116716262ee3e7c32419c96ec8d5e26bca3a",
+        "sha256": "1lchaassin9ysbwl5zw0cijlkcyzx8yanss8zz1fa62iqqvdh2hh",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/e008342fa204af86a0a55f6f986e34ae1341ae9b.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/f83a116716262ee3e7c32419c96ec8d5e26bca3a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vimix-icon-theme": {
@@ -348,11 +348,11 @@
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
         "publisher": "vscjava",
-        "sha256": "0n420n6waq0pq3016srmf9xc7cn5pif7l7phfmwdda8fksvrgvd1",
+        "sha256": "1yjzgf96kqm09qlhxpa249fqb2b5wpzw9k53sgr8jx8sfx5qn95b",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.18.7/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.18.8/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.7"
+        "version": "0.18.8"
     },
     "vscode-java-pack": {
         "name": "vscode-java-pack",
@@ -456,11 +456,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "1ffsah3pwxfa8ya2c0a3q1wh5ngh621zgidfwl8iggnrl7nbwl3k",
+        "sha256": "0hdly0cxj13fs5q06nlcic3yhv6jq641q01y07sxl9xaprb0n2dm",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/0.22.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/0.23.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.22.0"
+        "version": "0.23.0"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
@@ -507,10 +507,10 @@
         "homepage": null,
         "owner": "Jannomag",
         "repo": "Yaru-Colors",
-        "rev": "33fbc1855741303611c881938edfbfa3d5f42cb7",
-        "sha256": "1bklnlqq6llzbhq1l3j02kyxg3k8ys3f3d7l9pnaqp0igbsq3y77",
+        "rev": "905e68806858c2976136d0c19f2db9df8af51934",
+        "sha256": "1clpggbpp1g95kx174ln2n5vaikwz90hmz7828c6hhp8ndqsvqcf",
         "type": "tarball",
-        "url": "https://github.com/Jannomag/Yaru-Colors/archive/33fbc1855741303611c881938edfbfa3d5f42cb7.tar.gz",
+        "url": "https://github.com/Jannomag/Yaru-Colors/archive/905e68806858c2976136d0c19f2db9df8af51934.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

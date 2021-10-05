@@ -23,6 +23,7 @@
     # potrace
     protobuf
     python3
+    python39Packages.pdfx
     youtube-dl
     # Applications
     android-studio
