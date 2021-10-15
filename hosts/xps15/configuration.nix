@@ -46,10 +46,10 @@
   services = {
     fstrim.enable = true;
     haveged.enable = true;
-    power-profiles-daemon.enable = false;
+    power-profiles-daemon.enable = true;
     smartd.enable = true;
     thermald.enable = true;
-    tlp.enable = true;
+    tlp.enable = false;
     tuptime.enable = true;
   };
 
