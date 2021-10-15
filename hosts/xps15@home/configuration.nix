@@ -12,7 +12,6 @@
     libreoffice.enable = true;
     kodi.enable = true;
     pipewire.enable = true;
-    sshd.enable = true;
     steam.enable = true;
     systemdBoot.enable = true;
   };

@@ -14,7 +14,6 @@
     docker.enable = true;
     emacs.enable = true;
     gnome.enable = true;
-    grubEfi.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
     resolved.enable = true;
@@ -40,8 +39,8 @@
     pkgs.vaapiIntel
   ];
 
-  # Use cgroups v1
-  systemd.enableUnifiedCgroupHierarchy = false;
+  # Use cgroups v2
+  systemd.enableUnifiedCgroupHierarchy = true;
   # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
 
   services = {

@@ -6,6 +6,10 @@
     ../xps15/configuration.nix
   ];
 
+  modules = {
+    grubEfi.enable = true;
+  };
+
   networking = {
     hostName = "nixos";
     extraHosts = "172.19.96.110 trow.kube-public";
