@@ -41,7 +41,6 @@ in {
       gnome3.gnome-maps
       gnome3.gnome-music
       gnome-photos
-      gnome3.totem
       gnome3.yelp
     ];
 
@@ -53,7 +52,6 @@ in {
       # Miscellaneous applications
       chromium
       gparted
-      vlc
       # Gnome extensions
       # gjs
       gnomeExtensions.appindicator
