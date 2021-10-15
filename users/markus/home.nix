@@ -3,7 +3,6 @@
 let
   sources = import ../../nix/sources.nix;
   vscodeExtensions = with sources; [
-    bracket-pair-colorizer-2
     vscode-emacs-friendly
     vscode-theme-darcula
     vscode-icons
