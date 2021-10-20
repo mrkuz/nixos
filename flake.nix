@@ -18,9 +18,9 @@
       url = "/home/markus/etc/nixos/repos/dotfiles";
       flake = false;
     };
-    doomd = {
-      # url = "github:mrkuz/doom.d";
-      url = "/home/markus/etc/nixos/repos/doom.d";
+    emacsd = {
+      # url = "github:mrkuz/emacs.d";
+      url = "/home/markus/etc/nixos/repos/emacs.d";
       flake = false;
     };
     credentials = {

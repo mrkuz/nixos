@@ -24,7 +24,6 @@ in {
       iniFile = ../markus/files/dconf.ini;
     };
     disableBluetooth.enable = true;
-    doomEmacs.enable = true;
     emacs.enable = true;
     fish.enable = true;
     javaPackages.enable = true;
@@ -87,8 +86,8 @@ in {
     recursive = true;
   };
 
-  home.file.".doom.d" = {
-    source = inputs.doomd;
+  home.file.".emacs.d" = {
+    source = inputs.emacsd;
     recursive = true;
   };
 
@@ -115,7 +114,7 @@ in {
     # Link some stuff
     [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
     [ -e $HOME/etc/dotfiles ] || ln -svf $HOME/etc/nixos/repos/dotfiles $HOME/etc/dotfiles
-    [ -e $HOME/etc/doom.d ] || ln -svf $HOME/etc/nixos/repos/doom.d $HOME/etc/doom.d
+    [ -e $HOME/etc/emacs.d ] || ln -svf $HOME/etc/nixos/repos/emacs.d $HOME/etc/emacs.d
 
     # Clone repositories
     [ -e $HOME/etc/nix-shell ] || (cd $HOME/etc && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/nix-shell")

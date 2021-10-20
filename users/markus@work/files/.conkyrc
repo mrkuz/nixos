@@ -36,7 +36,7 @@ Home FS free: $alignr ${fs_free /home} of ${fs_size /home}
 Data FS free: $alignr ${fs_free /data/user} of ${fs_size /data/user}
 $hr
 dotfiles.git $alignr ${exec git -C ~/etc/dotfiles/ diff --quiet --exit-code && echo Clean || echo Dirty}
-doom.d $alignr ${exec git -C ~/etc/doom.d/ diff --quiet --exit-code && echo Clean || echo Dirty}
+emacs.d $alignr ${exec git -C ~/etc/emacs.d/ diff --quiet --exit-code && echo Clean || echo Dirty}
 nixos $alignr ${exec git -C ~/etc/nixos/ diff --quiet --exit-code && echo Clean || echo Dirty}
 nix-shell $alignr ${exec git -C ~/etc/nix-shell/ diff --quiet --exit-code && echo Clean || echo Dirty}
 dockerfiles $alignr ${exec git -C ~/src/dockerfiles/ diff --quiet --exit-code && echo Clean || echo Dirty}

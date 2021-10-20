@@ -32,30 +32,11 @@
         "url": "file:///home/markus/etc/nixos/repos/credentials"
       }
     },
-    "doomd": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1620716989,
-        "narHash": "sha256-dft6QEpz+kcloyCCJ/g0kUyLNQEgqs3oYGlWw2gCMRo=",
-        "ref": "HEAD",
-        "rev": "98cbc196c31b2e0c2a900559209057a190eab376",
-        "revCount": 59,
-        "type": "git",
-        "url": "file:///home/markus/etc/nixos/repos/doom.d"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///home/markus/etc/nixos/repos/doom.d"
-      }
-    },
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1627203344,
-        "narHash": "sha256-+xBuyA6HYf2mXHJ9rMvMBZ7+VZfqrp+2+jwcYUmQh/8=",
-        "ref": "HEAD",
-        "rev": "94f07e6a1743650e0f8741daa73bd13a2d95dd36",
-        "revCount": 223,
+        "lastModified": 1634194743,
+        "narHash": "sha256-YwzC4ywHLz8meg4FqTdRTu5a52mHDBrmDJszkMHkReY=",
         "type": "git",
         "url": "file:///home/markus/etc/nixos/repos/dotfiles"
       },
@@ -77,6 +58,22 @@
         "owner": "nix-community",
         "repo": "emacs-overlay",
         "type": "github"
+      }
+    },
+    "emacsd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634754540,
+        "narHash": "sha256-KHS+JSnbyxTCmX79Tv+S0sflMUPWE5mwFgSuLlMJFSU=",
+        "ref": "main",
+        "rev": "617f5bae47b201730897fbab3679ef894df62eee",
+        "revCount": 52,
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/emacs.d"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/markus/etc/nixos/repos/emacs.d"
       }
     },
     "flake-compat": {
@@ -185,9 +182,9 @@
     "root": {
       "inputs": {
         "credentials": "credentials",
-        "doomd": "doomd",
         "dotfiles": "dotfiles",
         "emacs-overlay": "emacs-overlay",
+        "emacsd": "emacsd",
         "flake-compat": "flake-compat",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",

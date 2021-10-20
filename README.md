@@ -140,7 +140,7 @@ Contains a bunch of extra packages.
 
 These repositories are added as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-- `doom.d` - My Doom Emacs [configuration](https://github.com/mrkuz/doom.d)
+- `emacs.d` - My Emacs [configuration](https://github.com/mrkuz/emacs.d)
 - `dotfiles` - My [dotfiles](https://github.com/mrkuz/dotfiles)
 
 
@@ -241,7 +241,7 @@ nix develop
   cd nixos
   ```
 
-- Change `dotfiles.url` and `doomd.url` in `flake.nix` to point to GitHub repositories, not local directories.
+- Change `dotfiles.url` and `emacsd.url` in `flake.nix` to point to GitHub repositories, not local directories.
 
   ```nix
   {
@@ -249,8 +249,8 @@ nix develop
       url = "github:mrkuz/dotfiles";
       flake = false;
     };
-    doomd = {
-      url = "github:mrkuz/doom.d";
+    emacsd = {
+      url = "github:mrkuz/emacs.d";
       flake = false;
     };
   }
@@ -306,7 +306,7 @@ nix develop
   git submodule update
   ```
 
-- Replace `dotfiles.url`, `doomd.url` and `credentials.url` in `flake.nix` with absolute paths.
+- Replace `dotfiles.url`, `emacsd.url` and `credentials.url` in `flake.nix` with absolute paths.
 
   ```nix
   {
@@ -314,8 +314,8 @@ nix develop
       url = "/home/user/etc/nixos/repos/dotfiles";
       flake = false;
     };
-    doomd = {
-      url = "/home/user/etc/nixos/repos/doom.d";
+    emacsd = {
+      url = "/home/user/etc/nixos/repos/emacs.d";
       flake = false;
     };
     credentials = {
