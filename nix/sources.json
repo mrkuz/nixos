@@ -20,11 +20,11 @@
     "auto-rename-tag": {
         "name": "auto-rename-tag",
         "publisher": "formulahendry",
-        "sha256": "08l010cl1vhci09wvzdzf8s0vja9hg83r9l4wx8f1xmq135m7zap",
+        "sha256": "1xk8rzda16qgdxhq8bz6f8w09fd9044qczx1wfhszd6w3r4q9262",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/formulahendry/vsextensions/auto-rename-tag/0.1.8/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/formulahendry/vsextensions/auto-rename-tag/0.1.9/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "bracket-pair-colorizer-2": {
         "name": "bracket-pair-colorizer-2",
@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "316209ea611795e3849a6ba3068c42ac94ca6cf7",
+        "rev": "b0438f158946a06d0aa5445f88ba4e1a32227324",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -80,10 +80,10 @@
         "homepage": "",
         "owner": "laktak",
         "repo": "extrakto",
-        "rev": "f74ec23cfb35fbf44ba145071e1505e6a8655f24",
-        "sha256": "0l08yn8ws7gmkrg8yx83qyavhf4z92s8a7g2c8ni53cmllhhczb0",
+        "rev": "c7d3b9cfb0967dc82dea5b5663de48328d3d50ec",
+        "sha256": "1ps9fybvhw53j6wj8qgpmrzmfysbva5s4v09xk37frbvwyy3yxfg",
         "type": "tarball",
-        "url": "https://github.com/laktak/extrakto/archive/f74ec23cfb35fbf44ba145071e1505e6a8655f24.tar.gz",
+        "url": "https://github.com/laktak/extrakto/archive/c7d3b9cfb0967dc82dea5b5663de48328d3d50ec.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "fish-kubectl-completions": {
@@ -116,20 +116,20 @@
         "homepage": null,
         "owner": "amalantony",
         "repo": "gnome-shell-extension-instant-workspace-switcher",
-        "rev": "8f186660d203cebe65b6054a22d0b43c4bff46ca",
-        "sha256": "0jxg1widd0cvpjhwqapa7py9k8bgbi2115m40rhc438bavzlmzg5",
+        "rev": "33210eefb4291c7d85ee9c20598041c465132d9f",
+        "sha256": "1h4v1dc87wrabvcl080w76ksh1dgap048j2ir293ag32952rh39l",
         "type": "tarball",
-        "url": "https://github.com/amalantony/gnome-shell-extension-instant-workspace-switcher/archive/8f186660d203cebe65b6054a22d0b43c4bff46ca.tar.gz",
+        "url": "https://github.com/amalantony/gnome-shell-extension-instant-workspace-switcher/archive/33210eefb4291c7d85ee9c20598041c465132d9f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "1r0xz8f7qyfzsbz5xl925vzi11xyzwd97wlyca3cybv3dr0pg5p2",
+        "sha256": "1mc5zjx9r08jpz1qz8g8d2yzaqjsbzhzqhzb35i1m5dpgrd4rsrv",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/0.82.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.0.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.82.0"
+        "version": "1.0.0"
     },
     "javascriptsnippets": {
         "name": "javascriptsnippets",
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "07129c8c1a5156d134749326602397ff3943b0d3",
+        "rev": "e09f39863e644e8ed4024d25f6b3f3c9104057f1",
         "type": "git"
     },
     "niv": {
@@ -173,10 +173,10 @@
         "homepage": null,
         "owner": "fthx",
         "repo": "no-overview",
-        "rev": "a539574eb7fe86a74a51d84efdbc8b103f1d5dc5",
-        "sha256": "1990an5vsyyjzwi54l3blc8s8mlvavh13wp9g0hkx8jd770522n5",
+        "rev": "857c68537c8b01b295d9df8599f27e8b7eaa2721",
+        "sha256": "12sk8286iwiph9f3w5p3jmvawkyl9jzm9krjpv0bkxlsw3ljgpri",
         "type": "tarball",
-        "url": "https://github.com/fthx/no-overview/archive/a539574eb7fe86a74a51d84efdbc8b103f1d5dc5.tar.gz",
+        "url": "https://github.com/fthx/no-overview/archive/857c68537c8b01b295d9df8599f27e8b7eaa2721.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pop-shell": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "28c060edb4e164f23987d62be04533aa8b3f66c0",
-        "sha256": "030wx154zx3vc65xrqh3k3l9fpjra4sg2j6pp4si6pzab7yhqgfl",
+        "rev": "1de4139c5739ff79d7a3ddef7a9a77988a358782",
+        "sha256": "094siblqpsjj356s32dn3rqq0vd47xrmbklzzyx26nh4hxlvzkzb",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/28c060edb4e164f23987d62be04533aa8b3f66c0.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/1de4139c5739ff79d7a3ddef7a9a77988a358782.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -210,7 +210,7 @@
     "shortcuts-gnome-extension": {
         "branch": "master",
         "repo": "https://gitlab.com/paddatrapper/shortcuts-gnome-extension",
-        "rev": "52737f91805ae34f6136508ebb16569557ff7093",
+        "rev": "f2a76abdf4870bd3544bc501d87558d1f617a133",
         "type": "git"
     },
     "sonarlint-vscode": {
@@ -243,20 +243,20 @@
     "terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "0bqf9ry0idqw61714dc6y1rh5js35mi14q19yqhiwayyfakwraq9",
+        "sha256": "0ya0xmmn4rmbvh8mxz466msbb3y2xqi4bg9dgymy2wq8cwzbn81b",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.15.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.16.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.15.0"
+        "version": "2.16.0"
     },
     "vetur": {
         "name": "vetur",
         "publisher": "octref",
-        "sha256": "09w3bik1mxs7qac67wgrc58vl98ham3syrn2anycpwd7135wlpby",
+        "sha256": "1l1w83yix8ya7si2g3w64mczh0m992c0cp2q0262qp3y0gspnm2j",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/octref/vsextensions/vetur/0.34.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/octref/vsextensions/vetur/0.35.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.34.1"
+        "version": "0.35.0"
     },
     "vimix-gtk-themes": {
         "branch": "master",
@@ -357,11 +357,11 @@
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "0f4xvaiii4pd672iqxwd9s91rc5mmfx4p3l2mrhipvp4saxkd26k",
+        "sha256": "095jdvvv4m8s2ymnrsq0ay7afqff5brgn6waknjfyy97qb3mzxj8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.18.5/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.18.6/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.5"
+        "version": "0.18.6"
     },
     "vscode-java-test": {
         "name": "vscode-java-test",
@@ -456,11 +456,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "0hdly0cxj13fs5q06nlcic3yhv6jq641q01y07sxl9xaprb0n2dm",
+        "sha256": "10pbc8vyvv6rmghnlx3pc5jbh4jf9qg25f20glfczsphi2bv036k",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/0.23.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.0.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.23.0"
+        "version": "1.0.0"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
