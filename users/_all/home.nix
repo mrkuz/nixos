@@ -22,6 +22,9 @@
       enable = true;
       names = [
         "android-file-transfer"
+        "calibre-ebook-edit"
+        "calibre-ebook-viewer"
+        "calibre-lrfviewer"
         "conky"
         "cups"
         "eclipse-mat"
