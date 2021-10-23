@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "b0438f158946a06d0aa5445f88ba4e1a32227324",
+        "rev": "0869d28483b5d81b818b110af351fd5c4dc04dd9",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "1de4139c5739ff79d7a3ddef7a9a77988a358782",
-        "sha256": "094siblqpsjj356s32dn3rqq0vd47xrmbklzzyx26nh4hxlvzkzb",
+        "rev": "6421fff66291152388b5d6a2ed3730c82fb6b1fa",
+        "sha256": "1km0flqgnf7m8p6kwhdphj16j1xpq6gfdkcx1nqwns4p8ir2gzsf",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/1de4139c5739ff79d7a3ddef7a9a77988a358782.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/6421fff66291152388b5d6a2ed3730c82fb6b1fa.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -210,7 +210,7 @@
     "shortcuts-gnome-extension": {
         "branch": "master",
         "repo": "https://gitlab.com/paddatrapper/shortcuts-gnome-extension",
-        "rev": "f2a76abdf4870bd3544bc501d87558d1f617a133",
+        "rev": "313d6ee96698fd7c47ce5a605e256e8d334995d3",
         "type": "git"
     },
     "sonarlint-vscode": {
