@@ -321,11 +321,11 @@
     "vscode-eslint": {
         "name": "vscode-eslint",
         "publisher": "dbaeumer",
-        "sha256": "02qsxrnidw3yf4a3arv5vg18jnjcpqi99ahpkszmz8z0d0gspkd5",
+        "sha256": "17j4czb1lxgy62l0rsdf06ld3482cqplxglsh7p4zyp50p4samln",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/dbaeumer/vsextensions/vscode-eslint/2.2.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/dbaeumer/vsextensions/vscode-eslint/2.2.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.2.1"
+        "version": "2.2.2"
     },
     "vscode-icons": {
         "name": "vscode-icons",
@@ -429,11 +429,11 @@
     "vscode-status-bar-format-toggle": {
         "name": "vscode-status-bar-format-toggle",
         "publisher": "tombonnike",
-        "sha256": "0ikkillwcqiq44l3b6p1lrbpf4pcd38cbrp3c16112swsazx3ha1",
+        "sha256": "1raz2rmqqx6f17070x9mqd186gz1ihqp26dxgjkdr1zvik8xb6bn",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/tombonnike/vsextensions/vscode-status-bar-format-toggle/2.0.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/tombonnike/vsextensions/vscode-status-bar-format-toggle/3.0.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.0.0"
+        "version": "3.0.0"
     },
     "vscode-theme-darcula": {
         "name": "vscode-theme-darcula",
