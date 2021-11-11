@@ -14,8 +14,8 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       libreoffice
-      hunspellDicts.en_US
       hunspellDicts.de_AT
+      hunspellDicts.en_US
     ];
   };
 }

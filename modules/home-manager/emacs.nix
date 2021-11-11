@@ -15,6 +15,9 @@ in {
     home.packages = with pkgs; [
       # Dependencies
       graphviz
+      hunspell
+      hunspellDicts.de_AT
+      hunspellDicts.en_US
       hugo
       pandoc
       pdftk

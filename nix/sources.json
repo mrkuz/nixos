@@ -50,16 +50,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "d66dae2d373e9a63daca20e7b30ed71be4fa5081",
-        "sha256": "08xa3jnh99hp6bizlf2d8iv4qfdyfh1ikpm1dra842s5mndgxqwv",
+        "rev": "940215555b67bd79d9e87f79b4961bd94cf31a45",
+        "sha256": "05bfd3b1g9zd86pl1rpgfqsmip271lasyfj8phpqf1gdds5yz6f6",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/d66dae2d373e9a63daca20e7b30ed71be4fa5081.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/940215555b67bd79d9e87f79b4961bd94cf31a45.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "0adaf03088ee7f39b3b2bca76e24fb1828721722",
+        "rev": "b4cc1c84d8e77e3a5cb2175be4908b6ce46d93a6",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "d96da57b9a87ef89a01517d1baa5ffaf2610a6e1",
+        "rev": "8d19edd8e7d7a85b9e3b9c42e3659acc3ae73396",
         "type": "git"
     },
     "niv": {
@@ -152,10 +152,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e",
-        "sha256": "17mirpsx5wyw262fpsd6n6m47jcgw8k2bwcp1iwdnrlzy4dhcgqh",
+        "rev": "5830a4dd348d77e39a0f3c4c762ff2663b602d4c",
+        "sha256": "1d3lsrqvci4qz2hwjrcnd8h5vfkg8aypq3sjd4g3izbc8frwz5sm",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/5830a4dd348d77e39a0f3c4c762ff2663b602d4c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nix": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "1fddaa8953a6554a83038bb5662662eb761eb361",
-        "sha256": "1dc71iyxnb5cv9fb3sigdxdmc4dsmdz91djz1vwkbfw2csj8lzfg",
+        "rev": "b3595b2415e095693e68f41feb9a7028902684ff",
+        "sha256": "1ygmnri4nk3rjzg7391486kmygqdwn66lkkf15dpd3jn7zixzqib",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/1fddaa8953a6554a83038bb5662662eb761eb361.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/b3595b2415e095693e68f41feb9a7028902684ff.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -276,10 +276,10 @@
         "homepage": null,
         "owner": "vinceliuice",
         "repo": "vimix-icon-theme",
-        "rev": "d474915ac349a38afefccc9c27ef5b0932aacd9e",
-        "sha256": "00hpini2r1kpak26g8sqxgwkpd3a1g93phcjn10j75dlj3x951fv",
+        "rev": "ebd3a0782c2120a7a8b222efe2c51033c6928ad0",
+        "sha256": "1ali128027yw5kllip7p32c92pby5gaqs0i393m3bp69547np1d4",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/d474915ac349a38afefccc9c27ef5b0932aacd9e.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/ebd3a0782c2120a7a8b222efe2c51033c6928ad0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {
@@ -375,11 +375,11 @@
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
         "publisher": "ms-kubernetes-tools",
-        "sha256": "1w22wyqszizcmr6qw0d5hqg64455yphzjjq6w13izc2flpird1kl",
+        "sha256": "0ial5ljgm0m35wh5gy4kpr0v7053wi52cv57ad4vcbxc9z00hxrd",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.3/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.4/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.3.3"
+        "version": "1.3.4"
     },
     "vscode-lombok": {
         "name": "vscode-lombok",
@@ -447,20 +447,20 @@
     "vscode-xml": {
         "name": "vscode-xml",
         "publisher": "redhat",
-        "sha256": "03igpqq8j6qbnr2z7bsg1sj4lvd38s2b59rgc2g714pgj3m80wd4",
+        "sha256": "006fjcr8s3rsznqgpp13cmvw8k94cfpr24r3rp019jaj5as3l1ck",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.18.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.18.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.0"
+        "version": "0.18.1"
     },
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "1cc871wdbasfkf37vkkanqf9jfzzvmvzi7gxyl63w613hb9g75w2",
+        "sha256": "0s68a6h9ri6bwinrd94ppxpcmklvp77gxvrjxkhg3gr5q7377hiy",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.1.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.2.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
@@ -483,11 +483,11 @@
     "vuejs-extension-pack": {
         "name": "vuejs-extension-pack",
         "publisher": "mubaidr",
-        "sha256": "1lwzmv8544dpg8qxsba5d5mvyb6svdmi0xwngn0mpl9q6bfl4r40",
+        "sha256": "0djmmw7s56sv8h0kp9yr5rrlvrf6p4h7gh5kygg1clinn1lj3lmn",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mubaidr/vsextensions/vuejs-extension-pack/1.3.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mubaidr/vsextensions/vuejs-extension-pack/1.6.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.3.0"
+        "version": "1.6.0"
     },
     "workspaces-bar": {
         "branch": "main",
