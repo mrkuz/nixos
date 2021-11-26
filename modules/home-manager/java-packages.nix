@@ -14,7 +14,7 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       eclipse-mat
-      ((pkgs.gradleGen.override { java = jdk; }).gradle_latest)
+      gradle
       jdk
       maven
       visualvm

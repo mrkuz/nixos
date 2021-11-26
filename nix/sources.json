@@ -50,16 +50,16 @@
         "homepage": "",
         "owner": "home-sweet-gnome",
         "repo": "dash-to-panel",
-        "rev": "940215555b67bd79d9e87f79b4961bd94cf31a45",
-        "sha256": "05bfd3b1g9zd86pl1rpgfqsmip271lasyfj8phpqf1gdds5yz6f6",
+        "rev": "9e541b94a230c85816264fd715aa12a3b3873c5c",
+        "sha256": "0nsixsgbjg8ww3hbfqlw8rw2d45psxi1n0j70r8q5bd8ky0dkb5p",
         "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/940215555b67bd79d9e87f79b4961bd94cf31a45.tar.gz",
+        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/9e541b94a230c85816264fd715aa12a3b3873c5c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "b4cc1c84d8e77e3a5cb2175be4908b6ce46d93a6",
+        "rev": "c09777b36bcdea2bda904f1fa153f0efae2f4df8",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -68,10 +68,10 @@
         "homepage": null,
         "owner": "ewlsh",
         "repo": "dynamic-panel-transparency",
-        "rev": "f9e720e98e40c7a2d87928d09a7313c9ef2e832c",
-        "sha256": "0njykxjiwlcmk0q8bsgqaznsryaw43fspfs6rzsjjz5p0xaq04nw",
+        "rev": "63c8b81d5544cc1e6d2ee9fd236b705a531b641b",
+        "sha256": "1znb6h43cgbq5162spsx5prjzbckykr7g1afrfkh5j66zw6lv79a",
         "type": "tarball",
-        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/f9e720e98e40c7a2d87928d09a7313c9ef2e832c.tar.gz",
+        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/63c8b81d5544cc1e6d2ee9fd236b705a531b641b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "extrakto": {
@@ -80,10 +80,10 @@
         "homepage": "",
         "owner": "laktak",
         "repo": "extrakto",
-        "rev": "c7d3b9cfb0967dc82dea5b5663de48328d3d50ec",
-        "sha256": "1ps9fybvhw53j6wj8qgpmrzmfysbva5s4v09xk37frbvwyy3yxfg",
+        "rev": "9c0c0f3a26e2942b273c2c4d9ca67df4cc97bf55",
+        "sha256": "0xic6ixll8nix6rkcnnmilab40mmdnmiinf9qmd2jdwiilx5zdy0",
         "type": "tarball",
-        "url": "https://github.com/laktak/extrakto/archive/c7d3b9cfb0967dc82dea5b5663de48328d3d50ec.tar.gz",
+        "url": "https://github.com/laktak/extrakto/archive/9c0c0f3a26e2942b273c2c4d9ca67df4cc97bf55.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "fish-kubectl-completions": {
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "8d19edd8e7d7a85b9e3b9c42e3659acc3ae73396",
+        "rev": "2eaab0289fe4287427b5b5a2fb76fdeea9de1b29",
         "type": "git"
     },
     "niv": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "b3595b2415e095693e68f41feb9a7028902684ff",
-        "sha256": "1ygmnri4nk3rjzg7391486kmygqdwn66lkkf15dpd3jn7zixzqib",
+        "rev": "676729ffa5361cbcf1236a7594c7f0240da1043c",
+        "sha256": "07q22da4ixwaali5450q0j23cv24hgpmd3xsgv6h0qpsl2n1lsh5",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/b3595b2415e095693e68f41feb9a7028902684ff.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/676729ffa5361cbcf1236a7594c7f0240da1043c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -210,7 +210,7 @@
     "shortcuts-gnome-extension": {
         "branch": "master",
         "repo": "https://gitlab.com/paddatrapper/shortcuts-gnome-extension",
-        "rev": "313d6ee96698fd7c47ce5a605e256e8d334995d3",
+        "rev": "fe59fccd924600a0969d00bc10a432255291c8bf",
         "type": "git"
     },
     "sonarlint-vscode": {
@@ -303,11 +303,11 @@
     "vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "01na7j64mavn2zqfxkly9n6fpr6bs3vyiipy09jkmr5m86fq0cdx",
+        "sha256": "0hhlhx3xy7x31xx2v3srvk67immajs6dm9h0wi49ii1rwx61zxah",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.17.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.18.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.17.0"
+        "version": "1.18.0"
     },
     "vscode-emacs-friendly": {
         "name": "vscode-emacs-friendly",
@@ -339,11 +339,11 @@
     "vscode-java-debug": {
         "name": "vscode-java-debug",
         "publisher": "vscjava",
-        "sha256": "1p9mymbf8sn39k44350zf3zwl29fhcwxfsqxr7841ch1qz88w9r8",
+        "sha256": "00dpjp9badb09a9md92vqc7vmgqp066q67bhg29sqsdyk8qn40wx",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.36.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.37.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.36.0"
+        "version": "0.37.0"
     },
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
@@ -366,11 +366,11 @@
     "vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "0lq6daz228ipzls88y09zbdsv9n6backs5bddpdam628rs99qvn3",
+        "sha256": "0krsr3hhlyiscdxmrmp2m86wg514c3w252phqb79jlakv0264hrz",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.32.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.33.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.32.0"
+        "version": "0.33.0"
     },
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
@@ -420,11 +420,11 @@
     "vscode-spring-initializr": {
         "name": "vscode-spring-initializr",
         "publisher": "vscjava",
-        "sha256": "0kgjl5rc1ncqy7inkgxar2jpnv41cfzj9hpb3byyaad94pdvcp9k",
+        "sha256": "0x7dmss5jxz5iy6yhbzv8d6a19y061fnh5cwg01vgzgavv0hvjfi",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-initializr/0.7.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-initializr/0.8.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "vscode-status-bar-format-toggle": {
         "name": "vscode-status-bar-format-toggle",
@@ -456,11 +456,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "0s68a6h9ri6bwinrd94ppxpcmklvp77gxvrjxkhg3gr5q7377hiy",
+        "sha256": "03i5fy80ifm5wn40z4ricbrwkzvypw4zy0a1b9zc67xh0faj63db",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.2.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.2.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
