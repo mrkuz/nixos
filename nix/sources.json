@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "c09777b36bcdea2bda904f1fa153f0efae2f4df8",
+        "rev": "eefa0ec0aa8552f31dc5877f6ddcb5362a4b9e6a",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -125,11 +125,11 @@
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "1mc5zjx9r08jpz1qz8g8d2yzaqjsbzhzqhzb35i1m5dpgrd4rsrv",
+        "sha256": "1m0iqc33gvigbh2xck0slv6l2xnl01d233afh0v2aragd0apfr32",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.0.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.1.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "javascriptsnippets": {
         "name": "javascriptsnippets",
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "2eaab0289fe4287427b5b5a2fb76fdeea9de1b29",
+        "rev": "4d59e7c34693949a507c041568c21d799c2ec829",
         "type": "git"
     },
     "niv": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "676729ffa5361cbcf1236a7594c7f0240da1043c",
-        "sha256": "07q22da4ixwaali5450q0j23cv24hgpmd3xsgv6h0qpsl2n1lsh5",
+        "rev": "4b65ee865d01436ec75a239a0586a2fa6051b8c3",
+        "sha256": "1yfd0fa6lgal01mf8bgxc19b42h8gx28q4zd8nqvr0f19kgajy8c",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/676729ffa5361cbcf1236a7594c7f0240da1043c.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/4b65ee865d01436ec75a239a0586a2fa6051b8c3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -357,11 +357,11 @@
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "095jdvvv4m8s2ymnrsq0ay7afqff5brgn6waknjfyy97qb3mzxj8",
+        "sha256": "0klivkkhp7xb1s6nqkl3r1gac21mdpdgz9f381lk1321rzvnr0gm",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.18.6/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.18.7/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.6"
+        "version": "0.18.7"
     },
     "vscode-java-test": {
         "name": "vscode-java-test",
@@ -456,11 +456,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "03i5fy80ifm5wn40z4ricbrwkzvypw4zy0a1b9zc67xh0faj63db",
+        "sha256": "06n4fxqr3lqmiyns9jdk3rdnanamcpzhrivllai8z9d997xmwcx6",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.2.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.2.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.2.1"
+        "version": "1.2.2"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
