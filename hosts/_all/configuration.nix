@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, self, config-name, ... }:
+{ config, lib, pkgs, nixpkgs, self, config-name, ... }:
 
 {
   imports = [
@@ -83,6 +83,14 @@
   };
 
   environment.etc."nixos/configuration.nix".source = ./files/configuration.nix;
+  environment.etc."nixos/system-packages".text =
+    let
+      packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+      sorted = builtins.sort (a: b: lib.toLower a < lib.toLower b) (lib.unique packages);
+      formatted = builtins.concatStringsSep "\n" sorted;
+    in
+      formatted;
+
   environment.extraInit = ''
     export NIX_PATH="nixpkgs=/nix/channels/nixos"
   '';
@@ -94,7 +102,7 @@
     ln -s ${self} /nix/current
     [ -d /nix/share ] || mkdir /nix/share
     ln -sf ${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json /nix/share/options.json
-    ${pkgs.nix}/bin/nix-store -q --requisites /run/current-system/sw | cut -d- -f2- | sort | uniq > /nix/share/system-packages
+    ln -sf /etc/nixos/system-packages /nix/share/system-packages
   '';
 
   environment.systemPackages = with pkgs; [
