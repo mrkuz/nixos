@@ -94,6 +94,7 @@
     ln -s ${self} /nix/current
     [ -d /nix/share ] || mkdir /nix/share
     ln -sf ${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json /nix/share/options.json
+    ${pkgs.nix}/bin/nix-store -q --requisites /run/current-system/sw | cut -d- -f2- | sort | uniq > /nix/share/system-packages
   '';
 
   environment.systemPackages = with pkgs; [

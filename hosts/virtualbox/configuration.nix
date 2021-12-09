@@ -34,14 +34,14 @@
     networks = {
       "01-nat" = {
         matchConfig = {
-	        Name = "enp0s3";
-	      };
-	      DHCP = "yes";
+          Name = "enp0s3";
+        };
+        DHCP = "yes";
       };
       "02-host-only" = {
         matchConfig = {
-	        Name = "enp0s8";
-	      };
+          Name = "enp0s8";
+        };
         address = [
           "192.168.56.101/24"
         ];

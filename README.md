@@ -16,6 +16,7 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
 - `/nix/current` - The active configuration
 - `/nix/channels/nixos` - Local copy of the unstable channel, used as the default Nix expression search path
 - `/nix/share/options.json` - JSON file of all available NixOS options
+- `/nix/share/system-packages` - List of installed packages
 
 # Files & directories
 
