@@ -18,11 +18,9 @@ in {
       hunspell
       hunspellDicts.de_AT
       hunspellDicts.en_US
-      hugo
       pandoc
-      pdftk
       plantuml
-      silver-searcher
+      # silver-searcher
       sqlite
       texlive.combined.scheme-basic
       (callPackage ../../pkgs/misc/revealjs {})

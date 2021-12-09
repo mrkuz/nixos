@@ -17,6 +17,7 @@
     gocr
     imagemagick
     hey
+    hugo
     html-tidy
     # mkvtoolnix-cli
     nodejs
@@ -31,11 +32,12 @@
     gimp
     jetbrains.idea-community
     lens
-    netbeans
+    # netbeans
+    pdftk
     postman
     qbittorrent
     spotify
-    skypeforlinux
+    # skypeforlinux
     thunderbird-bin
   ];
 }

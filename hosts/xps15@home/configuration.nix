@@ -10,9 +10,9 @@
     btrfs.enable = true;
     buildPackages.enable = true;
     libreoffice.enable = true;
-    kodi.enable = true;
+    # kodi.enable = true;
     pipewire.enable = true;
-    steam.enable = true;
+    # steam.enable = true;
     systemdBoot.enable = true;
   };
 
