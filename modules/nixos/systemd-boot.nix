@@ -20,7 +20,7 @@ in {
       systemd-boot = {
         enable = true;
         editor = true;
-        configurationLimit = 3;
+        configurationLimit = 10;
       };
       timeout = 3;
     };
