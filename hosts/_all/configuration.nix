@@ -83,6 +83,7 @@
   };
 
   environment.etc."nixos/configuration.nix".source = ./files/configuration.nix;
+  environment.etc."nixos/options.json".source = "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
   environment.etc."nixos/system-packages".text =
     let
       packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
@@ -100,9 +101,6 @@
     ln -s ${nixpkgs} /nix/channels/nixos
     rm -f /nix/current
     ln -s ${self} /nix/current
-    [ -d /nix/share ] || mkdir /nix/share
-    ln -sf ${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json /nix/share/options.json
-    ln -sf /etc/nixos/system-packages /nix/share/system-packages
   '';
 
   environment.systemPackages = with pkgs; [

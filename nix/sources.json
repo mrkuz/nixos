@@ -29,11 +29,11 @@
     "bracket-pair-colorizer-2": {
         "name": "bracket-pair-colorizer-2",
         "publisher": "CoenraadS",
-        "sha256": "0bfvzs4ac537zqhnqaa38jf4lhiy1fmqcv6lq89nnx8k963380z7",
+        "sha256": "0zcbs7h801agfs2cggk1cz8m8j0i2ypmgznkgw17lcx3zisll9ad",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/CoenraadS/vsextensions/bracket-pair-colorizer-2/0.2.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/CoenraadS/vsextensions/bracket-pair-colorizer-2/0.2.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "color-highlight": {
         "name": "color-highlight",
@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "39ed5eb9ec6474f9d3d6a521e3be647ac2ae6fee",
+        "rev": "23f6f90515d711a22be20a82fabfba6b0f364456",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -465,11 +465,11 @@
     "vscodeintellicode": {
         "name": "vscodeintellicode",
         "publisher": "visualstudioexptteam",
-        "sha256": "1j72v6grwasqk34m1jy3d6w3fgrw0dnsv7v17wca8baxrvgqsm6g",
+        "sha256": "04pfczmzkshl3sg3m37h7ib6gagmxf6a30afg4mq21b6p8zqkjkd",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/1.2.14/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/visualstudioexptteam/vsextensions/vscodeintellicode/1.2.15/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.2.14"
+        "version": "1.2.15"
     },
     "vue-vscode-snippets": {
         "name": "vue-vscode-snippets",
