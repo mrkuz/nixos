@@ -6,7 +6,7 @@ self: super:
     buildInputs = [ super.makeWrapper ];
     # wrapProgram $out/bin/chromium --add-flags "--single-process"
     postBuild = ''
-      wrapProgram $out/bin/chromium --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy"
+      wrapProgram $out/bin/chromium --add-flags "--start-maximized --enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy"
     '';
   };
 }
