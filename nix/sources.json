@@ -146,6 +146,15 @@
         "rev": "3bd301eec6aea5d7bca37e2d5f37199f347a4596",
         "type": "git"
     },
+    "markdown-preview-github-styles": {
+        "name": "markdown-preview-github-styles",
+        "publisher": "bierner",
+        "sha256": "0lprg6b3slpvzh8cg4b1552s02x8dkfvncvf02p1npsymdhbv6ra",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/bierner/vsextensions/markdown-preview-github-styles/0.2.0/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.2.0"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",

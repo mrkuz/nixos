@@ -8,6 +8,7 @@ let
     vscode-icons
     vscodeintellicode
     vscode-status-bar-format-toggle
+    markdown-preview-github-styles
   ];
   hm = inputs.home-manager.lib.hm;
 in {
