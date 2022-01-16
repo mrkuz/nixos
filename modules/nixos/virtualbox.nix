@@ -14,7 +14,7 @@ in {
   config = mkIf cfg.enable {
     virtualisation = {
       virtualbox.host.enable = true;
-      virtualbox.host.enableExtensionPack = true;
+      # virtualbox.host.enableExtensionPack = true;
     };
 
     environment.systemPackages = with pkgs; [
