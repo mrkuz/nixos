@@ -34,7 +34,7 @@
   boot = {
     cleanTmpDir = true;
     consoleLogLevel = 0;
-    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "udev.log_priority=3" ];
     kernel.sysctl = {
       "vm.swappiness" = 10;

@@ -61,7 +61,7 @@ in {
       rsync
       smartmontools
       strace
-      tldr
+      # tldr
       tmux
       tree
       unrar

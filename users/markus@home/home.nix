@@ -38,6 +38,6 @@
     qbittorrent
     spotify
     # skypeforlinux
-    thunderbird-bin
+    thunderbird
   ];
 }
