@@ -28,6 +28,7 @@
         "conky"
         "cups"
         "eclipse-mat"
+        "emacsclient"
         "fish"
         "hplip"
         "htop"

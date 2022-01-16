@@ -30,20 +30,13 @@ in {
       text = ''
         [Desktop Entry]
         Name=Org-Protocol
-        Exec=emacsclient -n -c -F '((name . "org-protocol-capture"))' '%u'
+        Exec=emacsclient -a "" -n -c -F '((name . "org-protocol-capture"))' '%u'
         NoDisplay=true
         Icon=emacs
         Type=Application
         Terminal=false
         MimeType=x-scheme-handler/org-protocol
       '';
-    };
-
-    services.emacs = {
-      enable = true;
-      package = pkgs.emacsPgtkGcc;
-      # package = pkgs.emacs;
-      client.enable = true;
     };
   };
 }
