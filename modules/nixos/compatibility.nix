@@ -20,6 +20,7 @@ in {
 
     environment.systemPackages = with pkgs; [
       (callPackage ../../pkgs/shell/fhs-shell {})
+      (callPackage ../../pkgs/shell/xfhs-shell {})
     ];
   };
 }
