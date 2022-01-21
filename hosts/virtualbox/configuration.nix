@@ -37,6 +37,7 @@
           Name = "enp0s3";
         };
         DHCP = "yes";
+        dns = [ "8.8.8.8" ];
       };
       "02-host-only" = {
         matchConfig = {

@@ -67,6 +67,7 @@ in {
       unrar
       unzip
       vim
+      wget
       zip
       zlib
     ];
