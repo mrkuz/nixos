@@ -74,7 +74,10 @@ in {
       fira-code
       fira-code-symbols
       inconsolata
-      # google-fonts
+      liberation_ttf
+      google-fonts
+      helvetica-neue-lt-std
+      jetbrains-mono
       # mplus-outline-fonts
       # noto-fonts
       roboto
