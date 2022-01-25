@@ -9,6 +9,7 @@ let
     vscodeintellicode
     vscode-status-bar-format-toggle
     markdown-preview-github-styles
+    remote-ssh
   ];
   hm = inputs.home-manager.lib.hm;
 in {
@@ -118,7 +119,6 @@ in {
     [ -e $HOME/etc/emacs.d ] || ln -svf $HOME/etc/nixos/repos/emacs.d $HOME/etc/emacs.d
 
     # Clone repositories
-    [ -e $HOME/etc/nix-shell ] || (cd $HOME/etc && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/nix-shell")
     [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
     [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")
     '';
