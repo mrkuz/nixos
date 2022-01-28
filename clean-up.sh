@@ -8,7 +8,7 @@ nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profile
 nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/$USER/channels
 nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/$USER/profile
 nix-env --delete-generations +"$KEEP_GENERATIONS" --profile $HOME/.nix-profile
-sudo nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/root/channels
-sudo nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/system
+sudo env "PATH=$PATH" nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/per-user/root/channels
+sudo env "PATH=$PATH" nix-env --delete-generations +"$KEEP_GENERATIONS" --profile /nix/var/nix/profiles/system
 
-sudo nix-collect-garbage
+sudo env "PATH=$PATH" nix-collect-garbage

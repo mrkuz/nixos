@@ -14,6 +14,7 @@
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/hide-applications.nix
     ../../modules/home-manager/java-packages.nix
+    ../../modules/home-manager/non-nixos.nix
     ../../modules/home-manager/vscode-profiles.nix
   ];
 
@@ -38,6 +39,7 @@
         "xpra-gui"
         "xterm"
         "ca.desrt.dconf-editor"
+        "software-properties-livepatch"
       ];
     };
   };

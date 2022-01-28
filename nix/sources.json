@@ -59,7 +59,7 @@
     "doom-emacs": {
         "branch": "develop",
         "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "35865ef5e89442e3809b8095199977053dd4210f",
+        "rev": "a5ebd0b04778409c2d513830791e919646e6f980",
         "type": "git"
     },
     "dynamic-panel-transparency": {
@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "241722cfa939849de5324b733b87575bdb5b3ceb",
+        "rev": "9fb4b2d4eedf0ae0f6d908db1878b947e2b970ce",
         "type": "git"
     },
     "markdown-preview-github-styles": {
@@ -212,11 +212,11 @@
     "remote-ssh": {
         "name": "remote-ssh",
         "publisher": "ms-vscode-remote",
-        "sha256": "1lh08157z7lialb0dxls9fhahmf5l9wz6x2anwrnycvs512lpr1p",
+        "sha256": "0cfapjh9p9i68gxdiz6zw5dsgqfms87hvvirz0wa6w8kd5imgx6p",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.71.2021121615/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.71.2022012715/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.71.2021121615"
+        "version": "0.71.2022012715"
     },
     "revealjs": {
         "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
@@ -357,11 +357,11 @@
     "vscode-java-debug": {
         "name": "vscode-java-debug",
         "publisher": "vscjava",
-        "sha256": "00dpjp9badb09a9md92vqc7vmgqp066q67bhg29sqsdyk8qn40wx",
+        "sha256": "1r5j7gqrr8yx2dm2qsq269bvmzm48acczas57r67wr6zmqfll375",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.37.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.38.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.37.0"
+        "version": "0.38.0"
     },
     "vscode-java-dependency": {
         "name": "vscode-java-dependency",
@@ -375,11 +375,11 @@
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "06h0xlmjm1lclql62qvb0ic12zs96nhb7b8zf4g1b7isssa9kasx",
+        "sha256": "17ippn7pvmbijkqg8frnrpdb7hk1iqcd0nnv472hi8mndc7i4vq8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.20.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.21.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.20.0"
+        "version": "0.21.0"
     },
     "vscode-java-test": {
         "name": "vscode-java-test",

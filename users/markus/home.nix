@@ -9,7 +9,7 @@ let
     vscodeintellicode
     vscode-status-bar-format-toggle
     markdown-preview-github-styles
-    remote-ssh
+    # remote-ssh
   ];
   hm = inputs.home-manager.lib.hm;
 in {
@@ -94,10 +94,10 @@ in {
   };
 
   programs.fish.plugins = [
-      {
-          name = "fish-kubectl-completions";
-          src = sources.fish-kubectl-completions;
-      }
+    {
+      name = "fish-kubectl-completions";
+      src = sources.fish-kubectl-completions;
+    }
   ];
 
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]

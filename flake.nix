@@ -44,7 +44,7 @@
         inherit system;
         config.allowUnfree = true;
       };
-      setUp = name: nixpkgs.lib.nixosSystem {
+      setUpNixOS = name: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           {
@@ -67,11 +67,32 @@
           (./hosts + "/${name}" + /configuration.nix)
         ];
       };
+      setUpNix = name: user: inputs.home-manager.lib.homeManagerConfiguration {
+        inherit system pkgs;
+        homeDirectory = "/home/${user}";
+        username = user;
+        configuration = {
+          nixpkgs.overlays = [
+            inputs.emacs-overlay.overlay
+            (import ./overlays/tools/package-management/nix)
+          ];
+          imports = [
+            {
+              _module.args.nixpkgs = nixpkgs;
+              _module.args.inputs = inputs;
+            }
+            (./users + "/${name}" + /home.nix)
+          ];
+        };
+      };
     in {
-      nixosConfigurations."virtualbox" = setUp "virtualbox";
-      nixosConfigurations."xps15@home" = setUp "xps15@home";
-      nixosConfigurations."xps15@work" = setUp "xps15@work";
+      nixosConfigurations."virtualbox" = setUpNixOS "virtualbox";
+      nixosConfigurations."xps15@home" = setUpNixOS "xps15@home";
+      nixosConfigurations."xps15@work" = setUpNixOS "xps15@work";
 
       defaultPackage.x86_64-linux = pkgs.nixFlakes;
+
+      homeConfigurations."markus@ubuntu" = setUpNix "markus@ubuntu" "markus";
+      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
     };
 }

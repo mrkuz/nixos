@@ -113,6 +113,7 @@ Scripts to simplify the work with VSCode extensions.
 - `fish` - Configures [Fish](https://fishshell.com/) shell
 - `hide-applications` - Hides applications from launcher
 - `java-packages` - [Java](https://www.java.com/en/) development related packages
+- `non-nixos` - Use if other Linux OS than NixOS
 - `vscode-profiles` - Adds [VSCod](https://code.visualstudio.com/) with multiple profiles
 
 ## `overlays/`
@@ -166,7 +167,7 @@ Shows how to create development shells with Nix expressions.
 nix develop
 ```
 
-# Appendix A: Example installation (VirtualBox)
+# Appendix A: Example NixOS installation (VirtualBox)
 
 ## Preparation
 
@@ -279,7 +280,7 @@ nix develop
 
   ```shell
   git add default.nix
-  git commit -m"Add credentials"
+  git commit -m "Add credentials"
   ```
 
 - Update `credentials.url` in `flake.nix`. Must be an absolute path.
@@ -336,7 +337,83 @@ nix develop
   ./rebuild.sh virtualbox
   ```
 
-# Appendix B: File structures
+# Appendix B: Example installation on Ubuntu
+
+- Install nix
+
+  ```shell
+  sh <(curl -L https://nixos.org/nix/install) --daemon
+  ```
+
+- Add yourself as trusted user to `/etc/nix/nix.conf`
+  ```
+  trusted-users = root user
+  ```
+
+- Clone nixpkgs
+
+  ```shell
+  sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
+  cd /nix/nixpkgs
+  git checkout nixos-unstable
+  ```
+
+- Clone repository
+
+  ```shell
+  mkdir ~/etc
+  cd ~/etc
+  git clone https://github.com/mrkuz/nixos.git
+  cd nixos
+  ```
+
+- Initialize submodules
+
+  ```shell
+  git submodule init
+  git submodule update
+  ```
+
+- Create credentials repository
+
+  ```shell
+  mkdir repos/credentials
+  cd repos/credentials
+  git init
+  touch default.nix
+  git add default.nix
+  git commit -m "Add credentials"
+  cd ../..
+  ```
+
+- Replace `dotfiles.url`, `emacsd.url` and `credentials.url` in `flake.nix` with absolute paths.
+
+  ```nix
+  {
+    dotfiles = {
+      url = "/home/user/etc/nixos/repos/dotfiles";
+      flake = false;
+    };
+    emacsd = {
+      url = "/home/user/etc/nixos/repos/emacs.d";
+      flake = false;
+    };
+    credentials = {
+      url = "/home/user/etc/nixos/repos/credentials";
+      flake = false;
+    };
+  }
+  ```
+
+- Install
+
+  ```shell
+  export NIX_CONFIG="experimental-features = nix-command flakes"
+  nix build .#user@ubuntu
+  ./result/activate
+  ```
+
+# Appendix C: File structures
 
 ## Hosts
 
