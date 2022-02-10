@@ -19,11 +19,6 @@ if [[ -L "./result" ]]; then
 fi
 sudo nixos-rebuild -vv --keep-going -j 2 --flake ".#$1" build
 
-OPTIONS="etc/nixos/options.json"
-if [[ -e "/$OPTIONS" ]]; then
-  diff -u --color=always <(jq keys "/$OPTIONS") <(jq keys "result/$OPTIONS") | less
-fi
-
 nix-store --query --requisites /run/current-system/ | cut -d- -f2- | sort | uniq > tmp/packages.old
 nix-store --query --requisites result/ | cut -d- -f2- | sort | uniq > tmp/packages.new
 diff -u --color=always tmp/packages.{old,new} | less

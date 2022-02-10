@@ -31,7 +31,6 @@ in {
 
     services.xserver = {
       videoDrivers = [ "nvidia" ];
-      displayManager.gdm.nvidiaWayland = mkIf config.modules.gnome.enable true;
     };
     # virtualisation.docker.enableNvidia = mkIf config.modules.docker.enable true;
 
