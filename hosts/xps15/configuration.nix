@@ -13,6 +13,7 @@
     desktop.enable = true;
     docker.enable = true;
     emacs.enable = true;
+    fonts.enable = true;
     gnome.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
@@ -39,6 +40,13 @@
     pkgs.vaapiIntel
   ];
 
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
+
   # Use cgroups v2
   systemd.enableUnifiedCgroupHierarchy = true;
   # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
@@ -47,9 +55,9 @@
     fstrim.enable = true;
     haveged.enable = true;
     power-profiles-daemon.enable = true;
+    printing.enable = true;
     smartd.enable = true;
     thermald.enable = true;
-    tlp.enable = false;
     tuptime.enable = true;
   };
 

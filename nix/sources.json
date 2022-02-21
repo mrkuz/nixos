@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "5a9567fb2b28899f9711834f157ca521ee7a95b3",
+        "rev": "ef74f587d4f61f779e10b23028b8e7dd20c9dea4",
         "type": "git"
     },
     "markdown-preview-github-styles": {
@@ -234,11 +234,11 @@
     "sonarlint-vscode": {
         "name": "sonarlint-vscode",
         "publisher": "sonarsource",
-        "sha256": "0ypvf7r40gk10c4g8raw8l0izv3f6rgncaz7hhzchwyclimczysl",
+        "sha256": "1gbx10yxfqiy279scgzfipc36bqyydm0f4zwhg438f0wqwwwy2bh",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.2.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.3.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "3.2.0"
+        "version": "3.3.0"
     },
     "straight-top-bar": {
         "branch": "master",
@@ -348,11 +348,11 @@
     "vscode-icons": {
         "name": "vscode-icons",
         "publisher": "vscode-icons-team",
-        "sha256": "147d5cba3jdfgjp22a5vvvp83z79mmmkd36hgplv7cgklfmnbdis",
+        "sha256": "0n96jdmqqh2v7mni4qv08qjxyhp8h82ck9rhmwnxp66ni5ybmj63",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/11.8.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/11.10.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "11.8.0"
+        "version": "11.10.0"
     },
     "vscode-java-debug": {
         "name": "vscode-java-debug",

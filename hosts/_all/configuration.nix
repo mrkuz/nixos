@@ -13,6 +13,7 @@
     ../../modules/nixos/docker.nix
     ../../modules/nixos/ecryptfs.nix
     ../../modules/nixos/emacs.nix
+    ../../modules/nixos/fonts.nix
     ../../modules/nixos/gnome.nix
     ../../modules/nixos/grub-efi.nix
     ../../modules/nixos/kodi.nix
