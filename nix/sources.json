@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "ef74f587d4f61f779e10b23028b8e7dd20c9dea4",
+        "rev": "dae378be6a9170fb06b18012310ebb2e42e05abe",
         "type": "git"
     },
     "markdown-preview-github-styles": {
@@ -212,11 +212,11 @@
     "remote-ssh": {
         "name": "remote-ssh",
         "publisher": "ms-vscode-remote",
-        "sha256": "18gwf9r9fsqxrgdjh70ii3b0fw9i1yvq9g978ww69mr25yai2p7j",
+        "sha256": "1jifyklm5qikb2y099gr3flg5lmxdw6hb77gsm6mv7mmqzfal7n5",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.73.2022021015/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.75.2022022115/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.73.2022021015"
+        "version": "0.75.2022022115"
     },
     "revealjs": {
         "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
@@ -234,11 +234,11 @@
     "sonarlint-vscode": {
         "name": "sonarlint-vscode",
         "publisher": "sonarsource",
-        "sha256": "1gbx10yxfqiy279scgzfipc36bqyydm0f4zwhg438f0wqwwwy2bh",
+        "sha256": "15wjhxx6jxnwcg9shfyw4l7ns7dmmn82xpnscq6wg22g0rmcyapr",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.3.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.3.3/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "3.3.0"
+        "version": "3.3.3"
     },
     "straight-top-bar": {
         "branch": "master",
@@ -294,10 +294,10 @@
         "homepage": null,
         "owner": "vinceliuice",
         "repo": "vimix-icon-theme",
-        "rev": "ebd3a0782c2120a7a8b222efe2c51033c6928ad0",
-        "sha256": "1ali128027yw5kllip7p32c92pby5gaqs0i393m3bp69547np1d4",
+        "rev": "95a8cbca9b994bbcd4c749ff95ae7958f350533b",
+        "sha256": "15mrjk9xnz77yf1rxd7aqc1fggkn5qlrq73amp8x3d5lxgsms5gx",
         "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/ebd3a0782c2120a7a8b222efe2c51033c6928ad0.tar.gz",
+        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/95a8cbca9b994bbcd4c749ff95ae7958f350533b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {
@@ -465,11 +465,11 @@
     "vscode-xml": {
         "name": "vscode-xml",
         "publisher": "redhat",
-        "sha256": "172szp70csia9n0xvj6pd3qln71brphj4cgh8cy2as5cmkydv5bc",
+        "sha256": "0k4lym09wbyz25q76db5awgdamx3ycpmjv5njvbi9b7damj0w99z",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.18.3/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.19.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.18.3"
+        "version": "0.19.1"
     },
     "vscode-yaml": {
         "name": "vscode-yaml",
