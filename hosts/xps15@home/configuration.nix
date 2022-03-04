@@ -27,6 +27,7 @@
 
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
   services.openssh.passwordAuthentication = false;
+  # services.teamviewer.enable = true;
 
   users = {
     groups.markus.gid = 1000;
