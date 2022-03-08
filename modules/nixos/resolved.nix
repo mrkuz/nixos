@@ -17,6 +17,8 @@ in {
       extraConfig = mkIf config.modules.avahi.enable "MulticastDNS=false";
     };
 
+    networking.networkmanager.extraConfig = "[connection]\nconnection.mdns=2\n";
+
     environment.etc.openvpn.source = "${pkgs.update-systemd-resolved}/libexec/openvpn";
 
     environment.systemPackages = with pkgs; [

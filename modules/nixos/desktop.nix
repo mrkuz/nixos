@@ -13,7 +13,6 @@ in {
 
   config = mkIf cfg.enable {
     networking.networkmanager.enable = true;
-    networking.networkmanager.extraConfig = "[connection]\nconnection.mdns=2\n";
     systemd.services.NetworkManager-wait-online.enable = false;
 
     security.polkit.enable = true;

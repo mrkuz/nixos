@@ -143,7 +143,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "f87655c2d8601996025bdcb1e551c213346492bd",
+        "rev": "5a260e13e68af058293802bc05901885602a14a3",
         "type": "git"
     },
     "markdown-preview-github-styles": {
@@ -194,10 +194,10 @@
         "homepage": "",
         "owner": "pop-os",
         "repo": "shell",
-        "rev": "485d4ac07aaea23dadd4dae2ce40280deb0832a0",
-        "sha256": "0df20bdzii40xi18s1mil2m6l220mx0fm71ac2v8g2lnbbrl52jj",
+        "rev": "55bbc17d5e0c5cf2f57813755969313d93b98f42",
+        "sha256": "11x0nsx3vi977nha7m7q50h5cvs31q74xnc97fxawacip7hwsayp",
         "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/485d4ac07aaea23dadd4dae2ce40280deb0832a0.tar.gz",
+        "url": "https://github.com/pop-os/shell/archive/55bbc17d5e0c5cf2f57813755969313d93b98f42.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prettier-vscode": {
@@ -375,20 +375,20 @@
     "vscode-java-pack": {
         "name": "vscode-java-pack",
         "publisher": "vscjava",
-        "sha256": "17ippn7pvmbijkqg8frnrpdb7hk1iqcd0nnv472hi8mndc7i4vq8",
+        "sha256": "1q7rdhkyqkk6bs5hwzy0ppk4pnhvchxxpmy47vm658xj5krnil80",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.21.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.22.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.21.0"
+        "version": "0.22.0"
     },
     "vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "15cdw15fjzjm6rn4pqd95b0sdgfq0j70p3pzfn5fmykcsgnry0xh",
+        "sha256": "0c40hvnm9dbkip038wg66g0zk1nn50qxigk0kf9mv5j3r847pgx8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.34.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.34.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.34.1"
+        "version": "0.34.2"
     },
     "vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
@@ -429,11 +429,11 @@
     "vscode-spring-boot-dashboard": {
         "name": "vscode-spring-boot-dashboard",
         "publisher": "vscjava",
-        "sha256": "0m08v48p6554a1g7ynpzv1v0a6p5adaac95s8i07vp7y117g85a3",
+        "sha256": "0ggkhw9cr5zspqlngk3i7b60si0wgbzfk0jqsnrmj4j98189cl54",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-boot-dashboard/0.2.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-boot-dashboard/0.3.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "vscode-spring-initializr": {
         "name": "vscode-spring-initializr",
@@ -474,11 +474,11 @@
     "vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "19a7ii4zrwcqb331jx78h7qpz8a4ar1w77k7nw43mcczx9gkb7sa",
+        "sha256": "0dj9mqfq45alm2a7napra8i6xgw0wgcggmkzh5sma7kl8636lxb6",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.4.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.5.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.4.0"
+        "version": "1.5.0"
     },
     "vscodeintellicode": {
         "name": "vscodeintellicode",
