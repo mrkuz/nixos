@@ -16,6 +16,7 @@ in {
       desktopManager.gnome.enable = true;
       displayManager.gdm.enable = true;
       desktopManager.xterm.enable = mkForce false;
+      displayManager.defaultSession = "gnome";
     };
 
     services.gnome = {
