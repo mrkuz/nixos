@@ -108,6 +108,7 @@ in {
     [ -e $HOME/org ] || mkdir -p $HOME/org/{calendar,lists,mobile,projects}
     [ -e $HOME/tmp ] || mkdir $HOME/tmp
     [ -e $HOME/Games ] || mkdir $HOME/Games
+    [ -e $HOME/Notes ] || mkdir $HOME/Notes
     [ -e $HOME/opt ] || mkdir $HOME/opt
     [ -e $HOME/src ] || mkdir $HOME/src
     [ -e $HOME/Workspace ] || mkdir $HOME/Workspace
