@@ -42,7 +42,6 @@
         hashedPassword = credentials."markus@home".hashedPassword;
         shell = pkgs.fish;
       };
-
       enesa = {
         uid = 1001;
         description = "Enesa";
@@ -50,6 +49,15 @@
         group = "enesa";
         extraGroups = [ "lp" "scanner" ];
         hashedPassword = credentials.enesa.hashedPassword;
+        shell = pkgs.bash;
+      };
+      malik = {
+        uid = 1002;
+        description = "Malik";
+        isNormalUser = true;
+        group = "malik";
+        extraGroups = [ "lp" "scanner" ];
+        hashedPassword = credentials.malik.hashedPassword;
         shell = pkgs.bash;
       };
     };
@@ -61,6 +69,11 @@
   };
 
   home-manager.users.enesa = import (./. + "/../../users/enesa/home.nix") {
+    inherit pkgs;
+    inherit inputs;
+  };
+
+  home-manager.users.malik = import (./. + "/../../users/malik/home.nix") {
     inherit pkgs;
     inherit inputs;
   };

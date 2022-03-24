@@ -32,7 +32,6 @@ in {
     security.pam.services.gdm.enableGnomeKeyring = true;
 
     environment.gnome.excludePackages = with pkgs; [
-      gnome3.cheese
       gnome3.gnome-disk-utility
       gnome3.epiphany
       gnome3.geary
