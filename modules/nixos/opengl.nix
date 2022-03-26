@@ -17,7 +17,7 @@ in {
       driSupport32Bit = true;
       enable = true;
       extraPackages = with pkgs; [
-        vaapiVdpau
+        # vaapiVdpau
         libvdpau-va-gl
       ];
     };

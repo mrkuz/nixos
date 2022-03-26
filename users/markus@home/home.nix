@@ -10,6 +10,7 @@
   };
 
   home.packages = with pkgs; [
+    audacity
     # curlftpfs
     gitAndTools.diff-so-fancy
     gitAndTools.gitFull
@@ -24,7 +25,7 @@
     # potrace
     protobuf
     python3
-    python39Packages.pdfx
+    # python39Packages.pdfx
     youtube-dl
     # Applications
     android-studio
@@ -36,6 +37,7 @@
     pdftk
     postman
     qbittorrent
+    # sox
     spotify
     # skypeforlinux
     thunderbird
