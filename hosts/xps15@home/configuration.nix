@@ -32,6 +32,7 @@
   users = {
     groups.markus.gid = 1000;
     groups.enesa.gid = 1001;
+    groups.malik.gid = 1002;
     users = {
       markus = {
         uid = 1000;

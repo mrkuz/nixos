@@ -31,17 +31,22 @@ in {
     security.pam.services.gdm.enableGnomeKeyring = true;
 
     environment.gnome.excludePackages = with pkgs; [
-      gnome3.gnome-disk-utility
-      gnome3.epiphany
-      gnome3.geary
-      gnome3.gnome-calendar
-      gnome3.gnome-contacts
-      gnome3.gnome-logs
-      gnome3.gnome-maps
-      gnome3.gnome-music
+      gnome.epiphany
+      gnome.geary
+      gnome.gnome-calendar
+      gnome.gnome-clocks
+      gnome.gnome-contacts
+      gnome.gnome-disk-utility
+      gnome.gnome-logs
+      gnome.gnome-maps
+      gnome.gnome-music
+      gnome.gnome-system-monitor
+      gnome.gnome-weather
+      gnome.totem
+      gnome.yelp
+      gnome-connections
       gnome-console
       gnome-photos
-      gnome3.yelp
     ];
 
     programs.gnome-terminal.enable = true;
@@ -54,6 +59,8 @@ in {
       # Miscellaneous applications
       chromium
       gparted
+      thunderbird-wayland
+      vlc
       # Gnome extensions
       # gjs
       gnomeExtensions.appindicator

@@ -40,7 +40,6 @@
     # sox
     spotify
     # skypeforlinux
-    thunderbird
     whatsapp-for-linux
   ];
 }

@@ -58,7 +58,7 @@
     "emacsd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-/D4GoG76ZlUOTMKv1u4ix9di9fuWjIQ6YZcrLxu/Fu0=",
+        "narHash": "sha256-ThQkhCcN6EjHcg9oHoFm2imbroyFIjPnEqui2UlcwOw=",
         "path": "/home/markus/etc/nixos/repos/emacs.d",
         "type": "path"
       },
