@@ -20,7 +20,6 @@ in {
     };
 
     services.gnome = {
-      experimental-features.realtime-scheduling = true;
       # Disable some core OS services
       evolution-data-server.enable = mkForce false;
       gnome-online-accounts.enable = false;
@@ -40,9 +39,12 @@ in {
       gnome3.gnome-logs
       gnome3.gnome-maps
       gnome3.gnome-music
+      gnome-console
       gnome-photos
       gnome3.yelp
     ];
+
+    programs.gnome-terminal.enable = true;
 
     environment.systemPackages = with pkgs; [
       # Gnome utilities
@@ -56,7 +58,7 @@ in {
       # gjs
       gnomeExtensions.appindicator
       gnomeExtensions.window-is-ready-remover
-      (callPackage ../../pkgs/desktops/gnome/extensions/dash-to-panel {})
+      # (callPackage ../../pkgs/desktops/gnome/extensions/dash-to-panel {})
       (callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency {})
       (callPackage ../../pkgs/desktops/gnome/extensions/instant-workspace-switcher {})
       (callPackage ../../pkgs/desktops/gnome/extensions/just-perfection {})
@@ -64,7 +66,7 @@ in {
       # (callPackage ../../pkgs/desktops/gnome/extensions/switcher {})
       (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar {})
       # Ubuntu look & feel
-      yaru-theme
+      # yaru-theme
     ];
   };
 }

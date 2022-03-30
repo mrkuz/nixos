@@ -16,6 +16,8 @@ in {
     systemd.services.NetworkManager-wait-online.enable = false;
 
     security.polkit.enable = true;
+    security.rtkit.enable = true;
+
     programs.dconf.enable = true;
 
     environment.systemPackages = with pkgs; [
