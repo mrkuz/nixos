@@ -13,8 +13,8 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      python38Packages.ansible
-      python38Packages.ansible-lint
+      ansible
+      ansible-lint
     ];
   };
 }

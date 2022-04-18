@@ -54,8 +54,8 @@ in {
       powertop
       psmisc
       pwgen
-      python38Packages.cgroup-utils
-      # python38Packages.wakeonlan
+      python310Packages.cgroup-utils
+      # python310Packages.wakeonlan
       rclone
       ripgrep
       rsync

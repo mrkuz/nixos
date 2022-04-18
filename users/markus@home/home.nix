@@ -25,11 +25,11 @@
     # potrace
     protobuf
     python3
-    # python39Packages.pdfx
+    python310Packages.pdfx
     youtube-dl
     # Applications
     android-studio
-    calibre
+    # calibre
     gimp
     jetbrains.idea-community
     lens
