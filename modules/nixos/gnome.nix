@@ -73,7 +73,7 @@ in {
       # (callPackage ../../pkgs/desktops/gnome/extensions/switcher {})
       (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar {})
       # Ubuntu look & feel
-      # yaru-theme
+      yaru-theme
     ];
   };
 }

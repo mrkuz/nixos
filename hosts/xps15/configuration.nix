@@ -53,7 +53,6 @@
 
   services = {
     fstrim.enable = true;
-    haveged.enable = true;
     power-profiles-daemon.enable = true;
     printing.enable = true;
     smartd.enable = true;
