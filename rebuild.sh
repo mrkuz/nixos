@@ -17,10 +17,10 @@ fi
 if [[ -L "./result" ]]; then
   rm ./result
 fi
-sudo nixos-rebuild -vv --keep-going -j 2 --flake ".#$1" build
+nixos-rebuild -vv --keep-going -j 2 --flake ".#$1" build
 
 nix-store --query --requisites /run/current-system/ | cut -d- -f2- | sort | uniq > tmp/packages.old
 nix-store --query --requisites result/ | cut -d- -f2- | sort | uniq > tmp/packages.new
 diff -u --color=always tmp/packages.{old,new} | less
 
-sudo nixos-rebuild -j 2 --flake ".#$1" switch
+nixos-rebuild -j 2 --use-remote-sudo --flake ".#$1" switch
