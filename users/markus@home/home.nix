@@ -24,7 +24,7 @@
     nodejs
     # potrace
     protobuf
-    python3
+    (python3.withPackages(ps: [ ps.jinja2 ps.requests ]))
     python310Packages.pdfx
     youtube-dl
     # Applications
