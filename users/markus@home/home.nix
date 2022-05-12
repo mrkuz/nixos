@@ -29,7 +29,7 @@
     youtube-dl
     # Applications
     android-studio
-    # calibre
+    calibre
     gimp
     jetbrains.idea-community
     lens
