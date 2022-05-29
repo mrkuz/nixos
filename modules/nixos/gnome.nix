@@ -52,6 +52,7 @@ in {
     programs.gnome-terminal.enable = true;
 
     environment.systemPackages = with pkgs; [
+      gnome.mutter
       # Gnome utilities
       gnome3.dconf-editor
       gnome3.gnome-tweaks
