@@ -20,6 +20,8 @@
     hey
     hugo
     html-tidy
+    lutris
+    mangohud
     # mkvtoolnix-cli
     nodejs
     # potrace
@@ -39,6 +41,7 @@
     qbittorrent
     # sox
     spotify
+    steam
     # skypeforlinux
     whatsapp-for-linux
   ];
