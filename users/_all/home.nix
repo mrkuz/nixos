@@ -53,4 +53,6 @@
     touch $HOME/.nix-defexpr/channels_root
     [ -e $HOME/.nix-defexpr/nixos ] || ln -svf /nix/channels/nixos $HOME/.nix-defexpr/nixos
     '';
+
+  home.stateVersion = "22.05";
 }
