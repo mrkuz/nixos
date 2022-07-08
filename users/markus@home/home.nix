@@ -26,7 +26,7 @@
     nodejs
     # potrace
     protobuf
-    (python3.withPackages(ps: [ ps.jinja2 ps.requests ]))
+    (python3.withPackages(ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))
     python310Packages.pdfx
     youtube-dl
     # Applications

@@ -79,6 +79,18 @@ in {
             vscode-kubernetes-tools
           ];
         }
+        {
+          name = "Python";
+          alias = "pcode";
+          extensions = with sources; vscodeExtensions ++ [
+            python
+            vscode-pylance # dependency for python
+            # jupyter # dependency for python
+            # jupyter-keymap # dependency for jupyter
+            # jupyter-renderers # dependency for jupyter
+            black-formatter
+          ];
+        }
       ];
     };
   };

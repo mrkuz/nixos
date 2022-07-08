@@ -26,6 +26,7 @@ in {
       dmidecode
       dnsmasq
       dos2unix
+      duf
       # ecryptfs
       efibootmgr
       exfat

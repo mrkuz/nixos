@@ -64,8 +64,8 @@
     "emacsd": {
       "flake": false,
       "locked": {
-        "lastModified": 1656176274,
-        "narHash": "sha256-ARD8wsiB1jjrMq3cAzA6SkNdS4rXy8pJaLrT1yrbe8w=",
+        "lastModified": 1656348338,
+        "narHash": "sha256-73mqgrblzpsbFk9HVEu+zuKk531NRqdM9hrSlHamS3c=",
         "path": "/home/markus/etc/nixos/repos/emacs.d",
         "type": "path"
       },

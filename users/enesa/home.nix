@@ -1,17 +1,10 @@
 { pkgs, ... }:
 
 let
-  python-custom = (pkgs.python3.withPackages(ps: [ ps.tkinter ]));
+  python-custom = (pkgs.python3.withPackages(ps: [ ps.black ps.pip ps.tkinter ]));
 in {
   imports = [
     ../_all/home.nix
-  ];
-
-  home.packages = with pkgs; [
-    firefox
-    jetbrains.pycharm-community
-    python-custom
-    python310Packages.bpython
   ];
 
   xdg.desktopEntries.idle3 = {
@@ -21,4 +14,11 @@ in {
     type = "Application";
     categories = [ "Development" "Utility"];
   };
+
+  home.packages = with pkgs; [
+    firefox
+    python-custom
+    python310Packages.bpython
+    vscode
+  ];
 }
