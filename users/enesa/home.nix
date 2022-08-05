@@ -17,6 +17,9 @@ in {
 
   home.packages = with pkgs; [
     firefox
+    gradle
+    jdk
+    maven
     python-custom
     python310Packages.bpython
     vscode
