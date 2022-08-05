@@ -84,6 +84,17 @@
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
       ];
     };
+
+    registry.nixpkgs = {
+      from = {
+        id = "nixpkgs";
+        type = "indirect";
+      };
+      to = {
+        path = "${nixpkgs}";
+        type = "path";
+      };
+    };
   };
 
   environment.etc."nixos/configuration.nix".source = ./files/configuration.nix;
