@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, credentials, ... }:
+{ config, pkgs, inputs, vars, credentials, ... }:
 
 {
   imports = [
@@ -66,18 +66,7 @@
     };
   };
 
-  home-manager.users.markus = import (./. + "/../../users/markus@home/home.nix") {
-    inherit pkgs;
-    inherit inputs;
-  };
-
-  home-manager.users.enesa = import (./. + "/../../users/enesa/home.nix") {
-    inherit pkgs;
-    inherit inputs;
-  };
-
-  home-manager.users.malik = import (./. + "/../../users/malik/home.nix") {
-    inherit pkgs;
-    inherit inputs;
-  };
+  home-manager.users.markus = ./. + "/../../users/markus@home/home.nix";
+  home-manager.users.enesa = ../../users/enesa/home.nix;
+  home-manager.users.malik = ../../users/malik/home.nix;
 }

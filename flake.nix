@@ -1,8 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "nixpkgs/nixos-21.05";
-    nixpkgs-local.url = "/nix/nixpkgs/";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-wayland.url = "github:colemickens/nixpkgs-wayland";
@@ -18,31 +16,21 @@
       url = "/home/markus/etc/nixos/repos/dotfiles";
       flake = false;
     };
-    emacsd = {
-      # url = "github:mrkuz/emacs.d";
-      url = "/home/markus/etc/nixos/repos/emacs.d";
-      flake = false;
-    };
     credentials = {
       url = "/home/markus/etc/nixos/repos/credentials";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-local, ... } @ inputs:
+  outputs = { self, nixpkgs, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
-      pkgs-local = import nixpkgs-local {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-stable = import nixpkgs-local {
-        inherit system;
-        config.allowUnfree = true;
+      vars = {
+        stateVersion = "22.05";
       };
       setUpNixOS = name: nixpkgs.lib.nixosSystem {
         inherit system;
@@ -52,9 +40,8 @@
             _module.args.self = self;
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
-            _module.args.pkgs-local = pkgs-local;
-            _module.args.pkgs-stable = pkgs-stable;
-            _module.args.config-name = name;
+            _module.args.configName = name;
+            _module.args.vars = vars;
             nixpkgs.overlays = [
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay
@@ -80,6 +67,7 @@
             {
               _module.args.nixpkgs = nixpkgs;
               _module.args.inputs = inputs;
+              _module.args.vars = vars;
             }
             (./users + "/${name}" + /home.nix)
           ];

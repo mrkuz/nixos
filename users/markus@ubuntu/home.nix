@@ -1,8 +1,8 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, inputs, vars, ... }:
 
 {
   imports = [
-    (import ../markus/home.nix { inherit pkgs; inherit inputs; })
+    ../markus/home.nix
   ];
 
   modules = {

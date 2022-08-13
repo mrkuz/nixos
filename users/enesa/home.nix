@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, vars, ... }:
 
 let
   python-custom = (pkgs.python3.withPackages(ps: [ ps.black ps.pip ps.tkinter ]));

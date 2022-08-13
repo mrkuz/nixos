@@ -58,15 +58,14 @@ Scripts to simplify the work with VSCode extensions.
 - `_all` - Base expression, imported by all other hosts
 - `xps15` - Contains common configuration for Dell XPS15
 - `xps15@home` - Specialization of xps15 for home
-- `xps15@work` - Specialization of xps15 for work
-- `virtualbox` - Configuration for VirtualBox
+- ...
 
 ## `users/`
 
 - `_all` - Base expression, imported by all other users
 - `markus` - My base user configuraton
 - `markus@home` - Specialization for home
-- `markus@work` - Specialization for work
+- ...
 
 ## `modules/`
 
@@ -247,16 +246,12 @@ nix develop
   cd nixos
   ```
 
-- Change `dotfiles.url` and `emacsd.url` in `flake.nix` to point to GitHub repositories, not local directories.
+- Change `dotfiles.url` in `flake.nix` to point to the GitHub repository, not local directory.
 
   ```nix
   {
     dotfiles = {
       url = "github:mrkuz/dotfiles";
-      flake = false;
-    };
-    emacsd = {
-      url = "github:mrkuz/emacs.d";
       flake = false;
     };
   }
@@ -312,16 +307,12 @@ nix develop
   git submodule update
   ```
 
-- Replace `dotfiles.url`, `emacsd.url` and `credentials.url` in `flake.nix` with absolute paths.
+- Replace `dotfiles.url` and `credentials.url` in `flake.nix` with absolute paths.
 
   ```nix
   {
     dotfiles = {
       url = "/home/user/etc/nixos/repos/dotfiles";
-      flake = false;
-    };
-    emacsd = {
-      url = "/home/user/etc/nixos/repos/emacs.d";
       flake = false;
     };
     credentials = {
@@ -387,16 +378,12 @@ nix develop
   cd ../..
   ```
 
-- Replace `dotfiles.url`, `emacsd.url` and `credentials.url` in `flake.nix` with absolute paths.
+- Replace `dotfiles.url` and `credentials.url` in `flake.nix` with absolute paths.
 
   ```nix
   {
     dotfiles = {
       url = "/home/user/etc/nixos/repos/dotfiles";
-      flake = false;
-    };
-    emacsd = {
-      url = "/home/user/etc/nixos/repos/emacs.d";
       flake = false;
     };
     credentials = {

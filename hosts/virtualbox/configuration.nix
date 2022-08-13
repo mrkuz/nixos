@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, credentials, ... }:
+{ config, pkgs, inputs, vars, credentials, ... }:
 
 {
   imports = [
@@ -72,8 +72,5 @@
     };
   };
 
-  home-manager.users.user = import ../../users/user/home.nix {
-    inherit pkgs;
-    inherit inputs;
-  };
+  home-manager.users.user = ../../users/user/home.nix;
 }

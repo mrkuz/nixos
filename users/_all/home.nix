@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
+{ pkgs, inputs, vars, ... }:
 
-{
+let
+  hm = inputs.home-manager.lib.hm;
+in {
   imports = [
     ../../modules/home-manager/ansible.nix
     ../../modules/home-manager/bash.nix
@@ -44,7 +46,7 @@
     };
   };
 
-  home.activation.channels = lib.hm.dag.entryAfter [ "writeBoundary" ]
+  home.activation.channels = hm.dag.entryAfter [ "writeBoundary" ]
     ''
     [ -e $HOME/.nix-defexpr ] || mkdir $HOME/.nix-defexpr
     rm -f $HOME/.nix-defexpr/channels
@@ -54,5 +56,5 @@
     [ -e $HOME/.nix-defexpr/nixos ] || ln -svf /nix/channels/nixos $HOME/.nix-defexpr/nixos
     '';
 
-  home.stateVersion = "22.05";
+  home.stateVersion = vars.stateVersion;
 }

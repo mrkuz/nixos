@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs, self, config-name, ... }:
+{ config, lib, pkgs, nixpkgs, self, inputs, vars, configName, ... }:
 
 {
   imports = [
@@ -97,7 +97,13 @@
     };
   };
 
-  environment.etc."nixos/configuration.nix".source = ./files/configuration.nix;
+  environment.etc."nixos/configuration.nix".text = ''
+    nix = {
+      nixPath = [ "nixpkgs=/nix/channels/nixos" ];
+    };
+
+    system.stateVersion = "${vars.stateVersion}";
+  '';
   environment.etc."nixos/options.json".source = "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
   environment.etc."nixos/system-packages".text =
     let
@@ -119,7 +125,7 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    (callPackage ../../pkgs/tools/nix/nixos-option { inherit config-name; })
+    (callPackage ../../pkgs/tools/nix/nixos-option { inherit configName; })
   ];
 
   documentation = {
@@ -131,6 +137,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = false;
+    extraSpecialArgs = { inherit inputs vars; };
   };
 
   users = {
@@ -142,6 +149,6 @@
     };
   };
 
-  system.stateVersion = "22.05";
+  system.stateVersion = vars.stateVersion;
   system.configurationRevision = self.rev or "dirty";
 }
