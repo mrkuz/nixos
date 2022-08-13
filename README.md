@@ -93,6 +93,7 @@ Scripts to simplify the work with VSCode extensions.
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
 - `sshd` - Configures [OpenSSH](https://www.openssh.com/) server
+- `steam` - Configures [Steam](https://store.steampowered.com/)
 - `sway` - Configures [sway](https://github.com/swaywm/sway) window manager
 - `systemd-boot` - Configures [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - `virtualbox` - Adds [VirutalBox](https://www.virtualbox.org/) and utilities
@@ -121,9 +122,7 @@ Scripts to simplify the work with VSCode extensions.
 Contains some custom [overlays](https://nixos.wiki/wiki/Overlays).
 
 - `application/networking/browsers/chromium` - Chromium with Wayland support
-- `desktops/gnome/core/gnome-shell` - OBSOLETE
 - `desktops/gnome/core/gnome-terminal` - Gnome Terminal with transparency patch
-- `desktops/gnome/core/mutter` - OBSOLETE
 - `tools/package-management/nix` - Patched to allow relative inputs and downloads from [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
 
 ## `pkgs/`
