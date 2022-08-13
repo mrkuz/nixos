@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, vars, ... }:
 
 with lib;
 let
@@ -12,8 +12,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      emacsPgtkNativeComp
+    home.packages =  with pkgs; [
       # Dependencies
       graphviz
       hunspell
@@ -25,7 +24,7 @@ in {
       sqlite
       texlive.combined.scheme-basic
       (callPackage ../../pkgs/misc/revealjs {})
-    ];
+    ] ++ [(getAttr vars.emacs pkgs)];
 
     home.file.".local/share/applications/org-protocol.desktop" = {
       text = ''

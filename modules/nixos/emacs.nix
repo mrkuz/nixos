@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, vars, ... }:
 
 with lib;
 let
@@ -12,10 +12,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      emacsPgtkNativeComp
-      # emacs
-    ];
+    environment.systemPackages = [(getAttr vars.emacs pkgs)];
 
     fonts.fonts = with pkgs; [
       emacs-all-the-icons-fonts

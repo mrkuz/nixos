@@ -31,6 +31,7 @@
       };
       vars = {
         stateVersion = "22.05";
+        emacs = "emacsPgtkNativeComp";
       };
       setUpNixOS = name: nixpkgs.lib.nixosSystem {
         inherit system;
