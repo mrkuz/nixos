@@ -179,7 +179,7 @@
     "just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "ebad3517d433c635cccfb30bc4c2b8bf88318ab0",
+        "rev": "477cb036331b9af039b24cace2eff55256760361",
         "type": "git"
     },
     "markdown-preview-github-styles": {
