@@ -35,15 +35,6 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "2022.5.12171013"
     },
-    "bracket-pair-colorizer-2": {
-        "name": "bracket-pair-colorizer-2",
-        "publisher": "CoenraadS",
-        "sha256": "1vdd3l5khxacwsqnzd9a19h2i7xpp3hi7awgdfbwvvr8w5v8vkmk",
-        "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/CoenraadS/vsextensions/bracket-pair-colorizer-2/0.2.4/vspackage",
-        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.2.4"
-    },
     "color-highlight": {
         "name": "color-highlight",
         "publisher": "naumovs",
@@ -52,18 +43,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/naumovs/vsextensions/color-highlight/2.6.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "2.6.0"
-    },
-    "dash-to-panel": {
-        "branch": "master",
-        "description": "An icon taskbar for the Gnome Shell. This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to that found in KDE Plasma and Windows 7+. A separate dock is no longer needed for easy access to running and favorited applications.",
-        "homepage": "",
-        "owner": "home-sweet-gnome",
-        "repo": "dash-to-panel",
-        "rev": "1c1c73976857d61e74ab7bb79564924df37003a5",
-        "sha256": "049j1zsv3555rn8ld4i709plwdf545kzs31dbrhkdhvff8n2n37i",
-        "type": "tarball",
-        "url": "https://github.com/home-sweet-gnome/dash-to-panel/archive/1c1c73976857d61e74ab7bb79564924df37003a5.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-emacs": {
         "branch": "develop",
@@ -83,18 +62,6 @@
         "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/63c8b81d5544cc1e6d2ee9fd236b705a531b641b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "extrakto": {
-        "branch": "master",
-        "description": "tmux - quickly select, copy/insert/complete text without a mouse",
-        "homepage": "",
-        "owner": "laktak",
-        "repo": "extrakto",
-        "rev": "4ce105d42cdf5eb0ebf7287c2ad1a7c354b31498",
-        "sha256": "0nkxcigk32r5z5yphzbcrs5fkd5p9y2wxgs4m15hzm07kcpzvm6h",
-        "type": "tarball",
-        "url": "https://github.com/laktak/extrakto/archive/4ce105d42cdf5eb0ebf7287c2ad1a7c354b31498.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "fish-kubectl-completions": {
         "branch": "main",
         "description": "kubectl completions for fish shell",
@@ -105,18 +72,6 @@
         "sha256": "09qcj82qfs4y4nfwvy90y10xmx6vc9yp33nmyk1mpvx0dx6ri21r",
         "type": "tarball",
         "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "flatery-icon-theme": {
-        "branch": "master",
-        "description": "Flatery is icon theme for linux in flat style licensed under the CC BY-NC-SA 3.0 ",
-        "homepage": null,
-        "owner": "cbrnix",
-        "repo": "Flatery",
-        "rev": "30bef81ba98ac4c4f764e9fc1b705a86e0d27e2c",
-        "sha256": "0vv507v0ijjdpbfy57b9skyp4qql5f5pdd9ja0bcbc0l2gmp7pma",
-        "type": "tarball",
-        "url": "https://github.com/cbrnix/Flatery/archive/30bef81ba98ac4c4f764e9fc1b705a86e0d27e2c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "instant-workspace-switcher": {
@@ -212,30 +167,6 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.1"
     },
-    "no-overview": {
-        "branch": "main",
-        "description": null,
-        "homepage": null,
-        "owner": "fthx",
-        "repo": "no-overview",
-        "rev": "857c68537c8b01b295d9df8599f27e8b7eaa2721",
-        "sha256": "12sk8286iwiph9f3w5p3jmvawkyl9jzm9krjpv0bkxlsw3ljgpri",
-        "type": "tarball",
-        "url": "https://github.com/fthx/no-overview/archive/857c68537c8b01b295d9df8599f27e8b7eaa2721.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "pop-shell": {
-        "branch": "master",
-        "description": "Pop!_OS Shell",
-        "homepage": "",
-        "owner": "pop-os",
-        "repo": "shell",
-        "rev": "aa8f35d1903d6c4a73482605811ad52c312ca3e2",
-        "sha256": "1b8pzrbfxm74rdh6iw7bkhp571dfhfhiizprlvq3xy8c2zc4j5zp",
-        "type": "tarball",
-        "url": "https://github.com/pop-os/shell/archive/aa8f35d1903d6c4a73482605811ad52c312ca3e2.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "prettier-vscode": {
         "name": "prettier-vscode",
         "publisher": "esbenp",
@@ -270,12 +201,6 @@
         "url_template": "https://github.com/hakimel/reveal.js/archive/refs/tags/<version>.zip",
         "version": "4.1.0"
     },
-    "shortcuts-gnome-extension": {
-        "branch": "master",
-        "repo": "https://gitlab.com/paddatrapper/shortcuts-gnome-extension",
-        "rev": "45b211cbffef48b5c357ec34d0b9f09e13ef3467",
-        "type": "git"
-    },
     "sonarlint-vscode": {
         "name": "sonarlint-vscode",
         "publisher": "sonarsource",
@@ -284,24 +209,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.7.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "3.7.0"
-    },
-    "straight-top-bar": {
-        "branch": "master",
-        "description": "GNOME Shell extensions",
-        "homepage": "https://peclu.net",
-        "owner": "jpec",
-        "repo": "gnome-shell-extensions",
-        "rev": "dcceb8c1f397d1e3f900b7c7d111039ddba72741",
-        "sha256": "1abfybr0w172whdlvi7wm4q8dl98gri9igm6wfmg2q13yaxnrw3l",
-        "type": "tarball",
-        "url": "https://github.com/jpec/gnome-shell-extensions/archive/dcceb8c1f397d1e3f900b7c7d111039ddba72741.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "switcher": {
-        "branch": "master",
-        "repo": "https://github.com/daniellandau/switcher",
-        "rev": "d54247182f4b4325ca79997b384e7e7c65c39f46",
-        "type": "git"
     },
     "terraform": {
         "name": "terraform",
@@ -320,30 +227,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/octref/vsextensions/vetur/0.35.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "0.35.0"
-    },
-    "vimix-gtk-themes": {
-        "branch": "master",
-        "description": "Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell etc.",
-        "homepage": "https://vinceliuice.github.io/",
-        "owner": "vinceliuice",
-        "repo": "vimix-gtk-themes",
-        "rev": "557c573d829fd21f89f23ee21dedba1ad0a67f62",
-        "sha256": "06rd1kgfrhszknpr1hxzm2pp2w3y9hns5pbj2p45yvpxc7aa6nas",
-        "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-gtk-themes/archive/557c573d829fd21f89f23ee21dedba1ad0a67f62.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "vimix-icon-theme": {
-        "branch": "master",
-        "description": "vimix-icon-theme",
-        "homepage": null,
-        "owner": "vinceliuice",
-        "repo": "vimix-icon-theme",
-        "rev": "95a8cbca9b994bbcd4c749ff95ae7958f350533b",
-        "sha256": "15mrjk9xnz77yf1rxd7aqc1fggkn5qlrq73amp8x3d5lxgsms5gx",
-        "type": "tarball",
-        "url": "https://github.com/vinceliuice/vimix-icon-theme/archive/95a8cbca9b994bbcd4c749ff95ae7958f350533b.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode-ansible": {
         "name": "vscode-ansible",

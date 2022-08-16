@@ -19,8 +19,8 @@ in {
     '';
 
     environment.systemPackages = with pkgs; [
+      steam-run
       (callPackage ../../pkgs/shell/fhs-shell {})
-      (callPackage ../../pkgs/shell/xfhs-shell {})
     ];
   };
 }
