@@ -7,6 +7,8 @@
     # nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-alien.inputs.nixpkgs.follows = "nixpkgs";
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;
@@ -44,6 +46,7 @@
             _module.args.configName = name;
             _module.args.vars = vars;
             nixpkgs.overlays = [
+              inputs.nix-alien.overlay
               inputs.emacs-overlay.overlay
               # inputs.nixpkgs-wayland.overlay
               (import ./overlays/applications/networking/browsers/chromium)

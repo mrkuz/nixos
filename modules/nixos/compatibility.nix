@@ -12,13 +12,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    system.activationScripts.lib64 = ''
-      # [ -d /lib64 ] || mkdir /lib64
-      # rm -f /lib64/ld-linux-x86-64.so.2
-      # ln -s ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
-    '';
+    programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [
+      nix-alien
+      nix-index
+      nix-index-update
       steam-run
       (callPackage ../../pkgs/shell/fhs-shell {})
     ];
