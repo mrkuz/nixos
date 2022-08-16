@@ -16,6 +16,7 @@ in {
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/hide-applications.nix
     ../../modules/home-manager/java-packages.nix
+    ../../modules/home-manager/nix.nix
     ../../modules/home-manager/non-nixos.nix
     ../../modules/home-manager/vscode-profiles.nix
   ];
@@ -44,17 +45,8 @@ in {
         "software-properties-livepatch"
       ];
     };
+    nix.enable = true;
   };
-
-  home.activation.channels = hm.dag.entryAfter [ "writeBoundary" ]
-    ''
-    [ -e $HOME/.nix-defexpr ] || mkdir $HOME/.nix-defexpr
-    rm -f $HOME/.nix-defexpr/channels
-    touch $HOME/.nix-defexpr/channels
-    rm -f $HOME/.nix-defexpr/channels_root
-    touch $HOME/.nix-defexpr/channels_root
-    [ -e $HOME/.nix-defexpr/nixos ] || ln -svf /nix/channels/nixos $HOME/.nix-defexpr/nixos
-    '';
 
   home.stateVersion = vars.stateVersion;
 }

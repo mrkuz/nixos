@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs, self, inputs, vars, configName, ... }:
+{ config, lib, pkgs, nixpkgs, self, inputs, vars, ... }:
 
 {
   imports = [
@@ -20,6 +20,7 @@
     ../../modules/nixos/kodi.nix
     ../../modules/nixos/kvm.nix
     ../../modules/nixos/libreoffice.nix
+    ../../modules/nixos/nix.nix
     ../../modules/nixos/nvidia.nix
     ../../modules/nixos/opengl.nix
     ../../modules/nixos/pipewire.nix
@@ -32,6 +33,10 @@
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/x11.nix
   ];
+
+  modules = {
+    nix.enable = true;
+  };
 
   boot = {
     cleanTmpDir = true;
@@ -56,88 +61,19 @@
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
 
-  nixpkgs.config.allowUnfree = true;
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-      narinfo-cache-positive-ttl = 86400
-      auto-optimise-store = true
-      repeat = 0
-    '';
-
-    settings = {
-      sandbox = true;
-      substituters = [
-        # "https://cache.nixos.org/"
-        "https://nix-community.cachix.org"
-        "https://nixpkgs-wayland.cachix.org"
-      ];
-      trusted-public-keys = [
-        # "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-      ];
-    };
-
-    registry.nixpkgs = {
-      from = {
-        id = "nixpkgs";
-        type = "indirect";
-      };
-      to = {
-        path = "${nixpkgs}";
-        type = "path";
-      };
-    };
-  };
-
-  environment.etc."nixos/configuration.nix".text = ''
-    nix = {
-      nixPath = [ "nixpkgs=/nix/channels/nixos" ];
-    };
-
-    system.stateVersion = "${vars.stateVersion}";
-  '';
-  environment.etc."nixos/options.json".source = "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
-  environment.etc."nixos/system-packages".text =
-    let
-      packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
-      sorted = builtins.sort (a: b: lib.toLower a < lib.toLower b) (lib.unique packages);
-      formatted = builtins.concatStringsSep "\n" sorted;
-    in
-      formatted;
-
-  environment.extraInit = ''
-    export NIX_PATH="nixpkgs=/nix/channels/nixos"
-  '';
-  system.activationScripts.nixpath = ''
-    [ -d /nix/channels ] || mkdir /nix/channels
-    rm -f /nix/channels/nixos
-    ln -s ${nixpkgs} /nix/channels/nixos
-    rm -f /nix/current
-    ln -s ${self} /nix/current
-  '';
-
-  environment.systemPackages = with pkgs; [
-    (callPackage ../../pkgs/tools/nix/nixos-option { inherit configName; })
-  ];
+  # Disable coredumps
+  systemd.coredump.enable = false;
 
   documentation = {
     doc.enable = false;
     info.enable = false;
     nixos.enable = true;
-  };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = false;
-    extraSpecialArgs = { inherit inputs vars; };
   };
 
   users = {

@@ -44,7 +44,6 @@ in {
       lzip
       mkpasswd
       most
-      niv
       nmap
       ntfs3g
       openssl

@@ -89,6 +89,7 @@ Scripts to simplify the work with VSCode extensions.
 - `kvm` - Support for [KVM](https://www.linux-kvm.org/)
 - `libreoffice` - Adds [LibreOffice](https://www.libreoffice.org/)
 - `nvidia` -  Configures proprietary NVIDIA drivers
+- `nix` - Nix configuration and additions
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
@@ -115,6 +116,7 @@ Scripts to simplify the work with VSCode extensions.
 - `hide-applications` - Hides applications from launcher
 - `java-packages` - [Java](https://www.java.com/en/) development related packages
 - `non-nixos` - Use if other Linux OS than NixOS
+- `nix` - Nix configuration and additions
 - `vscode-profiles` - Adds [VSCod](https://code.visualstudio.com/) with multiple profiles
 
 ## `overlays/`

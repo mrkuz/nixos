@@ -3,8 +3,8 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:rycee/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgs-wayland.url = "github:colemickens/nixpkgs-wayland";
-    nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
+    # nixpkgs-wayland.url = "github:colemickens/nixpkgs-wayland";
+    # nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     flake-compat = {
@@ -51,7 +51,13 @@
               (import ./overlays/desktops/gnome/core/gnome-terminal)
             ];
           }
-          inputs.home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = false;
+              extraSpecialArgs = { inherit inputs vars; };
+            };
+          }
           (./hosts + "/${name}" + /configuration.nix)
         ];
       };

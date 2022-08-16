@@ -12,19 +12,16 @@ in {
   };
 
   config = mkIf cfg.enable {
-    networking.networkmanager.enable = true;
-    systemd.services.NetworkManager-wait-online.enable = false;
-
+    services.packagekit.enable = true;
+    services.upower.enable = true;
     security.polkit.enable = true;
     security.rtkit.enable = true;
 
-    programs.dconf.enable = true;
-
     environment.systemPackages = with pkgs; [
       desktop-file-utils
-      libnotify
       shared-mime-info
       xdg-user-dirs
+      xdg-utils
     ];
   };
 }
