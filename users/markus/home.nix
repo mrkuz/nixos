@@ -20,7 +20,7 @@ in {
   modules = {
     bash.enable = true;
     chromium.enable = true;
-    cloudPackages.enable = true;
+    cloudTools.enable = true;
     dconf = {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
@@ -28,7 +28,7 @@ in {
     disableBluetooth.enable = true;
     emacs.enable = true;
     fish.enable = true;
-    javaPackages.enable = true;
+    javaDevelopment.enable = true;
     vscodeProfiles = {
       enable = true;
       profiles = [
@@ -99,11 +99,6 @@ in {
     source = inputs.dotfiles;
     recursive = true;
   };
-
-  # home.file.".emacs.d" = {
-  #  source = inputs.emacsd;
-  #  recursive = true;
-  # };
 
   programs.fish.plugins = [
     {

@@ -75,7 +75,7 @@ Scripts to simplify the work with VSCode extensions.
 - `avahi` - Configures [avahi](https://www.avahi.org/)
 - `base-packages` - Collection of essential CLI tools
 - `btrfs` - Configures [btrfs](https://btrfs.wiki.kernel.org/)
-- `build-packages` - Build essentials
+- `build-essentials` - Build essentials
 - `command-not-found` - Adds simple `command-not-found` script
 - `compatibility` - Adds `fhs-shell`, a FHS-compatible shell
 - `desktop` - Essential packages for desktop environments
@@ -106,7 +106,7 @@ Scripts to simplify the work with VSCode extensions.
 - `ansible` - Adds [Ansible](https://www.ansible.com/)
 - `bash` - Configures [Bash](https://www.gnu.org/software/bash/) shell
 - `chromium` - Configures [Chromium](https://www.chromium.org/) web browser and extensions
-- `cloud-packages` - [Kubernetes](https://kubernetes.io/) and Google Cloud related packages
+- `cloud-tools` - [Kubernetes](https://kubernetes.io/) and cloud related packages
 - `conky` - Configures [conky](https://github.com/brndnmtthws/conky)
 - `dconf` - Loads [dconf](https://wiki.gnome.org/Projects/dconf) configuration from file
 - `disable-bluetooth` - Disables Bluetooth on start
@@ -114,9 +114,9 @@ Scripts to simplify the work with VSCode extensions.
 - `emacs` - Configures [Emacs](https://www.gnu.org/software/emacs/)
 - `fish` - Configures [Fish](https://fishshell.com/) shell
 - `hide-applications` - Hides applications from launcher
-- `java-packages` - [Java](https://www.java.com/en/) development related packages
+- `java-development` - [Java](https://www.java.com/en/) development related packages
 - `non-nixos` - Use if other Linux OS than NixOS
-- `nix` - Nix configuration and additions
+- `nixos` - NixOS configuration and additions
 - `vscode-profiles` - Adds [VSCod](https://code.visualstudio.com/) with multiple profiles
 
 ## `overlays/`

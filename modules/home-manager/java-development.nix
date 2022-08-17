@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.javaPackages;
+  cfg = config.modules.javaDevelopment;
 in {
-  options.modules.javaPackages = {
+  options.modules.javaDevelopment = {
     enable = mkOption {
       default = false;
       type = types.bool;
@@ -15,6 +15,7 @@ in {
     home.packages = with pkgs; [
       eclipse-mat
       gradle
+      jetbrains.idea-community
       jdk
       maven
       visualvm

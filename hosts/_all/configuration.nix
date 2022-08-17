@@ -6,7 +6,7 @@
     ../../modules/nixos/avahi.nix
     ../../modules/nixos/base-packages.nix
     ../../modules/nixos/btrfs.nix
-    ../../modules/nixos/build-packages.nix
+    ../../modules/nixos/build-essentials.nix
     ../../modules/nixos/command-not-found.nix
     ../../modules/nixos/compatibility.nix
     ../../modules/nixos/desktop.nix

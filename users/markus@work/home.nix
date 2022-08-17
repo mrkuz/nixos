@@ -24,7 +24,6 @@
     charles
     firefox
     google-chrome
-    jetbrains.idea-community
     netbeans
     postman
     robo3t

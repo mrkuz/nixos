@@ -7,7 +7,7 @@ in {
     ../../modules/home-manager/ansible.nix
     ../../modules/home-manager/bash.nix
     ../../modules/home-manager/chromium.nix
-    ../../modules/home-manager/cloud-packages.nix
+    ../../modules/home-manager/cloud-tools.nix
     ../../modules/home-manager/conky.nix
     ../../modules/home-manager/dconf.nix
     ../../modules/home-manager/disable-bluetooth.nix
@@ -15,8 +15,8 @@ in {
     ../../modules/home-manager/emacs.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/hide-applications.nix
-    ../../modules/home-manager/java-packages.nix
-    ../../modules/home-manager/nix.nix
+    ../../modules/home-manager/java-development.nix
+    ../../modules/home-manager/nixos.nix
     ../../modules/home-manager/non-nixos.nix
     ../../modules/home-manager/vscode-profiles.nix
   ];
@@ -45,7 +45,7 @@ in {
         "software-properties-livepatch"
       ];
     };
-    nix.enable = true;
+    nixos.enable = true;
   };
 
   home.stateVersion = vars.stateVersion;

@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.cloudPackages;
+  cfg = config.modules.cloudTools;
 in {
-  options.modules.cloudPackages = {
+  options.modules.cloudTools = {
     enable = mkOption {
       default = false;
       type = types.bool;

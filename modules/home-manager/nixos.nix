@@ -2,9 +2,9 @@
 
 with lib;
 let
-  cfg = config.modules.nix;
+  cfg = config.modules.nixos;
 in {
-  options.modules.nix = {
+  options.modules.nixos = {
     enable = mkOption {
       default = false;
       type = types.bool;

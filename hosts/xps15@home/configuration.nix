@@ -8,11 +8,9 @@
 
   modules = {
     btrfs.enable = true;
-    buildPackages.enable = true;
+    buildEssentials.enable = true;
     libreoffice.enable = true;
-    # kodi.enable = true;
     pipewire.enable = true;
-    # steam.enable = true;
     systemdBoot.enable = true;
   };
 

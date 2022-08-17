@@ -33,9 +33,7 @@
     android-studio
     calibre
     gimp
-    jetbrains.idea-community
     lens
-    # netbeans
     pdftk
     postman
     qbittorrent
