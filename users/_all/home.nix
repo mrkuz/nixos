@@ -43,10 +43,16 @@ in {
         "xterm"
         "ca.desrt.dconf-editor"
         "software-properties-livepatch"
+        "Waydroid"
       ];
     };
     nixos.enable = true;
   };
+
+  home.activation.hideWaydroidApps = hm.dag.entryAfter [ "writeBoundary" ]
+    ''
+    sed -i 's/Icon=.*/NoDisplay=true/' ~/.local/share/applications/waydroid*.desktop || true
+    '';
 
   home.stateVersion = vars.stateVersion;
 }

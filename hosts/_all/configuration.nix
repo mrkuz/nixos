@@ -30,6 +30,7 @@
     ../../modules/nixos/sway.nix
     ../../modules/nixos/systemd-boot.nix
     ../../modules/nixos/virtualbox.nix
+    ../../modules/nixos/waydroid.nix
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/x11.nix
   ];

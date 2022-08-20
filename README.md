@@ -98,6 +98,7 @@ Scripts to simplify the work with VSCode extensions.
 - `sway` - Configures [sway](https://github.com/swaywm/sway) window manager
 - `systemd-boot` - Configures [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - `virtualbox` - Adds [VirutalBox](https://www.virtualbox.org/) and utilities
+- `waydroid` - Adds [Waydroid](hhttps://waydro.id/)
 - `wayland` - Adds [Wayland](https://wayland.freedesktop.org/) utilities
 - `x11` - Configures X11
 
