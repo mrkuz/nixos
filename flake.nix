@@ -65,23 +65,25 @@
         ];
       };
       setUpNix = name: user: inputs.home-manager.lib.homeManagerConfiguration {
-        inherit system pkgs;
-        homeDirectory = "/home/${user}";
-        username = user;
-        configuration = {
-          nixpkgs.overlays = [
-            inputs.emacs-overlay.overlay
-            (import ./overlays/tools/package-management/nix)
-          ];
-          imports = [
-            {
-              _module.args.nixpkgs = nixpkgs;
-              _module.args.inputs = inputs;
-              _module.args.vars = vars;
-            }
-            (./users + "/${name}" + /home.nix)
-          ];
-        };
+        inherit pkgs;
+        modules = [
+          {
+            _module.args.nixpkgs = nixpkgs;
+            _module.args.inputs = inputs;
+            _module.args.vars = vars;
+            nixpkgs.overlays = [
+              inputs.emacs-overlay.overlay
+              (import ./overlays/tools/package-management/nix)
+            ];
+          }
+          {
+            home = {
+              homeDirectory = "/home/${user}";
+              username = user;
+            };
+          }
+          (./users + "/${name}" + /home.nix)
+        ];
       };
     in {
       nixosConfigurations."virtualbox" = setUpNixOS "virtualbox";

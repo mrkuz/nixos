@@ -349,7 +349,7 @@ nix develop
   ```shell
   sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
   cd /nix/nixpkgs
-  git checkout nixos-unstable
+  sudo git checkout nixos-unstable
   ```
 
 - Clone repository
@@ -368,7 +368,7 @@ nix develop
   git submodule update
   ```
 
-- Create credentials repository
+- Create credentials repository with empty default.nix
 
   ```shell
   mkdir repos/credentials
