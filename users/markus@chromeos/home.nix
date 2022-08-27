@@ -10,6 +10,7 @@ in {
   modules = {
     bash.enable = true;
     fish.enable = true;
+    chromeOs.enable = true;
     nonNixOs.enable = true;
   };
 
@@ -17,6 +18,8 @@ in {
     source = inputs.dotfiles;
     recursive = true;
   };
+
+  home.file.".local/share/applications/emacs.desktop".source = "${pkgs.emacs}/share/applications/emacs.desktop";
 
   home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
     ''

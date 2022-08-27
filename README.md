@@ -106,6 +106,7 @@ Scripts to simplify the work with VSCode extensions.
 
 - `ansible` - Adds [Ansible](https://www.ansible.com/)
 - `bash` - Configures [Bash](https://www.gnu.org/software/bash/) shell
+- `chromeos` - Use if [ChromeOS](https://www.google.com/chromebook/chrome-os/)
 - `chromium` - Configures [Chromium](https://www.chromium.org/) web browser and extensions
 - `cloud-tools` - [Kubernetes](https://kubernetes.io/) and cloud related packages
 - `conky` - Configures [conky](https://github.com/brndnmtthws/conky)
@@ -118,7 +119,7 @@ Scripts to simplify the work with VSCode extensions.
 - `java-development` - [Java](https://www.java.com/en/) development related packages
 - `non-nixos` - Use if other Linux OS than NixOS
 - `nixos` - NixOS configuration and additions
-- `vscode-profiles` - Adds [VSCod](https://code.visualstudio.com/) with multiple profiles
+- `vscode-profiles` - Adds [VSCode](https://code.visualstudio.com/) with multiple profiles
 
 ## `overlays/`
 
