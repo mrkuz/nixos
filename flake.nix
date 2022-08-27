@@ -26,16 +26,15 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
       vars = {
         stateVersion = "22.05";
         emacs = "emacsPgtkNativeComp";
       };
-      setUpNixOS = name: nixpkgs.lib.nixosSystem {
+      mkPkgs = system: import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           {
@@ -64,8 +63,8 @@
           (./hosts + "/${name}" + /configuration.nix)
         ];
       };
-      setUpNix = name: user: inputs.home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      setUpNix = name: user: system: inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = mkPkgs system;
         modules = [
           {
             _module.args.nixpkgs = nixpkgs;
@@ -86,13 +85,16 @@
         ];
       };
     in {
-      nixosConfigurations."virtualbox" = setUpNixOS "virtualbox";
-      nixosConfigurations."xps15@home" = setUpNixOS "xps15@home";
-      nixosConfigurations."xps15@work" = setUpNixOS "xps15@work";
+      nixosConfigurations."virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
+      nixosConfigurations."xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
+      nixosConfigurations."xps15@work" = setUpNixOS "xps15@work" "x86_64-linux";
 
-      defaultPackage.x86_64-linux = pkgs.nixFlakes;
+      defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nixFlakes;
 
-      homeConfigurations."markus@ubuntu" = setUpNix "markus@ubuntu" "markus";
-      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
+      homeConfigurations."markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
+      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;#
+
+      homeConfigurations."markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
+      packages.aarch64-linux."markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
     };
 }
