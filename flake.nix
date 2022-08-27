@@ -33,25 +33,26 @@
       mkPkgs = system: import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        overlays = [
+          inputs.nix-alien.overlay
+          inputs.emacs-overlay.overlay
+          # inputs.nixpkgs-wayland.overlay
+          (import ./overlays/applications/networking/browsers/chromium)
+          (import ./overlays/tools/package-management/nix)
+          (import ./overlays/desktops/gnome/core/gnome-terminal)
+        ];
       };
       setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           {
+            nixpkgs.pkgs = mkPkgs system;
             _module.args.nixpkgs = nixpkgs;
             _module.args.self = self;
             _module.args.inputs = inputs;
             _module.args.credentials = import inputs.credentials;
             _module.args.configName = name;
             _module.args.vars = vars;
-            nixpkgs.overlays = [
-              inputs.nix-alien.overlay
-              inputs.emacs-overlay.overlay
-              # inputs.nixpkgs-wayland.overlay
-              (import ./overlays/applications/networking/browsers/chromium)
-              (import ./overlays/tools/package-management/nix)
-              (import ./overlays/desktops/gnome/core/gnome-terminal)
-            ];
           }
           inputs.home-manager.nixosModules.home-manager {
             home-manager = {
@@ -70,10 +71,6 @@
             _module.args.nixpkgs = nixpkgs;
             _module.args.inputs = inputs;
             _module.args.vars = vars;
-            nixpkgs.overlays = [
-              inputs.emacs-overlay.overlay
-              (import ./overlays/tools/package-management/nix)
-            ];
           }
           {
             home = {
