@@ -325,6 +325,14 @@ nix develop
   }
   ```
 
+- Clone nixpkgs (optional)
+
+  ```shell
+  sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
+  cd /nix/nixpkgs
+  sudo git checkout nixos-unstable
+  ```
+
 - Update and rebuild system
 
   ```shell
@@ -345,7 +353,7 @@ nix develop
   trusted-users = root user
   ```
 
-- Clone nixpkgs
+- Clone nixpkgs (optional)
 
   ```shell
   sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
