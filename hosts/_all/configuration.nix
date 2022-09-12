@@ -46,6 +46,7 @@
     kernelParams = [ "udev.log_priority=3" ];
     kernel.sysctl = {
       "vm.swappiness" = 10;
+      "net.ipv4.ip_forward" = 1;
     };
   };
 
@@ -72,6 +73,7 @@
   systemd.coredump.enable = false;
 
   documentation = {
+    enable = true;
     doc.enable = false;
     info.enable = false;
     nixos.enable = true;
