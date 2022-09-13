@@ -412,7 +412,18 @@ nix develop
   ./result/activate
   ```
 
-# Appendix C: File structures
+# Appendix C: Build and run Docker image
+
+  ```shell
+  nix build .#docker
+  docker import result/tarball/nixos-system-x86_64-linux.tar.xz nixos
+  docker run --rm -it --privileged --name nixos nixos /init
+
+  # Other terminal
+  docker exec -ti nixos /run/current-system/sw/bin/bash
+  ```
+
+# Appendix D: File structures
 
 ## Hosts
 

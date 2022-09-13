@@ -50,9 +50,7 @@
           (import ./overlays/desktops/gnome/core/gnome-terminal)
         ];
       };
-      setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
+      mkNixOSModules = name: system: [
           {
             nixpkgs.pkgs = mkPkgs system;
             _module.args.nixpkgs = nixpkgs;
@@ -71,6 +69,14 @@
           }
           (./hosts + "/${name}" + /configuration.nix)
         ];
+      setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = mkNixOSModules name system;
+      };
+      setUpDocker = name: system: nixos-generators.nixosGenerate {
+        inherit system;
+        modules = mkNixOSModules name system;
+        format = "docker";
       };
       setUpNix = name: user: system: inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = mkPkgs system;
@@ -101,5 +107,7 @@
 
       homeConfigurations."markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
       packages.aarch64-linux."markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
+
+      packages.x86_64-linux."docker" = setUpDocker "docker" "x86_64-linux";
     };
 }
