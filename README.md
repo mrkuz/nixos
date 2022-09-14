@@ -417,7 +417,7 @@ nix develop
   ```shell
   nix build .#docker
   docker import result/tarball/nixos-system-x86_64-linux.tar.xz nixos
-  docker run --rm -it --privileged --name nixos nixos /init
+  docker run --rm -t --name nixos --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro nixos /init
 
   # Other terminal
   docker exec -ti nixos /run/current-system/sw/bin/bash

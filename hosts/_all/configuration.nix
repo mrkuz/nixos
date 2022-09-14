@@ -43,7 +43,10 @@
     cleanTmpDir = true;
     consoleLogLevel = 0;
     # kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "udev.log_priority=3" ];
+    kernelParams = [
+      "udev.log_priority=3"
+      "systemd.unified_cgroup_hierarchy=0"
+    ];
     kernel.sysctl = {
       "vm.swappiness" = 10;
       "net.ipv4.ip_forward" = 1;

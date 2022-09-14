@@ -47,8 +47,6 @@
     powerOnBoot = false;
   };
 
-  # Use cgroups v2
-  systemd.enableUnifiedCgroupHierarchy = true;
   # systemd.additionalUpstreamSystemUnits = [ "debug-shell.service" ];
 
   services = {

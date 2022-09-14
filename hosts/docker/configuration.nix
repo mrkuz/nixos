@@ -10,7 +10,7 @@
   };
 
   boot.isContainer = true;
-  # boot.specialFileSystems = lib.mkForce {};
+  boot.specialFileSystems = lib.mkForce {};
 
   networking = {
     hostName = "";
@@ -19,7 +19,7 @@
   };
 
   systemd.services.console-getty.enable = false;
-  systemd.services.systemd-logind.enable = false;
+  # systemd.services.systemd-logind.enable = false;
   # systemd.services.nix-daemon.enable = false;
   # systemd.sockets.nix-daemon.enable = false;
 
