@@ -31,5 +31,7 @@
   };
   programs.command-not-found.enable = false;
 
+  nix.settings.sandbox = false;
+
   users.allowNoPasswordLogin = true;
 }
