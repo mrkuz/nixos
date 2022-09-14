@@ -109,5 +109,6 @@
       packages.aarch64-linux."markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
 
       packages.x86_64-linux."docker" = setUpDocker "docker" "x86_64-linux";
+      packages.x86_64-linux."docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
     };
 }

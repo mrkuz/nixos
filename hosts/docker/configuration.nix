@@ -25,9 +25,6 @@
 
   services.journald.console = "/dev/console";
 
-  # Override defaults from nixos/modules/profiles/docker-container.nix
-  # environment.noXlibs = false;
-
   documentation = {
     enable = lib.mkForce false;
     nixos.enable = lib.mkForce false;
