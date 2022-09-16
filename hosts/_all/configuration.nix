@@ -72,9 +72,6 @@
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
 
-  # Disable coredumps
-  systemd.coredump.enable = false;
-
   documentation = {
     enable = true;
     doc.enable = false;
