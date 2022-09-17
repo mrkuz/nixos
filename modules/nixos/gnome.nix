@@ -61,6 +61,7 @@ in {
       # Miscellaneous applications
       chromium
       gparted
+      gthumb
       thunderbird-wayland
       vlc
       # Gnome extensions

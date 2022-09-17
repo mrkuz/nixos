@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
     audacity
     # curlftpfs
+    exiftool
     gitAndTools.diff-so-fancy
     gitAndTools.gitFull
     go
