@@ -98,24 +98,10 @@ in {
   };
 
 
-  home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
+  home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
     ''
-    # Create directories
-    [ -e $HOME/bin ] || mkdir $HOME/bin
-    [ -e $HOME/etc ] || mkdir $HOME/etc
-    [ -e $HOME/org ] || mkdir -p $HOME/org/{calendar,lists,mobile,projects}
-    [ -e $HOME/tmp ] || mkdir $HOME/tmp
-    [ -e $HOME/Games ] || mkdir $HOME/Games
-    [ -e $HOME/Notes ] || mkdir $HOME/Notes
-    [ -e $HOME/opt ] || mkdir $HOME/opt
-    [ -e $HOME/src ] || mkdir $HOME/src
-    [ -e $HOME/Workspace ] || mkdir $HOME/Workspace
-
     # Link some stuff
     [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
-    [ -e $HOME/etc/dotfiles ] || ln -svf $HOME/etc/nixos/repos/dotfiles $HOME/etc/dotfiles
-    [ -e $HOME/etc/emacs.d ] || ln -svf $HOME/etc/nixos/repos/emacs.d $HOME/etc/emacs.d
-    [ -e $HOME/.emacs.d ] || ln -svf $HOME/etc/emacs.d $HOME/.emacs.d
 
     # Clone repositories
     [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
