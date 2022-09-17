@@ -4,19 +4,13 @@ let
   hm = inputs.home-manager.lib.hm;
 in {
   imports = [
-    ../_all/home.nix
+    ../markus/home.nix
   ];
 
   modules = {
-    bash.enable = true;
-    fish.enable = true;
     chromeOs.enable = true;
+    nixos.enable = lib.mkForce false;
     nonNixOs.enable = true;
-  };
-
-  home.file."tmp/../" = {
-    source = inputs.dotfiles;
-    recursive = true;
   };
 
   home.file.".local/share/applications/emacs.desktop".source = "${pkgs.emacs}/share/applications/emacs.desktop";

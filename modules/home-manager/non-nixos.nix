@@ -13,8 +13,6 @@ in {
 
   config = mkIf cfg.enable {
 
-    modules.nixos.enable = mkForce false;
-
     home.packages = with pkgs; [
       # nix
       niv
