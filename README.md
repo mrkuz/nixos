@@ -404,9 +404,10 @@ nix develop
   }
   ```
 
-- Install
+- Update inputs and install
 
   ```shell
+  ./update.sh
   export NIX_CONFIG="experimental-features = nix-command flakes"
   nix build .#user@ubuntu
   ./result/activate
