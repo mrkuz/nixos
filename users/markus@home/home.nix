@@ -78,6 +78,13 @@ in {
           ];
         }
         {
+          name = "Nix";
+          alias = "ncode";
+          extensions = with sources; vscodeExtensions ++ [
+            nix-ide
+          ];
+        }
+        {
           name = "Python";
           alias = "pcode";
           extensions = with sources; vscodeExtensions ++ [

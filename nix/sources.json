@@ -167,6 +167,15 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.1"
     },
+    "nix-ide": {
+        "name": "nix-ide",
+        "publisher": "jnoortheen",
+        "sha256": "0i5zqfz2ic57z9b4v6mrs68dzhvgpnr5984srjapi0nzm30k127b",
+        "type": "file",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jnoortheen/vsextensions/nix-ide/0.1.23/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.1.23"
+    },
     "prettier-vscode": {
         "name": "prettier-vscode",
         "publisher": "esbenp",

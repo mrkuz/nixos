@@ -77,6 +77,8 @@ in {
 
     environment.systemPackages = with pkgs; [
       niv
+      nixpkgs-fmt
+      rnix-lsp
       (callPackage ../../pkgs/tools/nix/nixos-option { inherit configName; })
     ];
   };
