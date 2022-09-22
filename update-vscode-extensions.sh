@@ -4,7 +4,7 @@ extensions=$(jq -r '.[] | select(.url | length > 0)  | select(.url | test("marke
 
 function get_details {
   curl -s -X POST 'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery' \
-    --header 'accept: application/json;api-version=3.0-preview.1' \
+    --header 'accept: application/json;api-version=7.1-preview.1' \
     --header 'content-type: application/json' \
     --data-raw "{
       \"filters\": [{
