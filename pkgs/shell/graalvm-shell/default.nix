@@ -8,7 +8,8 @@ let
     export NIX_SHELL="graalvm"
     exec ${pkgs.fish}/bin/fish
   '';
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "graalvm-shell";
   unpackPhase = "true";
   installPhase = ''

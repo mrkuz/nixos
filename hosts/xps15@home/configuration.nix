@@ -16,7 +16,7 @@
 
   networking.hostName = "nixos";
 
-  swapDevices = [ { device = "/.swapfile"; } ];
+  swapDevices = [{ device = "/.swapfile"; }];
 
   hardware.sane = {
     enable = true;
@@ -39,7 +39,7 @@
         description = "Markus";
         isNormalUser = true;
         group = "markus";
-        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd"  "lp" "scanner" "vboxusers" ];
+        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd" "lp" "scanner" "vboxusers" ];
         hashedPassword = credentials."markus@home".hashedPassword;
         shell = pkgs.fish;
       };

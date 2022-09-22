@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.bash;
-in {
+in
+{
   options.modules.bash = {
     enable = mkOption {
       default = false;

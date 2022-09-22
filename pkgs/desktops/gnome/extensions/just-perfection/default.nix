@@ -2,7 +2,8 @@
 
 let
   sources = import ../../../../../nix/sources.nix;
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "just-perfection";
   src = sources.just-perfection;
   uuid = "just-perfection-desktop@just-perfection";

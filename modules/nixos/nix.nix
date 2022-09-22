@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.nix;
-in {
+in
+{
   options.modules.nix = {
     enable = mkOption {
       default = false;
@@ -61,7 +62,7 @@ in {
         sorted = builtins.sort (a: b: lib.toLower a < lib.toLower b) (lib.unique packages);
         formatted = builtins.concatStringsSep "\n" sorted;
       in
-        formatted;
+      formatted;
 
     environment.extraInit = ''
       export NIX_PATH="nixpkgs=/nix/channels/nixos"

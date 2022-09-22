@@ -1,8 +1,9 @@
 { pkgs, inputs, vars, ... }:
 
 let
-  python-custom = (pkgs.python3.withPackages(ps: [ ps.black ps.pip ps.tkinter ]));
-in {
+  python-custom = (pkgs.python3.withPackages (ps: [ ps.black ps.pip ps.tkinter ]));
+in
+{
   imports = [
     ../_all/home.nix
   ];
@@ -12,7 +13,7 @@ in {
     exec = "${python-custom}/bin/idle3";
     terminal = false;
     type = "Application";
-    categories = [ "Development" "Utility"];
+    categories = [ "Development" "Utility" ];
   };
 
   home.packages = with pkgs; [

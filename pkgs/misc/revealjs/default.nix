@@ -2,7 +2,8 @@
 
 let
   sources = import ../../../nix/sources.nix;
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "revealjs";
   src = sources.revealjs;
 

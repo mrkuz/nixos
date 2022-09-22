@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.virtualbox;
-in {
+in
+{
   options.modules.virtualbox = {
     enable = mkOption {
       default = false;

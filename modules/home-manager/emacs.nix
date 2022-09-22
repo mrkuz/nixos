@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.emacs;
-in {
+in
+{
   options.modules.emacs = {
     enable = mkOption {
       default = false;
@@ -12,7 +13,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages =  with pkgs; [
+    home.packages = with pkgs; [
       # Dependencies
       graphviz
       hunspell
@@ -23,8 +24,8 @@ in {
       # silver-searcher
       sqlite
       texlive.combined.scheme-basic
-      (callPackage ../../pkgs/misc/revealjs {})
-    ] ++ [(getAttr vars.emacs pkgs)];
+      (callPackage ../../pkgs/misc/revealjs { })
+    ] ++ [ (getAttr vars.emacs pkgs) ];
 
     home.file.".local/share/applications/org-protocol.desktop" = {
       text = ''

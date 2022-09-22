@@ -12,7 +12,8 @@ let
     static unsigned char emptyCursor_bits[] = {
     0x00};
   '';
-in {
+in
+{
   options.modules.steam = {
     enable = mkOption {
       default = false;

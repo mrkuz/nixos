@@ -1,8 +1,9 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 let
   sources = import ../../../../nix/sources.nix;
-in pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+in
+pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
     inherit (sources.remote-ssh) name publisher version sha256;
   };

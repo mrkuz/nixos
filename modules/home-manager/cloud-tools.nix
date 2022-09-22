@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.cloudTools;
-in {
+in
+{
   options.modules.cloudTools = {
     enable = mkOption {
       default = false;

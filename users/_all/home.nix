@@ -2,7 +2,8 @@
 
 let
   hm = inputs.home-manager.lib.hm;
-in {
+in
+{
   imports = [
     ../../modules/home-manager/ansible.nix
     ../../modules/home-manager/bash.nix
@@ -52,7 +53,7 @@ in {
 
   home.activation.hideWaydroidApps = hm.dag.entryAfter [ "writeBoundary" ]
     ''
-    sed -i 's/Icon=.*/NoDisplay=true/' ~/.local/share/applications/waydroid*.desktop || true
+      sed -i 's/Icon=.*/NoDisplay=true/' ~/.local/share/applications/waydroid*.desktop || true
     '';
 
   home.stateVersion = vars.stateVersion;

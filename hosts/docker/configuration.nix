@@ -10,7 +10,7 @@
   };
 
   boot.isContainer = true;
-  boot.specialFileSystems = lib.mkForce {};
+  boot.specialFileSystems = lib.mkForce { };
 
   networking = {
     hostName = "";

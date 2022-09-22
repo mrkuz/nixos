@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.sshd;
-in {
+in
+{
   options.modules.sshd = {
     enable = mkOption {
       default = false;

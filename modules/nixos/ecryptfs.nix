@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.ecryptfs;
-in {
+in
+{
   options.modules.ecryptfs = {
     enable = mkOption {
       default = false;

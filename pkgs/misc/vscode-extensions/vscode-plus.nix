@@ -1,18 +1,19 @@
-{ stdenv, lib, pkgs, name, userDataDir, extensions, ...}:
+{ stdenv, lib, pkgs, name, userDataDir, extensions, ... }:
 
 with lib;
 
 let
   makeVsix = source:
     let fileName = removePrefix "/nix/store/" source;
-    in  "$NIX_BUILD_TOP/${fileName}.vsix";
+    in "$NIX_BUILD_TOP/${fileName}.vsix";
   makeLink = source:
     let vsix = makeVsix source;
     in "ln -s \"${source}\" \"${vsix}\"";
   makeInstall = source:
     let vsix = makeVsix source;
     in "${pkgs.vscode}/bin/code --user-data-dir \"$NIX_BUILD_TOP/user-data\" --extensions-dir \"$out/share/$name/extensions\" --install-extension \"${vsix}\"";
-in stdenv.mkDerivation {
+in
+stdenv.mkDerivation {
   inherit name;
   src = ./.;
 

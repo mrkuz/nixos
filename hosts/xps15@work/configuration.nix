@@ -16,7 +16,7 @@
     firewall.allowedTCPPorts = [ 8888 ];
   };
 
-  swapDevices = [ { device = "/dev/vg00/swap"; } ];
+  swapDevices = [{ device = "/dev/vg00/swap"; }];
 
   fileSystems."/home" = {
     device = "/dev/vg00/home";
@@ -46,7 +46,7 @@
         description = "Markus";
         isNormalUser = true;
         group = "markus";
-        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd"  "lp" "scanner" "vboxusers" ];
+        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd" "lp" "scanner" "vboxusers" ];
         hashedPassword = credentials."markus@work".hashedPassword;
         shell = pkgs.fish;
       };

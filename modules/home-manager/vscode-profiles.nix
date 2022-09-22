@@ -12,14 +12,15 @@ let
           [ -e "$HOME/.vscode/${profile.name}/User/settings.json" ] || install -m 665 "$HOME/.config/Code/User/settings.json" "$HOME/.vscode/${profile.name}/User/"
           [ -e "$HOME/.vscode/${profile.name}/User/keybindings.json" ] || install -m 665 "$HOME/.config/Code/User/keybindings.json" "$HOME/.vscode/${profile.name}/User/"
         '';
-      };
+    };
   createPackage = profile:
     (pkgs.callPackage ../../pkgs/misc/vscode-extensions/vscode-plus.nix {
       name = "${profile.alias}";
       userDataDir = ".vscode/${profile.name}";
       extensions = profile.extensions;
     });
-in {
+in
+{
   options.modules.vscodeProfiles = {
     enable = mkOption {
       default = false;

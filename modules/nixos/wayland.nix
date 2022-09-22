@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.wayland;
-in {
+in
+{
   options.modules.wayland = {
     enable = mkOption {
       default = false;

@@ -7,12 +7,13 @@ let
     name = ".local/share/applications/${name}.desktop";
     value = {
       text = ''
-      [Desktop Entry]
-      NoDisplay=true
+        [Desktop Entry]
+        NoDisplay=true
       '';
     };
   };
-in {
+in
+{
   options.modules.hideApplications = {
     enable = mkOption {
       default = false;

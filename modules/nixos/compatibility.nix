@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.compatibility;
-in {
+in
+{
   options.modules.compatibility = {
     enable = mkOption {
       default = false;
@@ -19,7 +20,7 @@ in {
       nix-index
       nix-index-update
       steam-run
-      (callPackage ../../pkgs/shell/fhs-shell {})
+      (callPackage ../../pkgs/shell/fhs-shell { })
     ];
   };
 }

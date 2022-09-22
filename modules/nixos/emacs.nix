@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.emacs;
-in {
+in
+{
   options.modules.emacs = {
     enable = mkOption {
       default = false;
@@ -12,7 +13,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [(getAttr vars.emacs pkgs)];
+    environment.systemPackages = [ (getAttr vars.emacs pkgs) ];
 
     fonts.fonts = with pkgs; [
       emacs-all-the-icons-fonts

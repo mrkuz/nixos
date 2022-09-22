@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.opengl;
-in {
+in
+{
   options.modules.opengl = {
     enable = mkOption {
       default = false;

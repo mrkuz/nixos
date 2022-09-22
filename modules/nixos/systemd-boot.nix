@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.systemdBoot;
-in {
+in
+{
   options.modules.systemdBoot = {
     enable = mkOption {
       default = false;

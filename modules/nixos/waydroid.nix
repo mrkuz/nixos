@@ -15,7 +15,8 @@ let
     wait $WESTON_PID
     waydroid session stop
   '';
-in {
+in
+{
   options.modules.waydroid = {
     enable = mkOption {
       default = false;

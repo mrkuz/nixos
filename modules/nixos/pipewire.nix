@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.pipewire;
-in {
+in
+{
   options.modules.pipewire = {
     enable = mkOption {
       default = false;

@@ -51,24 +51,25 @@
         ];
       };
       mkNixOSModules = name: system: [
-          {
-            nixpkgs.pkgs = mkPkgs system;
-            _module.args.nixpkgs = nixpkgs;
-            _module.args.self = self;
-            _module.args.inputs = inputs;
-            _module.args.credentials = import inputs.credentials;
-            _module.args.configName = name;
-            _module.args.vars = vars;
-          }
-          inputs.home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = false;
-              extraSpecialArgs = { inherit inputs vars; };
-            };
-          }
-          (./hosts + "/${name}" + /configuration.nix)
-        ];
+        {
+          nixpkgs.pkgs = mkPkgs system;
+          _module.args.nixpkgs = nixpkgs;
+          _module.args.self = self;
+          _module.args.inputs = inputs;
+          _module.args.credentials = import inputs.credentials;
+          _module.args.configName = name;
+          _module.args.vars = vars;
+        }
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = false;
+            extraSpecialArgs = { inherit inputs vars; };
+          };
+        }
+        (./hosts + "/${name}" + /configuration.nix)
+      ];
       setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = mkNixOSModules name system;
@@ -95,7 +96,8 @@
           (./users + "/${name}" + /home.nix)
         ];
       };
-    in {
+    in
+    {
       nixosConfigurations."virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
       nixosConfigurations."xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
       nixosConfigurations."xps15@work" = setUpNixOS "xps15@work" "x86_64-linux";
@@ -103,7 +105,7 @@
       defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nixFlakes;
 
       homeConfigurations."markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
-      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;#
+      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
 
       homeConfigurations."markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
       packages.aarch64-linux."markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;

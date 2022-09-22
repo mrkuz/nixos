@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.disableBluetooth;
-in {
+in
+{
   options.modules.disableBluetooth = {
     enable = mkOption {
       default = false;
@@ -18,7 +19,7 @@ in {
       };
 
       Service = {
-        ExecStart= "${pkgs.util-linux}/bin/rfkill block bluetooth";
+        ExecStart = "${pkgs.util-linux}/bin/rfkill block bluetooth";
       };
 
       Unit = {

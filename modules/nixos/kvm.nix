@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.kvm;
-in {
+in
+{
   options.modules.kvm = {
     enable = mkOption {
       default = false;

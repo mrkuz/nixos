@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.kodi;
-in {
+in
+{
   options.modules.kodi = {
     enable = mkOption {
       default = false;

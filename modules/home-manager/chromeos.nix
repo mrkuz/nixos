@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.chromeOs;
-in {
+in
+{
   options.modules.chromeOs = {
     enable = mkOption {
       default = false;

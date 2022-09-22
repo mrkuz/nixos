@@ -2,8 +2,9 @@
 
 with lib;
 let
- cfg = config.modules.kde;
-in {
+  cfg = config.modules.kde;
+in
+{
   options.modules.kde = {
     enable = mkOption {
       default = false;

@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.javaDevelopment;
-in {
+in
+{
   options.modules.javaDevelopment = {
     enable = mkOption {
       default = false;
@@ -19,7 +20,7 @@ in {
       jdk
       maven
       visualvm
-      (callPackage ../../pkgs/shell/graalvm-shell {})
+      (callPackage ../../pkgs/shell/graalvm-shell { })
     ];
   };
 }

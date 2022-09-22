@@ -12,7 +12,8 @@ let
     exec -a "$0" "$@"
   '';
 
-in {
+in
+{
   options.modules.nvidia = {
     enable = mkOption {
       default = false;

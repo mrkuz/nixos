@@ -49,11 +49,11 @@
     };
   };
 
-  swapDevices = [ { device = "/.swapfile"; } ];
+  swapDevices = [{ device = "/.swapfile"; }];
 
   virtualisation.virtualbox.guest = {
-      enable = true;
-      x11 = true;
+    enable = true;
+    x11 = true;
   };
 
   users = {

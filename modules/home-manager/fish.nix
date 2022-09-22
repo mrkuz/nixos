@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.fish;
-in {
+in
+{
   options.modules.fish = {
     enable = mkOption {
       default = false;

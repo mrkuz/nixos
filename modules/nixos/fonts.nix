@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.fonts;
-in {
+in
+{
   options.modules.fonts = {
     enable = mkOption {
       default = false;

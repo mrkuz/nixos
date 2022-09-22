@@ -6,7 +6,8 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages."${system}";
-    in {
+    in
+    {
       defaultPackage."${system}" = pkgs.dockerTools.buildImage {
         name = "hello-docker";
         tag = "latest";

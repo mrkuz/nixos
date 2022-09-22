@@ -12,7 +12,8 @@ let
     # remote-ssh
   ];
   hm = inputs.home-manager.lib.hm;
-in {
+in
+{
   imports = [
     ../markus/home.nix
   ];
@@ -37,14 +38,14 @@ in {
             sonarlint-vscode
             vscode-lombok
             vscode-xml
-            java  # dependency for vscode-spring-boot-dashboard, vscode-java-pack
-            vscode-java-debug  # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            java # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            vscode-java-debug # dependency for vscode-spring-boot-dashboard, vscode-java-pack
             vscode-java-dependency # dependency for vscode-java-pack
             vscode-java-test # dependency for vscode-java-pack
             vscode-maven # dependency for vscode-java-pack
             vscode-spring-boot # dependency for vscode-spring-boot-dashboard, vscode-boot-dev-pack
             vscode-spring-initializr # dependency for vscode-boot-dev-pack
-            vscode-spring-boot-dashboard  # dependency for vscode-boot-dev-pack
+            vscode-spring-boot-dashboard # dependency for vscode-boot-dev-pack
             # vscode-boot-dev-pack
             vscode-java-pack
           ];
@@ -107,12 +108,12 @@ in {
 
   home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
     ''
-    # Link some stuff
-    [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
+      # Link some stuff
+      [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
 
-    # Clone repositories
-    [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
-    [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")
+      # Clone repositories
+      [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
+      [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")
     '';
 
   home.packages = with pkgs; [
@@ -133,7 +134,7 @@ in {
     nodejs
     # potrace
     protobuf
-    (python3.withPackages(ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))
+    (python3.withPackages (ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))
     python310Packages.pdfx
     youtube-dl
     # Applications

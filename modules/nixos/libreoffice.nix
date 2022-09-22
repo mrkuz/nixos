@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.libreoffice;
-in {
+in
+{
   options.modules.libreoffice = {
     enable = mkOption {
       default = false;

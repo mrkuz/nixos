@@ -2,8 +2,9 @@
 
 with lib;
 let
- cfg = config.modules.sway;
-in {
+  cfg = config.modules.sway;
+in
+{
   options.modules.sway = {
     enable = mkOption {
       default = false;

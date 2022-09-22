@@ -7,7 +7,8 @@ let
   command-not-found = pkgs.writeShellScriptBin "command-not-found" ''
     echo "$1: command not found"
   '';
-in {
+in
+{
   options.modules.commandNotFound = {
     enable = mkOption {
       default = false;

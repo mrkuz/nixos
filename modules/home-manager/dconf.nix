@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.dconf;
-in {
+in
+{
   options.modules.dconf = {
     enable = mkOption {
       default = false;

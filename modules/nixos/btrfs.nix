@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.btrfs;
-in {
+in
+{
   options.modules.btrfs = {
     enable = mkOption {
       default = false;

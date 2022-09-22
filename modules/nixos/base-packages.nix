@@ -1,10 +1,11 @@
-{ config, lib, pkgs, inputs , ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 let
   cfg = config.modules.basePackages;
   home-manager-package = (import inputs.home-manager { inherit pkgs; }).home-manager;
-in {
+in
+{
   options.modules.basePackages = {
     enable = mkOption {
       default = false;

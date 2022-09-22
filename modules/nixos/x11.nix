@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.x11;
-in {
+in
+{
   options.modules.x11 = {
     enable = mkOption {
       default = false;

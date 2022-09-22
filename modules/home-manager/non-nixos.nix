@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.nonNixOs;
-in {
+in
+{
   options.modules.nonNixOs = {
     enable = mkOption {
       default = false;

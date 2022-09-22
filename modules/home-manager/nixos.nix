@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.nixos;
-in {
+in
+{
   options.modules.nixos = {
     enable = mkOption {
       default = false;

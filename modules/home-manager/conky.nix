@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.conky;
-in {
+in
+{
   options.modules.conky = {
     enable = mkOption {
       default = false;
@@ -23,7 +24,7 @@ in {
 
       Service = {
         ExecStartPre = "/run/current-system/sw/bin/sleep 10";
-        ExecStart= "${pkgs.conky}/bin/conky";
+        ExecStart = "${pkgs.conky}/bin/conky";
         Restart = "on-failure";
       };
 

@@ -2,7 +2,8 @@
 
 let
   sources = import ../../../../../nix/sources.nix;
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "instant-workspace-switcher";
   src = sources.instant-workspace-switcher;
   uuid = "instantworkspaceswitcher@amalantony.net";

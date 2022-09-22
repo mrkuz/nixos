@@ -1,9 +1,10 @@
-{ config, lib, pkgs, inputs , ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 let
   cfg = config.modules.buildEssentials;
-in {
+in
+{
   options.modules.buildEssentials = {
     enable = mkOption {
       default = false;

@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.ansible;
-in {
+in
+{
   options.modules.ansible = {
     enable = mkOption {
       default = false;

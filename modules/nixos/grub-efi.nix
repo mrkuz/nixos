@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.grubEfi;
-in {
+in
+{
   options.modules.grubEfi = {
     enable = mkOption {
       default = false;

@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.android;
-in {
+in
+{
   options.modules.android = {
     enable = mkOption {
       default = false;

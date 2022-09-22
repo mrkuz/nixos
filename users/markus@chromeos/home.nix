@@ -2,7 +2,8 @@
 
 let
   hm = inputs.home-manager.lib.hm;
-in {
+in
+{
   imports = [
     ../markus/home.nix
   ];

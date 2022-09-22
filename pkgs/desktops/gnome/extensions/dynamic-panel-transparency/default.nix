@@ -2,7 +2,8 @@
 
 let
   sources = import ../../../../../nix/sources.nix;
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "dynamic-panel-transparency";
   src = sources.dynamic-panel-transparency;
   uuid = "dynamic-panel-transparency@rockon999.github.io";

@@ -3,7 +3,8 @@
 with lib;
 let
   cfg = config.modules.avahi;
-in {
+in
+{
   options.modules.avahi = {
     enable = mkOption {
       default = false;
