@@ -39,7 +39,7 @@ in
       # home-manager-package
       htop
       inetutils
-      iproute
+      iproute2
       jq
       lm_sensors
       lzip
