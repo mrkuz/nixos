@@ -55,9 +55,9 @@ in
     environment.systemPackages = with pkgs; [
       gnome.mutter
       # Gnome utilities
-      gnome3.dconf-editor
-      gnome3.gnome-tweaks
-      gnome3.libgnome-keyring
+      gnome.dconf-editor
+      gnome.gnome-tweaks
+      gnome.libgnome-keyring
       libnotify
       # Miscellaneous applications
       chromium
