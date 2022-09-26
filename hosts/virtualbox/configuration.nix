@@ -57,19 +57,19 @@
   };
 
   users = {
-    groups.user.gid = 1000;
+    groups.markus.gid = 1000;
     users = {
-      user = {
+      markus = {
         uid = 1000;
-        description = "User";
+        description = "Markus";
         isNormalUser = true;
-        group = "user";
+        group = "markus";
         extraGroups = [ "wheel" ];
-        password = credentials.user.password;
+        password = credentials.markus.password;
         shell = pkgs.fish;
       };
     };
   };
 
-  home-manager.users.user = ../../users/user/home.nix;
+  home-manager.users.markus = ../../users/markus/home.nix;
 }
