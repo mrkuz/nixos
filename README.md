@@ -188,10 +188,17 @@ nix develop
   parted /dev/sda -- mkpart primary 512MiB 100%
   ```
 
+- Set up LUKS
+
+  ```shell
+  cryptsetup luksFormat /dev/sda2
+  cryptsetup luksOpen /dev/sda2 crypt
+  ```
+
 - Create filesystems
 
   ```shell
-  mkfs.btrfs -L nixos /dev/sda2
+  mkfs.btrfs -L nixos /dev/mapper/crypt
   mount /dev/disk/by-label/nixos /mnt/
   btrfs subvolume create /mnt/root
   btrfs subvolume create /mnt/nix
@@ -265,6 +272,8 @@ nix develop
   ```shell
   mkdir repos/credentials
   cd repos/credentials
+  git config --global user.name "User"
+  git config --global user.email "user@localhost"
   git init
   ```
 
@@ -283,6 +292,13 @@ nix develop
   ```
 
 - Update `credentials.url` in `flake.nix`. Must be an absolute path.
+
+- Update inputs and install
+
+  ```shell
+  export NIX_CONFIG="experimental-features = nix-command flakes"
+  ./update.sh
+  ```
 
 - Install
 
@@ -407,8 +423,8 @@ nix develop
 - Update inputs and install
 
   ```shell
-  ./update.sh
   export NIX_CONFIG="experimental-features = nix-command flakes"
+  ./update.sh
   nix build .#user@ubuntu
   ./result/activate
   ```
