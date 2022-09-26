@@ -9,7 +9,7 @@ NIXPKGS="/nix/nixpkgs"
 git submodule update --recursive --remote
 nix flake update
 git diff flake.lock
-niv update
+command -v niv && niv update
 git diff nix/sources.json
 
 if [[ -e "$NIXPKGS" ]]; then

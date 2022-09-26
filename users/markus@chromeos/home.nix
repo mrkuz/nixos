@@ -14,12 +14,12 @@ in
     nonNixOs.enable = true;
   };
 
-  home.file.".local/share/applications/emacs.desktop".source = "${pkgs.emacs}/share/applications/emacs.desktop";
-
   home.packages = with pkgs; [
     bat
+    def
     emacs
     htop
+    sqlite
     ubuntu_font_family
   ];
 }
