@@ -17,7 +17,7 @@ in
     home.packages = with pkgs; [
       # nix
       niv
-      nixFlakes
+      nix
       # base-packages
       fzf
       tmux

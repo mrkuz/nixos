@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
     nix = {
-      package = pkgs.nixFlakes;
+      package = pkgs.nix;
       extraOptions = ''
         experimental-features = nix-command flakes
         narinfo-cache-positive-ttl = 86400
