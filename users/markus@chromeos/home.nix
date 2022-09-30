@@ -16,7 +16,7 @@ in
 
   home.packages = with pkgs; [
     bat
-    def
+    duf
     emacs
     htop
     sqlite

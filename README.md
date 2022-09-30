@@ -293,7 +293,7 @@ nix develop
 
 - Update `credentials.url` in `flake.nix`. Must be an absolute path.
 
-- Update inputs and install
+- Update inputs
 
   ```shell
   export NIX_CONFIG="experimental-features = nix-command flakes"
