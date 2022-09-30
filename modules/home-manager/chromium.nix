@@ -21,6 +21,7 @@ in
         { id = "jnihajbhpnppcggbcgedagnkighmdlei"; } # LiveReload
         { id = "nlbjncdgjeocebhnmkbbbdekmmmcbfjd"; } # RSS Subscription extension
         { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+        { id = "hfjbmagddngcpeloejdejnfgbamkjaeg"; } # Vimium C
       ];
     };
   };
