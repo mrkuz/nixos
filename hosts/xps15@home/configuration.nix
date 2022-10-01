@@ -11,6 +11,7 @@
     buildEssentials.enable = true;
     libreoffice.enable = true;
     pipewire.enable = true;
+    snapper.enable = true;
     systemdBoot.enable = true;
   };
 

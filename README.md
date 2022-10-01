@@ -93,6 +93,7 @@ Scripts to simplify the work with VSCode extensions.
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
+- `snapper` - Configures [Snapper](http://snapper.io/) to create snapshots of `/home` on boot
 - `sshd` - Configures [OpenSSH](https://www.openssh.com/) server
 - `steam` - Configures [Steam](https://store.steampowered.com/)
 - `sway` - Configures [sway](https://github.com/swaywm/sway) window manager
@@ -204,6 +205,7 @@ nix develop
   btrfs subvolume create /mnt/nix
   btrfs subvolume create /mnt/var
   btrfs subvolume create /mnt/home
+  btrfs subvolume create /mnt/home/.snapshots
   btrfs subvolume create /mnt/data
   umount /mnt
 

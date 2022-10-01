@@ -25,6 +25,7 @@
     ../../modules/nixos/opengl.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/resolved.nix
+    ../../modules/nixos/snapper.nix
     ../../modules/nixos/sshd.nix
     ../../modules/nixos/steam.nix
     ../../modules/nixos/sway.nix
