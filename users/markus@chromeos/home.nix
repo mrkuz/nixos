@@ -14,6 +14,10 @@ in
     nonNixOs.enable = true;
   };
 
+  services.syncthing = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     bat
     duf

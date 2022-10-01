@@ -31,12 +31,13 @@ in
       # Create directories
       [ -e $HOME/bin ] || mkdir $HOME/bin
       [ -e $HOME/etc ] || mkdir $HOME/etc
-      [ -e $HOME/org ] || mkdir -p $HOME/org/{calendar,lists,mobile,projects}
+      [ -e $HOME/org ] || mkdir -p $HOME/org/{calendar,journal,lists,mobile,projects,roles}
       [ -e $HOME/tmp ] || mkdir $HOME/tmp
       [ -e $HOME/Games ] || mkdir $HOME/Games
       [ -e $HOME/Notes ] || mkdir $HOME/Notes
       [ -e $HOME/opt ] || mkdir $HOME/opt
       [ -e $HOME/src ] || mkdir $HOME/src
+      [ -e $HOME/Shared ] || mkdir $HOME/Shared
       [ -e $HOME/Workspace ] || mkdir $HOME/Workspace
 
       # Link some stuff

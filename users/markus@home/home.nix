@@ -105,7 +105,6 @@ in
     enable = true;
   };
 
-
   home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
     ''
       # Link some stuff
