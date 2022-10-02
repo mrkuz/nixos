@@ -68,13 +68,11 @@ in
       export NIX_PATH="nixpkgs=/nix/channels/nixos"
     '';
 
-    system.activationScripts.nixpath = ''
-      [ -d /nix/channels ] || mkdir /nix/channels
-      rm -f /nix/channels/nixos
-      ln -s ${nixpkgs} /nix/channels/nixos
-      rm -f /nix/current
-      ln -s ${self} /nix/current
-    '';
+    systemd.tmpfiles.rules = [
+      "d   /nix/channels        0755 root root  -  -"
+      "L+  /nix/channels/nixos     -    -    -  -  ${nixpkgs}"
+      "L+  /nix/current            -    -    -  -  ${self}"
+    ];
 
     environment.systemPackages = with pkgs; [
       niv

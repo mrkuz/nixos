@@ -1,4 +1,4 @@
-{ pkgs, inputs, vars, ... }:
+{ config, pkgs, inputs, vars, ... }:
 
 let
   sources = import ../../nix/sources.nix;
@@ -12,6 +12,7 @@ let
     # remote-ssh
   ];
   hm = inputs.home-manager.lib.hm;
+  user = config.home.username;
 in
 {
   imports = [
@@ -106,11 +107,12 @@ in
     enable = true;
   };
 
+  systemd.user.tmpfiles.rules = [
+    "L  %h/Backup -  -  -  -  /data/user/${user}/Backup"
+  ];
+
   home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
     ''
-      # Link some stuff
-      [ -e $HOME/Backup ] || ln -svf /data/user/$USER/Backup $HOME/Backup
-
       # Clone repositories
       [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
       [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")

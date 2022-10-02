@@ -1,8 +1,9 @@
-{ pkgs, inputs, vars, ... }:
+{ config, pkgs, inputs, vars, ... }:
 
 let
   sources = import ../../nix/sources.nix;
   hm = inputs.home-manager.lib.hm;
+  user = config.home.username;
 in
 {
   imports = [
@@ -26,23 +27,25 @@ in
     }
   ];
 
-  home.activation.activate = hm.dag.entryAfter [ "writeBoundary" ]
-    ''
-      # Create directories
-      [ -e $HOME/bin ] || mkdir $HOME/bin
-      [ -e $HOME/etc ] || mkdir $HOME/etc
-      [ -e $HOME/org ] || mkdir -p $HOME/org/{calendar,journal,lists,mobile,projects,roles}
-      [ -e $HOME/tmp ] || mkdir $HOME/tmp
-      [ -e $HOME/Games ] || mkdir $HOME/Games
-      [ -e $HOME/Notes ] || mkdir $HOME/Notes
-      [ -e $HOME/opt ] || mkdir $HOME/opt
-      [ -e $HOME/src ] || mkdir $HOME/src
-      [ -e $HOME/Shared ] || mkdir $HOME/Shared
-      [ -e $HOME/Workspace ] || mkdir $HOME/Workspace
-
-      # Link some stuff
-      [ -e $HOME/etc/dotfiles ] || ln -svf $HOME/etc/nixos/repos/dotfiles $HOME/etc/dotfiles
-      [ -e $HOME/etc/emacs.d ] || ln -svf $HOME/etc/nixos/repos/emacs.d $HOME/etc/emacs.d
-      [ -e $HOME/.emacs.d ] || ln -svf $HOME/etc/emacs.d $HOME/.emacs.d
-    '';
+  systemd.user.tmpfiles.rules = [
+    "d  %h/bin           0755 ${user} ${user}  -  -"
+    "d  %h/etc           0755 ${user} ${user}  -  -"
+    "d  %h/opt           0755 ${user} ${user}  -  -"
+    "d  %h/org           0755 ${user} ${user}  -  -"
+    "d  %h/org/calendar  0755 ${user} ${user}  -  -"
+    "d  %h/org/journal   0755 ${user} ${user}  -  -"
+    "d  %h/org/lists     0755 ${user} ${user}  -  -"
+    "d  %h/org/mobile    0755 ${user} ${user}  -  -"
+    "d  %h/org/projects  0755 ${user} ${user}  -  -"
+    "d  %h/org/roles     0755 ${user} ${user}  -  -"
+    "d  %h/src           0755 ${user} ${user}  -  -"
+    "d  %h/tmp           0755 ${user} ${user}  -  -"
+    "d  %h/Games         0755 ${user} ${user}  -  -"
+    "d  %h/Notes         0755 ${user} ${user}  -  -"
+    "d  %h/Shared        0755 ${user} ${user}  -  -"
+    "d  %h/Workspace     0755 ${user} ${user}  -  -"
+    "L  %h/etc/dotfiles     -       -       -  -  %h/etc/nixos/repos/dotfiles"
+    "L  %h/etc/emacs.d      -       -       -  -  %h/etc/nixos/repos/emacs.d"
+    "L  %h/.emacs.d         -       -       -  -  %h/etc/emacs.d"
+  ];
 }
