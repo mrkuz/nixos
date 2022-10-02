@@ -19,6 +19,7 @@ in
   ];
 
   modules = {
+    borgBackup.enable = true;
     chromium.enable = true;
     cloudTools.enable = true;
     dconf = {

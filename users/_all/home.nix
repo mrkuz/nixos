@@ -7,6 +7,7 @@ in
   imports = [
     ../../modules/home-manager/ansible.nix
     ../../modules/home-manager/bash.nix
+    ../../modules/home-manager/borg-backup.nix
     ../../modules/home-manager/chromeos.nix
     ../../modules/home-manager/chromium.nix
     ../../modules/home-manager/cloud-tools.nix

@@ -107,6 +107,7 @@ Scripts to simplify the work with VSCode extensions.
 
 - `ansible` - Adds [Ansible](https://www.ansible.com/)
 - `bash` - Configures [Bash](https://www.gnu.org/software/bash/) shell
+- `borg-backup` - Adds job which runs [BorgBackup](https://www.borgbackup.org/)/[borgmatic](https://torsion.org/borgmatic/)
 - `chromeos` - Use if [ChromeOS](https://www.google.com/chromebook/chrome-os/)
 - `chromium` - Configures [Chromium](https://www.chromium.org/) web browser and extensions
 - `cloud-tools` - [Kubernetes](https://kubernetes.io/) and cloud related packages
