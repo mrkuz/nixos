@@ -9,7 +9,6 @@
     android.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
-    compatibility.enable = true;
     desktop.enable = true;
     docker.enable = true;
     emacs.enable = true;
