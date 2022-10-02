@@ -129,7 +129,7 @@ Contains some custom [overlays](https://nixos.wiki/wiki/Overlays).
 
 - `application/networking/browsers/chromium` - Chromium with Wayland support
 - `desktops/gnome/core/gnome-terminal` - Gnome Terminal with transparency patch
-- `tools/package-management/nix` - Patched to allow relative inputs and downloads from [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
+- `tools/package-management/nix` - Patched to allow downloads from [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
 
 ## `pkgs/`
 
