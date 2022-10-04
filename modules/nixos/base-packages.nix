@@ -45,6 +45,7 @@ in
       lzip
       mkpasswd
       most
+      ncdu
       nmap
       ntfs3g
       openssl

@@ -21,7 +21,9 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      btdu
       btrfs-progs
+      compsize
     ];
   };
 }
