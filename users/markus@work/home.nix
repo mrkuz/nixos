@@ -6,6 +6,7 @@
   ];
 
   modules = {
+    borgBackup.enable = true;
     chromium.enable = true;
     cloudTools.enable = true;
     dconf = {
@@ -20,26 +21,10 @@
   home.file.".gitconfig".source = ./files/.gitconfig;
 
   home.packages = with pkgs; [
-    # Miscellaneous
+    gitAndTools.diff-so-fancy
     gitAndTools.gitFull
-    gocr
-    imagemagick
-    html-tidy
-    mongodb-tools
-    mongodb-4_2
-    mysql
-    potrace
-    protobuf
-    # Applications
-    android-studio
-    charles
-    firefox
-    google-chrome
-    netbeans
+    lens
     postman
-    robo3t
-    skypeforlinux
-    wkhtmltopdf
     zoom-us
   ];
 }
