@@ -27,13 +27,18 @@ in
         extraConfig = ''
           NUMBER_CLEANUP=yes
           NUMBER_LIMIT=10
-          TIMELINE_CREATE=no
+
+          TIMELINE_CREATE=yes
+          TIMELINE_CLEANUP=yes
+
+          TIMELINE_LIMIT_HOURLY=12
+          TIMELINE_LIMIT_DAILY=0
+          TIMELINE_LIMIT_WEEKLY=0
+          TIMELINE_LIMIT_MONTHLY=0
+          TIMELINE_LIMIT_YEARLY=0
         '';
       };
     };
-
-    # We don't use timeline snapshots, so disable the service
-    systemd.services.snapper-timeline.enable = false;
 
     systemd.timers.snapper-boot = {
       description = "Take snapper snapshot on boot";
