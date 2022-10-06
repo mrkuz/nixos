@@ -46,6 +46,7 @@ in
       mkpasswd
       most
       ncdu
+      nfs-utils
       nmap
       ntfs3g
       openssl
