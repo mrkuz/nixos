@@ -96,7 +96,7 @@ in
             # jupyter # dependency for python
             # jupyter-keymap # dependency for jupyter
             # jupyter-renderers # dependency for jupyter
-            black-formatter
+            # black-formatter
           ];
         }
       ];
