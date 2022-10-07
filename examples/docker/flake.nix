@@ -6,18 +6,26 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages."${system}";
-      modules = [ "java.base" ];
+      modules = [
+        "java.base"
+        "java.desktop"
+        "java.instrument"
+        "java.logging"
+        "java.management"
+        "java.naming"
+        "java.security.jgss"
+      ];
       jre-custom = pkgs.stdenv.mkDerivation {
         pname = "jre-custom";
-        version = "17";
-        buildInputs = [ pkgs.jdk17_headless ];
+        version = "11";
+        buildInputs = with pkgs; [ adoptopenjdk-bin autoPatchelfHook ];
         dontUnpack = true;
         dontInstall = true;
         stripDebugFlags = [ "--strip-unneeded" ];
 
         buildPhase = ''
           runHook preBuild
-          jlink --module-path ${pkgs.jdk}/lib/openjdk/jmods \
+          jlink --module-path ${pkgs.jdk}/jmods \
             --add-modules ${pkgs.lib.concatStringsSep "," modules} \
             --strip-debug \
             --no-man-pages \
@@ -35,11 +43,16 @@
         tag = "latest";
         copyToRoot = pkgs.buildEnv {
           name = "image-root";
-          paths = with pkgs; [ bash coreutils findutils which jre-custom ];
+          paths = with pkgs; [ busybox jre-custom ];
           pathsToLink = [ "/bin" ];
+          # extraOutputsToInstall = [ "bin" ];
         };
+        runAsRoot = ''
+          install -m 777 -d /tmp
+        '';
         config = {
-          Cmd = [ "${pkgs.bash}/bin/bash" ];
+          Cmd = [ "${pkgs.busybox}/bin/sh" ];
+          # Entrypoint = [ "${jre-custom}/bin/java" "-jar" ];
         };
       };
     };
