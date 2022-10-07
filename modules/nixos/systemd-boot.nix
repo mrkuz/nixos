@@ -15,7 +15,7 @@ in
   config = mkIf cfg.enable {
     boot.loader = {
       efi = {
-        efiSysMountPoint = "/boot/efi";
+        efiSysMountPoint = "/boot";
         canTouchEfiVariables = false;
       };
       systemd-boot = {

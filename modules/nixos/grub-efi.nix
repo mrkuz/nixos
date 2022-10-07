@@ -15,8 +15,8 @@ in
   config = mkIf cfg.enable {
     boot.loader = {
       efi = {
-        efiSysMountPoint = "/boot/efi";
-        canTouchEfiVariables = false;
+        efiSysMountPoint = "/boot";
+        canTouchEfiVariables = true;
       };
       grub = {
         device = "nodev";

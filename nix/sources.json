@@ -89,11 +89,11 @@
     "java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "0y592150qs709nbh8svnj4dwlqi56qxq3caikaybzap4dhfsjxz8",
+        "sha256": "0lasnsabyi8q6v36azli6z7d42afr0w3dawbbj4j46fd99ckphfi",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.12.2022100604/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.12.2022100704/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.12.2022100604"
+        "version": "1.12.2022100704"
     },
     "javascriptsnippets": {
         "name": "javascriptsnippets",
@@ -107,11 +107,11 @@
     "jupyter": {
         "name": "jupyter",
         "publisher": "ms-toolsai",
-        "sha256": "0a2fza7kghq2hkl9r2gzs0950l7j51kkgsl6hvzr9y6n512jdgkn",
+        "sha256": "1f0afib1w9lwykpwb581c7l1aa1h43c9z4q4hd80f5kbii25jv7h",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter/2022.10.1002811049/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter/2022.10.1002821042/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2022.10.1002811049"
+        "version": "2022.10.1002821042"
     },
     "jupyter-keymap": {
         "name": "jupyter-keymap",
@@ -188,11 +188,11 @@
     "python": {
         "name": "python",
         "publisher": "ms-python",
-        "sha256": "000yp8rgfbjz4zxh7ybqfkbbgzfi0wagwbk9g7gkp697h2aw3c7f",
+        "sha256": "0sfds5my0lvzap7x4xxzjp40wr44sz8ym7plwbfgfqaysn42a4ph",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.17.12791010/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.17.12801004/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2022.17.12791010"
+        "version": "2022.17.12801004"
     },
     "remote-ssh": {
         "name": "remote-ssh",
@@ -411,7 +411,7 @@
     "vscode-xml": {
         "name": "vscode-xml",
         "publisher": "redhat",
-        "sha256": "0bqljq30q17sgzpdx3dazn0js9zmrq3jg98iqbhg9q846dih09vq",
+        "sha256": "1ld3mflssc3ysidd14zckib9b0msflvbvg8qlk0whl7b9pwc0xfn",
         "type": "file",
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-xml/0.21.2022100504/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
