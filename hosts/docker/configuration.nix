@@ -12,6 +12,10 @@
   boot.isContainer = true;
   boot.specialFileSystems = lib.mkForce { };
 
+  boot.enableContainers = false;
+  environment.defaultPackages = [];
+  system.disableInstallerTools = true;
+
   networking = {
     hostName = "";
     nameservers = [ "8.8.8.8" ];
