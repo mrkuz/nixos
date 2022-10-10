@@ -36,6 +36,7 @@ in
     "d  %h/org/journal   0755 ${user} ${user}  -  -"
     "d  %h/org/lists     0755 ${user} ${user}  -  -"
     "d  %h/org/mobile    0755 ${user} ${user}  -  -"
+    "d  %h/org/people    0755 ${user} ${user}  -  -"
     "d  %h/org/projects  0755 ${user} ${user}  -  -"
     "d  %h/org/roles     0755 ${user} ${user}  -  -"
     "d  %h/src           0755 ${user} ${user}  -  -"
