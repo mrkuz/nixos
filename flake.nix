@@ -100,7 +100,6 @@
     {
       nixosConfigurations."virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
       nixosConfigurations."xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
-      nixosConfigurations."xps15@work" = setUpNixOS "xps15@work" "x86_64-linux";
 
       defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nix;
 
