@@ -1,4 +1,16 @@
 {
+    "always-indicator": {
+        "branch": "master",
+        "description": "GNOME shell extension to always show the new messages indicator on new messages",
+        "homepage": "",
+        "owner": "mzur",
+        "repo": "gnome-shell-always-indicator",
+        "rev": "d0cc0a73d1ca31a978f66b366ea9f58f3dbe6eb7",
+        "sha256": "1w7ynbi40zb5va9nwlx5w2bngcw9ny7944jx0razsyvv9j9jwz2y",
+        "type": "tarball",
+        "url": "https://github.com/mzur/gnome-shell-always-indicator/archive/d0cc0a73d1ca31a978f66b366ea9f58f3dbe6eb7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "auto-close-tag": {
         "name": "auto-close-tag",
         "publisher": "formulahendry",
