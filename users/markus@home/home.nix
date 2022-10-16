@@ -107,6 +107,32 @@ in
     enable = true;
   };
 
+  systemd.user.services.update-calendar = {
+    Unit = {
+      Description = "Update calendar";
+    };
+
+    Service = {
+      # Simple script that fetches remote calendars and stores them in ~/.var/
+      ExecStart = "/home/markus/Scripts/update-calendar.sh";
+    };
+  };
+
+  systemd.user.timers.update-calendar = {
+    Unit = {
+      Description = "Update calendar timer";
+    };
+
+    Timer = {
+      Unit = "update-calendar.service";
+      OnStartupSec = "1s";
+    };
+
+    Install = {
+      WantedBy = [ "timers.target" ];
+    };
+  };
+
   systemd.user.tmpfiles.rules = [
     "L  %h/Backup -  -  -  -  /data/user/${user}/Backup"
   ];

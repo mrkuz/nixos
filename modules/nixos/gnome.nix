@@ -22,8 +22,8 @@ in
 
     services.gnome = {
       # Disable some core OS services
-      evolution-data-server.enable = mkForce false;
-      gnome-online-accounts.enable = false;
+      # evolution-data-server.enable = mkForce false;
+      # gnome-online-accounts.enable = false;
       gnome-online-miners.enable = mkForce false;
       tracker.enable = false;
       tracker-miners.enable = false;
@@ -34,7 +34,6 @@ in
     environment.gnome.excludePackages = with pkgs; [
       gnome.epiphany
       gnome.geary
-      gnome.gnome-calendar
       gnome.gnome-clocks
       gnome.gnome-contacts
       gnome.gnome-disk-utility
@@ -73,7 +72,7 @@ in
       (callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency { })
       (callPackage ../../pkgs/desktops/gnome/extensions/instant-workspace-switcher { })
       (callPackage ../../pkgs/desktops/gnome/extensions/just-perfection { })
-      # (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar { })
+      (callPackage ../../pkgs/desktops/gnome/extensions/workspaces-bar { })
       # Ubuntu look & feel
       yaru-theme
     ];
