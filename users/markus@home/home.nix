@@ -178,5 +178,6 @@ in
     steam
     # skypeforlinux
     whatsapp-for-linux
+    zoom-us
   ];
 }
