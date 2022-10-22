@@ -22,6 +22,10 @@ in
 
   programs.fish.plugins = [
     {
+      name = "bass";
+      src = sources.bass;
+    }
+    {
       name = "fish-kubectl-completions";
       src = sources.fish-kubectl-completions;
     }
