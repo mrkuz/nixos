@@ -48,6 +48,7 @@
           (import ./overlays/applications/networking/browsers/chromium)
           (import ./overlays/tools/package-management/nix)
           (import ./overlays/desktops/gnome/core/gnome-terminal)
+          (import ./overlays/desktops/gnome/core/nautilus)
         ];
       };
       mkNixOSModules = name: system: [

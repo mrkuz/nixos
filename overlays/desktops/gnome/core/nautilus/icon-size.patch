@@ -1,0 +1,15 @@
+diff --git a/src/nautilus-enums.h b/src/nautilus-enums.h
+index 669b3c453..ca1721398 100644
+--- a/src/nautilus-enums.h
++++ b/src/nautilus-enums.h
+@@ -31,8 +31,8 @@
+ typedef enum
+ {
+     NAUTILUS_GRID_ICON_SIZE_SMALL       = 48,
+-    NAUTILUS_GRID_ICON_SIZE_MEDIUM      = 96,
+-    NAUTILUS_GRID_ICON_SIZE_LARGE       = 168,
++    NAUTILUS_GRID_ICON_SIZE_MEDIUM      = 64,
++    NAUTILUS_GRID_ICON_SIZE_LARGE       = 128,
+     NAUTILUS_GRID_ICON_SIZE_EXTRA_LARGE = 256,
+ } NautilusGridIconSize;
+ 
