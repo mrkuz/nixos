@@ -169,7 +169,6 @@ in
     android-studio
     calibre
     gimp
-    gnome-builder
     lens
     pdftk
     postman
