@@ -1,4 +1,34 @@
 {
+    "doom-emacs": {
+        "branch": "develop",
+        "repo": "https://github.com/hlissner/doom-emacs/",
+        "rev": "35865ef5e89442e3809b8095199977053dd4210f",
+        "type": "git"
+    },
+    "fish:bass": {
+        "branch": "master",
+        "description": "Make Bash utilities usable in Fish shell",
+        "homepage": null,
+        "owner": "edc",
+        "repo": "bass",
+        "rev": "2fd3d2157d5271ca3575b13daec975ca4c10577a",
+        "sha256": "0mb01y1d0g8ilsr5m8a71j6xmqlyhf8w4xjf00wkk8k41cz3ypky",
+        "type": "tarball",
+        "url": "https://github.com/edc/bass/archive/2fd3d2157d5271ca3575b13daec975ca4c10577a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "fish:fish-kubectl-completions": {
+        "branch": "main",
+        "description": "kubectl completions for fish shell",
+        "homepage": "",
+        "owner": "evanlucas",
+        "repo": "fish-kubectl-completions",
+        "rev": "ced676392575d618d8b80b3895cdc3159be3f628",
+        "sha256": "09qcj82qfs4y4nfwvy90y10xmx6vc9yp33nmyk1mpvx0dx6ri21r",
+        "type": "tarball",
+        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "gse:always-indicator": {
         "branch": "master",
         "description": "GNOME shell extension to always show the new messages indicator on new messages",
@@ -10,6 +40,67 @@
         "type": "tarball",
         "url": "https://github.com/mzur/gnome-shell-always-indicator/archive/d0cc0a73d1ca31a978f66b366ea9f58f3dbe6eb7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "gse:dynamic-panel-transparency": {
+        "branch": "main",
+        "description": "Adds Transparency To The Gnome Shell Panel",
+        "homepage": null,
+        "owner": "ewlsh",
+        "repo": "dynamic-panel-transparency",
+        "rev": "63c8b81d5544cc1e6d2ee9fd236b705a531b641b",
+        "sha256": "1znb6h43cgbq5162spsx5prjzbckykr7g1afrfkh5j66zw6lv79a",
+        "type": "tarball",
+        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/63c8b81d5544cc1e6d2ee9fd236b705a531b641b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "gse:instant-workspace-switcher": {
+        "branch": "master",
+        "description": "A GNOME 40 shell extension to disable the workspace switch animation. Instantly switch workspaces with keyborad shortcuts.",
+        "homepage": null,
+        "owner": "amalantony",
+        "repo": "gnome-shell-extension-instant-workspace-switcher",
+        "rev": "676d36fc27ad3683588cee485a3fe8b8f406714d",
+        "sha256": "0d4afqysxyshkh90hr82qi64w4l8lp2j72hw7mgb6rklfjd7bmfg",
+        "type": "tarball",
+        "url": "https://github.com/amalantony/gnome-shell-extension-instant-workspace-switcher/archive/676d36fc27ad3683588cee485a3fe8b8f406714d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "gse:just-perfection": {
+        "branch": "main",
+        "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
+        "rev": "717d981924a547f41a2886135285efc159f99dd9",
+        "type": "git"
+    },
+    "gse:workspaces-bar": {
+        "branch": "main",
+        "description": "GNOME Shell extension that shows workspaces buttons in top panel",
+        "homepage": null,
+        "owner": "mrkuz",
+        "repo": "workspaces-bar",
+        "rev": "bd581bf65ab91f287140421bd2adab64b558da65",
+        "sha256": "0s4f0ajrvfca9w82mjwpvf7sg2d74cyl4z9rwngdfrbwy7f9fqg1",
+        "type": "tarball",
+        "url": "https://github.com/mrkuz/workspaces-bar/archive/bd581bf65ab91f287140421bd2adab64b558da65.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "351d8bc316bf901a81885bab5f52687ec8ccab6e",
+        "sha256": "1yzhz7ihkh6p2sxhp3amqfbmm2yqzaadqqii1xijymvl8alw5rrr",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/351d8bc316bf901a81885bab5f52687ec8ccab6e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "revealjs": {
+        "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
+        "type": "file",
+        "url": "https://github.com/hakimel/reveal.js/archive/refs/tags/4.1.0.tar.gz",
+        "url_template": "https://github.com/hakimel/reveal.js/archive/refs/tags/<version>.zip",
+        "version": "4.1.0"
     },
     "vscode:auto-close-tag": {
         "name": "auto-close-tag",
@@ -38,18 +129,6 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "0.1.10"
     },
-    "fish:bass": {
-        "branch": "master",
-        "description": "Make Bash utilities usable in Fish shell",
-        "homepage": null,
-        "owner": "edc",
-        "repo": "bass",
-        "rev": "2fd3d2157d5271ca3575b13daec975ca4c10577a",
-        "sha256": "0mb01y1d0g8ilsr5m8a71j6xmqlyhf8w4xjf00wkk8k41cz3ypky",
-        "type": "tarball",
-        "url": "https://github.com/edc/bass/archive/2fd3d2157d5271ca3575b13daec975ca4c10577a.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "vscode:black-formatter": {
         "name": "black-formatter",
         "publisher": "ms-python",
@@ -67,48 +146,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/naumovs/vsextensions/color-highlight/2.6.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "2.6.0"
-    },
-    "doom-emacs": {
-        "branch": "develop",
-        "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "35865ef5e89442e3809b8095199977053dd4210f",
-        "type": "git"
-    },
-    "gse:dynamic-panel-transparency": {
-        "branch": "main",
-        "description": "Adds Transparency To The Gnome Shell Panel",
-        "homepage": null,
-        "owner": "ewlsh",
-        "repo": "dynamic-panel-transparency",
-        "rev": "63c8b81d5544cc1e6d2ee9fd236b705a531b641b",
-        "sha256": "1znb6h43cgbq5162spsx5prjzbckykr7g1afrfkh5j66zw6lv79a",
-        "type": "tarball",
-        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/63c8b81d5544cc1e6d2ee9fd236b705a531b641b.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "fish:fish-kubectl-completions": {
-        "branch": "main",
-        "description": "kubectl completions for fish shell",
-        "homepage": "",
-        "owner": "evanlucas",
-        "repo": "fish-kubectl-completions",
-        "rev": "ced676392575d618d8b80b3895cdc3159be3f628",
-        "sha256": "09qcj82qfs4y4nfwvy90y10xmx6vc9yp33nmyk1mpvx0dx6ri21r",
-        "type": "tarball",
-        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "gse:instant-workspace-switcher": {
-        "branch": "master",
-        "description": "A GNOME 40 shell extension to disable the workspace switch animation. Instantly switch workspaces with keyborad shortcuts.",
-        "homepage": null,
-        "owner": "amalantony",
-        "repo": "gnome-shell-extension-instant-workspace-switcher",
-        "rev": "676d36fc27ad3683588cee485a3fe8b8f406714d",
-        "sha256": "0d4afqysxyshkh90hr82qi64w4l8lp2j72hw7mgb6rklfjd7bmfg",
-        "type": "tarball",
-        "url": "https://github.com/amalantony/gnome-shell-extension-instant-workspace-switcher/archive/676d36fc27ad3683588cee485a3fe8b8f406714d.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode:java": {
         "name": "java",
@@ -155,12 +192,6 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.12"
     },
-    "gse:just-perfection": {
-        "branch": "main",
-        "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "717d981924a547f41a2886135285efc159f99dd9",
-        "type": "git"
-    },
     "vscode:markdown-preview-github-styles": {
         "name": "markdown-preview-github-styles",
         "publisher": "bierner",
@@ -169,18 +200,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/bierner/vsextensions/markdown-preview-github-styles/1.0.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.0.1"
-    },
-    "niv": {
-        "branch": "master",
-        "description": "Easy dependency management for Nix projects",
-        "homepage": "https://github.com/nmattia/niv",
-        "owner": "nmattia",
-        "repo": "niv",
-        "rev": "351d8bc316bf901a81885bab5f52687ec8ccab6e",
-        "sha256": "1yzhz7ihkh6p2sxhp3amqfbmm2yqzaadqqii1xijymvl8alw5rrr",
-        "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/351d8bc316bf901a81885bab5f52687ec8ccab6e.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vscode:nix": {
         "name": "nix",
@@ -226,13 +245,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.93.2022111115/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "0.93.2022111115"
-    },
-    "revealjs": {
-        "sha256": "0bv3z6kp4f77w75wrzs9av1ip8q8x8z7a6y8ad961c1y4d6vki99",
-        "type": "file",
-        "url": "https://github.com/hakimel/reveal.js/archive/refs/tags/4.1.0.tar.gz",
-        "url_template": "https://github.com/hakimel/reveal.js/archive/refs/tags/<version>.zip",
-        "version": "4.1.0"
     },
     "vscode:sonarlint-vscode": {
         "name": "sonarlint-vscode",
@@ -476,18 +488,6 @@
         "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/mubaidr/vsextensions/vuejs-extension-pack/1.9.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.9.0"
-    },
-    "gse:workspaces-bar": {
-        "branch": "main",
-        "description": "GNOME Shell extension that shows workspaces buttons in top panel",
-        "homepage": null,
-        "owner": "mrkuz",
-        "repo": "workspaces-bar",
-        "rev": "bd581bf65ab91f287140421bd2adab64b558da65",
-        "sha256": "0s4f0ajrvfca9w82mjwpvf7sg2d74cyl4z9rwngdfrbwy7f9fqg1",
-        "type": "tarball",
-        "url": "https://github.com/mrkuz/workspaces-bar/archive/bd581bf65ab91f287140421bd2adab64b558da65.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "yaru-colors-themes": {
         "branch": "master",
