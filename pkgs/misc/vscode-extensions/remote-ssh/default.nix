@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.remote-ssh) name publisher version sha256;
+    inherit (sources."vscode:remote-ssh") name publisher version sha256;
   };
 }

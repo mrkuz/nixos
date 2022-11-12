@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.markdown-preview-github-styles) name publisher version sha256;
+    inherit (sources."vscode:markdown-preview-github-styles") name publisher version sha256;
   };
 }

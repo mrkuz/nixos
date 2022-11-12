@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.sonarlint-vscode) name publisher version sha256;
+    inherit (sources."vscode:sonarlint-vscode") name publisher version sha256;
   };
 }

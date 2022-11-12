@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.jupyter) name publisher version sha256;
+    inherit (sources."vscode:jupyter") name publisher version sha256;
   };
 }

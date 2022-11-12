@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.terraform) name publisher version sha256;
+    inherit (sources."vscode:terraform") name publisher version sha256;
   };
 }

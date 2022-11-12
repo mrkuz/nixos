@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.vscode-kubernetes-tools) name publisher version sha256;
+    inherit (sources."vscode:vscode-kubernetes-tools") name publisher version sha256;
   };
 }

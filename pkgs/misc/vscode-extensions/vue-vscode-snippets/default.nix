@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.vue-vscode-snippets) name publisher version sha256;
+    inherit (sources."vscode:vue-vscode-snippets") name publisher version sha256;
   };
 }

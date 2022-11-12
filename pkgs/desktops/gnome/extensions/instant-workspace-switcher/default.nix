@@ -5,7 +5,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "instant-workspace-switcher";
-  src = sources.instant-workspace-switcher;
+  src = sources."gse:instant-workspace-switcher";
   uuid = "instantworkspaceswitcher@amalantony.net";
 
   installPhase = ''

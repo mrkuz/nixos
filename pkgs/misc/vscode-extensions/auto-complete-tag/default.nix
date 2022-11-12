@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.auto-complete-tag) name publisher version sha256;
+    inherit (sources."vscode:auto-complete-tag") name publisher version sha256;
   };
 }

@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.color-highlight) name publisher version sha256;
+    inherit (sources."vscode:color-highlight") name publisher version sha256;
   };
 }

@@ -2,14 +2,14 @@
 
 let
   sources = import ../../nix/sources.nix;
-  vscodeExtensions = with sources; [
-    vscode-emacs-friendly
-    vscode-theme-darcula
-    vscode-icons
-    vscodeintellicode
-    vscode-status-bar-format-toggle
-    markdown-preview-github-styles
-    # remote-ssh
+  vscodeExtensions = [
+    sources."vscode:vscode-emacs-friendly"
+    sources."vscode:vscode-theme-darcula"
+    sources."vscode:vscode-icons"
+    sources."vscode:vscodeintellicode"
+    sources."vscode:vscode-status-bar-format-toggle"
+    sources."vscode:markdown-preview-github-styles"
+    # sources."vscode:emote-ssh"
   ];
   hm = inputs.home-manager.lib.hm;
   user = config.home.username;
@@ -36,67 +36,67 @@ in
         {
           name = "Java";
           alias = "jcode";
-          extensions = with sources; vscodeExtensions ++ [
-            sonarlint-vscode
-            vscode-lombok
-            vscode-xml
-            java # dependency for vscode-spring-boot-dashboard, vscode-java-pack
-            vscode-java-debug # dependency for vscode-spring-boot-dashboard, vscode-java-pack
-            vscode-java-dependency # dependency for vscode-java-pack
-            vscode-java-test # dependency for vscode-java-pack
-            vscode-maven # dependency for vscode-java-pack
-            vscode-spring-boot # dependency for vscode-spring-boot-dashboard, vscode-boot-dev-pack
-            vscode-spring-initializr # dependency for vscode-boot-dev-pack
-            vscode-spring-boot-dashboard # dependency for vscode-boot-dev-pack
-            # vscode-boot-dev-pack
-            vscode-java-pack
+          extensions = vscodeExtensions ++ [
+            sources."vscode:sonarlint-vscode"
+            sources."vscode:vscode-lombok"
+            sources."vscode:vscode-xml"
+            sources."vscode:java" # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            sources."vscode:vscode-java-debug" # dependency for vscode-spring-boot-dashboard, vscode-java-pack
+            sources."vscode:vscode-java-dependency" # dependency for vscode-java-pack
+            sources."vscode:vscode-java-test" # dependency for vscode-java-pack
+            sources."vscode:vscode-maven" # dependency for vscode-java-pack
+            sources."vscode:vscode-spring-boot" # dependency for vscode-spring-boot-dashboard, vscode-boot-dev-pack
+            sources."vscode:vscode-spring-initializr" # dependency for vscode-boot-dev-pack
+            sources."vscode:vscode-spring-boot-dashboard" # dependency for vscode-boot-dev-pack
+            # sources."vscode-boot-dev-pack"
+            sources."vscode:vscode-java-pack"
           ];
         }
         {
           name = "JavaScript";
           alias = "jscode";
-          extensions = with sources; vscodeExtensions ++ [
-            color-highlight
-            auto-close-tag # dependency auto-complete-tag
-            auto-rename-tag # dependency auto-complete-tag
-            auto-complete-tag # dependency for vuejs-extension-pack
-            javascriptsnippets # dependency for vuejs-extension-pack
-            prettier-vscode # dependency for vuejs-extension-pack
-            vetur # dependency for vuejs-extension-pack
-            vscode-eslint # dependency for vuejs-extension-pack
-            vue-vscode-snippets # dependency for vuejs-extension-pack
-            vuejs-extension-pack
+          extensions = vscodeExtensions ++ [
+            sources."vscode:color-highlight"
+            sources."vscode:auto-close-tag" # dependency auto-complete-tag
+            sources."vscode:auto-rename-tag" # dependency auto-complete-tag
+            sources."vscode:auto-complete-tag" # dependency for vuejs-extension-pack
+            sources."vscode:javascriptsnippets" # dependency for vuejs-extension-pack
+            sources."vscode:prettier-vscode" # dependency for vuejs-extension-pack
+            sources."vscode:vetur" # dependency for vuejs-extension-pack
+            sources."vscode:vscode-eslint" # dependency for vuejs-extension-pack
+            sources."vscode:vue-vscode-snippets" # dependency for vuejs-extension-pack
+            sources."vscode:vuejs-extension-pack"
           ];
         }
         {
           name = "DevOps";
           alias = "dcode";
-          extensions = with sources; vscodeExtensions ++ [
-            nix
-            terraform
-            vscode-ansible
-            vscode-yaml # dependency for vscode-docker, vscode-kubernetes-tools
-            vscode-docker
-            vscode-kubernetes-tools
+          extensions = vscodeExtensions ++ [
+            sources."vscode:nix"
+            sources."vscode:terraform"
+            sources."vscode:vscode-ansible"
+            sources."vscode:vscode-yaml" # dependency for vscode-docker, vscode-kubernetes-tools
+            sources."vscode:vscode-docker"
+            sources."vscode:vscode-kubernetes-tools"
           ];
         }
         {
           name = "Nix";
           alias = "ncode";
-          extensions = with sources; vscodeExtensions ++ [
-            nix-ide
+          extensions = vscodeExtensions ++ [
+            sources."vscode:nix-ide"
           ];
         }
         {
           name = "Python";
           alias = "pcode";
-          extensions = with sources; vscodeExtensions ++ [
-            python
-            vscode-pylance # dependency for python
-            # jupyter # dependency for python
-            # jupyter-keymap # dependency for jupyter
-            # jupyter-renderers # dependency for jupyter
-            # black-formatter
+          extensions = vscodeExtensions ++ [
+            sources."vscode:python"
+            sources."vscode:vscode-pylance" # dependency for python
+            # sources."vscode:jupyter" # dependency for python
+            # sources."vscode:jupyter-keymap" # dependency for jupyter
+            # sources."vscode:jupyter-renderers" # dependency for jupyter
+            # sources."vscode:black-formatter"
           ];
         }
       ];

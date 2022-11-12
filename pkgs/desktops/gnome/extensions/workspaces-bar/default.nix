@@ -5,7 +5,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "workspaces-bar";
-  src = sources.workspaces-bar;
+  src = sources."gse:workspaces-bar";
   uuid = "workspaces-bar@fthx";
 
   installPhase = ''

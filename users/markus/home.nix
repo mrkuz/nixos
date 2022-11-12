@@ -23,11 +23,11 @@ in
   programs.fish.plugins = [
     {
       name = "bass";
-      src = sources.bass;
+      src = sources."fish:bass";
     }
     {
       name = "fish-kubectl-completions";
-      src = sources.fish-kubectl-completions;
+      src = sources."fish:fish-kubectl-completions";
     }
   ];
 

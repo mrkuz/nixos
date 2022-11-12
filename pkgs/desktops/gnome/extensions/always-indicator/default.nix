@@ -5,7 +5,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "always-indicator";
-  src = sources.always-indicator;
+  src = sources."gse:always-indicator";
   uuid = "always-indicator@martin.zurowietz.de";
 
   dontConfigure = true;

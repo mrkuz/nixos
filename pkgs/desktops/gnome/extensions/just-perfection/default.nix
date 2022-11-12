@@ -5,7 +5,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "just-perfection";
-  src = sources.just-perfection;
+  src = sources."gse:just-perfection";
   uuid = "just-perfection-desktop@just-perfection";
 
   buildInputs = with pkgs; [ gnome.gnome-shell glib unzip ];

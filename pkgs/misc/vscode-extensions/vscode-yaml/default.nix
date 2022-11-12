@@ -5,6 +5,6 @@ let
 in
 pkgs.vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
-    inherit (sources.vscode-yaml) name publisher version sha256;
+    inherit (sources."vscode:vscode-yaml") name publisher version sha256;
   };
 }
