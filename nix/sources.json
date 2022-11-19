@@ -71,6 +71,18 @@
         "rev": "718449e913660923f0c4f58a06b2d16b0c4b0569",
         "type": "git"
     },
+    "gse:quick-settings-tweaks": {
+        "branch": "master",
+        "description": "Let's tweak gnome 43's quick settings! You can add Media Controls, Notifications, Volume Mixer on quick settings and remove useless buttons!",
+        "homepage": "https://extensions.gnome.org/extension/5446/quick-settings-tweaker/",
+        "owner": "qwreey75",
+        "repo": "quick-settings-tweaks",
+        "rev": "e7eab279bbe2cfaeb59a7068808166ac7c5c046d",
+        "sha256": "14nn9g9mkcj9nza98zk126jkas95nqg4pj3d328vfkz469shcgfp",
+        "type": "tarball",
+        "url": "https://github.com/qwreey75/quick-settings-tweaks/archive/e7eab279bbe2cfaeb59a7068808166ac7c5c046d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "gse:workspaces-bar": {
         "branch": "main",
         "description": "GNOME Shell extension that shows workspaces buttons in top panel",

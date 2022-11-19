@@ -112,5 +112,7 @@
 
       packages.x86_64-linux."docker" = setUpDocker "docker" "x86_64-linux";
       packages.x86_64-linux."docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
+
+      # packages.x86_64-linux.? = ((mkPkgs "x86_64-linux").callPackage pkgs/? { });
     };
 }
