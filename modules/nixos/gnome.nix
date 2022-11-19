@@ -41,7 +41,6 @@ in
       gnome.gnome-maps
       gnome.gnome-music
       gnome.gnome-system-monitor
-      gnome.gnome-weather
       gnome.totem
       gnome.yelp
       gnome-connections
