@@ -68,7 +68,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "717d981924a547f41a2886135285efc159f99dd9",
+        "rev": "718449e913660923f0c4f58a06b2d16b0c4b0569",
         "type": "git"
     },
     "gse:workspaces-bar": {
@@ -82,6 +82,30 @@
         "type": "tarball",
         "url": "https://github.com/mrkuz/workspaces-bar/archive/bd581bf65ab91f287140421bd2adab64b558da65.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "idea:checkstyle-idea": {
+        "file": "1065/249401/CheckStyle-IDEA-5.73.0.zip",
+        "sha256": "0394n5j1rzdavi77wz7pz6516fq2fd7c6x7sxw2fh1h32qiz6lj0",
+        "type": "file",
+        "url": "https://plugins.jetbrains.com/files/1065/249401/CheckStyle-IDEA-5.73.0.zip",
+        "url_template": "https://plugins.jetbrains.com/files/<file>",
+        "version": "5.73.0"
+    },
+    "idea:kotest": {
+        "file": "14080/236115/kotest-plugin-intellij-1.2.63-IC-2022.2.zip",
+        "sha256": "1nhbp1i41701gh45wz3hps5cqh939nz17vpwgzvkpm1a8kx3br88",
+        "type": "file",
+        "url": "https://plugins.jetbrains.com/files/14080/236115/kotest-plugin-intellij-1.2.63-IC-2022.2.zip",
+        "url_template": "https://plugins.jetbrains.com/files/<file>",
+        "version": "1.2.63-IC-2022.2"
+    },
+    "idea:mybatisx": {
+        "file": "10119/236224/MybatisX-1.5.5.zip",
+        "sha256": "101a01qdlsfrdxva58ng915fb3b3ffgzpf6cg8xa8bllfsxlkqwf",
+        "type": "file",
+        "url": "https://plugins.jetbrains.com/files/10119/236224/MybatisX-1.5.5.zip",
+        "url_template": "https://plugins.jetbrains.com/files/<file>",
+        "version": "1.5.5"
     },
     "niv": {
         "branch": "master",
