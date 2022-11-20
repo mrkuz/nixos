@@ -43,7 +43,7 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
 
 Scripts to simplify the work with VSCode extensions.
 
-- `add-vscode-extension.sh` - Creates Nix expression for VSCode extension
+- `add-vscode-extension.sh` - Add VSCode extension to `nix/sources.json`
 
   _Example_
 
