@@ -53,6 +53,12 @@ Scripts to simplify the work with VSCode extensions.
 
 - `update-vscode-extensions.sh` - Updates all extensions to the latest version
 
+### IntelliJ IDEA
+
+Scripts to simplify the work with IntelliJ IDEA plugins.
+
+- `add-idea-plugin.sh` - Add IDEA plugin to `nix/sources.json`
+
 ## `hosts/`
 
 - `_all` - Base expression, imported by all other hosts

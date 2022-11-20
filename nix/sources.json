@@ -105,7 +105,7 @@
     },
     "idea:kotest": {
         "file": "14080/236115/kotest-plugin-intellij-1.2.63-IC-2022.2.zip",
-        "sha256": "1nhbp1i41701gh45wz3hps5cqh939nz17vpwgzvkpm1a8kx3br88",
+        "sha256": "1hal3njsjixljmjxkm9ql8d3kx4saciaxj4h281qnb6q2k4s3sah",
         "type": "file",
         "url": "https://plugins.jetbrains.com/files/14080/236115/kotest-plugin-intellij-1.2.63-IC-2022.2.zip",
         "url_template": "https://plugins.jetbrains.com/files/<file>",

@@ -3,6 +3,14 @@
 with lib;
 let
   cfg = config.modules.javaDevelopment;
+
+  linkIdeaPlugin = plugin:
+    {
+      name = "./JetBrains/IdeaIC2022.2/${plugin}";
+      value = {
+        source = (pkgs.callPackage ../../pkgs/misc/idea/plugins/${plugin} { }) + "/share/JetBrains/plugins/${plugin}";
+      };
+    };
 in
 {
   options.modules.javaDevelopment = {
@@ -13,6 +21,9 @@ in
   };
 
   config = mkIf cfg.enable {
+
+    xdg.dataFile = listToAttrs (map linkIdeaPlugin [ "checkstyle-idea" "kotest" "mybatisx" ]);
+
     home.packages = with pkgs; [
       eclipse-mat
       gradle
