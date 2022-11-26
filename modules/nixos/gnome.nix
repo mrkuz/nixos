@@ -31,6 +31,11 @@ in
 
     security.pam.services.gdm.enableGnomeKeyring = true;
 
+    # Requirement for gnome-boxes
+    virtualisation.libvirtd.enable = true;
+    # UEFI
+    virtualisation.libvirtd.qemu.ovmf.enable = true;
+
     environment.gnome.excludePackages = with pkgs; [
       gnome.epiphany
       gnome.geary
@@ -43,7 +48,6 @@ in
       gnome.gnome-system-monitor
       gnome.totem
       gnome.yelp
-      gnome-connections
       gnome-console
       gnome-photos
     ];
@@ -54,6 +58,7 @@ in
       gnome.mutter
       # Gnome utilities
       gnome.dconf-editor
+      gnome.gnome-boxes
       gnome.gnome-tweaks
       gnome.libgnome-keyring
       libnotify

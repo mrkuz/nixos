@@ -56,6 +56,4 @@
     thermald.enable = true;
     tuptime.enable = true;
   };
-
-  # virtualisation.libvirtd.enable = true;
 }
