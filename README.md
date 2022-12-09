@@ -58,6 +58,7 @@ Scripts to simplify the work with VSCode extensions.
 Scripts to simplify the work with IntelliJ IDEA plugins.
 
 - `add-idea-plugin.sh` - Add IDEA plugin to `nix/sources.json`
+- `update-idea-plugins.sh` - Updates all plugins to the latest version
 
 ## `hosts/`
 

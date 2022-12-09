@@ -6,11 +6,17 @@ fi
 
 plugin_id=$1
 name=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id" | jq -r '.name')
-# link=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id" | jq -r '.link')
+version=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=2" | jq -r '[.[] | select(.version | contains("SNAPSHOT") | not)] | .[0].version')
+version_code=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=2" | jq -r '[.[] | select(.version | contains("SNAPSHOT") | not)] | .[0].id')
+file=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=2" | jq -r '[.[] | select(.version | contains("SNAPSHOT") | not)] | .[0].file')
 
-file=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=1" | jq -r '.[0].file')
-version=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=1" | jq -r '.[0].version')
-# version_code=$(curl -s "https://plugins.jetbrains.com/api/plugins/$plugin_id/updates?size=1" | jq -r '.[0].id')
+file_name=${file##*/}
+file_name=${file_name%.*}
+file_name=${file_name/-$version/}
 
-niv add "idea:${name,,}" -v $version -a file=$file -t "https://plugins.jetbrains.com/files/<file>"
-# alternative: https://plugins.jetbrains.com/files/<plugin-id>/<version-code>/<name>-<version>.zip
+niv add "idea:${name,,}" -v "$version" \
+    -s name="$name" \
+    -s file_name="$file_name" \
+    -s plugin_id="$plugin_id" \
+    -s version_code="$version_code" \
+    -t "https://plugins.jetbrains.com/files/<plugin_id>/<version_code>/<file_name>-<version>.zip"
