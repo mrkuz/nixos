@@ -91,8 +91,8 @@ in
           name = "Python";
           alias = "pcode";
           extensions = vscodeExtensions ++ [
-            sources."vscode:python"
-            sources."vscode:vscode-pylance" # dependency for python
+            # sources."vscode:python"
+            # sources."vscode:vscode-pylance" # dependency for python
             # sources."vscode:jupyter" # dependency for python
             # sources."vscode:jupyter-keymap" # dependency for jupyter
             # sources."vscode:jupyter-renderers" # dependency for jupyter

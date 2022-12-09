@@ -23,9 +23,9 @@ function get_details {
 }
 
 for ext in $extensions; do
-  fqn=$(jq -r ".\"$ext\" | .publisher + \".\" + .name" nix/sources.json)
+  fqn=$(jq -r ".\"vscode:$ext\" | .publisher + \".\" + .name" nix/sources.json)
   echo "Updating $fqn..."
   version=$(get_details $fqn | jq -r '.results[0].extensions[0].versions[0].version')
-  niv update $ext -v $version
+  niv update "vscode:$ext" -v $version
   sleep 1
 done;
