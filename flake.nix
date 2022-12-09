@@ -35,7 +35,7 @@
   outputs = { self, nixpkgs, nixos-generators, ... } @ inputs:
     let
       vars = {
-        stateVersion = "22.05";
+        stateVersion = "22.11";
         emacs = "emacsPgtkNativeComp";
       };
       mkPkgs = system: import nixpkgs {
