@@ -36,7 +36,7 @@
     let
       vars = {
         stateVersion = "22.11";
-        emacs = "emacsPgtkNativeComp";
+        emacs = "emacsPgtk";
       };
       mkPkgs = system: import nixpkgs {
         inherit system;
@@ -100,6 +100,7 @@
     in
     {
       nixosConfigurations."virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
+      nixosConfigurations."virtualbox-dual" = setUpNixOS "virtualbox-dual" "x86_64-linux";
       nixosConfigurations."xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
 
       defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nix;
