@@ -99,12 +99,12 @@
         "file_name": "CheckStyle-IDEA",
         "name": "CheckStyle-IDEA",
         "plugin_id": "1065",
-        "sha256": "05qnw7pqbl22xx1c8gkv5721b47wqxalljbzk7vr8lq87kgzj03q",
+        "sha256": "0rxg62mrcr45xz5ag6gxq78h2ljfkl0qj1yqkg0r08ahzq5j3ann",
         "type": "file",
-        "url": "https://plugins.jetbrains.com/files/1065/261207/CheckStyle-IDEA-5.74.0.zip",
+        "url": "https://plugins.jetbrains.com/files/1065/264963/CheckStyle-IDEA-5.74.1.zip",
         "url_template": "https://plugins.jetbrains.com/files/<plugin_id>/<version_code>/<file_name>-<version>.zip",
-        "version": "5.74.0",
-        "version_code": "261207"
+        "version": "5.74.1",
+        "version_code": "264963"
     },
     "idea:kotest": {
         "file_name": "kotest-plugin-intellij",
@@ -393,11 +393,11 @@
     "vscode:vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "0gck916yzn09rh863gyaaf2nhjqnv0gqdkzcn1fjy7956sn9w073",
+        "sha256": "1475hhfxy6s9s24x9qj2q3jb01zmyk9y8w0v8gd3l07j6zslwsj7",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.23.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.23.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.23.1"
+        "version": "1.23.2"
     },
     "vscode:vscode-emacs-friendly": {
         "name": "vscode-emacs-friendly",
