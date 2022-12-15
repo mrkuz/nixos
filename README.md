@@ -36,7 +36,7 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
   ```
 
 - `update.sh` - Updates flake inputs, `/nix/nixpkgs` and packages managed by [niv](https://github.com/nmattia/niv.)
-
+- `update-all.sh` - Runs all other update scripts
 - `clean-up.sh` - Removes old generations and collects garbage
 
 ### VSCode

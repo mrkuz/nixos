@@ -68,7 +68,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "6adb3f2d7ed9ec4238510a1328012a191636ccec",
+        "rev": "2abea3701616bbc8bcb6ce39aff7bab7d08af9f1",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
@@ -330,11 +330,11 @@
     "vscode:terraform": {
         "name": "terraform",
         "publisher": "hashicorp",
-        "sha256": "01shnd6vdcx1yqd4gg77jf0rlxivxlk4wkaicn7fadra4lhc855m",
+        "sha256": "1n8gmrif2r40v1vx1f3g96hrv7flk9525s3fjpxxc1h5rhlqddrv",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.25.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/hashicorp/vsextensions/terraform/2.25.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2.25.1"
+        "version": "2.25.2"
     },
     "vscode:vetur": {
         "name": "vetur",
@@ -384,11 +384,11 @@
     "vscode:vscode-boot-dev-pack": {
         "name": "vscode-boot-dev-pack",
         "publisher": "Pivotal",
-        "sha256": "13hls4g5ikrsa5g3lmbyvhx25m6q953z5zgg3n8xcc00s6kgb7sl",
+        "sha256": "1v6962cz9xz2yd6dbb4ic0iyvyhxx4kys4aaa5rz9fczgg8w6bra",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/Pivotal/vsextensions/vscode-boot-dev-pack/0.1.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/Pivotal/vsextensions/vscode-boot-dev-pack/0.2.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "vscode:vscode-docker": {
         "name": "vscode-docker",
@@ -501,11 +501,11 @@
     "vscode:vscode-maven": {
         "name": "vscode-maven",
         "publisher": "vscjava",
-        "sha256": "040c9hg676h93a5p7c30cwxnzyzcbph8fwjrwjr5d9xdzs4sycld",
+        "sha256": "1wh8q5qaj6r87grw88qcjlnw9v2hw5d83kj9nmil1b0vrdyxd156",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.40.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.40.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.40.1"
+        "version": "0.40.2"
     },
     "vscode:vscode-pylance": {
         "name": "vscode-pylance",
@@ -519,11 +519,11 @@
     "vscode:vscode-spring-boot": {
         "name": "vscode-spring-boot",
         "publisher": "pivotal",
-        "sha256": "0bbxhnxcvcjbvqid5k2ijix7clmymvp66zadifbl6p8m1wppim7l",
+        "sha256": "1m5fwx6p97mrx6mgfjhjz0v38xgq2n3qcif0x4gvfh53ksgmjllz",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pivotal/vsextensions/vscode-spring-boot/1.41.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/pivotal/vsextensions/vscode-spring-boot/1.42.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.41.0"
+        "version": "1.42.0"
     },
     "vscode:vscode-spring-boot-dashboard": {
         "name": "vscode-spring-boot-dashboard",
