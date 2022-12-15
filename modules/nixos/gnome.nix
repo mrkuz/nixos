@@ -48,6 +48,7 @@ in
       gnome.gnome-system-monitor
       gnome.totem
       gnome.yelp
+      gnome-connections
       gnome-console
       gnome-photos
     ];
@@ -66,7 +67,8 @@ in
       chromium
       gparted
       gthumb
-      thunderbird-wayland
+      remmina
+      thunderbird
       vlc
       # Gnome extensions
       # gjs

@@ -51,6 +51,8 @@
     kernel.sysctl = {
       "vm.swappiness" = 10;
       "net.ipv4.ip_forward" = 1;
+      "fs.inotify.max_user_instances" = 524288;
+      "fs.inotify.max_user_watches" = 524288;
     };
   };
 

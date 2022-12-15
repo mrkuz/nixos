@@ -18,6 +18,7 @@ in
       # nix
       niv
       nix
+      nixpkgs-fmt
       # base-packages
       fzf
       tmux
