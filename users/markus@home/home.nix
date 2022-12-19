@@ -159,6 +159,7 @@ in
     # sox
     spotify
     steam
+    trashy
     # skypeforlinux
     whatsapp-for-linux
     zoom-us

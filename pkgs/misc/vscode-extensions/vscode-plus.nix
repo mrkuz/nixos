@@ -27,8 +27,10 @@ stdenv.mkDerivation {
     ${concatMapStringsSep "\n" (makeInstall) extensions}
 
     for i in "$out/share/$name/extensions"/*; do
-      [ -d "$i/cache" ] && rm -rf "$i/cache"
-      ln -svf "/tmp/cache/vscode/`basename $i`" "$i/cache"
+      if [ -d "$i" ]; then
+        [ -d "$i/cache" ] && rm -rf "$i/cache"
+        ln -svf "/tmp/cache/vscode/`basename $i`" "$i/cache"
+      fi
     done
 
     substitute ./vscode-plus.sh "$out/bin/${name}" \
