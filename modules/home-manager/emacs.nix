@@ -28,11 +28,28 @@ in
       (callPackage ../../pkgs/misc/revealjs { })
     ] ++ [ ((pkgs.emacsPackagesFor emacsPkg).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
 
+    systemd.user.services.emacs = {
+      Unit = {
+        Description = "Emacs text editor";
+        Documentation = "info:emacs man:emacs(1) https://gnu.org/software/emacs/";
+        X-RestartIfChanged = false;
+        RefuseManualStart = true;
+      };
+
+      Service = {
+        Type = "notify";
+        ExecStart = "${pkgs.runtimeShell} -l -c \"${emacsPkg}/bin/emacs --fg-daemon\"";
+        SuccessExitStatus = 15;
+        Restart = "on-failure";
+      };
+      Install = { WantedBy = [ "default.target" ]; };
+    };
+
     home.file.".local/share/applications/org-protocol.desktop" = {
       text = ''
         [Desktop Entry]
         Name=Org-Protocol
-        Exec=emacsclient -a "" -n -c -F '((name . "org-protocol-capture"))' '%u'
+        Exec=${emacsPkg}/bin/emacsclient -a "" -n -c -F '((name . "org-protocol-capture"))' '%u'
         NoDisplay=true
         Icon=emacs
         Type=Application
