@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
     ../_all/configuration.nix
   ];
 
@@ -16,12 +15,50 @@
   };
 
   boot.loader = {
+    efi.canTouchEfiVariables = true;
+    initrd = {
+      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
+      luks.devices.crypt.device = "/dev/sda2";
+    };
     systemd-boot = {
       enable = true;
       configurationLimit = 3;
     };
-    efi.canTouchEfiVariables = true;
   };
+
+  fileSystems = {
+    "/boot" = {
+      device = "/dev/disk/by-label/boot";
+      fsType = "vfat";
+    };
+    "/" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
+      options = [ "subvol=root" "compress=zstd:1" "noatime" ];
+    };
+    "/var" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
+      options = [ "subvol=var" "compress=zstd:1" "noatime" ];
+    };
+    "/nix" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
+      options = [ "subvol=nix" "compress=zstd:1" "noatime" ];
+    };
+    "/home" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
+      options = [ "subvol=home" "compress=zstd:1" "noatime" ];
+    };
+    "/data" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
+      options = [ "subvol=data" "compress=zstd:1" "noatime" ];
+    };
+  };
+
+  swapDevices = [{ device = "/.swapfile"; }];
 
   networking = {
     hostName = "virtualbox";
@@ -48,8 +85,6 @@
       };
     };
   };
-
-  swapDevices = [{ device = "/.swapfile"; }];
 
   virtualisation.virtualbox.guest = {
     enable = true;

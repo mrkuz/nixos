@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
     ../_all/configuration.nix
   ];
 
@@ -16,8 +15,10 @@
   };
 
   boot.loader = {
-    systemd-boot.enable = false;
-    timeout = 3;
+    efi = {
+      efiSysMountPoint = "/boot/efi";
+      canTouchEfiVariables = true;
+    };
     grub = {
       enable = true;
       device = "nodev";
@@ -30,22 +31,54 @@
         }
       '';
     };
-    efi = {
-      efiSysMountPoint = "/boot/efi";
-      canTouchEfiVariables = true;
+    initrd = {
+      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
+      luks.devices.crypt = {
+        device = "/dev/sda2";
+        keyFile = "/etc/luks/boot.keyfile";
+      };
+      secrets = {
+        "/etc/luks/boot.keyfile" = null;
+      };
+      systemd.enable = true;
+    };
+    systemd-boot.enable = false;
+    timeout = 3;
+  };
+
+  fileSystems = {
+    "/boot/efi" = {
+      device = "/dev/disk/by-label/boot";
+      fsType = "vfat";
+    };
+    "/" = {
+      device = "/dev/mapper/crypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nix/root" "compress=zstd:1" "noatime" ];
+    };
+    "/var" = {
+      device = "/dev/mapper/crypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nix/var" "compress=zstd:1" "noatime" ];
+    };
+    "/nix" = {
+      device = "/dev/mapper/crypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nix/nix" "compress=zstd:1" "noatime" ];
+    };
+    "/home" = {
+      device = "/dev/mapper/crypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nix/home" "compress=zstd:1" "noatime" ];
+    };
+    "/data" = {
+      device = "/dev/mapper/crypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nix/data" "compress=zstd:1" "noatime" ];
     };
   };
 
-  boot.initrd = {
-    systemd.enable = true;
-    luks.devices.crypt = {
-      device = "/dev/sda2";
-      keyFile = "/etc/luks/boot.keyfile";
-    };
-    secrets = {
-      "/etc/luks/boot.keyfile" = null;
-    };
-  };
+  swapDevices = [{ device = "/.swapfile"; }];
 
   networking = {
     hostName = "virtualbox";
@@ -72,8 +105,6 @@
       };
     };
   };
-
-  swapDevices = [{ device = "/.swapfile"; }];
 
   virtualisation.virtualbox.guest = {
     enable = true;

@@ -633,8 +633,8 @@ nix develop
  1. Imports
  2. Modules
  3. Boot
- 4. Networking
- 5. Filesystems
+ 4. Filesystems
+ 5. Networking
  6. Hardware
  7. systemd
  8. Services

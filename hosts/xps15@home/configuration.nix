@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
     ../xps15/configuration.nix
   ];
 
@@ -15,13 +14,53 @@
     systemdBoot.enable = true;
   };
 
-  networking.hostName = "nixos";
+  boot = {
+    initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
+    kernelModules = [ "kvm-intel" ];
+  };
+
+  fileSystems = {
+    "/boot" = {
+      device = "/dev/disk/by-uuid/F29C-27AB";
+      fsType = "vfat";
+    };
+    "/" = {
+      device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
+      fsType = "btrfs";
+      options = [ "subvol=root" "compress=zstd:1" "noatime" ];
+    };
+    "/var" = {
+      device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
+      fsType = "btrfs";
+      options = [ "subvol=var" "compress=zstd:1" "noatime" ];
+    };
+    "/nix" = {
+      device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
+      fsType = "btrfs";
+      options = [ "subvol=nix" "compress=zstd:1" "noatime" ];
+    };
+    "/home" = {
+      device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
+      fsType = "btrfs";
+      options = [ "subvol=home" "compress=zstd:1" "noatime" ];
+    };
+    "/data" = {
+      device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
+      fsType = "btrfs";
+      options = [ "subvol=data" "compress=zstd:1" "noatime" ];
+    };
+  };
 
   swapDevices = [{ device = "/.swapfile"; }];
 
-  hardware.sane = {
-    enable = true;
-    extraBackends = [ pkgs.hplipWithPlugin ];
+  networking.hostName = "nixos";
+
+  hardware = {
+    enableRedistributableFirmware = true;
+    sane = {
+      enable = true;
+      extraBackends = [ pkgs.hplipWithPlugin ];
+    };
   };
 
   services.printing.drivers = [ pkgs.hplipWithPlugin ];

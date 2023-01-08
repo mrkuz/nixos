@@ -13,6 +13,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    fonts.enableDefaultFonts = true;
     fonts.fonts = with pkgs; [
       cantarell-fonts
       dejavu_fonts
