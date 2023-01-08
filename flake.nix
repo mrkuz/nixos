@@ -66,7 +66,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = false;
-            extraSpecialArgs = { inherit inputs vars; };
+            extraSpecialArgs = { inherit inputs nixpkgs vars; };
           };
         }
         (./hosts + "/${name}" + /configuration.nix)

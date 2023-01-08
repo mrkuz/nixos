@@ -50,7 +50,7 @@ in
 
     environment.etc."nixos/configuration.nix".text = ''
       nix = {
-        nixPath = [ "nixpkgs=/nix/channels/nixos" ];
+        nixPath = [ "nixpkgs=${nixpkgs}" ];
       };
 
       system.stateVersion = "${vars.stateVersion}";
@@ -65,7 +65,7 @@ in
       formatted;
 
     environment.extraInit = ''
-      export NIX_PATH="nixpkgs=/nix/channels/nixos"
+      export NIX_PATH="nixpkgs=${nixpkgs}"
     '';
 
     systemd.tmpfiles.rules = [
@@ -76,8 +76,6 @@ in
 
     environment.systemPackages = with pkgs; [
       niv
-      nixpkgs-fmt
-      rnix-lsp
       (callPackage ../../pkgs/tools/nix/nixos-option { inherit configName; })
     ];
   };

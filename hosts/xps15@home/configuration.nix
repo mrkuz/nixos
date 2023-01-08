@@ -9,14 +9,8 @@
     btrfs.enable = true;
     buildEssentials.enable = true;
     libreoffice.enable = true;
-    pipewire.enable = true;
     snapper.enable = true;
     systemdBoot.enable = true;
-  };
-
-  boot = {
-    initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
-    kernelModules = [ "kvm-intel" ];
   };
 
   fileSystems = {
@@ -55,12 +49,9 @@
 
   networking.hostName = "nixos";
 
-  hardware = {
-    enableRedistributableFirmware = true;
-    sane = {
-      enable = true;
-      extraBackends = [ pkgs.hplipWithPlugin ];
-    };
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
   services.printing.drivers = [ pkgs.hplipWithPlugin ];

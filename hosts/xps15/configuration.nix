@@ -16,16 +16,24 @@
     gnome.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
+    pipewire.enable = true;
     resolved.enable = true;
     virtualbox.enable = true;
     wayland.enable = true;
     x11.enable = true;
   };
 
-  boot.initrd.kernelModules = [ "i915" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot = {
+    initrd = {
+      availableKernelModules = [ "ahci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
+      kernelModules = [ "i915" ];
+    };
+    kernelModules = [ "kvm-intel" ];
+  };
 
   powerManagement.cpuFreqGovernor = "powersave";
+
+  hardware.enableRedistributableFirmware = true;
 
   hardware.nvidia = {
     prime = {
@@ -40,7 +48,6 @@
   ];
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;

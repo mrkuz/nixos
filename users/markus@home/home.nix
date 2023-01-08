@@ -139,8 +139,8 @@ in
     hey
     hugo
     html-tidy
-    lutris
-    mangohud
+    # lutris
+    # mangohud
     # mkvtoolnix-cli
     nodejs
     # potrace
@@ -159,7 +159,6 @@ in
     # sox
     spotify
     steam
-    trashy
     # skypeforlinux
     whatsapp-for-linux
     zoom-us

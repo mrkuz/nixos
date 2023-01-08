@@ -23,6 +23,7 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      # distrobox
       dive
       docker-compose
       # x11docker

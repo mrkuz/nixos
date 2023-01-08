@@ -29,7 +29,6 @@ in
       dnsmasq
       dos2unix
       duf
-      # ecryptfs
       efibootmgr
       exfat
       fd
@@ -67,6 +66,7 @@ in
       strace
       # tldr
       tmux
+      trashy
       tree
       unrar
       unzip

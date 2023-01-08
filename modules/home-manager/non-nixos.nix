@@ -19,6 +19,7 @@ in
       niv
       nix
       nixpkgs-fmt
+      rnix-lsp
       # base-packages
       fzf
       tmux
