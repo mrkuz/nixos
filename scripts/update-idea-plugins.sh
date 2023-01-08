@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "${BASH_SOURCE%/*}/lib/common.sh"
+
 plugins=$(jq -r '.[] | select(.url | length > 0)  | select(.url | test("plugins.jetbrains.com")) | .name' nix/sources.json)
 
 for plugin in $plugins; do

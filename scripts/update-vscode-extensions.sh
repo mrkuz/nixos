@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-if [ $# -ne 1 ]; then
-  echo "Usage: $0 EXTENSION"
-  exit 1;
-fi
+
+source "${BASH_SOURCE%/*}/lib/common.sh"
+
+extensions=$(jq -r '.[] | select(.url | length > 0)  | select(.url | test("marketplace.visualstudio")) | .name' nix/sources.json)
 
 function get_details {
   curl -s -X POST 'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery' \
@@ -24,9 +24,10 @@ function get_details {
     }"
 }
 
-
-publisher=${1%%.*}
-name=${1##*.}
-version=$(get_details $1 | jq -r '.results[0].extensions[0].versions[] | select(.properties | index({ "key": "Microsoft.VisualStudio.Code.PreRelease", "value" : "true" }) | not) | .version' | head -n1)
-
-niv add "vscode:$name" -a name=$name -a publisher=$publisher -v $version -t "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage"
+for ext in $extensions; do
+  fqn=$(jq -r ".\"vscode:$ext\" | .publisher + \".\" + .name" nix/sources.json)
+  echo "Updating $fqn..."
+  version=$(get_details $fqn | jq -r '.results[0].extensions[0].versions[] | select(.properties | index({ "key": "Microsoft.VisualStudio.Code.PreRelease", "value" : "true" }) | not) | .version' | head -n1)
+  niv update "vscode:$ext" -v $version
+  sleep 1
+done;

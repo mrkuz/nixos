@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+source "${BASH_SOURCE%/*}/lib/common.sh"
+
 if [ $# -ne 1 ]; then
   echo "Usage: $0 PLUGIN_ID"
   exit 1;

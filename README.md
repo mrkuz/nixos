@@ -23,16 +23,14 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
 
 # Files & directories
 
-## Main directory
-
-### Scripts
+## `scripts/`
 
 - `rebuild.sh` - Wrapper for `nixos-rebuild switch`
 
   _Example_
 
   ```shell
-  ./rebuild.sh xps15@home
+  ./scripts/rebuild.sh xps15@home
   ```
 
 - `update.sh` - Updates flake inputs, `/nix/nixpkgs` and packages managed by [niv](https://github.com/nmattia/niv.)
@@ -48,7 +46,7 @@ Scripts to simplify the work with VSCode extensions.
   _Example_
 
   ```shell
-  ./add-vscode-extension.sh formulahendry.auto-rename-tag
+  ./scripts/add-vscode-extension.sh formulahendry.auto-rename-tag
   ```
 
 - `update-vscode-extensions.sh` - Updates all extensions to the latest version
