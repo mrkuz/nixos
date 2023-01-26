@@ -2,6 +2,6 @@
 
 source "${BASH_SOURCE%/*}/lib/common.sh"
 
-./update.sh
-./update-vscode-extensions.sh
-./update-idea-plugins.sh
+./scripts/update.sh
+./scripts/update-vscode-extensions.sh
+./scripts/update-idea-plugins.sh
