@@ -26,7 +26,7 @@ in
         if [[ -v DRY_RUN ]]; then
           echo $DCONF_DBUS_RUN_SESSION ${pkgs.dconf}/bin/dconf load / "<" ${cfg.iniFile}
         else
-          $DCONF_DBUS_RUN_SESSION ${pkgs.dconf}/bin/dconf load / < ${cfg.iniFile}
+          $DCONF_DBUS_RUN_SESSION ${pkgs.dconf}/bin/dconf load / < ${cfg.iniFile} || echo "Loading dconf failed"
         fi
         unset DCONF_DBUS_RUN_SESSION
       '';

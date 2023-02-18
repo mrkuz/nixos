@@ -55,7 +55,7 @@
   };
 
   services.printing.drivers = [ pkgs.hplipWithPlugin ];
-  services.openssh.passwordAuthentication = false;
+  services.openssh.settings.PasswordAuthentication = false;
   # services.teamviewer.enable = true;
 
   users = {

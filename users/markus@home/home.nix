@@ -80,7 +80,6 @@ in
           extensions = vscodeExtensions ++ [
             sources."vscode:nix"
             sources."vscode:terraform"
-            sources."vscode:vscode-ansible"
             sources."vscode:vscode-docker"
             sources."vscode:vscode-kubernetes-tools"
             sources."vscode:vscode-yaml" # dependency for vscode-docker, vscode-kubernetes-tools

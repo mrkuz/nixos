@@ -13,7 +13,16 @@ in
   };
 
   config = mkIf cfg.enable {
-    services.packagekit.enable = true;
+    services.packagekit = {
+      enable = true;
+      settings = {
+        Daemon = {
+          DefaultBackend = "test_nop";
+          KeepCache = false;
+        };
+      };
+    };
+
     services.upower.enable = true;
     security.polkit.enable = true;
     security.rtkit.enable = true;

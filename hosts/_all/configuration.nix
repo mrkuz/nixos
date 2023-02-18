@@ -46,7 +46,7 @@
     # kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "udev.log_priority=3"
-      "systemd.unified_cgroup_hierarchy=0"
+      # "systemd.unified_cgroup_hierarchy=0"
     ];
     kernel.sysctl = {
       "vm.swappiness" = 10;
@@ -74,6 +74,9 @@
 
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
+
+  # Not working with cgroup v1
+  # systemd.oomd.enable = false;
 
   documentation = {
     enable = true;
