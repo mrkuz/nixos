@@ -19,7 +19,6 @@ in
         experimental-features = nix-command flakes
         narinfo-cache-positive-ttl = 86400
         auto-optimise-store = true
-        repeat = 0
       '';
 
       settings = {
