@@ -17,8 +17,6 @@ in
 
     environment.systemPackages = with pkgs; [
       nix-alien
-      nix-index
-      nix-index-update
       steam-run
       (callPackage ../../pkgs/shell/fhs-shell { })
     ];

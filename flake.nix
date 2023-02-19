@@ -17,10 +17,6 @@
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
-    };
     dotfiles = {
       # url = "github:mrkuz/dotfiles";
       url = "/home/markus/etc/nixos/repos/dotfiles";

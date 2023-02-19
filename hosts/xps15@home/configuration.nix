@@ -8,6 +8,7 @@
   modules = {
     btrfs.enable = true;
     buildEssentials.enable = true;
+    compatibility.enable = true;
     libreoffice.enable = true;
     snapper.enable = true;
     systemdBoot.enable = true;
