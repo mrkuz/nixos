@@ -62,7 +62,6 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 ## `hosts/`
 
 - `_all` - Base expression, imported by all other hosts
-- `xps15` - Contains common configuration for Dell XPS15
 - `xps15@home` - Specialization of xps15 for home
 - ...
 
