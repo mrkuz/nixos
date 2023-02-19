@@ -51,17 +51,18 @@ in
       { ... }:
 
       let
-        flake = import ${self};
+        nixpkgs = import ${nixpkgs} {};
       in
-      flake.legacyPackages.''${builtins.currentSystem}
+      nixpkgs
     '';
+
     environment.etc."nixos/compat/nixos/default.nix".text = ''
       { ... }:
 
       let
-        flake = import ${self};
+        current = import ${self};
       in
-      flake.nixosConfigurations."${systemName}"
+      current.nixosConfigurations."${systemName}"
     '';
 
     environment.etc."nixos/configuration.nix".text = ''
