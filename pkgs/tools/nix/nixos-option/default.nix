@@ -1,8 +1,8 @@
-{ stdenv, pkgs, configName, ... }:
+{ stdenv, pkgs, systemName, ... }:
 
 let
   script = pkgs.writeShellScriptBin "nixos-option" ''
-    env "CONFIG_NAME=${configName}" ${pkgs.nixos-option}/bin/nixos-option -I nixpkgs=${./compat} $@
+    env "SYSTEM_NAME=${systemName}" ${pkgs.nixos-option}/bin/nixos-option -I nixpkgs=${./compat} $@
   '';
 in
 stdenv.mkDerivation rec {

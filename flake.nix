@@ -58,7 +58,7 @@
           _module.args.self = self;
           _module.args.inputs = inputs;
           _module.args.credentials = import inputs.credentials;
-          _module.args.configName = name;
+          _module.args.systemName = name;
           _module.args.vars = vars;
         }
         inputs.home-manager.nixosModules.home-manager

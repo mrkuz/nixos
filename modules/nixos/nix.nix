@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs, self, vars, configName, ... }:
+{ config, lib, pkgs, nixpkgs, self, vars, systemName, ... }:
 
 with lib;
 let
@@ -52,6 +52,7 @@ in
         nixPath = [ "nixpkgs=${nixpkgs}" ];
       };
 
+      system.name = "${systemName}";
       system.stateVersion = "${vars.stateVersion}";
     '';
     environment.etc."nixos/current".source = self;
@@ -71,7 +72,7 @@ in
 
     environment.systemPackages = with pkgs; [
       niv
-      (callPackage ../../pkgs/tools/nix/nixos-option { inherit configName; })
+      (callPackage ../../pkgs/tools/nix/nixos-option { inherit systemName; })
     ];
   };
 }

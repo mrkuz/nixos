@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs, self, inputs, vars, ... }:
+{ config, lib, pkgs, nixpkgs, self, inputs, vars, systemName, ... }:
 
 {
   imports = [
@@ -94,6 +94,7 @@
     };
   };
 
+  system.name = systemName;
   system.stateVersion = vars.stateVersion;
   system.configurationRevision = self.rev or "dirty";
 }
