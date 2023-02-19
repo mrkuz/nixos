@@ -54,6 +54,8 @@ in
 
       system.stateVersion = "${vars.stateVersion}";
     '';
+    environment.etc."nixos/current".source = self;
+    environment.etc."nixos/nixpkgs".source = nixpkgs;
     environment.etc."nixos/options.json".source = "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
     environment.etc."nixos/system-packages".text =
       let
@@ -66,12 +68,6 @@ in
     environment.extraInit = ''
       export NIX_PATH="nixpkgs=${nixpkgs}"
     '';
-
-    systemd.tmpfiles.rules = [
-      "d   /nix/channels        0755 root root  -  -"
-      "L+  /nix/channels/nixos     -    -    -  -  ${nixpkgs}"
-      "L+  /nix/current            -    -    -  -  ${self}"
-    ];
 
     environment.systemPackages = with pkgs; [
       niv

@@ -1,6 +1,6 @@
 { ... }:
 
 let
-  flake = import /nix/current;
+  flake = import /etc/nixos/current;
 in
 flake.nixosConfigurations.${builtins.getEnv "CONFIG_NAME"}
