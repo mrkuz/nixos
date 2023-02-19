@@ -47,6 +47,23 @@ in
       };
     };
 
+    environment.etc."nixos/compat/default.nix".text = ''
+      { ... }:
+
+      let
+        flake = import ${self};
+      in
+      flake.legacyPackages.''${builtins.currentSystem}
+    '';
+    environment.etc."nixos/compat/nixos/default.nix".text = ''
+      { ... }:
+
+      let
+        flake = import ${self};
+      in
+      flake.nixosConfigurations."${systemName}"
+    '';
+
     environment.etc."nixos/configuration.nix".text = ''
       nix = {
         nixPath = [ "nixpkgs=${nixpkgs}" ];
@@ -72,7 +89,7 @@ in
 
     environment.systemPackages = with pkgs; [
       niv
-      (callPackage ../../pkgs/tools/nix/nixos-option { inherit systemName; })
+      (callPackage ../../pkgs/tools/nix/nixos-option { })
     ];
   };
 }

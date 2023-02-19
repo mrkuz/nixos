@@ -16,6 +16,7 @@ Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module)
 
 ## Additions to `/etc/nixos`
 
+- `/etc/nixos/compat` - Compatibility layer for non-flake utils
 - `/etc/nixos/current` - The active configuration
 - `/etc/nixos/nixpkgs` - Link to current NixOS nixpkgs
 - `/etc/nixos/options.json` - JSON file of all available NixOS options
