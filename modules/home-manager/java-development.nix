@@ -31,7 +31,7 @@ in
       jdk
       maven
       visualvm
-      (callPackage ../../pkgs/shell/graalvm-shell { })
+      # (callPackage ../../pkgs/shell/graalvm-shell { })
     ];
   };
 }

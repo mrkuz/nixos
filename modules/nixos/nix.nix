@@ -35,6 +35,7 @@ in
         ];
       };
 
+      # Use local nixpkgs
       registry.nixpkgs = {
         from = {
           id = "nixpkgs";
@@ -47,6 +48,7 @@ in
       };
     };
 
+    # Provide compatibility layer for non-flake utils
     environment.etc."nixos/compat/default.nix".text = ''
       { ... }:
 
@@ -55,7 +57,6 @@ in
       in
       nixpkgs
     '';
-
     environment.etc."nixos/compat/nixos/default.nix".text = ''
       { ... }:
 

@@ -25,7 +25,7 @@ in
       # silver-searcher
       sqlite
       texlive.combined.scheme-basic
-      (callPackage ../../pkgs/misc/revealjs { })
+      # (callPackage ../../pkgs/misc/revealjs { })
     ] ++ [ ((pkgs.emacsPackagesFor emacsPkg).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
 
     systemd.user.services.emacs = {

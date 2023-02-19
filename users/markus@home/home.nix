@@ -122,7 +122,6 @@ in
   home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
     ''
       # Clone repositories
-      [ -e $HOME/src/vagrant-k3s ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/vagrant-k3s")
       [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")
     '';
 
@@ -149,7 +148,7 @@ in
     youtube-dl
     # Applications
     android-studio
-    calibre
+    # calibre
     gimp
     lens
     pdftk

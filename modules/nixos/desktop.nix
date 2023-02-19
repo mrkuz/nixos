@@ -17,6 +17,7 @@ in
       enable = true;
       settings = {
         Daemon = {
+          # nix backend not working with flakes
           DefaultBackend = "test_nop";
           KeepCache = false;
         };

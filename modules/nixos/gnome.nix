@@ -33,19 +33,17 @@ in
 
     # Requirement for gnome-boxes
     # virtualisation.libvirtd.enable = true;
-    # UEFI
+    # UEFI support
     # virtualisation.libvirtd.qemu.ovmf.enable = true;
 
     environment.gnome.excludePackages = with pkgs; [
       gnome.epiphany
       gnome.geary
-      gnome.gnome-clocks
       gnome.gnome-contacts
       gnome.gnome-disk-utility
       gnome.gnome-logs
       gnome.gnome-maps
       gnome.gnome-music
-      gnome.gnome-system-monitor
       gnome.totem
       gnome.yelp
       gnome-connections
