@@ -78,6 +78,7 @@ in
           name = "DevOps";
           alias = "dcode";
           extensions = vscodeExtensions ++ [
+            sources."vscode:aws-toolkit-vscode"
             sources."vscode:nix"
             sources."vscode:terraform"
             sources."vscode:vscode-docker"
