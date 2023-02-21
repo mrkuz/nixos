@@ -14,7 +14,6 @@ in
     ../../modules/home-manager/conky.nix
     ../../modules/home-manager/dconf.nix
     ../../modules/home-manager/disable-bluetooth.nix
-    ../../modules/home-manager/doom-emacs.nix
     ../../modules/home-manager/emacs.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/hide-applications.nix

@@ -1,10 +1,4 @@
 {
-    "doom-emacs": {
-        "branch": "develop",
-        "repo": "https://github.com/hlissner/doom-emacs/",
-        "rev": "35865ef5e89442e3809b8095199977053dd4210f",
-        "type": "git"
-    },
     "fish:bass": {
         "branch": "master",
         "description": "Make Bash utilities usable in Fish shell",
@@ -258,11 +252,11 @@
     "vscode:jupyter-renderers": {
         "name": "jupyter-renderers",
         "publisher": "ms-toolsai",
-        "sha256": "101mjb5qapm8m4h46pxshvw43pfnzw4ii1ilm893nifigfx8y7i5",
+        "sha256": "12l5z60kpz3nx77l8ck6a6w4qdzyz3xkn6k9670r30w365q9lf0z",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter-renderers/1.0.15/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter-renderers/1.0.12/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.0.15"
+        "version": "1.0.12"
     },
     "vscode:markdown-preview-github-styles": {
         "name": "markdown-preview-github-styles",

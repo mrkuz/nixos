@@ -119,7 +119,6 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `conky` - Configures [conky](https://github.com/brndnmtthws/conky)
 - `dconf` - Loads [dconf](https://wiki.gnome.org/Projects/dconf) configuration from file
 - `disable-bluetooth` - Disables Bluetooth on start
-- `doom-emacs` - Configures [Doom Emacs](https://github.com/hlissner/doom-emacs)
 - `emacs` - Configures [Emacs](https://www.gnu.org/software/emacs/)
 - `fish` - Configures [Fish](https://fishshell.com/) shell
 - `hide-applications` - Hides applications from launcher
