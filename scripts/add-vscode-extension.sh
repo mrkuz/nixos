@@ -27,9 +27,8 @@ function get_details {
     }"
 }
 
-
 publisher=${1%%.*}
 name=${1##*.}
 version=$(get_details $1 | jq -r '.results[0].extensions[0].versions[] | select(.properties | index({ "key": "Microsoft.VisualStudio.Code.PreRelease", "value" : "true" }) | not) | .version' | head -n1)
 
-niv add "vscode:$name" -a name=$name -a publisher=$publisher -v $version -t "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage"
+niv add "vscode:$name" -a name=$name -a publisher=$publisher -v $version -t "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64"
