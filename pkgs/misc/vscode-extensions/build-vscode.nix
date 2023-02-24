@@ -33,7 +33,7 @@ stdenv.mkDerivation {
       fi
     done
 
-    substitute ./vscode-plus.sh "$out/bin/${name}" \
+    substitute ./build-vscode.sh "$out/bin/${name}" \
       --subst-var-by name $name \
       --subst-var-by out $out \
       --subst-var-by vscode ${pkgs.vscode} \
