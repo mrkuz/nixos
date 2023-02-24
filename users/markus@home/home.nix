@@ -20,6 +20,7 @@ in
     devShells = {
       enable = true;
       shells = [
+        (import ../../modules/home-manager/shells/android.nix)
         (import ../../modules/home-manager/shells/build.nix)
         (import ../../modules/home-manager/shells/devops.nix)
         (import ../../modules/home-manager/shells/fhs.nix)

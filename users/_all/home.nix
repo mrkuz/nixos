@@ -27,6 +27,7 @@ in
       enable = true;
       names = [
         "android-file-transfer"
+        "ca.desrt.dconf-editor"
         "calibre-ebook-edit"
         "calibre-ebook-viewer"
         "calibre-lrfviewer"
@@ -40,11 +41,12 @@ in
         "nixos-manual"
         "nvidia-settings"
         "org.gnome.Tour"
-        "xpra-gui"
-        "xterm"
-        "ca.desrt.dconf-editor"
+        "scrcpy"
+        "scrcpy-console"
         "software-properties-livepatch"
         "Waydroid"
+        "xpra-gui"
+        "xterm"
       ];
     };
     nixos.enable = true;
