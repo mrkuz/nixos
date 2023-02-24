@@ -9,7 +9,6 @@
     android.enable = true;
     basePackages.enable = true;
     btrfs.enable = true;
-    buildEssentials.enable = true;
     commandNotFound.enable = true;
     compatibility.enable = true;
     desktop.enable = true;

@@ -80,9 +80,8 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `avahi` - Configures [avahi](https://www.avahi.org/)
 - `base-packages` - Collection of essential CLI tools
 - `btrfs` - Configures [btrfs](https://btrfs.wiki.kernel.org/)
-- `build-essentials` - Build essentials
 - `command-not-found` - Adds simple `command-not-found` script
-- `compatibility` - Adds `fhs-shell`, a FHS-compatible shell
+- `compatibility` - Adds some tools for better compatibility with other Linux distributions
 - `desktop` - Essential packages for desktop environments
 - `docker` - Adds [Docker](https://www.docker.com/) and utilities
 - `ecryptfs` - Support for [eCryptfs](https://www.ecryptfs.org/)
@@ -110,14 +109,13 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 
 ### `home-manager/`
 
-- `ansible` - Adds [Ansible](https://www.ansible.com/)
 - `bash` - Configures [Bash](https://www.gnu.org/software/bash/) shell
 - `borg-backup` - Adds job which runs [BorgBackup](https://www.borgbackup.org/)/[borgmatic](https://torsion.org/borgmatic/)
 - `chromeos` - Use if [ChromeOS](https://www.google.com/chromebook/chrome-os/)
 - `chromium` - Configures [Chromium](https://www.chromium.org/) web browser and extensions
-- `cloud-tools` - [Kubernetes](https://kubernetes.io/) and cloud related packages
 - `conky` - Configures [conky](https://github.com/brndnmtthws/conky)
 - `dconf` - Loads [dconf](https://wiki.gnome.org/Projects/dconf) configuration from file
+- `devShells` - Adds custom development shells
 - `disable-bluetooth` - Disables Bluetooth on start
 - `emacs` - Configures [Emacs](https://www.gnu.org/software/emacs/)
 - `fish` - Configures [Fish](https://fishshell.com/) shell

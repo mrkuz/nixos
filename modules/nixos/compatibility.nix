@@ -18,7 +18,6 @@ in
     environment.systemPackages = with pkgs; [
       nix-alien
       steam-run
-      (callPackage ../../pkgs/shell/fhs-shell { })
     ];
   };
 }

@@ -13,10 +13,21 @@ in
   modules = {
     borgBackup.enable = true;
     chromium.enable = true;
-    cloudTools.enable = true;
     dconf = {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
+    };
+    devShells = {
+      enable = true;
+      shells = [
+        (import ../../modules/home-manager/shells/build.nix)
+        (import ../../modules/home-manager/shells/devops.nix)
+        (import ../../modules/home-manager/shells/fhs.nix)
+        (import ../../modules/home-manager/shells/graalvm.nix)
+        (import ../../modules/home-manager/shells/java.nix)
+        (import ../../modules/home-manager/shells/sdkman.nix)
+        (import ../../modules/home-manager/shells/web.nix)
+      ];
     };
     disableBluetooth.enable = true;
     emacs.enable = true;
@@ -62,7 +73,6 @@ in
     # lutris
     # mangohud
     # mkvtoolnix-cli
-    nodejs
     # potrace
     protobuf
     (python3.withPackages (ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))

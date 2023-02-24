@@ -26,12 +26,8 @@ in
 
     home.packages = with pkgs; [
       eclipse-mat
-      gradle
       jetbrains.idea-community
-      jdk
-      maven
       visualvm
-      # (callPackage ../../pkgs/shell/graalvm-shell { })
     ];
   };
 }
