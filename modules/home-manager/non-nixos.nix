@@ -18,6 +18,8 @@ in
       # nix
       niv
       nix
+      nix-index
+      nix-index-update
       nixpkgs-fmt
       rnix-lsp
       # base-packages

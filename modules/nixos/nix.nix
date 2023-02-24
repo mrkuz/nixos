@@ -91,6 +91,10 @@ in
 
     environment.systemPackages = with pkgs; [
       niv
+      nix-index
+      nix-index-update
+      nixpkgs-fmt
+      rnix-lsp
       (callPackage ../../pkgs/tools/nix/nixos-option { })
     ];
   };
