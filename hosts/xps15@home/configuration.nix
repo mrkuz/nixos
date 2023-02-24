@@ -13,7 +13,6 @@
     compatibility.enable = true;
     desktop.enable = true;
     docker.enable = true;
-    emacs.enable = true;
     fonts.enable = true;
     gnome.enable = true;
     libreoffice.enable = true;

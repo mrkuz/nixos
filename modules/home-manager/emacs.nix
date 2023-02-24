@@ -1,9 +1,9 @@
-{ config, lib, pkgs, vars, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 let
   cfg = config.modules.emacs;
-  emacsPkg = (getAttr vars.emacs pkgs);
+  emacsPkg = pkgs.emacsPgtk;
 in
 {
   options.modules.emacs = {

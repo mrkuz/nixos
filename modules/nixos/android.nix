@@ -18,10 +18,5 @@ in
     ];
 
     programs.adb.enable = true;
-    environment.systemPackages = with pkgs; [
-      # android-file-transfer
-      # gitRepo
-      scrcpy
-    ];
   };
 }

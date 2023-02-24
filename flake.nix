@@ -32,7 +32,6 @@
     let
       vars = {
         stateVersion = "22.11";
-        emacs = "emacsPgtk";
       };
       mkPkgs = system: import nixpkgs {
         inherit system;

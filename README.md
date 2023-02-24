@@ -85,7 +85,6 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `desktop` - Essential packages for desktop environments
 - `docker` - Adds [Docker](https://www.docker.com/) and utilities
 - `ecryptfs` - Support for [eCryptfs](https://www.ecryptfs.org/)
-- `emacs` - Adds [Emacs](https://www.gnu.org/software/emacs/)
 - `fonts` - Adds some fonts
 - `gnome` - Configures [Gnome](https://www.gnome.org/) desktop environment
 - `grub-efi` - Configures [GRUB](https://www.gnu.org/software/grub/) for UEFI systems
