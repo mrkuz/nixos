@@ -1,39 +1,6 @@
 { config, lib, pkgs, nixpkgs, self, inputs, vars, systemName, ... }:
 
 {
-  imports = [
-    ../../modules/nixos/android.nix
-    ../../modules/nixos/avahi.nix
-    ../../modules/nixos/base-packages.nix
-    ../../modules/nixos/btrfs.nix
-    ../../modules/nixos/command-not-found.nix
-    ../../modules/nixos/compatibility.nix
-    ../../modules/nixos/desktop.nix
-    ../../modules/nixos/docker.nix
-    ../../modules/nixos/ecryptfs.nix
-    ../../modules/nixos/fonts.nix
-    ../../modules/nixos/gnome.nix
-    ../../modules/nixos/grub-efi.nix
-    ../../modules/nixos/kde.nix
-    ../../modules/nixos/kodi.nix
-    ../../modules/nixos/kvm.nix
-    ../../modules/nixos/libreoffice.nix
-    ../../modules/nixos/nix.nix
-    ../../modules/nixos/nvidia.nix
-    ../../modules/nixos/opengl.nix
-    ../../modules/nixos/pipewire.nix
-    ../../modules/nixos/resolved.nix
-    ../../modules/nixos/snapper.nix
-    ../../modules/nixos/sshd.nix
-    ../../modules/nixos/steam.nix
-    ../../modules/nixos/sway.nix
-    ../../modules/nixos/systemd-boot.nix
-    ../../modules/nixos/virtualbox.nix
-    ../../modules/nixos/waydroid.nix
-    ../../modules/nixos/wayland.nix
-    ../../modules/nixos/x11.nix
-  ];
-
   modules = {
     nix.enable = true;
   };
