@@ -16,7 +16,7 @@ in
     ../../modules/home-manager/emacs.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/hide-applications.nix
-    ../../modules/home-manager/java-development.nix
+    ../../modules/home-manager/idea.nix
     ../../modules/home-manager/nixos.nix
     ../../modules/home-manager/non-nixos.nix
     ../../modules/home-manager/vscode-profiles.nix

@@ -119,7 +119,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `emacs` - Configures [Emacs](https://www.gnu.org/software/emacs/)
 - `fish` - Configures [Fish](https://fishshell.com/) shell
 - `hide-applications` - Hides applications from launcher
-- `java-development` - [Java](https://www.java.com/en/) development related packages
+- `idea` - Adds [IntelliJ IDEA](https://www.jetbrains.com/idea/) with plugins
 - `non-nixos` - Use if other Linux OS than NixOS
 - `nixos` - NixOS configuration and additions
 - `vscode-profiles` - Adds [VSCode](https://code.visualstudio.com/) with multiple profiles

@@ -136,6 +136,12 @@
             quick-settings-tweaks = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/quick-settings-tweaks { });
             workspaces-bar = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/workspaces-bar { });
           };
+          # IDEA plugins
+          idea-plugins = {
+            checkstyle-idea = (pkgs.callPackage ./pkgs/misc/idea/plugins/checkstyle-idea { });
+            kotest = (pkgs.callPackage ./pkgs/misc/idea/plugins/kotest { });
+            mybatisx = (pkgs.callPackage ./pkgs/misc/idea/plugins/mybatisx { });
+          };
           # Helper functions
           buildFhsShell = spec: pkgs.callPackage ./pkgs/shell/build-fhs-shell.nix spec;
           buildShell = spec: pkgs.callPackage ./pkgs/shell/build-shell.nix spec;

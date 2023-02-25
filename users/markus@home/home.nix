@@ -32,7 +32,14 @@ in
     };
     disableBluetooth.enable = true;
     emacs.enable = true;
-    javaDevelopment.enable = true;
+    idea = {
+      enable = true;
+      plugins = with pkgs; [
+        idea-plugins.checkstyle-idea
+        idea-plugins.kotest
+        idea-plugins.mybatisx
+      ];
+    };
     vscodeProfiles = {
       enable = true;
       profiles = [
@@ -79,6 +86,9 @@ in
     (python3.withPackages (ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))
     python310Packages.pdfx
     youtube-dl
+    # Java development
+    # eclipse-mat
+    # visualvm
     # Applications
     android-studio
     # calibre
