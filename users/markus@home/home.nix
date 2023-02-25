@@ -1,9 +1,17 @@
-{ config, pkgs, inputs, vars, ... }:
+{ config, pkgs, inputs, vars, sources, ... }:
 
 let
-  sources = import ../../nix/sources.nix;
   hm = inputs.home-manager.lib.hm;
   user = config.home.username;
+
+  python-custom = pkgs.python3.withPackages (ps: with ps; [
+    black
+    jinja2
+    pdfx
+    pip
+    requests
+    tkinter
+  ]);
 in
 {
   imports = [
@@ -94,8 +102,7 @@ in
     # mkvtoolnix-cli
     # potrace
     protobuf
-    (python3.withPackages (ps: [ ps.black ps.jinja2 ps.pip ps.requests ps.tkinter ]))
-    python310Packages.pdfx
+    python-custom
     youtube-dl
     # Java development
     # eclipse-mat

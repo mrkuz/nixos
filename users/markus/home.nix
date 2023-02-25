@@ -1,7 +1,6 @@
-{ config, pkgs, inputs, vars, ... }:
+{ config, pkgs, inputs, vars, sources, ... }:
 
 let
-  sources = import ../../nix/sources.nix;
   hm = inputs.home-manager.lib.hm;
   user = config.home.username;
 in
