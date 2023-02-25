@@ -1,6 +1,6 @@
-let
-  sources = import ../../../nix/sources.nix;
-in [
+{ sources }:
+
+[
   sources."vscode:intellicode-api-usage-examples" # dependency for vscodeintellicode
   sources."vscode:markdown-preview-github-styles"
   sources."vscode:vscode-emacs-friendly"

@@ -1,7 +1,9 @@
+{ sources }:
+
 let
-  sources = import ../../../nix/sources.nix;
-  baseExtensions = import ./base-extensions.nix;
-in {
+  baseExtensions = import ./base-extensions.nix { inherit sources; };
+in
+{
   name = "Web";
   alias = "wcode";
   extensions = baseExtensions ++ [

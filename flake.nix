@@ -34,6 +34,7 @@
         currentSystem = "x86_64-linux";
         stateVersion = "22.11";
       };
+      sources = import ./nix/sources.nix;
 
       attrsToValues = attrs:
         nixpkgs.lib.attrsets.mapAttrsToList (name: value: value) attrs;
@@ -58,13 +59,14 @@
           _module.args.credentials = import inputs.credentials;
           _module.args.systemName = name;
           _module.args.vars = vars;
+          _module.args.sources = sources;
         }
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = false;
-            extraSpecialArgs = { inherit inputs nixpkgs vars; };
+            extraSpecialArgs = { inherit inputs nixpkgs vars sources; };
           };
         }
         (./hosts + "/${name}" + /configuration.nix)
@@ -88,6 +90,7 @@
             _module.args.nixpkgs = nixpkgs;
             _module.args.inputs = inputs;
             _module.args.vars = vars;
+            _module.args.sources = sources;
           }
           {
             home = {

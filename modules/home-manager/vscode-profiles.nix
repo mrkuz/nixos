@@ -1,10 +1,11 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 with lib;
 let
   cfg = config.modules.vscodeProfiles;
-  createActivation = profile:
-    {
+  createActivation = mkProfile: rec {
+    profile = mkProfile { inherit sources; };
+    activation = {
       name = "${profile.name}";
       value = hm.dag.entryAfter [ "writeBoundary" ]
         ''
@@ -13,12 +14,15 @@ let
           [ -e "$HOME/.vscode/${profile.name}/User/keybindings.json" ] || install -m 665 "$HOME/.config/Code/User/keybindings.json" "$HOME/.vscode/${profile.name}/User/"
         '';
     };
-  createPackage = profile:
-    (pkgs.buildVscode {
-      name = "${profile.alias}";
-      userDataDir = ".vscode/${profile.name}";
+  }.activation;
+  createPackage = mkProfile: rec {
+    profile = mkProfile { inherit sources; };
+    package = pkgs.buildVscode {
+      name = "${ profile. alias}";
+      userDataDir = ".vscode/${ profile. name}";
       extensions = profile.extensions;
-    });
+    };
+  }.package;
 in
 {
   options.modules.vscodeProfiles = {
@@ -27,7 +31,7 @@ in
       type = types.bool;
     };
     profiles = mkOption {
-      type = types.listOf types.attrs;
+      type = types.listOf types.anything;
     };
   };
 

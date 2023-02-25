@@ -1,10 +1,12 @@
+{ sources }:
+
 let
-  sources = import ../../../nix/sources.nix;
-  baseExtensions = import ./base-extensions.nix;
-in {
+  baseExtensions = import ./base-extensions.nix { inherit sources; };
+in
+{
   name = "Java";
   alias = "jcode";
-  extensions =  baseExtensions ++ [
+  extensions = baseExtensions ++ [
     sources."vscode:java" # dependency for vscode-spring-boot-dashboard, vscode-java-pack
     sources."vscode:sonarlint-vscode"
     sources."vscode:vscode-java-debug" # dependency for vscode-spring-boot-dashboard, vscode-java-pack
