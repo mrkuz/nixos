@@ -190,6 +190,7 @@
       overlays = {
         chromium = import ./overlays/applications/networking/browsers/chromium;
         nix = import ./overlays/tools/package-management/nix;
+        nixos-option = import ./overlays/tools/nix/nixos-option;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
       };

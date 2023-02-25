@@ -93,9 +93,9 @@ in
       niv
       nix-index
       nix-index-update
+      nixos-option
       nixpkgs-fmt
       rnix-lsp
-      (callPackage ../../pkgs/tools/nix/nixos-option { })
     ];
   };
 }

@@ -131,6 +131,7 @@ Contains some custom [overlays](https://nixos.wiki/wiki/Overlays).
 - `desktops/gnome/core/gnome-terminal` - Gnome Terminal with transparency patch
 - `desktops/gnome/core/nautilus` - Change grid icon sizes
 - `tools/package-management/nix` - Patched to allow downloads from [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
+- `tools/nix/nixos-option` - nixos-option using compatibility layer
 
 ## `pkgs/`
 
