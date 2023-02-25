@@ -4,23 +4,6 @@ let
   hm = inputs.home-manager.lib.hm;
 in
 {
-  imports = [
-    ../../modules/home-manager/bash.nix
-    ../../modules/home-manager/borg-backup.nix
-    ../../modules/home-manager/chromeos.nix
-    ../../modules/home-manager/conky.nix
-    ../../modules/home-manager/dconf.nix
-    ../../modules/home-manager/dev-shells.nix
-    ../../modules/home-manager/disable-bluetooth.nix
-    ../../modules/home-manager/emacs.nix
-    ../../modules/home-manager/fish.nix
-    ../../modules/home-manager/hide-applications.nix
-    ../../modules/home-manager/idea.nix
-    ../../modules/home-manager/nixos.nix
-    ../../modules/home-manager/non-nixos.nix
-    ../../modules/home-manager/vscode-profiles.nix
-  ];
-
   modules = {
     hideApplications = {
       enable = true;

@@ -67,6 +67,7 @@
             useGlobalPkgs = true;
             useUserPackages = false;
             extraSpecialArgs = { inherit inputs nixpkgs vars sources; };
+            sharedModules = attrsToValues self.homeManagerModules;
           };
         }
         (./hosts + "/${name}" + /configuration.nix)
@@ -99,7 +100,7 @@
             };
           }
           (./users + "/${name}" + /home.nix)
-        ];
+        ] ++ attrsToValues self.homeManagerModules;
       };
 
       pkgs = mkPkgs vars.currentSystem;
@@ -113,7 +114,7 @@
         "xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
       };
 
-      homeConfigurations = {
+      homeManagerConfigurations = {
         "markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
         "markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
       };
@@ -121,12 +122,12 @@
       packages = {
         aarch64-linux = {
           # home-manager
-          "markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
+          "markus@chromeos" = self.homeManagerConfigurations."markus@chromeos".activationPackage;
         };
 
         x86_64-linux = {
           # home-manager
-          "markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
+          "markus@ubuntu" = self.homeManagerConfigurations."markus@ubuntu".activationPackage;
           # Docker images
           docker-images = {
             docker = setUpDocker "docker" "x86_64-linux";
@@ -185,6 +186,23 @@
         waydroid = import ./modules/nixos/waydroid.nix;
         wayland = import ./modules/nixos/wayland.nix;
         x11 = import ./modules/nixos/x11.nix;
+      };
+
+      homeManagerModules = {
+        bash = import ./modules/home-manager/bash.nix;
+        borgBackup = import ./modules/home-manager/borg-backup.nix;
+        chromeos = import ./modules/home-manager/chromeos.nix;
+        conky = import ./modules/home-manager/conky.nix;
+        dconf = import ./modules/home-manager/dconf.nix;
+        devShells = import ./modules/home-manager/dev-shells.nix;
+        disableBluetooth = import ./modules/home-manager/disable-bluetooth.nix;
+        emacs = import ./modules/home-manager/emacs.nix;
+        fish = import ./modules/home-manager/fish.nix;
+        hideApplications = import ./modules/home-manager/hide-applications.nix;
+        idea = import ./modules/home-manager/idea.nix;
+        nixos = import ./modules/home-manager/nixos.nix;
+        nonNixos = import ./modules/home-manager/non-nixos.nix;
+        vscodeProfiles = import ./modules/home-manager/vscode-profiles.nix;
       };
 
       overlays = {
