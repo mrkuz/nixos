@@ -22,8 +22,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.steam.enable = true;
-
     services.xserver.desktopManager.session = [{
       name = "Steam";
       start = ''
@@ -32,5 +30,7 @@ in
         waitPID=$!
       '';
     }];
+
+    programs.steam.enable = true;
   };
 }

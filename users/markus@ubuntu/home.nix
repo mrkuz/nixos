@@ -9,7 +9,6 @@ in
   ];
 
   modules = {
-    chromium.enable = true;
     dconf = {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
@@ -24,6 +23,14 @@ in
     gitAndTools.gitFull
     htop
   ];
+
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      { id = "gphhapmejobijbbhgpjhcjognlahblep"; } # GNOME Shell integration
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+    ];
+  };
 
   # Gnome extensions
   xdg.dataFile."gnome-shell/extensions/dynamic-panel-transparency@rockon999.github.io".source = (pkgs.callPackage ../../pkgs/desktops/gnome/extensions/dynamic-panel-transparency { }) + "/share/gnome-shell/extensions/dynamic-panel-transparency@rockon999.github.io";

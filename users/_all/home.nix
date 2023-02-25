@@ -8,7 +8,6 @@ in
     ../../modules/home-manager/bash.nix
     ../../modules/home-manager/borg-backup.nix
     ../../modules/home-manager/chromeos.nix
-    ../../modules/home-manager/chromium.nix
     ../../modules/home-manager/conky.nix
     ../../modules/home-manager/dconf.nix
     ../../modules/home-manager/dev-shells.nix

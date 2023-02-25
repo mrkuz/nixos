@@ -111,7 +111,6 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `bash` - Configures [Bash](https://www.gnu.org/software/bash/) shell
 - `borg-backup` - Adds job which runs [BorgBackup](https://www.borgbackup.org/)/[borgmatic](https://torsion.org/borgmatic/)
 - `chromeos` - Use if [ChromeOS](https://www.google.com/chromebook/chrome-os/)
-- `chromium` - Configures [Chromium](https://www.chromium.org/) web browser and extensions
 - `conky` - Configures [conky](https://github.com/brndnmtthws/conky)
 - `dconf` - Loads [dconf](https://wiki.gnome.org/Projects/dconf) configuration from file
 - `devShells` - Adds custom development shells
@@ -646,9 +645,10 @@ nix develop
 10. Virtualization
 11. Environment
 12. Activation
-13. Packages
-14. Fonts
-15. Users
+13. Programs
+14. Packages
+15. Fonts
+16. Users
 
 ## NixOS modules
 
@@ -659,6 +659,7 @@ Same as hosts
 1. Packages
 2. Services
 3. Activation
+4. Programs
 
 ## Users
 
@@ -667,4 +668,5 @@ Same as hosts
 3. Files
 4. Services
 5. Activation
-6. Packages
+6. Programs
+7. Packages

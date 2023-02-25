@@ -12,7 +12,6 @@ in
 
   modules = {
     borgBackup.enable = true;
-    chromium.enable = true;
     dconf = {
       enable = true;
       iniFile = ../markus/files/dconf.ini;
@@ -65,6 +64,18 @@ in
       # Clone repositories
       [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")
     '';
+
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      { id = "gphhapmejobijbbhgpjhcjognlahblep"; } # GNOME Shell integration
+      { id = "chklaanhfefbnpoihckbnefhakgolnmc"; } # JSONView
+      { id = "jnihajbhpnppcggbcgedagnkighmdlei"; } # LiveReload
+      { id = "nlbjncdgjeocebhnmkbbbdekmmmcbfjd"; } # RSS Subscription extension
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+      { id = "hfjbmagddngcpeloejdejnfgbamkjaeg"; } # Vimium C
+    ];
+  };
 
   home.packages = with pkgs; [
     audacity
