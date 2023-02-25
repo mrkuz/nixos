@@ -614,7 +614,7 @@ nix develop
 # Appendix D: Build and run Docker image
 
   ```shell
-  nix build .#docker
+  nix build .#docker-images.docker
   docker import result/tarball/nixos-system-x86_64-linux.tar.xz nixos
   docker run --rm -t --name nixos --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro nixos /init
 

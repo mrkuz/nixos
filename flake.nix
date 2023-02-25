@@ -31,6 +31,7 @@
   outputs = { self, nixpkgs, nixos-generators, ... } @ inputs:
     let
       vars = {
+        currentSystem = "x86_64-linux";
         stateVersion = "22.11";
       };
 
@@ -44,6 +45,7 @@
           inputs.nix-alien.overlay
           inputs.emacs-overlay.overlay
           # inputs.nixpkgs-wayland.overlay
+          (_: super: self.packages."${system}")
         ] ++ attrsToValues self.overlays;
       };
 
@@ -96,6 +98,8 @@
           (./users + "/${name}" + /home.nix)
         ];
       };
+
+      pkgs = mkPkgs vars.currentSystem;
     in
     {
       nixosConfigurations = {
@@ -118,9 +122,20 @@
         x86_64-linux = {
           # home-manager
           "markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
-          # docker
-          "docker" = setUpDocker "docker" "x86_64-linux";
-          "docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
+          # Docker images
+          docker-images = {
+            docker = setUpDocker "docker" "x86_64-linux";
+            docker-desktop = setUpDocker "docker-desktop" "x86_64-linux";
+          };
+          # GNOME extensions
+          gnome-shell-extensions = {
+            always-indicator = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/always-indicator { });
+            dynamic-panel-transparency = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency { });
+            instant-workspace-switcher = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/instant-workspace-switcher { });
+            just-perfection = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/just-perfection { });
+            quick-settings-tweaks = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/quick-settings-tweaks { });
+            workspaces-bar = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/workspaces-bar { });
+          };
         };
       };
 
