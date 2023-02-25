@@ -1,8 +1,5 @@
-{ stdenv, ... }:
+{ stdenv, sources, ... }:
 
-let
-  sources = import ../../../../../nix/sources.nix;
-in
 stdenv.mkDerivation rec {
   name = "dynamic-panel-transparency";
   src = sources."gse:dynamic-panel-transparency";

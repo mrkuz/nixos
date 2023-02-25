@@ -1,8 +1,5 @@
-{ stdenv, pkgs, ... }:
+{ stdenv, pkgs, sources, ... }:
 
-let
-  sources = import ../../../../../nix/sources.nix;
-in
 stdenv.mkDerivation rec {
   name = "quick-settings-tweaks";
   src = sources."gse:quick-settings-tweaks";

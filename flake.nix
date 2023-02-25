@@ -103,6 +103,8 @@
       };
 
       pkgs = mkPkgs vars.currentSystem;
+      callPkg = package:
+        pkgs.callPackage package { inherit sources; };
     in
     {
       nixosConfigurations = {
@@ -132,18 +134,18 @@
           };
           # GNOME extensions
           gnome-shell-extensions = {
-            always-indicator = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/always-indicator { });
-            dynamic-panel-transparency = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency { });
-            instant-workspace-switcher = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/instant-workspace-switcher { });
-            just-perfection = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/just-perfection { });
-            quick-settings-tweaks = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/quick-settings-tweaks { });
-            workspaces-bar = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/workspaces-bar { });
+            always-indicator = (callPkg ./pkgs/desktops/gnome/extensions/always-indicator);
+            dynamic-panel-transparency = (callPkg ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency);
+            instant-workspace-switcher = (callPkg ./pkgs/desktops/gnome/extensions/instant-workspace-switcher);
+            just-perfection = (callPkg ./pkgs/desktops/gnome/extensions/just-perfection);
+            quick-settings-tweaks = (callPkg ./pkgs/desktops/gnome/extensions/quick-settings-tweaks);
+            workspaces-bar = (callPkg ./pkgs/desktops/gnome/extensions/workspaces-bar);
           };
           # IDEA plugins
           idea-plugins = {
-            checkstyle-idea = (pkgs.callPackage ./pkgs/misc/idea/plugins/checkstyle-idea { });
-            kotest = (pkgs.callPackage ./pkgs/misc/idea/plugins/kotest { });
-            mybatisx = (pkgs.callPackage ./pkgs/misc/idea/plugins/mybatisx { });
+            checkstyle-idea = (callPkg ./pkgs/misc/idea/plugins/checkstyle-idea);
+            kotest = (callPkg ./pkgs/misc/idea/plugins/kotest);
+            mybatisx = (callPkg ./pkgs/misc/idea/plugins/mybatisx);
           };
           # Helper functions
           buildFhsShell = spec: pkgs.callPackage ./pkgs/shell/build-fhs-shell.nix spec;

@@ -1,8 +1,5 @@
-{ stdenv, pkgs, ... }:
+{ stdenv, pkgs, sources, ... }:
 
-let
-  sources = import ../../../../../nix/sources.nix;
-in
 stdenv.mkDerivation rec {
   name = "checkstyle-idea";
   src = sources."idea:checkstyle-idea";

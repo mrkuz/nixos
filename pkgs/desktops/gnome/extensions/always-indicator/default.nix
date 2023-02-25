@@ -1,8 +1,5 @@
-{ stdenv, ... }:
+{ stdenv, sources, ... }:
 
-let
-  sources = import ../../../../../nix/sources.nix;
-in
 stdenv.mkDerivation rec {
   name = "always-indicator";
   src = sources."gse:always-indicator";
