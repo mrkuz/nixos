@@ -50,6 +50,10 @@
         ] ++ attrsToValues self.overlays;
       };
 
+      pkgs = mkPkgs vars.currentSystem;
+      callPkg = package:
+        pkgs.callPackage package { inherit sources; };
+
       mkNixOSModules = name: system: [
         {
           nixpkgs.pkgs = mkPkgs system;
@@ -102,10 +106,6 @@
           (./users + "/${name}" + /home.nix)
         ] ++ attrsToValues self.homeManagerModules;
       };
-
-      pkgs = mkPkgs vars.currentSystem;
-      callPkg = package:
-        pkgs.callPackage package { inherit sources; };
     in
     {
       nixosConfigurations = {

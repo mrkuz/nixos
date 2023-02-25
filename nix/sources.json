@@ -369,11 +369,11 @@
     "vscode:volar": {
         "name": "volar",
         "publisher": "vue",
-        "sha256": "1v6h4dhd26pyz6k28hzk7pa2v7xfw13qd4a5jhdbkkaqa4yyafv9",
+        "sha256": "0nmm0frqik9a69nz6n0n681s84k7k7qy27bs5bb1hn4ikrmyzmwq",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/volar/1.1.7/vspackage?targetPlatform=linux-x64",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/volar/1.2.0/vspackage?targetPlatform=linux-x64",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "1.1.7"
+        "version": "1.2.0"
     },
     "vscode:vscode-boot-dev-pack": {
         "name": "vscode-boot-dev-pack",
@@ -558,11 +558,11 @@
     "vscode:vscode-typescript-vue-plugin": {
         "name": "vscode-typescript-vue-plugin",
         "publisher": "vue",
-        "sha256": "01nqx32692vszhajfznbc1l37avj5p6yd98a9lgbdsl3iw5y3p0g",
+        "sha256": "0rrwihybcvw366y2ml4wl7zh8820qijcppmp10g5bgi7nckp8ib2",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/vscode-typescript-vue-plugin/1.1.5/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/vscode-typescript-vue-plugin/1.2.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.1.5"
+        "version": "1.2.0"
     },
     "vscode:vscode-xml": {
         "name": "vscode-xml",
