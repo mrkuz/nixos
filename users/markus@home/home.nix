@@ -19,14 +19,14 @@ in
     devShells = {
       enable = true;
       shells = [
-        (import ../../modules/home-manager/shells/android.nix)
-        (import ../../modules/home-manager/shells/build.nix)
-        (import ../../modules/home-manager/shells/devops.nix)
-        (import ../../modules/home-manager/shells/fhs.nix)
-        (import ../../modules/home-manager/shells/graalvm.nix)
-        (import ../../modules/home-manager/shells/java.nix)
-        (import ../../modules/home-manager/shells/sdkman.nix)
-        (import ../../modules/home-manager/shells/web.nix)
+        (import ./dev-shells/android.nix)
+        (import ./dev-shells/build.nix)
+        (import ./dev-shells/devops.nix)
+        (import ./dev-shells/fhs.nix)
+        (import ./dev-shells/graalvm.nix)
+        (import ./dev-shells/java.nix)
+        (import ./dev-shells/sdkman.nix)
+        (import ./dev-shells/web.nix)
       ];
     };
     disableBluetooth.enable = true;
@@ -42,11 +42,11 @@ in
     vscodeProfiles = {
       enable = true;
       profiles = [
-        (import ../../modules/home-manager/vscode-profiles/devops.nix)
-        (import ../../modules/home-manager/vscode-profiles/java.nix)
-        (import ../../modules/home-manager/vscode-profiles/nix.nix)
-        (import ../../modules/home-manager/vscode-profiles/python.nix)
-        (import ../../modules/home-manager/vscode-profiles/web.nix)
+        (import ./vscode-profiles/devops.nix)
+        (import ./vscode-profiles/java.nix)
+        (import ./vscode-profiles/nix.nix)
+        (import ./vscode-profiles/python.nix)
+        (import ./vscode-profiles/web.nix)
       ];
     };
   };
