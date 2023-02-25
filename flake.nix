@@ -104,16 +104,25 @@
         "xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
       };
 
-      defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nix;
+      homeConfigurations = {
+        "markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
+        "markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
+      };
 
-      homeConfigurations."markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
-      packages.x86_64-linux."markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
+      packages = {
+        aarch64-linux = {
+          # home-manager
+          "markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
+        };
 
-      homeConfigurations."markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
-      packages.aarch64-linux."markus@chromeos" = self.homeConfigurations."markus@chromeos".activationPackage;
-
-      packages.x86_64-linux."docker" = setUpDocker "docker" "x86_64-linux";
-      packages.x86_64-linux."docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
+        x86_64-linux = {
+          # home-manager
+          "markus@ubuntu" = self.homeConfigurations."markus@ubuntu".activationPackage;
+          # docker
+          "docker" = setUpDocker "docker" "x86_64-linux";
+          "docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
+        };
+      };
 
       nixosModules = {
         android = import ./modules/nixos/android.nix;
@@ -154,7 +163,5 @@
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
       };
-
-      # packages.x86_64-linux.? = ((mkPkgs "x86_64-linux").callPackage pkgs/? { });
     };
 }
