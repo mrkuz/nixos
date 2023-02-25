@@ -34,6 +34,9 @@
         stateVersion = "22.11";
       };
 
+      attrsToValues = attrs:
+        nixpkgs.lib.attrsets.mapAttrsToList (name: value: value) attrs;
+
       mkPkgs = system: import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -41,11 +44,7 @@
           inputs.nix-alien.overlay
           inputs.emacs-overlay.overlay
           # inputs.nixpkgs-wayland.overlay
-          (import ./overlays/applications/networking/browsers/chromium)
-          (import ./overlays/tools/package-management/nix)
-          (import ./overlays/desktops/gnome/core/gnome-terminal)
-          (import ./overlays/desktops/gnome/core/nautilus)
-        ];
+        ] ++ attrsToValues self.overlays;
       };
 
       mkNixOSModules = name: system: [
@@ -67,7 +66,7 @@
           };
         }
         (./hosts + "/${name}" + /configuration.nix)
-      ] ++ nixpkgs.lib.attrsets.mapAttrsToList (name: value: value) self.nixosModules;
+      ] ++ attrsToValues self.nixosModules;
 
       setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
         inherit system;
@@ -99,9 +98,11 @@
       };
     in
     {
-      nixosConfigurations."virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
-      nixosConfigurations."virtualbox-dual" = setUpNixOS "virtualbox-dual" "x86_64-linux";
-      nixosConfigurations."xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
+      nixosConfigurations = {
+        "virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
+        "virtualbox-dual" = setUpNixOS "virtualbox-dual" "x86_64-linux";
+        "xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
+      };
 
       defaultPackage.x86_64-linux = (mkPkgs "x86_64-linux").nix;
 
@@ -114,36 +115,45 @@
       packages.x86_64-linux."docker" = setUpDocker "docker" "x86_64-linux";
       packages.x86_64-linux."docker-desktop" = setUpDocker "docker-desktop" "x86_64-linux";
 
-      nixosModules.android = import ./modules/nixos/android.nix;
-      nixosModules.avahi = import ./modules/nixos/avahi.nix;
-      nixosModules.base-ackages = import ./modules/nixos/base-packages.nix;
-      nixosModules.btrfs = import ./modules/nixos/btrfs.nix;
-      nixosModules.command-not-found = import ./modules/nixos/command-not-found.nix;
-      nixosModules.compatibility = import ./modules/nixos/compatibility.nix;
-      nixosModules.desktop = import ./modules/nixos/desktop.nix;
-      nixosModules.docker = import ./modules/nixos/docker.nix;
-      nixosModules.ecryptfs = import ./modules/nixos/ecryptfs.nix;
-      nixosModules.fonts = import ./modules/nixos/fonts.nix;
-      nixosModules.gnome = import ./modules/nixos/gnome.nix;
-      nixosModules.grub-efi = import ./modules/nixos/grub-efi.nix;
-      nixosModules.kde = import ./modules/nixos/kde.nix;
-      nixosModules.kodi = import ./modules/nixos/kodi.nix;
-      nixosModules.kvm = import ./modules/nixos/kvm.nix;
-      nixosModules.libreoffice = import ./modules/nixos/libreoffice.nix;
-      nixosModules.nix = import ./modules/nixos/nix.nix;
-      nixosModules.nvidia = import ./modules/nixos/nvidia.nix;
-      nixosModules.opengl = import ./modules/nixos/opengl.nix;
-      nixosModules.pipewire = import ./modules/nixos/pipewire.nix;
-      nixosModules.resolved = import ./modules/nixos/resolved.nix;
-      nixosModules.snapper = import ./modules/nixos/snapper.nix;
-      nixosModules.sshd = import ./modules/nixos/sshd.nix;
-      nixosModules.steam = import ./modules/nixos/steam.nix;
-      nixosModules.sway = import ./modules/nixos/sway.nix;
-      nixosModules.systemd-boot = import ./modules/nixos/systemd-boot.nix;
-      nixosModules.virtualbox = import ./modules/nixos/virtualbox.nix;
-      nixosModules.waydroid = import ./modules/nixos/waydroid.nix;
-      nixosModules.wayland = import ./modules/nixos/wayland.nix;
-      nixosModules.x11 = import ./modules/nixos/x11.nix;
+      nixosModules = {
+        android = import ./modules/nixos/android.nix;
+        avahi = import ./modules/nixos/avahi.nix;
+        base-ackages = import ./modules/nixos/base-packages.nix;
+        btrfs = import ./modules/nixos/btrfs.nix;
+        command-not-found = import ./modules/nixos/command-not-found.nix;
+        compatibility = import ./modules/nixos/compatibility.nix;
+        desktop = import ./modules/nixos/desktop.nix;
+        docker = import ./modules/nixos/docker.nix;
+        ecryptfs = import ./modules/nixos/ecryptfs.nix;
+        fonts = import ./modules/nixos/fonts.nix;
+        gnome = import ./modules/nixos/gnome.nix;
+        grub-efi = import ./modules/nixos/grub-efi.nix;
+        kde = import ./modules/nixos/kde.nix;
+        kodi = import ./modules/nixos/kodi.nix;
+        kvm = import ./modules/nixos/kvm.nix;
+        libreoffice = import ./modules/nixos/libreoffice.nix;
+        nix = import ./modules/nixos/nix.nix;
+        nvidia = import ./modules/nixos/nvidia.nix;
+        opengl = import ./modules/nixos/opengl.nix;
+        pipewire = import ./modules/nixos/pipewire.nix;
+        resolved = import ./modules/nixos/resolved.nix;
+        snapper = import ./modules/nixos/snapper.nix;
+        sshd = import ./modules/nixos/sshd.nix;
+        steam = import ./modules/nixos/steam.nix;
+        sway = import ./modules/nixos/sway.nix;
+        systemd-boot = import ./modules/nixos/systemd-boot.nix;
+        virtualbox = import ./modules/nixos/virtualbox.nix;
+        waydroid = import ./modules/nixos/waydroid.nix;
+        wayland = import ./modules/nixos/wayland.nix;
+        x11 = import ./modules/nixos/x11.nix;
+      };
+
+      overlays = {
+        chromium = import ./overlays/applications/networking/browsers/chromium;
+        nix = import ./overlays/tools/package-management/nix;
+        gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
+        nautilus = import ./overlays/desktops/gnome/core/nautilus;
+      };
 
       # packages.x86_64-linux.? = ((mkPkgs "x86_64-linux").callPackage pkgs/? { });
     };
