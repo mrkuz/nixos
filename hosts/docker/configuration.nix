@@ -13,7 +13,7 @@
   boot.specialFileSystems = lib.mkForce { };
 
   boot.enableContainers = false;
-  environment.defaultPackages = [];
+  environment.defaultPackages = [ ];
   system.disableInstallerTools = true;
 
   networking = {

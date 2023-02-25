@@ -26,7 +26,7 @@
       };
 
       jdkPackage = import "${nixpkgs}/pkgs/development/compilers/adoptopenjdk-bin/jdk-linux-base.nix" { inherit sourcePerArch; };
-      jdk = pkgsMusl.callPackage jdkPackage {};
+      jdk = pkgsMusl.callPackage jdkPackage { };
       modules = [
         "java.base"
         "java.desktop"
@@ -65,10 +65,10 @@
         name = "mrkuz/java";
         tag = "latest";
         copyToRoot = pkgs.buildEnv {
-            name = "image-root";
-            paths = [ pkgsMusl.busybox jre ];
-            pathsToLink = [ "/bin" ];
-            # extraOutputsToInstall = [ "bin" ];
+          name = "image-root";
+          paths = [ pkgsMusl.busybox jre ];
+          pathsToLink = [ "/bin" ];
+          # extraOutputsToInstall = [ "bin" ];
         };
         runAsRoot = ''
           install -m 777 -d /tmp
