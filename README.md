@@ -622,7 +622,15 @@ nix develop
   docker exec -ti nixos /run/current-system/sw/bin/bash
   ```
 
-# Appendix E: File structures
+# Appendix E: Naming conventions
+
+- File names: kebab-case
+- Package names: kebab-case
+- Module names: camel-case
+- Module options: camel-case
+- Functions: kebab-case
+
+# Appendix F: File structures
 
 ## Hosts
 

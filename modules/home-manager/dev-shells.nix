@@ -8,9 +8,9 @@ let
     package =
       if spec.fhs
       then
-        pkgs.callPackage ../../pkgs/shell/build-fhs-shell.nix spec
+        pkgs.buildFhsShell spec
       else
-        pkgs.callPackage ../../pkgs/shell/build-shell.nix spec;
+        pkgs.buildShell spec;
   }.package;
 in
 {

@@ -136,22 +136,26 @@
             quick-settings-tweaks = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/quick-settings-tweaks { });
             workspaces-bar = (pkgs.callPackage ./pkgs/desktops/gnome/extensions/workspaces-bar { });
           };
+          # Helper functions
+          buildFhsShell = spec: pkgs.callPackage ./pkgs/shell/build-fhs-shell.nix spec;
+          buildShell = spec: pkgs.callPackage ./pkgs/shell/build-shell.nix spec;
+          buildVscode = profile: pkgs.callPackage ./pkgs/misc/vscode-extensions/build-vscode.nix profile;
         };
       };
 
       nixosModules = {
         android = import ./modules/nixos/android.nix;
         avahi = import ./modules/nixos/avahi.nix;
-        base-ackages = import ./modules/nixos/base-packages.nix;
+        basePackages = import ./modules/nixos/base-packages.nix;
         btrfs = import ./modules/nixos/btrfs.nix;
-        command-not-found = import ./modules/nixos/command-not-found.nix;
+        commandNotFound = import ./modules/nixos/command-not-found.nix;
         compatibility = import ./modules/nixos/compatibility.nix;
         desktop = import ./modules/nixos/desktop.nix;
         docker = import ./modules/nixos/docker.nix;
         ecryptfs = import ./modules/nixos/ecryptfs.nix;
         fonts = import ./modules/nixos/fonts.nix;
         gnome = import ./modules/nixos/gnome.nix;
-        grub-efi = import ./modules/nixos/grub-efi.nix;
+        grubEfi = import ./modules/nixos/grub-efi.nix;
         kde = import ./modules/nixos/kde.nix;
         kodi = import ./modules/nixos/kodi.nix;
         kvm = import ./modules/nixos/kvm.nix;
@@ -165,7 +169,7 @@
         sshd = import ./modules/nixos/sshd.nix;
         steam = import ./modules/nixos/steam.nix;
         sway = import ./modules/nixos/sway.nix;
-        systemd-boot = import ./modules/nixos/systemd-boot.nix;
+        systemdBoot = import ./modules/nixos/systemd-boot.nix;
         virtualbox = import ./modules/nixos/virtualbox.nix;
         waydroid = import ./modules/nixos/waydroid.nix;
         wayland = import ./modules/nixos/wayland.nix;
