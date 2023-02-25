@@ -24,7 +24,7 @@ in
     };
     version = mkOption {
       default = "IdeaIC2022.3";
-      type = types.string;
+      type = types.str;
     };
     plugins = mkOption {
       type = types.listOf types.package;

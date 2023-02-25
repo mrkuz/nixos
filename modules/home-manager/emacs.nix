@@ -3,13 +3,16 @@
 with lib;
 let
   cfg = config.modules.emacs;
-  emacsPkg = pkgs.emacsPgtk;
 in
 {
   options.modules.emacs = {
     enable = mkOption {
       default = false;
       type = types.bool;
+    };
+    package = mkOption {
+      default = pkgs.emacsPgtk;
+      type = types.package;
     };
   };
 
@@ -26,7 +29,7 @@ in
       sqlite
       texlive.combined.scheme-basic
       # (callPackage ../../pkgs/misc/revealjs { })
-    ] ++ [ ((pkgs.emacsPackagesFor emacsPkg).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
+    ] ++ [ ((pkgs.emacsPackagesFor cfg.package).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
 
     systemd.user.services.emacs = {
       Unit = {
@@ -38,7 +41,7 @@ in
 
       Service = {
         Type = "notify";
-        ExecStart = "${pkgs.runtimeShell} -l -c \"${emacsPkg}/bin/emacs --fg-daemon\"";
+        ExecStart = "${pkgs.runtimeShell} -l -c \"${cfg.package}/bin/emacs --fg-daemon\"";
         SuccessExitStatus = 15;
         Restart = "on-failure";
       };
@@ -49,7 +52,7 @@ in
       text = ''
         [Desktop Entry]
         Name=Org-Protocol
-        Exec=${emacsPkg}/bin/emacsclient -a "" -n -c -F '((name . "org-protocol-capture"))' '%u'
+        Exec=${cfg.package}/bin/emacsclient -a "" -n -c -F '((name . "org-protocol-capture"))' '%u'
         NoDisplay=true
         Icon=emacs
         Type=Application
