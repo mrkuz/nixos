@@ -17,6 +17,10 @@
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:ryantm/agenix";
+    };
     dotfiles = {
       # url = "github:mrkuz/dotfiles";
       url = "/home/markus/etc/nixos/repos/dotfiles";
@@ -28,11 +32,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-generators, ... } @ inputs:
+  outputs = { self, nixpkgs, nixos-generators, agenix, ... } @ inputs:
     let
       vars = {
         currentSystem = "x86_64-linux";
         stateVersion = "22.11";
+        ageIdentityFile = "/home/markus/.ssh/id_rsa";
       };
       sources = import ./nix/sources.nix;
 
@@ -64,6 +69,10 @@
           _module.args.systemName = name;
           _module.args.vars = vars;
           _module.args.sources = sources;
+        }
+        agenix.nixosModules.default
+        {
+          age.identityPaths = [ vars.ageIdentityFile ];
         }
         inputs.home-manager.nixosModules.home-manager
         {
@@ -133,6 +142,7 @@
             docker = setUpDocker "docker" "x86_64-linux";
             docker-desktop = setUpDocker "docker-desktop" "x86_64-linux";
           };
+          agenix = agenix.packages.x86_64-linux.default;
           # GNOME extensions
           gnome-shell-extensions = {
             always-indicator = (callPkg ./pkgs/desktops/gnome/extensions/always-indicator);

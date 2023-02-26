@@ -59,6 +59,8 @@
       device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd:1" "noatime" ];
+      # Ensures that SSH private key is available for decryption
+      neededForBoot = true;
     };
     "/data" = {
       device = "/dev/disk/by-uuid/7ff654ca-c480-48aa-ad10-835c44ecb0e5";
@@ -112,6 +114,12 @@
   services.openssh.settings.PasswordAuthentication = false;
   # services.teamviewer.enable = true;
 
+  age.secrets = {
+    markus.file = ./secrets/markus.age;
+    enesa.file = ./secrets/enesa.age;
+    malik.file = ./secrets/malik.age;
+  };
+
   users = {
     groups = {
       markus.gid = 1000;
@@ -125,7 +133,7 @@
         isNormalUser = true;
         group = "markus";
         extraGroups = [ "wheel" "adbusers" "docker" "libvirtd" "lp" "scanner" "vboxusers" ];
-        hashedPassword = credentials."markus@home".hashedPassword;
+        passwordFile = config.age.secrets.markus.path;
         shell = pkgs.fish;
       };
       enesa = {
@@ -134,7 +142,7 @@
         isNormalUser = true;
         group = "enesa";
         extraGroups = [ "lp" "scanner" ];
-        hashedPassword = credentials.enesa.hashedPassword;
+        passwordFile = config.age.secrets.enesa.path;
         shell = pkgs.bash;
       };
       malik = {
@@ -143,7 +151,7 @@
         isNormalUser = true;
         group = "malik";
         extraGroups = [ "lp" "scanner" ];
-        hashedPassword = credentials.malik.hashedPassword;
+        passwordFile = config.age.secrets.malik.path;
         shell = pkgs.bash;
       };
     };

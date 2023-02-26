@@ -90,6 +90,7 @@ in
     '';
 
     environment.systemPackages = with pkgs; [
+      # agenix
       niv
       nix-index
       nix-index-update
