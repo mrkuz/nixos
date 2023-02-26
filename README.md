@@ -141,22 +141,10 @@ Contains a bunch of extra packages.
 
 ## `repos/`
 
-- `credentials` - Local repository with one file `default.nix`, which is used to store the passwords for users. Must be created manually.
-
-  _Example_
-
-  ```nix
-  {
-    user.password = "password";
-    # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'
-  }
-  ```
-
 These repositories are added as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 - `emacs.d` - My Emacs [configuration](https://github.com/mrkuz/emacs.d)
 - `dotfiles` - My [dotfiles](https://github.com/mrkuz/dotfiles)
-
 
 ## `examples/docker/`
 
@@ -274,32 +262,6 @@ nix develop
   }
   ```
 
-- Create credentials repository
-
-  ```shell
-  mkdir repos/credentials
-  cd repos/credentials
-  git config --global user.name "User"
-  git config --global user.email "user@localhost"
-  git init
-  ```
-
-- Create `repos/credentials/default.nix` and set password for the user `user`.
-
-  ```nix
-  {
-    user.password = "...";
-    # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'sha-512'
-  }
-  ```
-
-  ```shell
-  git add default.nix
-  git commit -m "Add credentials"
-  ```
-
-- Update `credentials.url` in `flake.nix`. Must be an absolute path.
-
 - Update inputs
 
   ```shell
@@ -333,21 +295,6 @@ nix develop
   git submodule update
   ```
 
-- Replace `dotfiles.url` and `credentials.url` in `flake.nix` with absolute paths.
-
-  ```nix
-  {
-    dotfiles = {
-      url = "/home/user/etc/nixos/repos/dotfiles";
-      flake = false;
-    };
-    credentials = {
-      url = "/home/user/etc/nixos/repos/credentials";
-      flake = false;
-    };
-  }
-  ```
-
 - Clone nixpkgs (optional)
 
   ```shell
@@ -377,14 +324,6 @@ nix develop
   trusted-users = root user
   ```
 
-- Clone nixpkgs (optional)
-
-  ```shell
-  sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
-  cd /nix/nixpkgs
-  sudo git checkout nixos-unstable
-  ```
-
 - Clone repository
 
   ```shell
@@ -394,6 +333,17 @@ nix develop
   cd nixos
   ```
 
+- Change `dotfiles.url` in `flake.nix` to point to the GitHub repository, not local directory.
+
+  ```nix
+  {
+    dotfiles = {
+      url = "github:mrkuz/dotfiles";
+      flake = false;
+    };
+  }
+  ```
+
 - Initialize submodules
 
   ```shell
@@ -401,31 +351,12 @@ nix develop
   git submodule update
   ```
 
-- Create credentials repository with empty default.nix
+- Clone nixpkgs (optional)
 
   ```shell
-  mkdir repos/credentials
-  cd repos/credentials
-  git init
-  touch default.nix
-  git add default.nix
-  git commit -m "Add credentials"
-  cd ../..
-  ```
-
-- Replace `dotfiles.url` and `credentials.url` in `flake.nix` with absolute paths.
-
-  ```nix
-  {
-    dotfiles = {
-      url = "/home/user/etc/nixos/repos/dotfiles";
-      flake = false;
-    };
-    credentials = {
-      url = "/home/user/etc/nixos/repos/credentials";
-      flake = false;
-    };
-  }
+  sudo git clone https://github.com/NixOS/nixpkgs.git /nix/nixpkgs
+  cd /nix/nixpkgs
+  sudo git checkout nixos-unstable
   ```
 
 - Update inputs and install
@@ -524,32 +455,6 @@ nix develop
   }
   ```
 
-- Create credentials repository
-
-  ```shell
-  mkdir repos/credentials
-  cd repos/credentials
-  git config --global user.name "User"
-  git config --global user.email "user@localhost"
-  git init
-  ```
-
-- Create `repos/credentials/default.nix` and set password for the user `user`.
-
-  ```nix
-  {
-    user.password = "...";
-    # user.hashedPassword = "..."; # Generated with 'mkpasswd -m sha-512'sha-512'
-  }
-  ```
-
-  ```shell
-  git add default.nix
-  git commit -m "Add credentials"
-  ```
-
-- Update `credentials.url` in `flake.nix`. Must be an absolute path.
-
 - Update inputs
 
   ```shell
@@ -581,21 +486,6 @@ nix develop
   ```shell
   git submodule init
   git submodule update
-  ```
-
-- Replace `dotfiles.url` and `credentials.url` in `flake.nix` with absolute paths.
-
-  ```nix
-  {
-    dotfiles = {
-      url = "/home/user/etc/nixos/repos/dotfiles";
-      flake = false;
-    };
-    credentials = {
-      url = "/home/user/etc/nixos/repos/credentials";
-      flake = false;
-    };
-  }
   ```
 
 - Clone nixpkgs (optional)

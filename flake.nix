@@ -26,10 +26,6 @@
       url = "/home/markus/etc/nixos/repos/dotfiles";
       flake = false;
     };
-    credentials = {
-      url = "/home/markus/etc/nixos/repos/credentials";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, nixos-generators, agenix, ... } @ inputs:
@@ -65,7 +61,6 @@
           _module.args.nixpkgs = nixpkgs;
           _module.args.self = self;
           _module.args.inputs = inputs;
-          _module.args.credentials = import inputs.credentials;
           _module.args.systemName = name;
           _module.args.vars = vars;
           _module.args.sources = sources;

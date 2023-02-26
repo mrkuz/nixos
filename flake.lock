@@ -8,30 +8,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1677247280,
-        "narHash": "sha256-sa+8MtoAOSLsWP9vf0qiJUyMovIEYgDzHE8TkoK04Hk=",
+        "lastModified": 1677430498,
+        "narHash": "sha256-/DNOThcCGz21Met/aMhm7NGqughtpxQzrlAqTuq+YZQ=",
         "owner": "ryantm",
         "repo": "agenix",
-        "rev": "833f87c8ff574a29aea3e091045cbaed3cf86bc1",
+        "rev": "9225d5630609dc6c452a0b581d7dba29c2826d90",
         "type": "github"
       },
       "original": {
         "owner": "ryantm",
         "repo": "agenix",
         "type": "github"
-      }
-    },
-    "credentials": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1647884706,
-        "narHash": "sha256-0C3w4L+4whkye3Siq0Xxq3rSChuAzAGe2SovLLbBYG8=",
-        "path": "/home/markus/etc/nixos/repos/credentials",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/markus/etc/nixos/repos/credentials",
-        "type": "path"
       }
     },
     "darwin": {
@@ -75,11 +62,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1677406816,
-        "narHash": "sha256-WvBb+4N+5X/4xDfR7irkKXE8UVG5r+xaA5BhkZIBT7U=",
+        "lastModified": 1677435690,
+        "narHash": "sha256-KxVX8hW0O7AMf6GvcxiAmZRdlzRcahakqdwJR67AcME=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "36750be6b0d855dc190a174a05a951ce26170a9a",
+        "rev": "9f2a5cf6737999431c1d433fd4ed15191d2fa38b",
         "type": "github"
       },
       "original": {
@@ -142,11 +129,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1677400245,
-        "narHash": "sha256-+/oDZltWUhYFYcIRjH0F5lSNWcBj+4o5kzmDSheiLRw=",
+        "lastModified": 1677427651,
+        "narHash": "sha256-0ISGo+uzcDHctXV2DFcy8QCKpkf7SRj9+ICnQwSw8QI=",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "693d76eeb84124cc3110793ff127aeab3832f95c",
+        "rev": "fc3432bac27d0dd3ffd8625d2724c41f86b8ad10",
         "type": "github"
       },
       "original": {
@@ -270,7 +257,6 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "credentials": "credentials",
         "dotfiles": "dotfiles",
         "emacs-overlay": "emacs-overlay",
         "home-manager": "home-manager",
