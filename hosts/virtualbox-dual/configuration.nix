@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, vars, credentials, ... }:
+{ config, pkgs, inputs, vars, ... }:
 
 {
   imports = [
@@ -111,19 +111,19 @@
   };
 
   users = {
-    groups.markus.gid = 1000;
+    groups.user.gid = 1000;
     users = {
-      markus = {
+      user = {
         uid = 1000;
-        description = "Markus";
+        description = "User";
         isNormalUser = true;
-        group = "markus";
+        group = "user";
         extraGroups = [ "wheel" ];
-        password = credentials.markus.password;
+        password = "user";
         shell = pkgs.fish;
       };
     };
   };
 
-  home-manager.users.markus = ../../users/markus/home.nix;
+  home-manager.users.user = ../../users/user/home.nix;
 }

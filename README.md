@@ -68,8 +68,10 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 ## `users/`
 
 - `_all` - Base expression, imported by all other users
+- `user` - Example user configuraton
+- `user@ubuntu` - Specialization for use within Ubuntu
 - `markus` - My base user configuraton
-- `markus@home` - Specialization for home
+- `markus@home` - Specialization for workstation at home
 - ...
 
 ## `modules/`

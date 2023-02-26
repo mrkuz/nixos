@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    ../markus/home.nix
+    ../user/home.nix
   ];
 
   modules = {
@@ -31,6 +31,10 @@ in
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     ];
   };
+
+  systemd.user.tmpfiles.rules = [
+    "L  %h/.emacs.d  -  -  -  -  %h/etc/nixos/repos/emacs.d"
+  ];
 
   # Gnome extensions
   xdg.dataFile."gnome-shell/extensions/dynamic-panel-transparency@rockon999.github.io".source = "${pkgs.gnome-shell-extensions.dynamic-panel-transparency}/share/gnome-shell/extensions/dynamic-panel-transparency@rockon999.github.io";
