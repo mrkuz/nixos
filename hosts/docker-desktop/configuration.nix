@@ -34,4 +34,6 @@
       };
     };
   };
+
+  home-manager.users.user = ../../users/user/home.nix;
 }
