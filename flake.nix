@@ -119,7 +119,7 @@
       };
 
       homeManagerConfigurations = {
-        "markus@ubuntu" = setUpNix "markus@ubuntu" "markus" "x86_64-linux";
+        "user@ubuntu" = setUpNix "user@ubuntu" "markus" "x86_64-linux";
         "markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
       };
 
@@ -131,7 +131,7 @@
 
         x86_64-linux = {
           # home-manager
-          "markus@ubuntu" = self.homeManagerConfigurations."markus@ubuntu".activationPackage;
+          "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Docker images
           docker-images = {
             docker = setUpDocker "docker" "x86_64-linux";
