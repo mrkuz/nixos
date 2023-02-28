@@ -9,20 +9,21 @@
     basePackages.enable = true;
     btrfs.enable = true;
     commandNotFound.enable = true;
-    emacs.enable = true;
     resolved.enable = true;
     sshd.enable = true;
   };
 
-  boot.loader = {
-    efi.canTouchEfiVariables = true;
+  boot = {
     initrd = {
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
       luks.devices.crypt.device = "/dev/sda2";
     };
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 3;
+    loader = {
+      efi.canTouchEfiVariables = true;
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 3;
+      };
     };
   };
 

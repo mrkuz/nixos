@@ -13,22 +13,26 @@
     sshd.enable = true;
   };
 
-  boot.loader = {
-    efi = {
-      efiSysMountPoint = "/boot/efi";
-      canTouchEfiVariables = true;
-    };
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
-      enableCryptodisk = true;
-      extraEntries = ''
-        menuentry "Ubuntu" {
-          set root=(hd0,1)
-          chainloader /EFI/ubuntu/grubx64.efi
-        }
-      '';
+  boot = {
+    loader = {
+      efi = {
+        efiSysMountPoint = "/boot/efi";
+        canTouchEfiVariables = true;
+      };
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        enableCryptodisk = true;
+        extraEntries = ''
+          menuentry "Ubuntu" {
+            set root=(hd0,1)
+            chainloader /EFI/ubuntu/grubx64.efi
+          }
+        '';
+      };
+      systemd-boot.enable = false;
+      timeout = 3;
     };
     initrd = {
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
@@ -41,8 +45,6 @@
       };
       systemd.enable = true;
     };
-    systemd-boot.enable = false;
-    timeout = 3;
   };
 
   fileSystems = {

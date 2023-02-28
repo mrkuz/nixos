@@ -16,8 +16,8 @@ in
     services.openssh = {
       enable = true;
       openFirewall = true;
-      permitRootLogin = "no";
       ports = [ 9999 ];
+      settings.PermitRootLogin = "no";
     };
   };
 }

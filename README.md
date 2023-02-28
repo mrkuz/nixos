@@ -266,7 +266,7 @@ nix develop
 
   ```shell
   export NIX_CONFIG="experimental-features = nix-command flakes"
-  ./update.sh
+  ./scripts/update.sh
   ```
 
 - Install
@@ -306,8 +306,8 @@ nix develop
 - Update and rebuild system
 
   ```shell
-  ./update.sh
-  ./rebuild.sh virtualbox
+  ./scripts/update.sh
+  ./scripts/rebuild.sh virtualbox
   ```
 
 # Appendix B: Example installation on Ubuntu
@@ -363,7 +363,7 @@ nix develop
 
   ```shell
   export NIX_CONFIG="experimental-features = nix-command flakes"
-  ./update.sh
+  ./scripts/update.sh
   nix build .#user@ubuntu
   ./result/activate
   ```
@@ -459,7 +459,7 @@ nix develop
 
   ```shell
   export NIX_CONFIG="experimental-features = nix-command flakes"
-  ./update.sh
+  ./scripts/update.sh
   ```
 
 - Install
@@ -499,8 +499,8 @@ nix develop
 - Update and rebuild system
 
   ```shell
-  ./update.sh
-  ./rebuild.sh virtualbox-dual
+  ./scripts/update.sh
+  ./scripts/rebuild.sh virtualbox-dual
   ```
 
 # Appendix D: Build and run Docker image
