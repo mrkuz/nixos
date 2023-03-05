@@ -76,7 +76,7 @@ in
     '';
     environment.etc."nixos/current".source = self;
     environment.etc."nixos/nixpkgs".source = nixpkgs;
-    environment.etc."nixos/options.json".source = "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
+    environment.etc."nixos/options.json".source = mkIf config.documentation.nixos.enable "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
     environment.etc."nixos/system-packages".text =
       let
         packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
@@ -92,11 +92,11 @@ in
     environment.systemPackages = with pkgs; [
       # agenix
       niv
-      nix-index
-      nix-index-update
       nixos-option
-      nixpkgs-fmt
-      rnix-lsp
     ];
+
+    system.name = systemName;
+    system.stateVersion = vars.stateVersion;
+    system.configurationRevision = self.rev or "dirty";
   };
 }

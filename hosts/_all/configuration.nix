@@ -58,8 +58,4 @@
       };
     };
   };
-
-  system.name = systemName;
-  system.stateVersion = vars.stateVersion;
-  system.configurationRevision = self.rev or "dirty";
 }
