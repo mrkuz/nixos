@@ -24,6 +24,7 @@
   time.timeZone = "Europe/Vienna";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.supportedLocales = [
+    "C.UTF-8/UTF-8"
     "en_US.UTF-8/UTF-8"
     "de_AT.UTF-8/UTF-8"
   ];
@@ -34,6 +35,7 @@
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
+  # systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
   systemd.services.NetworkManager-wait-online.enable = false;
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
@@ -47,6 +49,7 @@
     enable = true;
     doc.enable = false;
     info.enable = false;
+    man.enable = true;
     nixos.enable = true;
   };
 
