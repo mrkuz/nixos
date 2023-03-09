@@ -59,11 +59,22 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `add-idea-plugin.sh` - Add IDEA plugin to `nix/sources.json`
 - `update-idea-plugins.sh` - Updates all plugins to the latest version
 
+## `profiles`/
+
+### `hosts/`
+
+- `default` - Base configuration for a default host
+- `docker` - Base configuration for docker hosts
+- `minimal` - Minimal configuration (without nix support)
+- `minimal-nix` - Minimal coniguration (with nix support)
+
 ## `hosts/`
 
-- `_all` - Base expression, imported by all other hosts
-- `xps15@home` - Specialization of xps15 for home
-- ...
+- `xps15@home` - Configuration for my workstation
+- `dockerized` - Dockerized NixOS example
+- `dockerized-desktop` - Dockerized NixOS with XFCE desktop
+- `virtualbox` - VirtualBox guest example
+- `virtualbox` - VirtualBox dual-boot example
 
 ## `users/`
 
@@ -506,7 +517,7 @@ nix develop
 # Appendix D: Build and run Docker image
 
   ```shell
-  nix build .#docker-images.docker
+  nix build .#dockerized
   docker import result/tarball/nixos-system-x86_64-linux.tar.xz nixos
   docker run --rm -t --privileged --name nixos --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro nixos /init
 

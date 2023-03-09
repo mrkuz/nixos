@@ -116,6 +116,9 @@
         "virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
         "virtualbox-dual" = setUpNixOS "virtualbox-dual" "x86_64-linux";
         "xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
+        # Docker images
+        "dockerized" = setUpNixOS "dockerized" "x86_64-linux";
+        "dockerized-desktop" = setUpNixOS "dockerized-desktop" "x86_64-linux";
       };
 
       homeManagerConfigurations = {
@@ -133,10 +136,9 @@
           # home-manager
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Docker images
-          docker-images = {
-            docker = setUpDocker "docker" "x86_64-linux";
-            docker-desktop = setUpDocker "docker-desktop" "x86_64-linux";
-          };
+          dockerized = setUpDocker "dockerized" "x86_64-linux";
+          dockerized-desktop = setUpDocker "dockerized-desktop" "x86_64-linux";
+          # Packages
           agenix = agenix.packages.x86_64-linux.default;
           # GNOME extensions
           gnome-shell-extensions = {

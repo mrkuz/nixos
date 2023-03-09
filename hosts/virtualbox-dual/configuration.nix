@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../_all/configuration.nix
+    ../../profiles/hosts/default.nix
   ];
 
   modules = {

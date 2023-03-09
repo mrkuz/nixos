@@ -41,12 +41,17 @@ in
           id = "nixpkgs";
           type = "indirect";
         };
-        to = {
+        to = lib.mkForce {
           path = "${nixpkgs}";
           type = "path";
         };
       };
     };
+
+    systemd.tmpfiles.rules = [
+      "d   /root/.nix-defexpr        0755  root  root  -  -"
+      "L+  /root/.nix-defexpr/nixos     -     -        -  -  ${nixpkgs}"
+    ];
 
     # Provide compatibility layer for non-flake utils
     environment.etc."nixos/compat/default.nix".text = ''
@@ -57,6 +62,7 @@ in
       in
       nixpkgs
     '';
+
     environment.etc."nixos/compat/nixos/default.nix".text = ''
       { ... }:
 
@@ -74,9 +80,19 @@ in
       system.name = "${systemName}";
       system.stateVersion = "${vars.stateVersion}";
     '';
+
     environment.etc."nixos/current".source = self;
     environment.etc."nixos/nixpkgs".source = nixpkgs;
-    environment.etc."nixos/options.json".source = mkIf config.documentation.nixos.enable "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
+
+    environment.etc."nixos/options.json".source =
+      if config.documentation.nixos.enable
+      then "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json"
+      else
+        pkgs.writeTextFile {
+          name = "options.json";
+          text = "{}";
+        };
+
     environment.etc."nixos/system-packages".text =
       let
         packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
@@ -90,8 +106,6 @@ in
     '';
 
     environment.systemPackages = with pkgs; [
-      # agenix
-      niv
       nixos-option
     ];
 

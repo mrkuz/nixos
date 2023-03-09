@@ -17,6 +17,7 @@ in
 
     home.packages = with pkgs; [
       # nix
+      niv
       nix-index
       nix-index-update
       nixpkgs-fmt

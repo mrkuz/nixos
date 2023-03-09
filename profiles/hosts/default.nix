@@ -22,16 +22,20 @@
   };
 
   time.timeZone = "Europe/Vienna";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.supportedLocales = [
-    "C.UTF-8/UTF-8"
-    "en_US.UTF-8/UTF-8"
-    "de_AT.UTF-8/UTF-8"
-  ];
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    supportedLocales = [
+      "C.UTF-8/UTF-8"
+      "en_US.UTF-8/UTF-8"
+      "de_AT.UTF-8/UTF-8"
+    ];
+  };
 
-  networking.firewall.enable = true;
-  networking.useDHCP = false;
-  networking.dhcpcd.wait = "background";
+  networking = {
+    firewall.enable = lib.mkDefault true;
+    useDHCP = false;
+    dhcpcd.wait = "background";
+  };
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;

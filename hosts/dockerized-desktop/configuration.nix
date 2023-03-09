@@ -2,8 +2,13 @@
 
 {
   imports = [
-    ../docker/configuration.nix
+    ../../profiles/hosts/docker.nix
   ];
+
+  networking = {
+    nameservers = [ "8.8.8.8" ];
+    useDHCP = false;
+  };
 
   services.xserver = {
     enable = true;
@@ -18,7 +23,6 @@
     defaultWindowManager = "xfce4-session";
   };
 
-  # Override defaults from nixos/modules/profiles/docker-container.nix
   environment.noXlibs = false;
 
   users = {
