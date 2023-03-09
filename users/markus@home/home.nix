@@ -15,14 +15,15 @@ let
 in
 {
   imports = [
-    ../markus/home.nix
+    ../../profiles/users/nixos.nix
+    ../../profiles/users/markus.nix
   ];
 
   modules = {
     borgBackup.enable = true;
     dconf = {
       enable = true;
-      iniFile = ../markus/files/dconf.ini;
+      iniFile = ./files/dconf.ini;
     };
     devShells = {
       enable = true;

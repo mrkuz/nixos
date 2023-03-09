@@ -29,4 +29,7 @@
     mime.enable = lib.mkDefault false;
     sounds.enable = false;
   };
+
+  system.stateVersion = vars.stateVersion;
+  system.configurationRevision = self.rev or "dirty";
 }

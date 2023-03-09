@@ -68,6 +68,12 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `minimal` - Minimal configuration (without nix support)
 - `minimal-nix` - Minimal coniguration (with nix support)
 
+### `users/`
+
+- `markus` - Base configuration for my user
+- `nixos` - Configuration for NixOS users
+- `non-nixos` - Configuration for non-NixOS users
+
 ## `hosts/`
 
 - `xps15@home` - Configuration for my workstation
@@ -78,11 +84,10 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 
 ## `users/`
 
-- `_all` - Base expression, imported by all other users
 - `user` - Example user configuraton
-- `user@ubuntu` - Specialization for use within Ubuntu
-- `markus` - My base user configuraton
-- `markus@home` - Specialization for workstation at home
+- `user@ubuntu` - Example user configuraton for Ubuntu
+- `markus@home` - User for my workstation at home
+- `markus@chromeos` - User for my Chromebook
 - ...
 
 ## `modules/`

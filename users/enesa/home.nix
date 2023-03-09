@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    ../_all/home.nix
+    ../../profiles/users/nixos.nix
   ];
 
   xdg.desktopEntries.idle3 = {

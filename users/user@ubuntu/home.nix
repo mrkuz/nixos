@@ -5,17 +5,18 @@ let
 in
 {
   imports = [
-    ../user/home.nix
+    ../../profiles/users/non-nixos.nix
   ];
 
   modules = {
-    dconf = {
-      enable = true;
-      iniFile = ../markus/files/dconf.ini;
-    };
+    bash.enable = true;
     emacs.enable = true;
-    nixos.enable = lib.mkForce false;
-    nonNixOs.enable = true;
+    fish.enable = true;
+  };
+
+  home.file."tmp/../" = {
+    source = inputs.dotfiles;
+    recursive = true;
   };
 
   home.packages = with pkgs; [

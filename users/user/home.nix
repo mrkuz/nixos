@@ -2,11 +2,10 @@
 
 let
   hm = inputs.home-manager.lib.hm;
-  user = config.home.username;
 in
 {
   imports = [
-    ../_all/home.nix
+    ../../profiles/users/nixos.nix
   ];
 
   modules = {

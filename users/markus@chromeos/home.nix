@@ -5,13 +5,12 @@ let
 in
 {
   imports = [
-    ../markus/home.nix
+    ../../profiles/users/non-nixos.nix
+    ../../profiles/users/markus.nix
   ];
 
   modules = {
     chromeOs.enable = true;
-    nixos.enable = lib.mkForce false;
-    nonNixOs.enable = true;
   };
 
   services.syncthing = {

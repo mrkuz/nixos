@@ -5,10 +5,6 @@ let
   user = config.home.username;
 in
 {
-  imports = [
-    ../_all/home.nix
-  ];
-
   modules = {
     bash.enable = true;
     fish.enable = true;
