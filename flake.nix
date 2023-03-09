@@ -92,6 +92,12 @@
         format = "docker";
       };
 
+      setUpVm = name: system: nixos-generators.nixosGenerate {
+        inherit system;
+        modules = mkNixOSModules name system;
+        format = "vm-nogui";
+      };
+
       setUpNix = name: user: system: inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = mkPkgs system;
         modules = [
@@ -119,6 +125,8 @@
         # Docker images
         "dockerized" = setUpNixOS "dockerized" "x86_64-linux";
         "dockerized-desktop" = setUpNixOS "dockerized-desktop" "x86_64-linux";
+        # VMs
+        "microvm" = setUpNixOS "microvm" "x86_64-linux";
       };
 
       homeManagerConfigurations = {
@@ -138,8 +146,12 @@
           # Docker images
           dockerized = setUpDocker "dockerized" "x86_64-linux";
           dockerized-desktop = setUpDocker "dockerized-desktop" "x86_64-linux";
+          # VMs
+          microvm = setUpVm "microvm" "x86_64-linux";
           # Packages
           agenix = agenix.packages.x86_64-linux.default;
+          # Kernel
+          linux-cros = (callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
           # GNOME extensions
           gnome-shell-extensions = {
             always-indicator = (callPkg ./pkgs/desktops/gnome/extensions/always-indicator);
@@ -218,6 +230,7 @@
         nixos-option = import ./overlays/tools/nix/nixos-option;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
+        module-closure = import ./overlays/build-support/kernel/module-closure;
       };
     };
 }

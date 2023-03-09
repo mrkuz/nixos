@@ -1,4 +1,12 @@
 {
+    "linux-cros": {
+        "sha256": "1fg6bsip64wwz00xmd02y6v0lyj0l49gwa7fjsmhgqix9afjh9bp",
+        "type": "file",
+        "url": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327.tar.gz",
+        "url_template": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/<rev>.tar.gz",
+        "version": "6.1.15",
+        "rev": "e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327"
+    },
     "fish:bass": {
         "branch": "master",
         "description": "Make Bash utilities usable in Fish shell",
@@ -62,7 +70,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "3f4d08d70aad022b231467b71dc495286a06b27b",
+        "rev": "12c3225e3120a63fc3952bd4b302f3d6aec24f96",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
