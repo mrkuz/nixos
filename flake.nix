@@ -230,7 +230,7 @@
         nixos-option = import ./overlays/tools/nix/nixos-option;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
-        module-closure = import ./overlays/build-support/kernel/module-closure;
+        # module-closure = import ./overlays/build-support/kernel/module-closure;
       };
     };
 }

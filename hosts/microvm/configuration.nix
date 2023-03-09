@@ -5,10 +5,18 @@
     ../../profiles/hosts/minimal-nix.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packagesFor pkgs.linux-cros;
+  boot = {
+    kernelPackages = pkgs.linuxKernel.packagesFor pkgs.linux-cros;
+    initrd = {
+      availableKernelModules = lib.mkForce [ ];
+      kernelModules = lib.mkForce [ ];
+    };
+  };
 
-  #virtualisation.useNixStoreImage = true;
-  #virtualisation.writableStore = false;
+  # virtualisation = {
+  #   useNixStoreImage = true;
+  #   writableStore = false;
+  # };
 
   systemd.network = {
     enable = true;
