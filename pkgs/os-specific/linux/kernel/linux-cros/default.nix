@@ -36,6 +36,7 @@ pkgs.linuxKernel.manualConfig rec {
   # - CONFIG_CRYPTO_USER_API_HASH
   # - CONFIG_AUTOFS4_FS
   # - CONFIG_BLK_DEV_INITRD
+  # - CONFIG_VT
   # Disable:
   # - CONFIG_SECURITY_CHROMIUMOS
   configfile = ./config;
