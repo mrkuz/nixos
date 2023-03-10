@@ -39,13 +39,16 @@ in
       # home-manager-package
       htop
       inetutils
+      iftop
       iproute2
       jq
       lm_sensors
+      lsof
       lzip
       mkpasswd
       most
       ncdu
+      ncurses
       nfs-utils
       nmap
       ntfs3g

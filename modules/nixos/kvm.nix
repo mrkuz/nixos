@@ -14,7 +14,9 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      kvm
+      crosvm
+      guestfs-tools
+      qemu_kvm
     ];
   };
 }

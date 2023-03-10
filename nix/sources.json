@@ -1,12 +1,4 @@
 {
-    "linux-cros": {
-        "sha256": "1fg6bsip64wwz00xmd02y6v0lyj0l49gwa7fjsmhgqix9afjh9bp",
-        "type": "file",
-        "url": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327.tar.gz",
-        "url_template": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/<rev>.tar.gz",
-        "version": "6.1.15",
-        "rev": "e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327"
-    },
     "fish:bass": {
         "branch": "master",
         "description": "Make Bash utilities usable in Fish shell",
@@ -70,7 +62,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "12c3225e3120a63fc3952bd4b302f3d6aec24f96",
+        "rev": "1740a7d829cd9edd1aa95cce24b7b2b009b2ec69",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
@@ -130,16 +122,24 @@
         "version": "1.5.5",
         "version_code": "236224"
     },
+    "linux-cros": {
+        "rev": "e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327",
+        "sha256": "157x267j73f3h8map36pxgv5jnjb89h3qc5qa37r5vcsjrvabi06",
+        "type": "file",
+        "url": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327.tar.gz",
+        "url_template": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/<rev>.tar.gz",
+        "version": "6.1.15"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "689d0e5539eddd0b0f566aee7bb18629eee7df74",
-        "sha256": "1rld3lk42l6b01f2gcrhq8qm9vry1awmfl29zmpiqda9dy89vbx0",
+        "rev": "320689d737d2c3dc325af1e5942ade5443e3206a",
+        "sha256": "1x0qbqgg83wy06lg28lwihkj6cw99lkm1rvdaj818fybfi8p5y55",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/689d0e5539eddd0b0f566aee7bb18629eee7df74.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/320689d737d2c3dc325af1e5942ade5443e3206a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "revealjs": {

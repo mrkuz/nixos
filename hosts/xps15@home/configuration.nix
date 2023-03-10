@@ -15,6 +15,7 @@
     docker.enable = true;
     fonts.enable = true;
     gnome.enable = true;
+    kvm.enable = true;
     libreoffice.enable = true;
     nvidia.enable = true;
     opengl.enable = true;
