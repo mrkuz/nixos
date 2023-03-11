@@ -66,6 +66,7 @@ in
       ripgrep
       rsync
       smartmontools
+      socat
       strace
       # tldr
       tmux
