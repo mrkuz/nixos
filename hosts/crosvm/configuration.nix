@@ -22,6 +22,8 @@
   environment.systemPackages = with pkgs; [
     sommelier
     weston
+    xorg.xeyes
+    xwayland
   ];
 
   users = {

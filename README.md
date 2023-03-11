@@ -548,6 +548,7 @@ nix develop
 
   # Inside VM
   sommelier weston-terminal
+  sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
   ```
 
 # Appendix F: Naming conventions

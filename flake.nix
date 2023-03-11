@@ -163,7 +163,11 @@
               extraModules = [
                 (./hosts + "/${name}" + /configuration.nix)
                 {
-                  boot.loader.grub.enable = false;
+                  boot = {
+                    initrd.enable = false;
+                    kernel.enable = false;
+                    loader.grub.enable = false;
+                  };
                 }
               ];
             };
