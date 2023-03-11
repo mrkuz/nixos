@@ -18,11 +18,11 @@ let
   };
 in
 pkgs.linuxKernel.manualConfig rec {
-  version = source.version;
+  version = "${source.version}-cros";
   # modDirVersion needs to be x.y.z, will automatically add .0 if needed
-  modDirVersion = lib.versions.pad 3 version;
+  modDirVersion = lib.versions.pad 3 source.version;
   # branchVersion needs to be x.y
-  extraMeta.branch = lib.versions.majorMinor version;
+  extraMeta.branch = lib.versions.majorMinor source.version;
 
   src = source;
 

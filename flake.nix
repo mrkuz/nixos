@@ -55,7 +55,9 @@
       callPkg = package:
         pkgs.callPackage package { inherit sources; };
 
-      mkNixOSModules = name: system: [
+      mkImage = import "${nixpkgs}/nixos/lib/make-disk-image.nix";
+
+      mkNixOSModules = { name, system, extraModules ? [ ] }: [
         {
           nixpkgs.pkgs = mkPkgs system;
           _module.args.nixpkgs = nixpkgs;
@@ -78,23 +80,31 @@
             sharedModules = attrsToValues self.homeManagerModules;
           };
         }
-        (./hosts + "/${name}" + /configuration.nix)
-      ] ++ attrsToValues self.nixosModules;
+      ] ++ attrsToValues self.nixosModules ++ extraModules;
 
       setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = mkNixOSModules name system;
+        modules = mkNixOSModules {
+          inherit name system;
+          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
+        };
       };
 
       setUpDocker = name: system: nixos-generators.nixosGenerate {
         inherit system;
-        modules = mkNixOSModules name system;
+        modules = mkNixOSModules {
+          inherit name system;
+          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
+        };
         format = "docker";
       };
 
       setUpVm = name: system: nixos-generators.nixosGenerate {
         inherit system;
-        modules = mkNixOSModules name system;
+        modules = mkNixOSModules {
+          inherit name system;
+          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
+        };
         format = "vm-nogui";
       };
 
@@ -116,6 +126,62 @@
           (./users + "/${name}" + /home.nix)
         ] ++ attrsToValues self.homeManagerModules;
       };
+
+      setUpKernelInitrd = name: system:
+        let
+          host = setUpNixOS name system;
+        in
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = mkNixOSModules {
+            inherit name system;
+            extraModules = [
+              {
+                boot = {
+                  loader.grub.enable = false;
+                  kernelPackages = host.config.boot.kernelPackages;
+                  initrd = {
+                    availableKernelModules = nixpkgs.lib.mkForce host.config.boot.initrd.availableKernelModules;
+                    kernelModules = nixpkgs.lib.mkForce host.config.boot.initrd.kernelModules;
+                  };
+                };
+                fileSystems = host.config.fileSystems;
+                system.stateVersion = vars.stateVersion;
+              }
+            ];
+          };
+        };
+
+      setUpDiskImage = name: system:
+        let
+          host = nixpkgs.lib.nixosSystem {
+            inherit system;
+            modules = mkNixOSModules {
+              inherit name system;
+              extraModules = [
+                (./hosts + "/${name}" + /configuration.nix)
+                {
+                  boot.loader.grub.enable = false;
+                }
+              ];
+            };
+          };
+        in
+        mkImage rec {
+          pkgs = mkPkgs system;
+          lib = pkgs.lib;
+          config = host.config;
+          installBootLoader = false;
+          copyChannel = false;
+          additionalSpace = "128M";
+          format = "qcow2";
+          contents = [
+            {
+              source = config.system.build.toplevel + "/init";
+              target = "/sbin/init";
+            }
+          ];
+        };
     in
     {
       nixosConfigurations = {
@@ -150,8 +216,11 @@
           microvm = setUpVm "microvm" "x86_64-linux";
           # Packages
           agenix = agenix.packages.x86_64-linux.default;
-          # Kernel
+          # Kernels
           linux-cros = (callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
+          # crosvm
+          crosvm-boot = (setUpKernelInitrd "crosvm" "x86_64-linux").config.system.build.toplevel;
+          crosvm-image = setUpDiskImage "crosvm" "x86_64-linux";
           # GNOME extensions
           gnome-shell-extensions = {
             always-indicator = (callPkg ./pkgs/desktops/gnome/extensions/always-indicator);

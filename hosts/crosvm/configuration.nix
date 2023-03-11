@@ -13,18 +13,16 @@
     };
   };
 
-  systemd.network = {
-    enable = true;
-    networks = {
-      "01-nat" = {
-        matchConfig = {
-          Name = "eth0";
-        };
-        DHCP = "yes";
-        dns = [ "8.8.8.8" ];
-      };
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-label/nixos";
+    fsType = "ext4";
   };
+
+  environment.noXlibs = false;
+  environment.systemPackages = with pkgs; [
+    sommelier
+    weston
+  ];
 
   users = {
     mutableUsers = false;

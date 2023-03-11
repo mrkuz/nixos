@@ -530,7 +530,27 @@ nix develop
   docker exec -ti nixos /run/current-system/sw/bin/bash
   ```
 
-# Appendix E: Naming conventions
+# Appendix E: Build and run crosvm image
+
+  ```shell
+  nix build .#crosvm-image
+  cp result/nixos.qcow2 .
+  chmod 644 nixos.qcow2
+  nix build .#crosvm-boot
+
+  crosvm run \
+    --disable-sandbox \
+    --wayland-sock /run/user/1000/wayland-0 \
+    --rwdisk nixos.qcow2 \
+    --initrd result/initrd \
+    -p "init=/sbin/init" \
+    result/kernel
+
+  # Inside VM
+  sommelier weston-terminal
+  ```
+
+# Appendix F: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -538,7 +558,7 @@ nix develop
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix F: File structures
+# Appendix G: File structures
 
 ## Hosts
 
