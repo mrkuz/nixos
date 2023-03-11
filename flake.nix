@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-generators, agenix, ... } @ inputs:
+  outputs = { self, nixpkgs, ... } @ inputs:
     let
       vars = {
         currentSystem = "x86_64-linux";
@@ -57,6 +57,8 @@
 
       mkImage = import "${nixpkgs}/nixos/lib/make-disk-image.nix";
 
+      nixos-generators = inputs.nixos-generators;
+
       mkNixOSModules = { name, system, extraModules ? [ ] }: [
         {
           nixpkgs.pkgs = mkPkgs system;
@@ -67,7 +69,7 @@
           _module.args.vars = vars;
           _module.args.sources = sources;
         }
-        agenix.nixosModules.default
+        inputs.agenix.nixosModules.default
         {
           age.identityPaths = [ vars.ageIdentityFile ];
         }
@@ -215,7 +217,7 @@
           # VMs
           microvm = setUpVm "microvm" "x86_64-linux";
           # Packages
-          agenix = agenix.packages.x86_64-linux.default;
+          agenix = inputs.agenix.packages.x86_64-linux.default;
           # Kernels
           linux-cros = (callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
           # crosvm
@@ -299,7 +301,6 @@
         nixos-option = import ./overlays/tools/nix/nixos-option;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
-        # module-closure = import ./overlays/build-support/kernel/module-closure;
       };
     };
 }
