@@ -23,6 +23,11 @@
     resolved.enable = true;
     snapper.enable = true;
     systemdBoot.enable = true;
+    tap = {
+      enable = true;
+      owner = "markus";
+      externalInterface = "wlp2s0";
+    };
     virtualbox.enable = true;
     wayland.enable = true;
     x11.enable = true;

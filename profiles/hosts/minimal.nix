@@ -7,6 +7,10 @@
   systemd.services.nix-daemon.enable = lib.mkDefault false;
   systemd.sockets.nix-daemon.enable = lib.mkDefault false;
 
+  # Speed up boot
+  systemd.services.systemd-udev-settle.enable = false;
+  systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
+
   services.logrotate.enable = false;
 
   environment.defaultPackages = [ ];

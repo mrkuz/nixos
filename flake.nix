@@ -276,6 +276,7 @@
         steam = import ./modules/nixos/steam.nix;
         sway = import ./modules/nixos/sway.nix;
         systemdBoot = import ./modules/nixos/systemd-boot.nix;
+        tap = import ./modules/nixos/tap.nix;
         virtualbox = import ./modules/nixos/virtualbox.nix;
         waydroid = import ./modules/nixos/waydroid.nix;
         wayland = import ./modules/nixos/wayland.nix;

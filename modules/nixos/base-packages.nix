@@ -72,6 +72,7 @@ in
       tmux
       trashy
       tree
+      tunctl
       unrar
       unzip
       vim

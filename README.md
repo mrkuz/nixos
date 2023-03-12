@@ -119,6 +119,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `steam` - Configures [Steam](https://store.steampowered.com/)
 - `sway` - Configures [sway](https://github.com/swaywm/sway) window manager
 - `systemd-boot` - Configures [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
+- `tap` - Configures TAP network device
 - `virtualbox` - Adds [VirutalBox](https://www.virtualbox.org/) and utilities
 - `waydroid` - Adds [Waydroid](hhttps://waydro.id/)
 - `wayland` - Adds [Wayland](https://wayland.freedesktop.org/) utilities
@@ -537,18 +538,38 @@ nix develop
   cp result/nixos.qcow2 .
   chmod 644 nixos.qcow2
   nix build .#crosvm-boot
+  ```
 
+  Run with crosvm:
+
+  ```
   crosvm run \
     --disable-sandbox \
     --wayland-sock /run/user/1000/wayland-0 \
     --rwdisk nixos.qcow2 \
     --initrd result/initrd \
+    --tap-name=tap0 \
     -p "init=/sbin/init" \
     result/kernel
 
   # Inside VM
   sommelier weston-terminal
   sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
+  ```
+
+  Or run with qemu-kvm:
+
+  ```
+  qemu-kvm -M microvm \
+     -enable-kvm -cpu host -m 512m -smp 2 \
+     -initrd result/initrd \
+     -kernel result/kernel -append "earlyprintk=ttyS0 console=ttyS0 init=/sbin/init" \
+     -nodefaults -no-user-config -nographic \
+     -serial stdio \
+     -drive id=primary,file=nixos.qcow2,format=qcow2,if=none \
+     -device virtio-blk-device,drive=primary \
+     -netdev tap,id=tap,ifname=tap0,script=no,downscript=no \
+     -device virtio-net-device,netdev=tap
   ```
 
 # Appendix F: Naming conventions
