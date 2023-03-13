@@ -83,7 +83,14 @@ in
 
     environment.etc."nixos/current".source = self;
     environment.etc."nixos/nixpkgs".source = nixpkgs;
-    environment.etc."nixos/options.json".source = mkIf config.documentation.nixos.enable "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json";
+    environment.etc."nixos/options.json".source =
+      if config.documentation.nixos.enable
+      then "${config.system.build.manual.optionsJSON}/share/doc/nixos/options.json"
+      else
+        pkgs.writeTextFile {
+          name = "options.json";
+          text = "{}";
+        };
 
     environment.etc."nixos/system-packages".text =
       let
