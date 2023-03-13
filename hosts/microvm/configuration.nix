@@ -13,24 +13,48 @@
     };
   };
 
+  virtualisation = {
+    diskImage = null;
+    sharedDirectories = lib.mkForce {
+      nix-store = {
+        source = builtins.storeDir;
+        target = "/nix/store";
+      };
+    };
+  };
+
+  networking.dhcpcd.enable = false;
   systemd.network = {
     enable = true;
     networks = {
-      "01-nat" = {
+      "nat" = {
         matchConfig = {
-          Name = "eth0";
+          Name = "e*";
         };
-        DHCP = "yes";
+        address = [
+          "192.168.77.2/24"
+        ];
+        DHCP = "no";
+        gateway = [ "192.168.77.1" ];
         dns = [ "8.8.8.8" ];
       };
     };
   };
 
   users = {
+    groups.user.gid = 1000;
     mutableUsers = false;
     users = {
       root = {
         password = "root";
+      };
+      user = {
+        uid = 1000;
+        description = "User";
+        isNormalUser = true;
+        group = "user";
+        extraGroups = [ "wheel" ];
+        password = "user";
       };
     };
   };
