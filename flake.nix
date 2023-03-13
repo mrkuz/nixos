@@ -30,71 +30,35 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
+      sources = import ./nix/sources.nix;
+
       vars = {
         currentSystem = "x86_64-linux";
         stateVersion = "22.11";
         ageIdentityFile = "/home/markus/.ssh/id_rsa";
       };
-      sources = import ./nix/sources.nix;
 
-      attrsToValues = attrs:
-        nixpkgs.lib.attrsets.mapAttrsToList (name: value: value) attrs;
+      utils = {
+        attrsToValues = attrs:
+          nixpkgs.lib.attrsets.mapAttrsToList (name: value: value) attrs;
 
-      mkPkgs = system: import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          inputs.nix-alien.overlay
-          inputs.emacs-overlay.overlay
-          # inputs.nixpkgs-wayland.overlay
-          (_: super: self.packages."${system}")
-        ] ++ attrsToValues self.overlays;
+        mkPkgs = import ./lib/make-pkgs.nix { inherit self nixpkgs inputs; };
+        callPkg = package:
+          pkgs.callPackage package { inherit sources; };
+
+        mkNixOSModules = import ./lib/make-nixos-modules.nix { inherit self nixpkgs inputs; };
+        mkImage = import "${nixpkgs}/nixos/lib/make-disk-image.nix";
+
+        setUpNixOS = import ./lib/setup-nixos.nix { inherit self nixpkgs inputs; };
+        setUpHomeManager = import ./lib/setup-home-manager.nix { inherit self nixpkgs inputs; };
       };
 
-      pkgs = mkPkgs vars.currentSystem;
-      callPkg = package:
-        pkgs.callPackage package { inherit sources; };
-
-      mkImage = import "${nixpkgs}/nixos/lib/make-disk-image.nix";
-
+      pkgs = utils.mkPkgs vars.currentSystem;
       nixos-generators = inputs.nixos-generators;
-
-      mkNixOSModules = { name, system, extraModules ? [ ] }: [
-        {
-          nixpkgs.pkgs = mkPkgs system;
-          _module.args.nixpkgs = nixpkgs;
-          _module.args.self = self;
-          _module.args.inputs = inputs;
-          _module.args.systemName = name;
-          _module.args.vars = vars;
-          _module.args.sources = sources;
-        }
-        inputs.agenix.nixosModules.default
-        {
-          age.identityPaths = [ vars.ageIdentityFile ];
-        }
-        inputs.home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = false;
-            extraSpecialArgs = { inherit inputs nixpkgs vars sources; };
-            sharedModules = attrsToValues self.homeManagerModules;
-          };
-        }
-      ] ++ attrsToValues self.nixosModules ++ extraModules;
-
-      setUpNixOS = name: system: nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = mkNixOSModules {
-          inherit name system;
-          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
-        };
-      };
 
       setUpDocker = name: system: nixos-generators.nixosGenerate {
         inherit system;
-        modules = mkNixOSModules {
+        modules = utils.mkNixOSModules {
           inherit name system;
           extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
         };
@@ -103,39 +67,20 @@
 
       setUpVm = name: system: nixos-generators.nixosGenerate {
         inherit system;
-        modules = mkNixOSModules {
+        modules = utils.mkNixOSModules {
           inherit name system;
           extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
         };
         format = "vm-nogui";
       };
 
-      setUpNix = name: user: system: inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = mkPkgs system;
-        modules = [
-          {
-            _module.args.nixpkgs = nixpkgs;
-            _module.args.inputs = inputs;
-            _module.args.vars = vars;
-            _module.args.sources = sources;
-          }
-          {
-            home = {
-              homeDirectory = "/home/${user}";
-              username = user;
-            };
-          }
-          (./users + "/${name}" + /home.nix)
-        ] ++ attrsToValues self.homeManagerModules;
-      };
-
       setUpKernelInitrd = name: system:
         let
-          host = setUpNixOS name system;
+          host = utils.setUpNixOS { inherit name system; };
         in
         nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = mkNixOSModules {
+          modules = utils.mkNixOSModules {
             inherit name system;
             extraModules = [
               {
@@ -158,7 +103,7 @@
         let
           host = nixpkgs.lib.nixosSystem {
             inherit system;
-            modules = mkNixOSModules {
+            modules = utils.mkNixOSModules {
               inherit name system;
               extraModules = [
                 (./hosts + "/${name}" + /configuration.nix)
@@ -173,8 +118,8 @@
             };
           };
         in
-        mkImage rec {
-          pkgs = mkPkgs system;
+        utils.mkImage rec {
+          pkgs = utils.mkPkgs system;
           lib = pkgs.lib;
           config = host.config;
           installBootLoader = false;
@@ -190,20 +135,48 @@
         };
     in
     {
+      inherit sources utils vars;
+
       nixosConfigurations = {
-        "virtualbox" = setUpNixOS "virtualbox" "x86_64-linux";
-        "virtualbox-dual" = setUpNixOS "virtualbox-dual" "x86_64-linux";
-        "xps15@home" = setUpNixOS "xps15@home" "x86_64-linux";
+        "virtualbox" = utils.setUpNixOS {
+          name = "virtualbox";
+          system = "x86_64-linux";
+        };
+        "virtualbox-dual" = utils.setUpNixOS {
+          name = "virtualbox-dual";
+          system = "x86_64-linux";
+        };
+        "xps15@home" = utils.setUpNixOS {
+          name = "xps15@home";
+          system = "x86_64-linux";
+        };
         # Docker images
-        "dockerized" = setUpNixOS "dockerized" "x86_64-linux";
-        "dockerized-desktop" = setUpNixOS "dockerized-desktop" "x86_64-linux";
+        "dockerized" = utils.setUpNixOS {
+          name = "dockerized";
+          system = "x86_64-linux";
+        };
+        "dockerized-desktop" = utils.setUpNixOS {
+          name = "dockerized-desktop";
+          system = "x86_64-linux";
+        };
         # VMs
-        "microvm" = setUpNixOS "microvm" "x86_64-linux";
+        "microvm" = utils.setUpNixOS {
+          name = "microvm";
+          system = "x86_64-linux";
+        };
       };
 
       homeManagerConfigurations = {
-        "user@ubuntu" = setUpNix "user@ubuntu" "markus" "x86_64-linux";
-        "markus@chromeos" = setUpNix "markus@chromeos" "markus" "aarch64-linux";
+        "user@ubuntu" = utils.setUpHomeManager {
+          name = "user@ubuntu";
+          user = "markus";
+          system = "x86_64-linux";
+        };
+        "markus@chromeos" = utils.setUpHomeManager {
+          name = "markus@chromeos";
+          user = "markus";
+          system = "aarch64-linux";
+        };
       };
 
       packages = {
@@ -223,24 +196,24 @@
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           # Kernels
-          linux-cros = (callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
+          linux-cros = (utils.callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
           # crosvm
           crosvm-boot = (setUpKernelInitrd "crosvm" "x86_64-linux").config.system.build.toplevel;
           crosvm-image = setUpDiskImage "crosvm" "x86_64-linux";
           # GNOME extensions
           gnome-shell-extensions = {
-            always-indicator = (callPkg ./pkgs/desktops/gnome/extensions/always-indicator);
-            dynamic-panel-transparency = (callPkg ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency);
-            instant-workspace-switcher = (callPkg ./pkgs/desktops/gnome/extensions/instant-workspace-switcher);
-            just-perfection = (callPkg ./pkgs/desktops/gnome/extensions/just-perfection);
-            quick-settings-tweaks = (callPkg ./pkgs/desktops/gnome/extensions/quick-settings-tweaks);
-            workspaces-bar = (callPkg ./pkgs/desktops/gnome/extensions/workspaces-bar);
+            always-indicator = (utils.callPkg ./pkgs/desktops/gnome/extensions/always-indicator);
+            dynamic-panel-transparency = (utils.callPkg ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency);
+            instant-workspace-switcher = (utils.callPkg ./pkgs/desktops/gnome/extensions/instant-workspace-switcher);
+            just-perfection = (utils.callPkg ./pkgs/desktops/gnome/extensions/just-perfection);
+            quick-settings-tweaks = (utils.callPkg ./pkgs/desktops/gnome/extensions/quick-settings-tweaks);
+            workspaces-bar = (utils.callPkg ./pkgs/desktops/gnome/extensions/workspaces-bar);
           };
           # IDEA plugins
           idea-plugins = {
-            checkstyle-idea = (callPkg ./pkgs/misc/idea/plugins/checkstyle-idea);
-            kotest = (callPkg ./pkgs/misc/idea/plugins/kotest);
-            mybatisx = (callPkg ./pkgs/misc/idea/plugins/mybatisx);
+            checkstyle-idea = (utils.callPkg ./pkgs/misc/idea/plugins/checkstyle-idea);
+            kotest = (utils.callPkg ./pkgs/misc/idea/plugins/kotest);
+            mybatisx = (utils.callPkg ./pkgs/misc/idea/plugins/mybatisx);
           };
           # Helper functions
           buildFhsShell = spec: pkgs.callPackage ./pkgs/shell/build-fhs-shell.nix spec;
