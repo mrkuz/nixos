@@ -10,6 +10,10 @@ in
       default = false;
       type = types.bool;
     };
+    name = mkOption {
+      default = "tap0";
+      type = types.str;
+    };
     owner = mkOption {
       default = "root";
       type = types.str;
@@ -17,6 +21,10 @@ in
     address = mkOption {
       default = "192.168.77.1";
       type = types.str;
+    };
+    prefixLength = mkOption {
+      default = 24;
+      type = types.ints.unsigned;
     };
     externalInterface = mkOption {
       default = "eth0";
@@ -28,7 +36,7 @@ in
 
     networking = {
       firewall = {
-        trustedInterfaces = [ "tap0" ];
+        trustedInterfaces = [ cfg.name ];
       };
 
       interfaces = {
@@ -38,7 +46,7 @@ in
           ipv4.addresses = [
             {
               address = cfg.address;
-              prefixLength = 24;
+              prefixLength = cfg.prefixLength;
             }
           ];
         };
@@ -46,7 +54,7 @@ in
 
       nat = {
         enable = true;
-        internalInterfaces = [ "tap0" ];
+        internalInterfaces = [ cfg.name ];
         externalInterface = cfg.externalInterface;
       };
     };

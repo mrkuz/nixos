@@ -10,6 +10,10 @@ in
       default = false;
       type = types.bool;
     };
+    timeout = mkOption {
+      default = 3;
+      type = types.ints.unsigned;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -23,7 +27,7 @@ in
         editor = true;
         configurationLimit = 3;
       };
-      timeout = 3;
+      timeout = cfg.timeout;
     };
   };
 }

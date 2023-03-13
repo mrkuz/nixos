@@ -10,13 +10,17 @@ in
       default = false;
       type = types.bool;
     };
+    port = mkOption {
+      default = 9999;
+      type = types.ints.unsigned;
+    };
   };
 
   config = mkIf cfg.enable {
     services.openssh = {
       enable = true;
       openFirewall = true;
-      ports = [ 9999 ];
+      ports = [ cfg.port ];
       settings.PermitRootLogin = "no";
     };
   };

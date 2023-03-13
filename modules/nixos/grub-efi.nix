@@ -10,6 +10,10 @@ in
       default = false;
       type = types.bool;
     };
+    timeout = mkOption {
+      default = 3;
+      type = types.ints.unsigned;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -22,7 +26,7 @@ in
         device = "nodev";
         efiSupport = true;
       };
-      timeout = 3;
+      timeout = cfg.timeout;
     };
   };
 }

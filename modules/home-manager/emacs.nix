@@ -10,6 +10,10 @@ in
       default = false;
       type = types.bool;
     };
+    service = mkOption {
+      default = true;
+      type = types.bool;
+    };
     package = mkOption {
       default = pkgs.emacsPgtk;
       type = types.package;
@@ -31,7 +35,7 @@ in
       # (callPackage ../../pkgs/misc/revealjs { })
     ] ++ [ ((pkgs.emacsPackagesFor cfg.package).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
 
-    systemd.user.services.emacs = {
+    systemd.user.services.emacs = mkIf cfg.service {
       Unit = {
         Description = "Emacs text editor";
         Documentation = "info:emacs man:emacs(1) https://gnu.org/software/emacs/";

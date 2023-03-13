@@ -10,7 +10,10 @@ in
 
   modules = {
     bash.enable = true;
-    emacs.enable = true;
+    emacs = {
+      enable = true;
+      service = false;
+    };
     fish.enable = true;
   };
 
