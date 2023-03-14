@@ -13,23 +13,13 @@
     };
   };
 
-  virtualisation = {
-    diskImage = null;
-    sharedDirectories = lib.mkForce {
-      nix-store = {
-        source = builtins.storeDir;
-        target = "/nix/store";
-      };
-    };
-  };
-
   networking.dhcpcd.enable = false;
   systemd.network = {
     enable = true;
     networks = {
       "nat" = {
         matchConfig = {
-          Name = "e*";
+          Name = "eth0";
         };
         address = [
           "192.168.77.2/24"

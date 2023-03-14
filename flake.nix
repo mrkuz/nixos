@@ -5,9 +5,6 @@
       url = "github:rycee/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nixpkgs-wayland.url = "github:colemickens/nixpkgs-wayland";
-    # nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
-    # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     nix-alien = {
       url = "github:thiagokokada/nix-alien";
@@ -26,6 +23,7 @@
       url = "/home/markus/etc/nixos/repos/dotfiles";
       flake = false;
     };
+    # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs:
@@ -51,6 +49,7 @@
 
         setUpNixOS = import ./lib/setup-nixos.nix { inherit self nixpkgs inputs; };
         setUpHomeManager = import ./lib/setup-home-manager.nix { inherit self nixpkgs inputs; };
+        setUpMicrovm = import ./lib/setup-microvm.nix { inherit self nixpkgs inputs; };
       };
 
       pkgs = utils.mkPkgs vars.currentSystem;
@@ -63,15 +62,6 @@
           extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
         };
         format = "docker";
-      };
-
-      setUpVm = name: system: nixos-generators.nixosGenerate {
-        inherit system;
-        modules = utils.mkNixOSModules {
-          inherit name system;
-          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
-        };
-        format = "vm-nogui";
       };
 
       setUpKernelInitrd = name: system:
@@ -159,11 +149,6 @@
           name = "dockerized-desktop";
           system = "x86_64-linux";
         };
-        # VMs
-        "microvm" = utils.setUpNixOS {
-          name = "microvm";
-          system = "x86_64-linux";
-        };
       };
 
       homeManagerConfigurations = {
@@ -192,7 +177,10 @@
           dockerized = setUpDocker "dockerized" "x86_64-linux";
           dockerized-desktop = setUpDocker "dockerized-desktop" "x86_64-linux";
           # VMs
-          microvm = setUpVm "microvm" "x86_64-linux";
+          microvm = utils.setUpMicrovm {
+            name = "microvm";
+            system = "x86_64-linux";
+          };
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           # Kernels

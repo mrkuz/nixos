@@ -4,6 +4,8 @@
   inherit system;
   modules = self.utils.mkNixOSModules {
     inherit name system;
-    extraModules = [ (../hosts + "/${name}" + /configuration.nix) ];
+    extraModules = [
+      (../hosts + "/${name}" + /configuration.nix)
+    ];
   };
 }

@@ -531,7 +531,14 @@ nix develop
   docker exec -ti nixos /run/current-system/sw/bin/bash
   ```
 
-# Appendix E: Build and run crosvm image
+# Appendix E: Build and run microvm
+
+  ```shell
+  nix build .#microvm
+  ./result/bin/start-vm
+  ```
+
+# Appendix F: Build and run crosvm image
 
   ```shell
   nix build .#crosvm-image
@@ -557,22 +564,7 @@ nix develop
   sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
   ```
 
-  Or run with qemu-kvm:
-
-  ```
-  qemu-kvm -M microvm \
-     -enable-kvm -cpu host -m 512m -smp 2 \
-     -initrd result/initrd \
-     -kernel result/kernel -append "earlyprintk=ttyS0 console=ttyS0 init=/sbin/init" \
-     -nodefaults -no-user-config -nographic \
-     -serial stdio \
-     -drive id=primary,file=nixos.qcow2,format=qcow2,if=none \
-     -device virtio-blk-device,drive=primary \
-     -netdev tap,id=tap,ifname=tap0,script=no,downscript=no \
-     -device virtio-net-device,netdev=tap
-  ```
-
-# Appendix F: Naming conventions
+# Appendix G: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -580,7 +572,7 @@ nix develop
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix G: File structures
+# Appendix H: File structures
 
 ## Hosts
 
