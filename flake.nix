@@ -5,13 +5,8 @@
       url = "github:rycee/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
     nix-alien = {
       url = "github:thiagokokada/nix-alien";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix = {
@@ -23,6 +18,7 @@
       url = "/home/markus/etc/nixos/repos/dotfiles";
       flake = false;
     };
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
@@ -51,19 +47,10 @@
         setUpHomeManager = import ./lib/setup-home-manager.nix { inherit self nixpkgs inputs; };
         setUpMicrovm = import ./lib/setup-microvm.nix { inherit self nixpkgs inputs; };
         setUpCrosvm = import ./lib/setup-crosvm.nix { inherit self nixpkgs inputs; };
+        setUpDocker = import ./lib/setup-docker.nix { inherit self nixpkgs inputs; };
       };
 
       pkgs = utils.mkPkgs vars.currentSystem;
-      nixos-generators = inputs.nixos-generators;
-
-      setUpDocker = name: system: nixos-generators.nixosGenerate {
-        inherit system;
-        modules = utils.mkNixOSModules {
-          inherit name system;
-          extraModules = [ (./hosts + "/${name}" + /configuration.nix) ];
-        };
-        format = "docker";
-      };
     in
     {
       inherit sources utils vars;
@@ -79,15 +66,6 @@
         };
         "xps15@home" = utils.setUpNixOS {
           name = "xps15@home";
-          system = "x86_64-linux";
-        };
-        # Docker images
-        "dockerized" = utils.setUpNixOS {
-          name = "dockerized";
-          system = "x86_64-linux";
-        };
-        "dockerized-desktop" = utils.setUpNixOS {
-          name = "dockerized-desktop";
           system = "x86_64-linux";
         };
       };
@@ -115,8 +93,14 @@
           # home-manager
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Docker images
-          dockerized = setUpDocker "dockerized" "x86_64-linux";
-          dockerized-desktop = setUpDocker "dockerized-desktop" "x86_64-linux";
+          "dockerized" = utils.setUpDocker {
+            name = "dockerized";
+            system = "x86_64-linux";
+          };
+          "dockerized-desktop" = utils.setUpDocker {
+            name = "dockerized-desktop";
+            system = "x86_64-linux";
+          };
           # VMs
           microvm-run = utils.setUpMicrovm {
             name = "microvm";
