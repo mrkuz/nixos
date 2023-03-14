@@ -32,7 +32,7 @@
         {
           virtualisation = {
             diskImage = null;
-            writableStore = false;
+            # writableStore = false;
             sharedDirectories = lib.mkForce {
               nix-store = {
                 source = builtins.storeDir;
