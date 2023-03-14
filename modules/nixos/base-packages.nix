@@ -62,6 +62,7 @@ in
       # python310Packages.wakeonlan
       rclone
       ripgrep
+      rng-tools
       rsync
       smartmontools
       socat

@@ -50,6 +50,7 @@
         setUpNixOS = import ./lib/setup-nixos.nix { inherit self nixpkgs inputs; };
         setUpHomeManager = import ./lib/setup-home-manager.nix { inherit self nixpkgs inputs; };
         setUpMicrovm = import ./lib/setup-microvm.nix { inherit self nixpkgs inputs; };
+        setUpCrosvm = import ./lib/setup-crosvm.nix { inherit self nixpkgs inputs; };
       };
 
       pkgs = utils.mkPkgs vars.currentSystem;
@@ -63,66 +64,6 @@
         };
         format = "docker";
       };
-
-      setUpKernelInitrd = name: system:
-        let
-          host = utils.setUpNixOS { inherit name system; };
-        in
-        nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = utils.mkNixOSModules {
-            inherit name system;
-            extraModules = [
-              {
-                boot = {
-                  loader.grub.enable = false;
-                  kernelPackages = host.config.boot.kernelPackages;
-                  initrd = {
-                    availableKernelModules = nixpkgs.lib.mkForce host.config.boot.initrd.availableKernelModules;
-                    kernelModules = nixpkgs.lib.mkForce host.config.boot.initrd.kernelModules;
-                  };
-                };
-                fileSystems = host.config.fileSystems;
-                system.stateVersion = vars.stateVersion;
-              }
-            ];
-          };
-        };
-
-      setUpDiskImage = name: system:
-        let
-          host = nixpkgs.lib.nixosSystem {
-            inherit system;
-            modules = utils.mkNixOSModules {
-              inherit name system;
-              extraModules = [
-                (./hosts + "/${name}" + /configuration.nix)
-                {
-                  boot = {
-                    initrd.enable = false;
-                    kernel.enable = false;
-                    loader.grub.enable = false;
-                  };
-                }
-              ];
-            };
-          };
-        in
-        utils.mkImage rec {
-          pkgs = utils.mkPkgs system;
-          lib = pkgs.lib;
-          config = host.config;
-          installBootLoader = false;
-          copyChannel = false;
-          additionalSpace = "128M";
-          format = "qcow2";
-          contents = [
-            {
-              source = config.system.build.toplevel + "/init";
-              target = "/sbin/init";
-            }
-          ];
-        };
     in
     {
       inherit sources utils vars;
@@ -177,17 +118,18 @@
           dockerized = setUpDocker "dockerized" "x86_64-linux";
           dockerized-desktop = setUpDocker "dockerized-desktop" "x86_64-linux";
           # VMs
-          microvm = utils.setUpMicrovm {
+          microvm-run = utils.setUpMicrovm {
             name = "microvm";
+            system = "x86_64-linux";
+          };
+          crosvm-run = utils.setUpCrosvm {
+            name = "crosvm";
             system = "x86_64-linux";
           };
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           # Kernels
           linux-cros = (utils.callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
-          # crosvm
-          crosvm-boot = (setUpKernelInitrd "crosvm" "x86_64-linux").config.system.build.toplevel;
-          crosvm-image = setUpDiskImage "crosvm" "x86_64-linux";
           # GNOME extensions
           gnome-shell-extensions = {
             always-indicator = (utils.callPkg ./pkgs/desktops/gnome/extensions/always-indicator);

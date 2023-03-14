@@ -19,7 +19,7 @@
     networks = {
       "nat" = {
         matchConfig = {
-          Name = "eth0";
+          Name = "eth*";
         };
         address = [
           "192.168.77.2/24"

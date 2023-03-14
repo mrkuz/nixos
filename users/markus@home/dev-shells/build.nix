@@ -7,5 +7,7 @@
     cmake
     gcc
     gnumake
+    ncurses
+    pkg-config
   ];
 }

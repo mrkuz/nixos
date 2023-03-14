@@ -6,27 +6,24 @@
   ];
 
   boot = {
+    loader.grub.enable = false;
     kernelPackages = pkgs.linuxKernel.packagesFor pkgs.linux-cros;
     initrd = {
+      checkJournalingFS = false;
       availableKernelModules = lib.mkForce [ ];
       kernelModules = lib.mkForce [ ];
     };
   };
 
   fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
-    fsType = "ext4";
+    device = "tmpfs";
+    fsType = "tmpfs";
   };
-
-  environment.noXlibs = false;
-  environment.systemPackages = with pkgs; [
-    socat
-    sommelier
-    waypipe
-    weston
-    xorg.xeyes
-    xwayland
-  ];
+  fileSystems."/nix/store" = {
+    device = "/dev/disk/by-label/nix-store";
+    fsType = "ext4";
+    options = [ "ro" ];
+  };
 
   networking.dhcpcd.enable = false;
   systemd.network = {
@@ -34,7 +31,7 @@
     networks = {
       "nat" = {
         matchConfig = {
-          Name = "enp0s3";
+          Name = "enp*";
         };
         address = [
           "192.168.77.2/24"
@@ -49,6 +46,16 @@
       };
     };
   };
+
+  environment.noXlibs = false;
+  environment.systemPackages = with pkgs; [
+    socat
+    sommelier
+    waypipe
+    weston
+    xorg.xeyes
+    xwayland
+  ];
 
   users = {
     groups.user.gid = 1000;

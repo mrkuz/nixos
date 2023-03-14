@@ -534,31 +534,18 @@ nix develop
 # Appendix E: Build and run microvm
 
   ```shell
-  nix build .#microvm
+  nix build .#microvm-run
   ./result/bin/start-vm
   ```
 
 # Appendix F: Build and run crosvm image
 
   ```shell
-  nix build .#crosvm-image
-  cp result/nixos.qcow2 .
-  chmod 644 nixos.qcow2
-  nix build .#crosvm-boot
+  nix build .#croscm-run
+  ./result/bin/start-vm
   ```
 
-  Run with crosvm:
-
-  ```
-  crosvm run \
-    --disable-sandbox \
-    --wayland-sock /run/user/1000/wayland-0 \
-    --rwdisk nixos.qcow2 \
-    --initrd result/initrd \
-    --tap-name=tap0 \
-    -p "init=/sbin/init" \
-    result/kernel
-
+  ```shell
   # Inside VM
   sommelier weston-terminal
   sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
