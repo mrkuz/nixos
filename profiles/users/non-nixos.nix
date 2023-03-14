@@ -1,8 +1,5 @@
-{ pkgs, inputs, vars, ... }:
+{ config, lib, pkgs, sources, vars, ... }:
 
-let
-  hm = inputs.home-manager.lib.hm;
-in
 {
   modules = {
     nonNixos.enable = true;

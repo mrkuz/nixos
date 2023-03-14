@@ -30,7 +30,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
-      sources = import ./nix/sources.nix;
+      sources = import ./nix/sources.nix // { dotfiles = inputs.dotfiles; };
 
       vars = {
         currentSystem = "x86_64-linux";

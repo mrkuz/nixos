@@ -18,6 +18,7 @@ let
   createPackage = mkProfile: rec {
     profile = mkProfile { inherit sources; };
     package = pkgs.buildVscode {
+      inherit sources;
       name = "${ profile. alias}";
       userDataDir = ".vscode/${ profile. name}";
       extensions = profile.extensions;

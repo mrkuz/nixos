@@ -1,4 +1,4 @@
-{ stdenv, pkgs, sources, ... }:
+{ stdenv, lib, pkgs, sources, ... }:
 
 stdenv.mkDerivation rec {
   name = "quick-settings-tweaks";

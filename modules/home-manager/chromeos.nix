@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 with lib;
 let

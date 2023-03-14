@@ -1,9 +1,8 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 with lib;
 let
   cfg = config.modules.basePackages;
-  home-manager-package = (import inputs.home-manager { inherit pkgs; }).home-manager;
 in
 {
   options.modules.basePackages = {
@@ -36,7 +35,6 @@ in
       fzf
       git
       groff
-      # home-manager-package
       htop
       inetutils
       iftop

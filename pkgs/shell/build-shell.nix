@@ -1,4 +1,4 @@
-{ stdenv, pkgs, name, targetPkgs, profile ? "", ... }:
+{ stdenv, lib, pkgs, sources, name, targetPkgs, profile ? "", ... }:
 
 let
   fullName = "${name}-shell";

@@ -1,7 +1,6 @@
-{ config, pkgs, inputs, vars, sources, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 let
-  hm = inputs.home-manager.lib.hm;
   user = config.home.username;
 
   python-custom = pkgs.python3.withPackages (ps: with ps; [
@@ -68,7 +67,7 @@ in
     "L  %h/Backup -  -  -  -  /data/user/${user}/Backup"
   ];
 
-  home.activation.activateExtra = hm.dag.entryAfter [ "writeBoundary" ]
+  home.activation.activateExtra = lib.hm.dag.entryAfter [ "writeBoundary" ]
     ''
       # Clone repositories
       [ -e $HOME/src/dockerfiles ] || (cd $HOME/src && ${pkgs.git}/bin/git clone "https://github.com/mrkuz/dockerfiles")

@@ -1,7 +1,6 @@
-{ config, pkgs, inputs, vars, sources, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 let
-  hm = inputs.home-manager.lib.hm;
   user = config.home.username;
 in
 {
@@ -11,7 +10,7 @@ in
   };
 
   home.file."tmp/../" = {
-    source = inputs.dotfiles;
+    source = sources.dotfiles;
     recursive = true;
   };
 

@@ -1,10 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, sources, ... }:
 
 with lib;
 let
   cfg = config.modules.devShells;
   createPackage = mkSpec: rec {
-    spec = (mkSpec { inherit pkgs; });
+    spec = (mkSpec { inherit pkgs; }) // { inherit sources; };
     package =
       if spec.fhs
       then

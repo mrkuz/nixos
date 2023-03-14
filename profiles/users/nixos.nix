@@ -1,8 +1,5 @@
-{ pkgs, inputs, vars, ... }:
+{ config, lib, pkgs, sources, vars, ... }:
 
-let
-  hm = inputs.home-manager.lib.hm;
-in
 {
   modules = {
     hideApplications = {
@@ -34,7 +31,7 @@ in
     nixos.enable = true;
   };
 
-  home.activation.hideWaydroidApps = hm.dag.entryAfter [ "writeBoundary" ]
+  home.activation.hideWaydroidApps = lib.hm.dag.entryAfter [ "writeBoundary" ]
     ''
       sed -i 's/Icon=.*/NoDisplay=true/' ~/.local/share/applications/waydroid*.desktop || true
     '';

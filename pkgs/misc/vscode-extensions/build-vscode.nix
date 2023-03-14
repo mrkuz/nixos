@@ -1,4 +1,4 @@
-{ stdenv, lib, pkgs, name, userDataDir, extensions, ... }:
+{ stdenv, lib, pkgs, sources, name, userDataDir, extensions, ... }:
 
 with lib;
 

@@ -4,9 +4,8 @@
   {
     nixpkgs.pkgs = self.utils.mkPkgs system;
     _module.args.nixpkgs = nixpkgs;
-    _module.args.self = self;
-    _module.args.inputs = inputs;
     _module.args.systemName = name;
+    _module.args.self = self;
     _module.args.vars = self.vars;
     _module.args.sources = self.sources;
   }

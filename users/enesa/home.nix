@@ -1,4 +1,4 @@
-{ pkgs, inputs, vars, ... }:
+{ lib, pkgs, sources, ... }:
 
 let
   python-custom = pkgs.python3.withPackages (ps: with ps; [

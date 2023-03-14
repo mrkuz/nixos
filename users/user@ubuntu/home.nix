@@ -1,8 +1,5 @@
-{ pkgs, lib, inputs, vars, ... }:
+{ config, lib, pkgs, sources, ... }:
 
-let
-  hm = inputs.home-manager.lib.hm;
-in
 {
   imports = [
     ../../profiles/users/non-nixos.nix
@@ -18,7 +15,7 @@ in
   };
 
   home.file."tmp/../" = {
-    source = inputs.dotfiles;
+    source = sources.dotfiles;
     recursive = true;
   };
 

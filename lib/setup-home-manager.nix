@@ -5,7 +5,6 @@
   modules = [
     {
       _module.args.nixpkgs = nixpkgs;
-      _module.args.inputs = inputs;
       _module.args.vars = self.vars;
       _module.args.sources = self.sources;
     }

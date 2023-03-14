@@ -1,4 +1,4 @@
-{ stdenv, pkgs, lib, sources, ... }:
+{ stdenv, lib, pkgs, sources, ... }:
 
 let
   source = stdenv.mkDerivation rec {

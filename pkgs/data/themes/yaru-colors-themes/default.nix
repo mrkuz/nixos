@@ -1,4 +1,4 @@
-{ stdenv, pkgs, sources, ... }:
+{ stdenv, lib, pkgs, sources, ... }:
 
 stdenv.mkDerivation rec {
   name = "yaru-colors-themes";

@@ -1,4 +1,4 @@
-{ stdenv, sources, ... }:
+{ stdenv, lib, pkgs, sources, ... }:
 
 stdenv.mkDerivation rec {
   name = "dynamic-panel-transparency";
