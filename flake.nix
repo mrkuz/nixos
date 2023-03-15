@@ -117,6 +117,7 @@
           # GNOME extensions
           gnome-shell-extensions = {
             always-indicator = (utils.callPkg ./pkgs/desktops/gnome/extensions/always-indicator);
+            caffeine = (utils.callPkg ./pkgs/desktops/gnome/extensions/caffeine);
             dynamic-panel-transparency = (utils.callPkg ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency);
             instant-workspace-switcher = (utils.callPkg ./pkgs/desktops/gnome/extensions/instant-workspace-switcher);
             just-perfection = (utils.callPkg ./pkgs/desktops/gnome/extensions/just-perfection);

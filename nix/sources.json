@@ -23,6 +23,18 @@
         "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "gse:caffeine": {
+        "branch": "master",
+        "description": "Disable screensaver and auto suspend",
+        "homepage": null,
+        "owner": "eonpatapon",
+        "repo": "gnome-shell-extension-caffeine",
+        "rev": "498ed439d300c4049f8b046c73d1e92531910937",
+        "sha256": "09knn3bbn16aya4s282c7s6ngy54m2jd6jwp423r1nc2h57g8f4a",
+        "type": "tarball",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/498ed439d300c4049f8b046c73d1e92531910937.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "gse:always-indicator": {
         "branch": "master",
         "description": "GNOME shell extension to always show the new messages indicator on new messages",
