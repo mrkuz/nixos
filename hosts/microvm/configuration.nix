@@ -2,8 +2,12 @@
 
 {
   imports = [
-    ../../profiles/hosts/minimal-nix.nix
+    ../../profiles/hosts/minimal.nix
   ];
+
+  modules = {
+    nix.enable = true;
+  };
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

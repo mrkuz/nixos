@@ -64,9 +64,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 ### `hosts/`
 
 - `default` - Base configuration for a default host
-- `docker` - Base configuration for docker hosts
-- `minimal` - Minimal configuration (without nix support)
-- `minimal-nix` - Minimal coniguration (with nix support)
+- `minimal` - Minimal configuration
 
 ### `users/`
 

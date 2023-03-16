@@ -18,7 +18,7 @@
   services.timesyncd.enable = false;
 
   environment.defaultPackages = [ ];
-  environment.noXlibs = lib.mkDefault true;
+  # environment.noXlibs = lib.mkDefault true;
 
   programs.command-not-found.enable = false;
 
