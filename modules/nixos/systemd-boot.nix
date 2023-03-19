@@ -10,6 +10,10 @@ in
       default = false;
       type = types.bool;
     };
+    mountPoint = mkOption {
+      default = "/boot";
+      type = types.str;
+    };
     timeout = mkOption {
       default = 3;
       type = types.ints.unsigned;
@@ -19,7 +23,7 @@ in
   config = mkIf cfg.enable {
     boot.loader = {
       efi = {
-        efiSysMountPoint = "/boot";
+        efiSysMountPoint = cfg.mountPoint;
         canTouchEfiVariables = false;
       };
       systemd-boot = {

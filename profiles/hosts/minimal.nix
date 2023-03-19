@@ -16,10 +16,9 @@
 
   services.logrotate.enable = false;
   services.timesyncd.enable = false;
-  services.udisks2.enable = false;
+  services.udisks2.enable = lib.mkDefault false;
 
   environment.defaultPackages = [ ];
-  # environment.noXlibs = lib.mkDefault true;
 
   programs.command-not-found.enable = false;
 

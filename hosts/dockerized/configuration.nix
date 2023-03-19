@@ -15,7 +15,7 @@
   };
 
   system.disableInstallerTools = true;
-  environment.noXlibs = lib.mkDefault true;
+  environment.noXlibs = true;
 
   users = {
     mutableUsers = false;
