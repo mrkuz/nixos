@@ -7,6 +7,7 @@
 
   modules = {
     nix.enable = true;
+    qemuGuest.enable = true;
   };
 
   boot = {

@@ -41,13 +41,8 @@
           pkgs.callPackage package { inherit sources; };
 
         mkNixOSModules = import ./lib/make-nixos-modules.nix { inherit self nixpkgs inputs; };
-        mkImage = import "${nixpkgs}/nixos/lib/make-disk-image.nix";
-
         setUpNixOS = import ./lib/setup-nixos.nix { inherit self nixpkgs inputs; };
         setUpHomeManager = import ./lib/setup-home-manager.nix { inherit self nixpkgs inputs; };
-        setUpMicrovm = import ./lib/setup-microvm.nix { inherit self nixpkgs inputs; };
-        setUpCrosvm = import ./lib/setup-crosvm.nix { inherit self nixpkgs inputs; };
-        setUpDocker = import ./lib/setup-docker.nix { inherit self nixpkgs inputs; };
       };
 
       pkgs = utils.mkPkgs vars.currentSystem;
@@ -93,23 +88,23 @@
           # home-manager
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Docker images
-          "dockerized" = utils.setUpDocker {
+          "dockerized" = (utils.setUpNixOS {
             name = "dockerized";
             system = "x86_64-linux";
-          };
-          "dockerized-desktop" = utils.setUpDocker {
+          }).config.system.build.dockerTar;
+          "dockerized-desktop" = (utils.setUpNixOS {
             name = "dockerized-desktop";
             system = "x86_64-linux";
-          };
+          }).config.system.build.dockerTar;
           # VMs
-          microvm-run = utils.setUpMicrovm {
+          microvm-run = (utils.setUpNixOS {
             name = "microvm";
             system = "x86_64-linux";
-          };
-          crosvm-run = utils.setUpCrosvm {
+          }).config.system.build.qemuRun;
+          crosvm-run = (utils.setUpNixOS {
             name = "crosvm";
             system = "x86_64-linux";
-          };
+          }).config.system.build.crosvmRun;
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           # Kernels
@@ -169,6 +164,10 @@
         waydroid = import ./modules/nixos/waydroid.nix;
         wayland = import ./modules/nixos/wayland.nix;
         x11 = import ./modules/nixos/x11.nix;
+        # Virtualization
+        crosvmGuest = import ./modules/nixos/virtualization/crosvm-guest.nix;
+        dockerContainer = import ./modules/nixos/virtualization/docker-container.nix;
+        qemuGuest = import ./modules/nixos/virtualization/qemu-guest.nix;
       };
 
       homeManagerModules = {

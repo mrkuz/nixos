@@ -119,9 +119,15 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `systemd-boot` - Configures [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - `tap` - Configures TAP network device
 - `virtualbox` - Adds [VirutalBox](https://www.virtualbox.org/) and utilities
-- `waydroid` - Adds [Waydroid](hhttps://waydro.id/)
+- `waydroid` - Adds [Waydroid](https://waydro.id/)
 - `wayland` - Adds [Wayland](https://wayland.freedesktop.org/) utilities
 - `x11` - Configures X11
+
+### `nixos/virtualization`
+
+- `crosvm-quest` - Prepares host to run [crosvm](https://github.com/google/crosvm) guest
+- `docker-container` - Prepares host to run as [Docker](https://www.docker.com/) container
+- `qemu-quest` - Prepares host to run [QEMU](https://www.qemu.org/) guest
 
 ### `home-manager/`
 

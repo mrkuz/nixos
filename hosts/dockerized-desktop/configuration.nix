@@ -2,8 +2,12 @@
 
 {
   imports = [
-    ../../profiles/hosts/docker.nix
+    ../../profiles/hosts/minimal.nix
   ];
+
+  modules = {
+    dockerContainer.enable = true;
+  };
 
   networking = {
     nameservers = [ "8.8.8.8" ];
@@ -23,11 +27,13 @@
     defaultWindowManager = "xfce4-session";
   };
 
-  environment.noXlibs = false;
-
   users = {
     groups.user.gid = 1000;
+    mutableUsers = false;
     users = {
+      root = {
+        hashedPassword = "*";
+      };
       user = {
         uid = 1000;
         description = "User";

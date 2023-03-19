@@ -136,7 +136,7 @@
     },
     "linux-cros": {
         "rev": "e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327",
-        "sha256": "1icqpjy21fzx4qv7z9c3whirs1vw3v57sn20wlgg02kh7ls8v4zg",
+        "sha256": "15wbdkx0pkqkfjdlzq104256nw5kccb4vc2a42awsn9ckjqn40ny",
         "type": "file",
         "url": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327.tar.gz",
         "url_template": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/<rev>.tar.gz",
