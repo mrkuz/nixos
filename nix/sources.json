@@ -23,18 +23,6 @@
         "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/ced676392575d618d8b80b3895cdc3159be3f628.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "gse:caffeine": {
-        "branch": "master",
-        "description": "Disable screensaver and auto suspend",
-        "homepage": null,
-        "owner": "eonpatapon",
-        "repo": "gnome-shell-extension-caffeine",
-        "rev": "498ed439d300c4049f8b046c73d1e92531910937",
-        "sha256": "09knn3bbn16aya4s282c7s6ngy54m2jd6jwp423r1nc2h57g8f4a",
-        "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/498ed439d300c4049f8b046c73d1e92531910937.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "gse:always-indicator": {
         "branch": "master",
         "description": "GNOME shell extension to always show the new messages indicator on new messages",
@@ -47,16 +35,28 @@
         "url": "https://github.com/mzur/gnome-shell-always-indicator/archive/56f852425f2d2180015da01854544984c5a279e1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "gse:caffeine": {
+        "branch": "master",
+        "description": "Disable screensaver and auto suspend",
+        "homepage": null,
+        "owner": "eonpatapon",
+        "repo": "gnome-shell-extension-caffeine",
+        "rev": "3b433821a903d1e48adea9c953b9f1cf128d9668",
+        "sha256": "11m3xjl6kwjxd204mmn6mib3k3zxbd3lzi2cd8jzlx6c0k3nc39k",
+        "type": "tarball",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/3b433821a903d1e48adea9c953b9f1cf128d9668.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "gse:dynamic-panel-transparency": {
         "branch": "main",
         "description": "Adds Transparency To The Gnome Shell Panel",
         "homepage": null,
         "owner": "ewlsh",
         "repo": "dynamic-panel-transparency",
-        "rev": "63c8b81d5544cc1e6d2ee9fd236b705a531b641b",
-        "sha256": "1znb6h43cgbq5162spsx5prjzbckykr7g1afrfkh5j66zw6lv79a",
+        "rev": "4ed748a8f048ef4346a7934672bdc59381d1ba43",
+        "sha256": "0ymframr2smaw36bgcbg1k3mmc5wzh0xdxzzigj71is29hh7h43h",
         "type": "tarball",
-        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/63c8b81d5544cc1e6d2ee9fd236b705a531b641b.tar.gz",
+        "url": "https://github.com/ewlsh/dynamic-panel-transparency/archive/4ed748a8f048ef4346a7934672bdc59381d1ba43.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:instant-workspace-switcher": {
