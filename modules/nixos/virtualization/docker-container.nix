@@ -13,8 +13,11 @@ let
           specialFileSystems = lib.mkForce { };
         };
 
-        systemd.services.console-getty.enable = false;
         services.journald.console = "/dev/console";
+        systemd.services.systemd-logind.enable = false;
+        systemd.services.console-getty.enable = false;
+
+        environment.noXlibs = mkOverride 900 false;
         users.allowNoPasswordLogin = true;
       }
       "${nixpkgs}/nixos/modules/virtualisation/docker-image.nix"
