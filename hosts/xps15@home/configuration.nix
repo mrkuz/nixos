@@ -28,7 +28,6 @@
       owner = "markus";
       externalInterface = "wlp2s0";
     };
-    virtualbox.enable = true;
     wayland.enable = true;
     x11.enable = true;
   };

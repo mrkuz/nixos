@@ -13,10 +13,25 @@ in
   };
 
   config = mkIf cfg.enable {
+
+    virtualisation.libvirtd = {
+      enable = true;
+      onBoot = "ignore";
+      onShutdown = "shutdown";
+      qemu = {
+        package = pkgs.qemu_kvm;
+        ovmf = {
+          enable = true;
+        };
+        runAsRoot = false;
+      };
+    };
+
     environment.systemPackages = with pkgs; [
       crosvm
       guestfs-tools
       qemu_kvm
+      virt-manager
     ];
   };
 }
