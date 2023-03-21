@@ -51,12 +51,12 @@
       inherit sources utils vars;
 
       nixosConfigurations = {
-        "virtualbox" = utils.setUpNixOS {
-          name = "virtualbox";
+        "demo" = utils.setUpNixOS {
+          name = "demo";
           system = "x86_64-linux";
         };
-        "virtualbox-dual" = utils.setUpNixOS {
-          name = "virtualbox-dual";
+        "demo-dual" = utils.setUpNixOS {
+          name = "demo-dual";
           system = "x86_64-linux";
         };
         "xps15@home" = utils.setUpNixOS {

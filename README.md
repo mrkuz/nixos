@@ -75,10 +75,8 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 ## `hosts/`
 
 - `xps15@home` - Configuration for my workstation
-- `dockerized` - Dockerized NixOS example
-- `dockerized-desktop` - Dockerized NixOS with XFCE desktop
-- `virtualbox` - VirtualBox guest example
-- `virtualbox` - VirtualBox dual-boot example
+- `demo` - Example host configuration
+- `demo-dual` - Example dual-boot configuration
 
 ## `users/`
 
@@ -189,7 +187,7 @@ Create development shells for running phoronix-test-suite.
 nix develop
 ```
 
-# Appendix A: Example NixOS installation (VirtualBox, UEFI, LUKS, BTRFS, systemd-boot)
+# Appendix A: Example NixOS installation (qemu-kvm, UEFI, LUKS, BTRFS, systemd-boot)
 
 ## Preparation
 
@@ -201,17 +199,17 @@ nix develop
 - Create partitions
 
   ```shell
-  parted /dev/sda -- mklabel gpt
-  parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB
-  parted /dev/sda -- set 1 esp on
-  parted /dev/sda -- mkpart primary 512MiB 100%
+  parted /dev/vda -- mklabel gpt
+  parted /dev/vda -- mkpart ESP fat32 1MiB 512MiB
+  parted /dev/vda -- set 1 esp on
+  parted /dev/vda -- mkpart primary 512MiB 100%
   ```
 
 - Set up LUKS
 
   ```shell
-  cryptsetup luksFormat /dev/sda2
-  cryptsetup luksOpen /dev/sda2 crypt
+  cryptsetup luksFormat /dev/vda2
+  cryptsetup luksOpen /dev/vda2 crypt
   ```
 
 - Create filesystems
@@ -227,7 +225,7 @@ nix develop
   btrfs subvolume create /mnt/data
   umount /mnt
 
-  mkfs.fat -F 32 -n boot /dev/sda1
+  mkfs.fat -F 32 -n boot /dev/vda1
   ```
 
 - Mount volumes
@@ -297,7 +295,7 @@ nix develop
 - Install
 
   ```shell
-  nixos-install --root /mnt --flake /mnt/data/nixos#virtualbox
+  nixos-install --root /mnt --flake /mnt/data/nixos#demo
   ```
 
 - Reboot
@@ -332,7 +330,7 @@ nix develop
 
   ```shell
   ./scripts/update.sh
-  ./scripts/rebuild.sh virtualbox
+  ./scripts/rebuild.sh demo
   ```
 
 # Appendix B: Example installation on Ubuntu
@@ -393,7 +391,7 @@ nix develop
   ./result/activate
   ```
 
-# Appendix C: Example Ubuntu/NixOS dual boot installation (VirtualBox, UEFI, LUKS, BTRFS, grub2)
+# Appendix C: Example Ubuntu/NixOS dual boot installation (qemu-kvm, UEFI, LUKS, BTRFS, grub2)
 
 ## Preparation
 
@@ -490,7 +488,7 @@ nix develop
 - Install
 
   ```shell
-  nixos-install --root /mnt --flake /mnt/data/nixos#virtualbox-dual
+  nixos-install --root /mnt --flake /mnt/data/nixos#demo-dual
   ```
 
 - Reboot
@@ -525,7 +523,7 @@ nix develop
 
   ```shell
   ./scripts/update.sh
-  ./scripts/rebuild.sh virtualbox-dual
+  ./scripts/rebuild.sh demo-dual
   ```
 
 # Appendix D: Build and run Docker image

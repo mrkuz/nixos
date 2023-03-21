@@ -14,6 +14,18 @@
   };
 
   boot = {
+    initrd = {
+      availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "xhci_pci" "sd_mod" "sr_mod" "virtio_pci" "virtio_blk" ];
+      luks.devices.crypt = {
+        device = "/dev/sda2";
+        keyFile = "/etc/luks/boot.keyfile";
+      };
+      secrets = {
+        "/etc/luks/boot.keyfile" = null;
+      };
+      systemd.enable = true;
+    };
+    kernelParams = [ "nomodeset" ];
     loader = {
       efi = {
         efiSysMountPoint = "/boot/efi";
@@ -33,17 +45,6 @@
       };
       systemd-boot.enable = false;
       timeout = 3;
-    };
-    initrd = {
-      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
-      luks.devices.crypt = {
-        device = "/dev/sda2";
-        keyFile = "/etc/luks/boot.keyfile";
-      };
-      secrets = {
-        "/etc/luks/boot.keyfile" = null;
-      };
-      systemd.enable = true;
     };
   };
 
@@ -82,34 +83,21 @@
   swapDevices = [{ device = "/.swapfile"; }];
 
   networking = {
-    hostName = "virtualbox";
+    hostName = "demo";
     dhcpcd.enable = false;
   };
 
   systemd.network = {
     enable = true;
     networks = {
-      "01-nat" = {
+      "nat" = {
         matchConfig = {
-          Name = "enp0s3";
+          Name = "enp*";
         };
         DHCP = "yes";
         dns = [ "8.8.8.8" ];
       };
-      "02-host-only" = {
-        matchConfig = {
-          Name = "enp0s8";
-        };
-        address = [
-          "192.168.56.101/24"
-        ];
-      };
     };
-  };
-
-  virtualisation.virtualbox.guest = {
-    enable = true;
-    x11 = true;
   };
 
   users = {
