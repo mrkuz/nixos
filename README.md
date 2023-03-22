@@ -169,7 +169,7 @@ These repositories are added as [Git submodules](https://git-scm.com/book/en/v2/
 
 ## `examples/docker/`
 
-Demonstrates how to build a Docker image from Nix expressions.
+Builds a simple Docker image from Nix expressions.
 
 ```shell
 nix build --impure
@@ -177,9 +177,13 @@ docker load < result
 docker run --rm -ti hello-docker:latest
 ```
 
-## `examples/jdk15/`
+## `examples/docker-java/`
 
-Shows how to create development shells with Nix expressions.
+Builds a Docker image with minimal Java runtime.
+
+## `examples/pts/`
+
+Create development shells for running phoronix-test-suite.
 
 ```shell
 nix develop
