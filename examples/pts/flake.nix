@@ -9,7 +9,22 @@
     in
     {
       devShell."${system}" = pkgs.mkShell {
-        buildInputs = with pkgs; [ fish phoronix-test-suite zlib mpi autoconf popt libaio python2 ];
+        buildInputs = with pkgs; [
+          fish
+          phoronix-test-suite
+          autoconf
+          freeglut
+          libaio
+          libjpeg
+          libpng
+          mpi
+          pkg-config
+          popt
+          python2
+          waf
+          xorg.libX11
+          zlib
+        ];
         shellHook = ''
           export NIX_SHELL=pts
           exec fish
