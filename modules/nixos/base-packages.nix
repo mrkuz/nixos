@@ -76,6 +76,7 @@ in
       unzip
       vim
       wget
+      xfsprogs
       zip
       zlib
     ];

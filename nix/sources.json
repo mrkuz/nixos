@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "eonpatapon",
         "repo": "gnome-shell-extension-caffeine",
-        "rev": "3b433821a903d1e48adea9c953b9f1cf128d9668",
-        "sha256": "11m3xjl6kwjxd204mmn6mib3k3zxbd3lzi2cd8jzlx6c0k3nc39k",
+        "rev": "d835baec6cc525c2668f2ba94a2265b404fc5d0a",
+        "sha256": "1ywjsrrarny4g9adafl5prizb48ijc9c1va3rd8wxxz3swflca70",
         "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/3b433821a903d1e48adea9c953b9f1cf128d9668.tar.gz",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/d835baec6cc525c2668f2ba94a2265b404fc5d0a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:dynamic-panel-transparency": {
