@@ -191,11 +191,11 @@
     "vscode:aws-toolkit-vscode": {
         "name": "aws-toolkit-vscode",
         "publisher": "AmazonWebServices",
-        "sha256": "150bb5czqdpwfq7vq0pdnbca624svsi9mlnvrflq659pzpz3bzja",
+        "sha256": "0d4yn6zb9mndd1j60dg3hrvz03gyfk35512b7fd1h5j4wrh03r94",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.64.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.66.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.64.0"
+        "version": "1.66.0"
     },
     "vscode:black-formatter": {
         "name": "black-formatter",
@@ -236,11 +236,11 @@
     "vscode:java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "1wl8asdcn1b7l9asbgz16ca66jk03h9a033qrg5gj1fxalh9sqam",
+        "sha256": "1b249sqjin9gpblyv206hbblzkzh0zpg9i3qvvrj388040z291g8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.15.0/vspackage?targetPlatform=linux-x64",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.16.0/vspackage?targetPlatform=linux-x64",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "1.15.0"
+        "version": "1.16.0"
     },
     "vscode:javascriptsnippets": {
         "name": "javascriptsnippets",
@@ -344,11 +344,11 @@
     "vscode:sonarlint-vscode": {
         "name": "sonarlint-vscode",
         "publisher": "sonarsource",
-        "sha256": "1lr803z5343spaajnx2ildklya4qg34455yv8gbjfnnirpkga75n",
+        "sha256": "11ywxpn9k19blp8gk7mih0lnwaw6v93n9fjfmhfljrq35640kajw",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.15.1/vspackage?targetPlatform=linux-x64",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/sonarsource/vsextensions/sonarlint-vscode/3.16.0/vspackage?targetPlatform=linux-x64",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "3.15.1"
+        "version": "3.16.0"
     },
     "vscode:terraform": {
         "name": "terraform",
@@ -479,11 +479,11 @@
     "vscode:vscode-jupyter-cell-tags": {
         "name": "vscode-jupyter-cell-tags",
         "publisher": "ms-toolsai",
-        "sha256": "1sb3za0ka8bl1kydlniwlaixldlgqxvfbx7pcyrg1a4sg6zwsvk1",
+        "sha256": "14zzr0dyr110yn53d984bk6hdn0mgva4jxvxzihvsn6lv6kg50yj",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/vscode-jupyter-cell-tags/0.1.6/vspackage?targetPlatform=linux-x64",
-        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "0.1.6"
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/vscode-jupyter-cell-tags/0.1.8/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.1.8"
     },
     "vscode:vscode-jupyter-slideshow": {
         "name": "vscode-jupyter-slideshow",
@@ -524,20 +524,20 @@
     "vscode:vscode-pylance": {
         "name": "vscode-pylance",
         "publisher": "ms-python",
-        "sha256": "1s4pgh3swlx23c6kmw4a555l2abhnrd67jsyn5l54i7djfw4phnm",
+        "sha256": "188pqwcrvdilzpizvgz054w72i2x4c5lr9l0wbg9vx5zy2s6h85s",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/vscode-pylance/2023.3.20/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/vscode-pylance/2023.3.30/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2023.3.20"
+        "version": "2023.3.30"
     },
     "vscode:vscode-spring-boot": {
         "name": "vscode-spring-boot",
         "publisher": "vmware",
-        "sha256": "1cssk86ljzdfsy25li485hd7svsfln3l9qap266y3y2vzz4g7dr5",
+        "sha256": "10aigc46rx5x65mxk4wsng4pfnzmb3gk8mij813pkgypzbfkg9ap",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vmware/vsextensions/vscode-spring-boot/1.44.0/vspackage?targetPlatform=linux-x64",
-        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "1.44.0"
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vmware/vsextensions/vscode-spring-boot/1.45.0/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "1.45.0"
     },
     "vscode:vscode-spring-boot-dashboard": {
         "name": "vscode-spring-boot-dashboard",
@@ -596,11 +596,11 @@
     "vscode:vscode-yaml": {
         "name": "vscode-yaml",
         "publisher": "redhat",
-        "sha256": "1dsbfc167r3069a8x3skdj1pcmr1gqqliy8f66zv2dcr1gapciy1",
+        "sha256": "193spsdrfwl6yf1c9k10c6s6azyq15h4jgz76gqz44c4d2yx0c8j",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.12.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/vscode-yaml/1.12.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.12.1"
+        "version": "1.12.2"
     },
     "vscode:vscodeintellicode": {
         "name": "vscodeintellicode",
