@@ -10,7 +10,6 @@
     basePackages.enable = true;
     btrfs.enable = true;
     commandNotFound.enable = true;
-    compatibility.enable = true;
     desktop.enable = true;
     docker.enable = true;
     fonts.enable = true;

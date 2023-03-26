@@ -16,6 +16,7 @@
         "emacsclient"
         "fish"
         "hplip"
+        "hp-uiscan"
         "htop"
         "nixos-manual"
         "nvidia-settings"
