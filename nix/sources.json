@@ -116,12 +116,12 @@
         "file_name": "kotest-plugin-intellij",
         "name": "Kotest",
         "plugin_id": "14080",
-        "sha256": "0qmg7w64s1gp6zj8ng35ck33bbc76cyiv8czyiqrrdrrs5hiis30",
+        "sha256": "18a208n3n5zd8awmi8inil8kcnbcgjkrb1an9f45ggnhavpkvm8n",
         "type": "file",
-        "url": "https://plugins.jetbrains.com/files/14080/291327/kotest-plugin-intellij-1.3.67-IC-2022.3.zip",
+        "url": "https://plugins.jetbrains.com/files/14080/313138/kotest-plugin-intellij-1.3.68-IC-2023.1.zip",
         "url_template": "https://plugins.jetbrains.com/files/<plugin_id>/<version_code>/<file_name>-<version>.zip",
-        "version": "1.3.67-IC-2022.3",
-        "version_code": "291327"
+        "version": "1.3.68-IC-2023.1",
+        "version_code": "313138"
     },
     "idea:mybatisx": {
         "file_name": "MybatisX",
@@ -203,11 +203,11 @@
     "vscode:aws-toolkit-vscode": {
         "name": "aws-toolkit-vscode",
         "publisher": "AmazonWebServices",
-        "sha256": "0d4yn6zb9mndd1j60dg3hrvz03gyfk35512b7fd1h5j4wrh03r94",
+        "sha256": "0mwfwm3ymdzblvsy15vr1i4kd46n0i60x41qahf8d0v3g1gaxpqr",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.66.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.67.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.66.0"
+        "version": "1.67.0"
     },
     "vscode:black-formatter": {
         "name": "black-formatter",
@@ -455,20 +455,20 @@
     "vscode:vscode-java-debug": {
         "name": "vscode-java-debug",
         "publisher": "vscjava",
-        "sha256": "1xh31ayv3b6frxn8q50n6d5a29hrmccl0dgkcc2zvrx1iy0v3ifx",
+        "sha256": "0s6f3n0j3h68757rmmja22hml1xfdx0w5h033m1lfaggvhj79l52",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.49.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/0.49.1/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.49.0"
+        "version": "0.49.1"
     },
     "vscode:vscode-java-dependency": {
         "name": "vscode-java-dependency",
         "publisher": "vscjava",
-        "sha256": "05661iy16kb6cjbg8lgp9sm9wjvhyz03kmdcic1p094sk8785zpj",
+        "sha256": "0k13g05wmzy3w7i5595izm7d8wkvb3gmjk77ljy4wz0rza13cgxl",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.21.1/vspackage?targetPlatform=linux-x64",
-        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "0.21.1"
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-dependency/0.21.2/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.21.2"
     },
     "vscode:vscode-java-pack": {
         "name": "vscode-java-pack",
@@ -482,11 +482,11 @@
     "vscode:vscode-java-test": {
         "name": "vscode-java-test",
         "publisher": "vscjava",
-        "sha256": "0fhribrms9nd0bxl37dg3ghr8gzm3iwy28acl4lmmv1q60hmg624",
+        "sha256": "1gbsfny61ld0w3dwmc0ypallipnkl8qww5lmx1v5rxsgj2f9q6jy",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.38.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/0.38.2/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.38.1"
+        "version": "0.38.2"
     },
     "vscode:vscode-jupyter-cell-tags": {
         "name": "vscode-jupyter-cell-tags",
@@ -527,11 +527,11 @@
     "vscode:vscode-maven": {
         "name": "vscode-maven",
         "publisher": "vscjava",
-        "sha256": "0allr53cz6v6xqxmzlw3gmjvm2myvh6vcqk4akg7c9k3ljflri2f",
+        "sha256": "1h4g7jidgfxl2dhbg0dzhkljnxxfazfc4ihskyzslr13lbkmfwp1",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.40.4/vspackage?targetPlatform=linux-x64",
-        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "0.40.4"
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-maven/0.41.0/vspackage",
+        "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
+        "version": "0.41.0"
     },
     "vscode:vscode-pylance": {
         "name": "vscode-pylance",
@@ -554,11 +554,11 @@
     "vscode:vscode-spring-boot-dashboard": {
         "name": "vscode-spring-boot-dashboard",
         "publisher": "vscjava",
-        "sha256": "1aqc13dq95m0s0kd7qvn9xsxw4pj71bhnlrzw07j69x9cvdx3ggf",
+        "sha256": "1jk0dq910r7l7cali98jsfhbxn6xv8yg2r5zlwfl2qrianjg2bi8",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-boot-dashboard/0.11.1/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-spring-boot-dashboard/0.12.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.11.1"
+        "version": "0.12.0"
     },
     "vscode:vscode-spring-initializr": {
         "name": "vscode-spring-initializr",
