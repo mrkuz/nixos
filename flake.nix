@@ -107,6 +107,7 @@
           }).config.system.build.crosvmRun;
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
+          snapd = (utils.callPkg ./pkgs/tools/package-management/snapd);
           # Kernels
           linux-cros = (utils.callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
           # GNOME extensions
@@ -154,6 +155,7 @@
         opengl = import ./modules/nixos/opengl.nix;
         pipewire = import ./modules/nixos/pipewire.nix;
         resolved = import ./modules/nixos/resolved.nix;
+        snapd = import ./modules/nixos/snapd.nix;
         snapper = import ./modules/nixos/snapper.nix;
         sshd = import ./modules/nixos/sshd.nix;
         steam = import ./modules/nixos/steam.nix;
@@ -189,10 +191,10 @@
 
       overlays = {
         chromium = import ./overlays/applications/networking/browsers/chromium;
-        nix = import ./overlays/tools/package-management/nix;
-        nixos-option = import ./overlays/tools/nix/nixos-option;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
+        nix = import ./overlays/tools/package-management/nix;
+        nixos-option = import ./overlays/tools/nix/nixos-option;
       };
     };
 }

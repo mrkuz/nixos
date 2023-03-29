@@ -161,6 +161,18 @@
         "url_template": "https://github.com/hakimel/reveal.js/archive/refs/tags/<version>.zip",
         "version": "4.1.0"
     },
+    "snapd": {
+        "branch": "2.59",
+        "description": "The snapd and snap tools enable systems to work with .snap files.",
+        "homepage": "",
+        "owner": "snapcore",
+        "repo": "snapd",
+        "rev": "e757928651eb6dec689c6facf56e69680239060d",
+        "sha256": "163piagvxn2c3rsr5kr0jbgm11pbcfgnvnvfp6v973sszx4m1x0w",
+        "type": "tarball",
+        "url": "https://github.com/snapcore/snapd/archive/e757928651eb6dec689c6facf56e69680239060d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "vscode:auto-close-tag": {
         "name": "auto-close-tag",
         "publisher": "formulahendry",

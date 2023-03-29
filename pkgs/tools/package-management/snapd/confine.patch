@@ -1,0 +1,50 @@
+diff --git a/cmd/libsnap-confine-private/utils.c b/cmd/libsnap-confine-private/utils.c
+index 635538a3da..bf05745491 100644
+--- a/cmd/libsnap-confine-private/utils.c
++++ b/cmd/libsnap-confine-private/utils.c
+@@ -242,7 +242,7 @@ int sc_nonfatal_mkpath(const char *const path, mode_t mode)
+ bool sc_is_expected_path(const char *path)
+ {
+ 	const char *expected_path_re =
+-	    "^(/snap/(snapd|core)/x?[0-9]+/usr/lib|/usr/lib(exec)?)/snapd/snap-confine$";
++	    "^(/snap/(snapd|core)/x?[0-9]+/usr/lib|/usr/lib(exec)?|/nix/store/.*/lib)/snapd/snap-confine(.unwrapped)?$";
+ 	regex_t re;
+ 	if (regcomp(&re, expected_path_re, REG_EXTENDED | REG_NOSUB) != 0)
+ 		die("can not compile regex %s", expected_path_re);
+diff --git a/cmd/snap-confine/mount-support.c b/cmd/snap-confine/mount-support.c
+index de2006702f..841a94cfa7 100644
+--- a/cmd/snap-confine/mount-support.c
++++ b/cmd/snap-confine/mount-support.c
+@@ -548,6 +548,14 @@ static void sc_bootstrap_mount_namespace(const struct sc_mount_config *config)
+ 		sc_do_mount(config->rootfs_dir, scratch_dir, NULL, MS_REC | MS_BIND,
+ 		            NULL);
+ 	}
++
++	sc_identity old = sc_set_effective_identity(sc_root_group_identity());
++	sc_must_snprintf(dst, sizeof(dst), "%s/%s", scratch_dir, "/nix");
++	if (sc_nonfatal_mkpath(dst, 0755) < 0) {
++		die("cannot create mount point %s", dst);
++	}
++	(void)sc_set_effective_identity(old);
++
+ 	// Make the scratch directory recursively slave. Nothing done there will be
+ 	// shared with the initial mount namespace. This effectively detaches us,
+ 	// in one way, from the original namespace and coupled with pivot_root
+@@ -952,7 +960,6 @@ void sc_populate_mount_ns(struct sc_apparmor *apparmor, int snap_update_ns_fd,
+ 		// In normal mode we use the base snap as / and set up several bind mounts.
+ 		static const struct sc_mount mounts[] = {
+ 			{"/dev"},	// because it contains devices on host OS
+-			{"/etc"},	// because that's where /etc/resolv.conf lives, perhaps a bad idea
+ 			{"/home"},	// to support /home/*/snap and home interface
+ 			{"/root"},	// because that is $HOME for services
+ 			{"/proc"},	// fundamental filesystem
+@@ -964,8 +971,8 @@ void sc_populate_mount_ns(struct sc_apparmor *apparmor, int snap_update_ns_fd,
+ 			{"/run"},	// to get /run with sockets and what not
+ 			{"/lib/modules",.is_optional = true},	// access to the modules of the running kernel
+ 			{"/lib/firmware",.is_optional = true},	// access to the firmware of the running kernel
+-			{"/usr/src"},	// FIXME: move to SecurityMounts in system-trace interface
+ 			{"/var/log"},	// FIXME: move to SecurityMounts in log-observe interface
++			{"/nix"},
+ #ifdef MERGED_USR
+ 			{"/run/media", true, "/media"},	// access to the users removable devices
+ #else

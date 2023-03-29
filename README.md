@@ -110,6 +110,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
+- `snapd` - Add [snapd](https://snapcraft.io/docs)
 - `snapper` - Configures [Snapper](http://snapper.io/) to create snapshots of `/home` on boot
 - `sshd` - Configures [OpenSSH](https://www.openssh.com/) server
 - `steam` - Configures [Steam](https://store.steampowered.com/)

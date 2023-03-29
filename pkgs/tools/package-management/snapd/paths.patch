@@ -1,0 +1,84 @@
+diff --git a/dirs/dirs.go b/dirs/dirs.go
+index 371b931237..57a93c5f03 100644
+--- a/dirs/dirs.go
++++ b/dirs/dirs.go
+@@ -352,11 +352,12 @@ func SetRootDir(rootdir string) {
+ 		"gentoo",
+ 		"manjaro",
+ 		"manjaro-arm",
++		"nixos",
+ 	}
+ 
+ 	isInsideBase, _ := isInsideBaseSnap()
+ 	if !isInsideBase && release.DistroLike(altDirDistros...) {
+-		SnapMountDir = filepath.Join(rootdir, "/var/lib/snapd/snap")
++		SnapMountDir = filepath.Join(rootdir, "/snap")
+ 	} else {
+ 		SnapMountDir = filepath.Join(rootdir, defaultSnapMountDir)
+ 	}
+@@ -439,7 +440,7 @@ func SetRootDir(rootdir string) {
+ 	SnapDBusSessionServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "services")
+ 	SnapDBusSystemServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "system-services")
+ 
+-	SnapPolkitPolicyDir = filepath.Join(rootdir, "/usr/share/polkit-1/actions")
++	SnapPolkitPolicyDir = filepath.Join(rootdir, "/run/current-system/sw/share/polkit-1/actions")
+ 
+ 	CloudInstanceDataFile = filepath.Join(rootdir, "/run/cloud-init/instance-data.json")
+ 
+@@ -448,7 +449,7 @@ func SetRootDir(rootdir string) {
+ 	SnapKModModulesDir = filepath.Join(rootdir, "/etc/modules-load.d/")
+ 	SnapKModModprobeDir = filepath.Join(rootdir, "/etc/modprobe.d/")
+ 
+-	LocaleDir = filepath.Join(rootdir, "/usr/share/locale")
++	LocaleDir = filepath.Join(rootdir, "/run/current-system/sw/share/locale")
+ 	ClassicDir = filepath.Join(rootdir, "/writable/classic")
+ 
+ 	opensuseTWWithLibexec := func() bool {
+@@ -475,15 +476,15 @@ func SetRootDir(rootdir string) {
+ 		// both RHEL and CentOS list "fedora" in ID_LIKE
+ 		DistroLibExecDir = filepath.Join(rootdir, "/usr/libexec/snapd")
+ 	} else {
+-		DistroLibExecDir = filepath.Join(rootdir, "/usr/lib/snapd")
++		DistroLibExecDir = filepath.Join(rootdir, "/run/current-system/sw/lib/snapd")
+ 	}
+ 
+ 	XdgRuntimeDirBase = filepath.Join(rootdir, "/run/user")
+ 	XdgRuntimeDirGlob = filepath.Join(XdgRuntimeDirBase, "*/")
+ 
+ 	CompletionHelperInCore = filepath.Join(CoreLibExecDir, "etelpmoc.sh")
+-	BashCompletionScript = filepath.Join(rootdir, "/usr/share/bash-completion/bash_completion")
+-	LegacyCompletersDir = filepath.Join(rootdir, "/usr/share/bash-completion/completions/")
++	BashCompletionScript = filepath.Join(rootdir, "/run/current-system/sw/share/bash-completion/bash_completion")
++	LegacyCompletersDir = filepath.Join(rootdir, "/run/current-system/sw/share/bash-completion/completions/")
+ 	CompletersDir = filepath.Join(rootdir, snappyDir, "desktop/bash-completion/completions/")
+ 
+ 	// These paths agree across all supported distros
+diff --git a/snap/info.go b/snap/info.go
+index aabac709b0..92e6f1c978 100644
+--- a/snap/info.go
++++ b/snap/info.go
+@@ -1137,9 +1137,9 @@ func (app *AppInfo) launcherCommand(command string) string {
+ 		command = " " + command
+ 	}
+ 	if app.Name == app.Snap.SnapName() {
+-		return fmt.Sprintf("/usr/bin/snap run%s %s", command, app.Snap.InstanceName())
++		return fmt.Sprintf("/run/current-system/sw/bin/snap run%s %s", command, app.Snap.InstanceName())
+ 	}
+-	return fmt.Sprintf("/usr/bin/snap run%s %s.%s", command, app.Snap.InstanceName(), app.Name)
++	return fmt.Sprintf("/run/current-system/sw/bin/snap run%s %s.%s", command, app.Snap.InstanceName(), app.Name)
+ }
+ 
+ // LauncherCommand returns the launcher command line to use when invoking the
+diff --git a/wrappers/binaries.go b/wrappers/binaries.go
+index 3060bf3579..0d1c618625 100644
+--- a/wrappers/binaries.go
++++ b/wrappers/binaries.go
+@@ -130,7 +130,7 @@ func AddSnapBinaries(s *snap.Info) (err error) {
+ 		if err := os.Remove(wrapperPath); err != nil && !os.IsNotExist(err) {
+ 			return err
+ 		}
+-		if err := os.Symlink("/usr/bin/snap", wrapperPath); err != nil {
++		if err := os.Symlink("/run/current-system/sw/bin/snap", wrapperPath); err != nil {
+ 			return err
+ 		}
+ 		created = append(created, wrapperPath)
