@@ -61,7 +61,7 @@ stdenv.mkDerivation rec {
       ICON_FOLDER=${placeholder "out"}/share/snapd \
       SYSTEMDUSERUNITDIR=${placeholder "out"}/lib/systemd/user \
       SYSTEMDSYSTEMUNITDIR=${placeholder "out"}/lib/systemd/system \
-      SNAP_MOUNT_DIR=/snap \
+      SNAP_MOUNT_DIR=/var/lib/snapd/snap \
       SNAPD_ENVIRONMENT_FILE=/etc/default/snapd
 
     cd cmd
@@ -69,7 +69,7 @@ stdenv.mkDerivation rec {
     ./configure \
       --prefix=/ \
       --libexecdir=/lib/snapd \
-      --with-snap-mount-dir=/snap \
+      --with-snap-mount-dir=/var/lib/snapd/snap \
       --disable-apparmor \
       --enable-nvidia-biarch \
       --enable-merged-usr
@@ -103,7 +103,7 @@ stdenv.mkDerivation rec {
       ICON_FOLDER=/share/snapd \
       SYSTEMDUSERUNITDIR=/lib/systemd/user \
       SYSTEMDSYSTEMUNITDIR=/lib/systemd/system \
-      SNAP_MOUNT_DIR=/snap \
+      SNAP_MOUNT_DIR=/var/lib/snapd/snap \
       DESTDIR="$out"
 
     # Install polkit policy

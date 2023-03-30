@@ -2,7 +2,7 @@ diff --git a/dirs/dirs.go b/dirs/dirs.go
 index 371b931237..57a93c5f03 100644
 --- a/dirs/dirs.go
 +++ b/dirs/dirs.go
-@@ -352,11 +352,12 @@ func SetRootDir(rootdir string) {
+@@ -352,6 +352,7 @@ func SetRootDir(rootdir string) {
  		"gentoo",
  		"manjaro",
  		"manjaro-arm",
@@ -10,12 +10,6 @@ index 371b931237..57a93c5f03 100644
  	}
  
  	isInsideBase, _ := isInsideBaseSnap()
- 	if !isInsideBase && release.DistroLike(altDirDistros...) {
--		SnapMountDir = filepath.Join(rootdir, "/var/lib/snapd/snap")
-+		SnapMountDir = filepath.Join(rootdir, "/snap")
- 	} else {
- 		SnapMountDir = filepath.Join(rootdir, defaultSnapMountDir)
- 	}
 @@ -439,7 +440,7 @@ func SetRootDir(rootdir string) {
  	SnapDBusSessionServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "services")
  	SnapDBusSystemServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "system-services")
