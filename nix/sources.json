@@ -74,7 +74,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "03e0db37d9f99155be43c8dda4de30923c7d174a",
+        "rev": "46c8c559f9cf8824df5628feea383bd9eb9ea9a7",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
