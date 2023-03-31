@@ -110,13 +110,14 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
-- `snapd` - Add [snapd](https://snapcraft.io/docs)
+- `snapd` - Adds [snapd](https://snapcraft.io/docs)
 - `snapper` - Configures [Snapper](http://snapper.io/) to create snapshots of `/home` on boot
 - `sshd` - Configures [OpenSSH](https://www.openssh.com/) server
 - `steam` - Configures [Steam](https://store.steampowered.com/)
 - `sway` - Configures [sway](https://github.com/swaywm/sway) window manager
 - `systemd-boot` - Configures [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - `tap` - Configures TAP network device
+- `toolbox` - Adds [toolbox](https://containertoolbx.org/)
 - `virtualbox` - Adds [VirutalBox](https://www.virtualbox.org/) and utilities
 - `waydroid` - Adds [Waydroid](https://waydro.id/)
 - `wayland` - Adds [Wayland](https://wayland.freedesktop.org/) utilities

@@ -108,6 +108,7 @@
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           snapd = (utils.callPkg ./pkgs/tools/package-management/snapd);
+          toolbox = (utils.callPkg ./pkgs/applications/virtualization/toolbox);
           # Kernels
           linux-cros = (utils.callPkg ./pkgs/os-specific/linux/kernel/linux-cros);
           # GNOME extensions
@@ -162,6 +163,7 @@
         sway = import ./modules/nixos/sway.nix;
         systemdBoot = import ./modules/nixos/systemd-boot.nix;
         tap = import ./modules/nixos/tap.nix;
+        toolbox = import ./modules/nixos/toolbox.nix;
         virtualbox = import ./modules/nixos/virtualbox.nix;
         waydroid = import ./modules/nixos/waydroid.nix;
         wayland = import ./modules/nixos/wayland.nix;

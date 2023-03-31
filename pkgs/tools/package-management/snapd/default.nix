@@ -3,7 +3,7 @@
 # see: https://github.com/snapcore/snapd/blob/master/packaging/arch/PKGBUILD
 let
   goModule = pkgs.buildGoModule rec {
-    name = "snapd";
+    name = "snapd-modules";
     src = sources.snapd;
     patches = [
       ./paths.patch

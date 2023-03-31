@@ -173,6 +173,18 @@
         "url": "https://github.com/snapcore/snapd/archive/e757928651eb6dec689c6facf56e69680239060d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "toolbox": {
+        "branch": "0.0.99.4",
+        "description": "Tool for interactive command line environments on Linux",
+        "homepage": "https://containertoolbx.org/",
+        "owner": "containers",
+        "repo": "toolbox",
+        "rev": "f7c4c7dedb34be33333065296275869e77464400",
+        "sha256": "11cdxzcvaibpghb2d1gsw607yanzf0dm9sc3ywmyp6c0av7svcwn",
+        "type": "tarball",
+        "url": "https://github.com/containers/toolbox/archive/f7c4c7dedb34be33333065296275869e77464400.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "vscode:auto-close-tag": {
         "name": "auto-close-tag",
         "publisher": "formulahendry",

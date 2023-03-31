@@ -46,8 +46,8 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1679466834,
-        "narHash": "sha256-fFmQBQ1KfKS7bgSpIsCOMDhxBJiTmQtyx4WdArG/6NI=",
+        "lastModified": 1680303038,
+        "narHash": "sha256-D9aEkKX6MjIwWMP2NsPt//x1FAm1R0P7m2L0Pb546EI=",
         "path": "/home/markus/etc/nixos/repos/dotfiles",
         "type": "path"
       },

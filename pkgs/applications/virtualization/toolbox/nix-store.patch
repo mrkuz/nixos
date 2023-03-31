@@ -1,0 +1,40 @@
+diff --git a/cmd/create.go b/cmd/create.go
+index 2a103f0..bb3f3dd 100644
+--- a/cmd/create.go
++++ b/cmd/create.go
+@@ -55,6 +55,7 @@ var (
+ 	}{
+ 		{"/etc/profile.d/toolbox.sh", "/etc/profile.d/toolbox.sh"},
+ 		{"/etc/profile.d/toolbox.sh", "/usr/share/profile.d/toolbox.sh"},
++		{"/etc/profile.d/toolbox.sh", "/run/current-system/sw/share/profile.d/toolbox.sh"},
+ 	}
+ )
+ 
+@@ -354,6 +355,18 @@ func createContainer(container, image, release, authFile string, showCommandToEn
+ 		runMediaMount = []string{"--volume", "/run/media:/run/media:rslave"}
+ 	}
+ 
++	var nixStoreMount []string
++
++	if utils.PathExists("/nix/store") {
++		nixStoreMount = []string{"--volume", "/nix/store:/nix/store:ro"}
++	}
++
++	var runCurrentSystemMount []string
++
++	if utils.PathExists("/run/current-system") {
++		 runCurrentSystemMount = []string{"--volume", "/run/current-system:/run/current-system:ro"}
++	}
++
+ 	logrus.Debug("Looking for toolbox.sh")
+ 
+ 	var toolboxShMount []string
+@@ -446,6 +459,8 @@ func createContainer(container, image, release, authFile string, showCommandToEn
+ 	createArgs = append(createArgs, mntMount...)
+ 	createArgs = append(createArgs, pcscSocketMount...)
+ 	createArgs = append(createArgs, runMediaMount...)
++	createArgs = append(createArgs, nixStoreMount...)
++	createArgs = append(createArgs, runCurrentSystemMount...)
+ 	createArgs = append(createArgs, toolboxShMount...)
+ 
+ 	createArgs = append(createArgs, []string{
