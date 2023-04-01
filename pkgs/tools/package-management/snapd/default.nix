@@ -9,7 +9,7 @@ let
       ./paths.patch
       ./misc.patch
     ];
-    vendorSha256 = "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo=";
+    vendorSha256 = sources.snapd.vendorSha256;
     nativeBuildInputs = with pkgs; [ pkg-config ];
     buildInputs = with pkgs; [ libseccomp libxfs libcap ];
     excludedPackages = [ "tests/lib/muinstaller" ];

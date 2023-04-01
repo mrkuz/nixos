@@ -1,12 +1,20 @@
 { stdenv, lib, pkgs, sources, ... }:
 
+
+
 let
   goModule = pkgs.buildGoModule rec {
     name = "toolbox-modules";
     src = "${sources.toolbox}/src";
-    vendorSha256 = "aAcrzq3j9OClRTFglWrYLF8qJcKamKhl3JRKeE9M3ns=";
+    vendorSha256 = sources.toolbox.vendorSha256;
     buildInputs = with pkgs; [ shadow ];
-    patches = [ ./nix-store.patch ];
+    overrideModAttrs = (_: {
+      patches = [ ./versions.patch ];
+    });
+    patches = [
+      ./nix-store.patch
+      ./versions.patch
+    ];
     doCheck = false;
   };
   libraryPath = lib.makeLibraryPath (with pkgs; [ shadow ]);

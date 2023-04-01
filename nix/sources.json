@@ -162,28 +162,30 @@
         "version": "4.1.0"
     },
     "snapd": {
-        "branch": "2.59",
+        "branch": "master",
         "description": "The snapd and snap tools enable systems to work with .snap files.",
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "e757928651eb6dec689c6facf56e69680239060d",
-        "sha256": "163piagvxn2c3rsr5kr0jbgm11pbcfgnvnvfp6v973sszx4m1x0w",
+        "rev": "1d1591f64bc187e67916a6b586458326cb188748",
+        "sha256": "0igd170iki20iw1804b14lhkqn0c8kyxcg2q9shrlkbyg19ic43m",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/e757928651eb6dec689c6facf56e69680239060d.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+        "url": "https://github.com/snapcore/snapd/archive/1d1591f64bc187e67916a6b586458326cb188748.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
     "toolbox": {
-        "branch": "0.0.99.4",
+        "branch": "main",
         "description": "Tool for interactive command line environments on Linux",
         "homepage": "https://containertoolbx.org/",
         "owner": "containers",
         "repo": "toolbox",
-        "rev": "f7c4c7dedb34be33333065296275869e77464400",
-        "sha256": "11cdxzcvaibpghb2d1gsw607yanzf0dm9sc3ywmyp6c0av7svcwn",
+        "rev": "d6c64dc0426350ec0be1278834550585b1d148fd",
+        "sha256": "1ypa2zg0pklzrqnb21jlp20c0dr8q805vqs4q75x7bl79cacm4qa",
         "type": "tarball",
-        "url": "https://github.com/containers/toolbox/archive/f7c4c7dedb34be33333065296275869e77464400.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+        "url": "https://github.com/containers/toolbox/archive/d6c64dc0426350ec0be1278834550585b1d148fd.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "vendorSha256": "9ifnqIA4s4KNs0WrSh/fu4+OzRZLm8LV8BYeLYXT/PU="
     },
     "vscode:auto-close-tag": {
         "name": "auto-close-tag",
