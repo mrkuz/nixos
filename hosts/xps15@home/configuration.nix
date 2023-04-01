@@ -19,6 +19,7 @@
     nvidia.enable = true;
     opengl.enable = true;
     pipewire.enable = true;
+    podman.enable = true;
     resolved.enable = true;
     snapper.enable = true;
     systemdBoot.enable = true;
@@ -136,7 +137,7 @@
         description = "Markus";
         isNormalUser = true;
         group = "markus";
-        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd" "lp" "scanner" "vboxusers" ];
+        extraGroups = [ "wheel" "adbusers" "docker" "libvirtd" "lp" "podman" "scanner" "vboxusers" ];
         passwordFile = config.age.secrets.markus.path;
         shell = pkgs.fish;
       };

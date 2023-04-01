@@ -19,7 +19,7 @@ in
         enable = true;
         dates = "daily";
       };
-      dockerSocket.enable = true;
+      dockerSocket.enable = config.modules.docker.enable == false;
     };
 
     environment.systemPackages = with pkgs; [
