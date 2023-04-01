@@ -14,7 +14,7 @@ let
     buildInputs = with pkgs; [ libseccomp libxfs libcap ];
     excludedPackages = [ "tests/lib/muinstaller" ];
     postConfigure = ''
-      ./mkversion.sh ${sources.snapd.branch}
+      ./mkversion.sh 99.99
     '';
     postInstall = ''
       mkdir -p $out/share

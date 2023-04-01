@@ -26,6 +26,9 @@ in
       tmpfiles.packages = [ pkgs.snapd ];
       services.snapd.wantedBy = [ "multi-user.target" ];
       sockets.snapd.wantedBy = [ "sockets.target" ];
+      tmpfiles.rules = [
+        "L  /snap  -  -  -  -  /var/lib/snapd/snap"
+      ];
     };
 
     environment.etc."default/snapd".text = ''
