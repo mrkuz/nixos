@@ -109,6 +109,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `nix` - Nix configuration and additions
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
 - `pipewire` - Configures [PipeWire](https://pipewire.org/)
+- `podman` - Adds [Podman](https://podman.io/)
 - `resolved` - Configures [systemd-resolved](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
 - `snapd` - Adds [snapd](https://snapcraft.io/docs)
 - `snapper` - Configures [Snapper](http://snapper.io/) to create snapshots of `/home` on boot

@@ -155,6 +155,7 @@
         nvidia = import ./modules/nixos/nvidia.nix;
         opengl = import ./modules/nixos/opengl.nix;
         pipewire = import ./modules/nixos/pipewire.nix;
+        podman = import ./modules/nixos/podman.nix;
         resolved = import ./modules/nixos/resolved.nix;
         snapd = import ./modules/nixos/snapd.nix;
         snapper = import ./modules/nixos/snapper.nix;
