@@ -11,3 +11,24 @@ index a8981290a1..f9085e32bb 100644
  				return false, ErrSystemKeyVersion
  			}
  		}
+diff --git a/wrappers/services.go b/wrappers/services.go
+index 58dfb6af6a..bde6be149b 100644
+--- a/wrappers/services.go
++++ b/wrappers/services.go
+@@ -1212,7 +1212,7 @@ After={{ stringsJoin .CoreMountedSnapdSnapDep " "}}
+ X-Snappy=yes
+
+ [Service]
+-EnvironmentFile=-/etc/environment
++EnvironmentFile=-/etc/default/snapd
+ ExecStart={{.App.LauncherCommand}}
+ SyslogIdentifier={{.App.Snap.InstanceName}}.{{.App.Name}}
+ Restart={{.Restart}}
+@@ -1236,6 +1236,7 @@ TimeoutStopSec={{.StopTimeout.Seconds}}
+ TimeoutStartSec={{.StartTimeout.Seconds}}
+ {{- end}}
+ Type={{.App.Daemon}}
++NotifyAccess=all
+ {{- if .Remain}}
+ RemainAfterExit={{.Remain}}
+ {{- end}}

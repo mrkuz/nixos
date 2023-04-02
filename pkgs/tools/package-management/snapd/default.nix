@@ -104,6 +104,7 @@ stdenv.mkDerivation rec {
       SYSTEMDUSERUNITDIR=/lib/systemd/user \
       SYSTEMDSYSTEMUNITDIR=/lib/systemd/system \
       SNAP_MOUNT_DIR=/var/lib/snapd/snap \
+      SNAPD_ENVIRONMENT_FILE=/etc/default/snapd \
       DESTDIR="$out"
 
     # Install polkit policy

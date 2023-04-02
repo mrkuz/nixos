@@ -1,5 +1,5 @@
 diff --git a/dirs/dirs.go b/dirs/dirs.go
-index 371b931237..57a93c5f03 100644
+index 371b931237..977f1bc1ed 100644
 --- a/dirs/dirs.go
 +++ b/dirs/dirs.go
 @@ -352,6 +352,7 @@ func SetRootDir(rootdir string) {
@@ -10,24 +10,6 @@ index 371b931237..57a93c5f03 100644
  	}
  
  	isInsideBase, _ := isInsideBaseSnap()
-@@ -439,7 +440,7 @@ func SetRootDir(rootdir string) {
- 	SnapDBusSessionServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "services")
- 	SnapDBusSystemServicesDir = filepath.Join(rootdir, snappyDir, "dbus-1", "system-services")
- 
--	SnapPolkitPolicyDir = filepath.Join(rootdir, "/usr/share/polkit-1/actions")
-+	SnapPolkitPolicyDir = filepath.Join(rootdir, "/run/current-system/sw/share/polkit-1/actions")
- 
- 	CloudInstanceDataFile = filepath.Join(rootdir, "/run/cloud-init/instance-data.json")
- 
-@@ -448,7 +449,7 @@ func SetRootDir(rootdir string) {
- 	SnapKModModulesDir = filepath.Join(rootdir, "/etc/modules-load.d/")
- 	SnapKModModprobeDir = filepath.Join(rootdir, "/etc/modprobe.d/")
- 
--	LocaleDir = filepath.Join(rootdir, "/usr/share/locale")
-+	LocaleDir = filepath.Join(rootdir, "/run/current-system/sw/share/locale")
- 	ClassicDir = filepath.Join(rootdir, "/writable/classic")
- 
- 	opensuseTWWithLibexec := func() bool {
 @@ -475,15 +476,15 @@ func SetRootDir(rootdir string) {
  		// both RHEL and CentOS list "fedora" in ID_LIKE
  		DistroLibExecDir = filepath.Join(rootdir, "/usr/libexec/snapd")

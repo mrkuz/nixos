@@ -27,12 +27,18 @@ in
       services.snapd.wantedBy = [ "multi-user.target" ];
       sockets.snapd.wantedBy = [ "sockets.target" ];
       tmpfiles.rules = [
-        "L  /snap  -  -  -  -  /var/lib/snapd/snap"
+        "L+  /bin/bash        -  -  -  -  ${pkgs.bash}/bin/bash"
+        "L+  /usr/lib/locale  -  -  -  -  ${pkgs.glibc}/lib/locale"
+        "L+  /snap            -  -  -  -  /var/lib/snapd/snap"
       ];
     };
 
+    programs.nix-ld.enable = true;
     environment.etc."default/snapd".text = ''
       PATH=/run/current-system/sw/bin
+
+      NIX_LD=${pkgs.glibc}/lib/ld-linux-x86-64.so.2
+      NIX_LD_LIBRARY_PATH=/run/current-system/sw/share/nix-ld/lib
     '';
 
     security.wrappers.snapd-confine = {
