@@ -8,10 +8,9 @@
   boot = {
     cleanTmpDir = true;
     consoleLogLevel = 0;
-    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "udev.log_priority=3"
-      # "systemd.unified_cgroup_hierarchy=0"
     ];
     kernel.sysctl = {
       "vm.swappiness" = 10;
@@ -21,13 +20,11 @@
     };
   };
 
-  time.timeZone = "Europe/Vienna";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     supportedLocales = [
       "C.UTF-8/UTF-8"
       "en_US.UTF-8/UTF-8"
-      "de_AT.UTF-8/UTF-8"
     ];
   };
 
@@ -39,15 +36,11 @@
 
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
-  # systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
   systemd.services.NetworkManager-wait-online.enable = false;
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
-
-  # Not working with cgroup v1
-  # systemd.oomd.enable = false;
 
   documentation = {
     enable = true;

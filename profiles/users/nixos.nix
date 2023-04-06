@@ -32,10 +32,5 @@
     nixos.enable = true;
   };
 
-  home.activation.hideWaydroidApps = lib.hm.dag.entryAfter [ "writeBoundary" ]
-    ''
-      sed -i 's/Icon=.*/NoDisplay=true/' ~/.local/share/applications/waydroid*.desktop || true
-    '';
-
   home.stateVersion = vars.stateVersion;
 }

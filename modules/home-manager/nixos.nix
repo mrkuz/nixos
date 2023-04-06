@@ -27,6 +27,7 @@ in
     systemd.user.tmpfiles.rules = [
       "d   %h/.nix-defexpr        0755 ${user} ${user}  -  -"
       "L+  %h/.nix-defexpr/nixos     -       -       -  -  ${nixpkgs}"
+      "L+  %h/.nix-defexpr/nixpkgs   -       -       -  -  ${nixpkgs}"
     ];
   };
 }

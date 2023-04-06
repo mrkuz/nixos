@@ -22,6 +22,7 @@ in
       bind
       binutils
       bridge-utils
+      btrfs-progs
       cifs-utils
       curl
       dmidecode

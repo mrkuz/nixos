@@ -28,7 +28,6 @@ in
     };
 
     environment.systemPackages = with pkgs; [
-      crosvm
       guestfs-tools
       qemu_kvm
       virt-manager

@@ -7,6 +7,7 @@
     ansible
     ansible-lint
     google-cloud-sdk
+    hey
     kubernetes-helm
     kubectl
     kubetail

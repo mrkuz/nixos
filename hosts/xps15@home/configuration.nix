@@ -3,6 +3,7 @@
 {
   imports = [
     ../../profiles/hosts/default.nix
+    ../../profiles/hosts/austria.nix
   ];
 
   modules = {

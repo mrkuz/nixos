@@ -30,6 +30,7 @@ in
         enable = true;
         editor = true;
         configurationLimit = 3;
+        consoleMode = "max";
       };
       timeout = cfg.timeout;
     };

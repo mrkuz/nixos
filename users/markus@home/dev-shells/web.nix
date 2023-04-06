@@ -3,5 +3,9 @@
 {
   name = "web";
   fhs = false;
-  targetPkgs = with pkgs; [ nodejs ];
+  targetPkgs = with pkgs; [
+    hugo
+    html-tidy
+    nodejs
+  ];
 }

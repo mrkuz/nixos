@@ -54,6 +54,7 @@ in
     systemd.tmpfiles.rules = [
       "d   /root/.nix-defexpr        0755  root  root  -  -"
       "L+  /root/.nix-defexpr/nixos     -     -        -  -  ${nixpkgs}"
+      "L+  /root/.nix-defexpr/nixpkgs   -     -        -  -  ${nixpkgs}"
     ];
 
     # Provide compatibility layer for non-flake utils

@@ -18,12 +18,12 @@ in
       driSupport32Bit = true;
       enable = true;
       extraPackages = with pkgs; [
-        # vaapiVdpau
         libvdpau-va-gl
       ];
     };
 
     environment.systemPackages = with pkgs; [
+      clinfo
       libva-utils
       glxinfo
       vdpauinfo

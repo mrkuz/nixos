@@ -41,6 +41,7 @@ in
     "d  %h/tmp           0755 ${user} ${user}  -  -"
     "d  %h/Games         0755 ${user} ${user}  -  -"
     "d  %h/Notes         0755 ${user} ${user}  -  -"
+    "d  %h/Scripts       0755 ${user} ${user}  -  -"
     "d  %h/Shared        0755 ${user} ${user}  -  -"
     "d  %h/Workspace     0755 ${user} ${user}  -  -"
     "L  %h/etc/dotfiles     -       -       -  -  %h/etc/nixos/repos/dotfiles"

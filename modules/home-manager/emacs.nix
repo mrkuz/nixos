@@ -29,10 +29,8 @@ in
       hunspellDicts.en_US
       pandoc
       plantuml
-      # silver-searcher
       sqlite
       texlive.combined.scheme-basic
-      # (callPackage ../../pkgs/misc/revealjs { })
     ] ++ [ ((pkgs.emacsPackagesFor cfg.package).emacsWithPackages (epkgs: [ epkgs.vterm ])) ];
 
     systemd.user.services.emacs = mkIf cfg.service {
