@@ -59,8 +59,8 @@ in
       gnome-shell-extensions.dynamic-panel-transparency
       gnome-shell-extensions.instant-workspace-switcher
       gnome-shell-extensions.just-perfection
+      gnome-shell-extensions.space-bar
       gnome-shell-extensions.quick-settings-tweaks
-      gnome-shell-extensions.workspaces-bar
       # Ubuntu look & feel
       yaru-theme
     ];

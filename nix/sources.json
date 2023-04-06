@@ -89,6 +89,18 @@
         "url": "https://github.com/qwreey75/quick-settings-tweaks/archive/0f8a28121689afc927922231a71fa21ee20dc238.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "gse:space-bar": {
+        "branch": "main",
+        "description": "GNOME Shell extension that shows workspaces buttons in top panel",
+        "homepage": null,
+        "owner": "christopher-l",
+        "repo": "space-bar",
+        "rev": "a58372bc64816306065529cbeaaa8e7fbe0ce49e",
+        "sha256": "0610bbjdccd4qvqln9jbv99drxcsknn0xpxn8hj8vm90q08g63xr",
+        "type": "tarball",
+        "url": "https://github.com/christopher-l/space-bar/archive/a58372bc64816306065529cbeaaa8e7fbe0ce49e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "gse:workspaces-bar": {
         "branch": "main",
         "description": "GNOME Shell extension that shows workspaces buttons in top panel",

@@ -122,8 +122,8 @@
             dynamic-panel-transparency = (utils.callPkg ./pkgs/desktops/gnome/extensions/dynamic-panel-transparency);
             instant-workspace-switcher = (utils.callPkg ./pkgs/desktops/gnome/extensions/instant-workspace-switcher);
             just-perfection = (utils.callPkg ./pkgs/desktops/gnome/extensions/just-perfection);
+            space-bar = (utils.callPkg ./pkgs/desktops/gnome/extensions/space-bar);
             quick-settings-tweaks = (utils.callPkg ./pkgs/desktops/gnome/extensions/quick-settings-tweaks);
-            workspaces-bar = (utils.callPkg ./pkgs/desktops/gnome/extensions/workspaces-bar);
           };
           # IDEA plugins
           idea-plugins = {
