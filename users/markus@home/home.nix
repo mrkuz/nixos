@@ -26,8 +26,8 @@ in
     devShells = {
       enable = true;
       shells = [
-        (import ./dev-shells/java.nix)
-        (import ./dev-shells/sdkman.nix)
+        (import ../../profiles/dev-shells/java.nix)
+        (import ../../profiles/dev-shells/sdkman.nix)
       ];
     };
     emacs.enable = true;
@@ -41,7 +41,7 @@ in
     vscodeProfiles = {
       enable = true;
       profiles = [
-        (import ./vscode-profiles/nix.nix)
+        (import ../../profiles/vscode/nix.nix)
       ];
     };
   };

@@ -282,11 +282,16 @@ nix develop
   lvcreate -n host.root -L 1G pool
   lvcreate -n host.var -L 100G pool
   lvcreate -n host.swap -L 4G pool
-  lvcreate -n shared.home -L 500G pool
+  lvcreate -n shared.home -L 100G pool
   lvcreate -n shared.data -L 100G pool
   lvcreate -n shared.nix -L 100G pool
 
   mkfs.fat -F 32 -n boot /dev/vda1
+  mkfs.ext4 /dev/pool/host.root
+  mkfs.ext4 /dev/pool/host.var
+  mkfs.ext4 /dev/pool/shared.home
+  mkfs.ext4 /dev/pool/shared.data
+  mkfs.ext4 /dev/pool/shared.nix
   ```
 
 - Mount volumes
