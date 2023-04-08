@@ -107,6 +107,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `kodi` - Adds [Kodi](https://kodi.tv/)
 - `kvm` - Support for [KVM](https://www.linux-kvm.org/)
 - `libreoffice` - Adds [LibreOffice](https://www.libreoffice.org/)
+- `lxd` - Support for [LXD](https://linuxcontainers.org/lxd/)
 - `nvidia` -  Configures proprietary NVIDIA drivers
 - `nix` - Nix configuration and additions
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)
@@ -157,6 +158,7 @@ Contains some custom [overlays](https://nixos.wiki/wiki/Overlays).
 - `desktops/gnome/core/gnome-terminal` - Gnome Terminal with transparency patch
 - `desktops/gnome/core/nautilus` - Change grid icon sizes
 - `tools/package-management/nix` - Patched to allow downloads from [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
+- `tools/admin/lxd` - [LXD](https://linuxcontainers.org/lxd/) with VM support
 - `tools/nix/nixos-option` - nixos-option using compatibility layer
 
 ## `pkgs/`

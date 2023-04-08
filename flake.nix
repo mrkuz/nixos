@@ -111,6 +111,7 @@
           }).config.system.build.crosvmRun;
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
+          lxd-agent = (utils.callPkg ./pkgs/tools/admin/lxd-agent);
           snapd = (utils.callPkg ./pkgs/tools/package-management/snapd);
           toolbox = (utils.callPkg ./pkgs/applications/virtualization/toolbox);
           # Kernels
@@ -156,6 +157,7 @@
         kodi = import ./modules/nixos/kodi.nix;
         kvm = import ./modules/nixos/kvm.nix;
         libreoffice = import ./modules/nixos/libreoffice.nix;
+        lxd = import ./modules/nixos/lxd.nix;
         nix = import ./modules/nixos/nix.nix;
         nvidia = import ./modules/nixos/nvidia.nix;
         opengl = import ./modules/nixos/opengl.nix;
@@ -200,6 +202,7 @@
       overlays = {
         chromium = import ./overlays/applications/networking/browsers/chromium;
         gnome-terminal = import ./overlays/desktops/gnome/core/gnome-terminal;
+        lxd = import ./overlays/tools/admin/lxd;
         nautilus = import ./overlays/desktops/gnome/core/nautilus;
         nix = import ./overlays/tools/package-management/nix;
         nixos-option = import ./overlays/tools/nix/nixos-option;

@@ -16,6 +16,7 @@
     fonts.enable = true;
     gnome.enable = true;
     kvm.enable = true;
+    # lxd.enable = true;
     # libreoffice.enable = true;
     opengl.enable = true;
     pipewire.enable = true;
@@ -125,7 +126,7 @@
         description = "Markus";
         isNormalUser = true;
         group = "markus";
-        extraGroups = [ "wheel" "adbusers" "disk" "docker" "libvirtd" "lp" "podman" "scanner" "vboxusers" ];
+        extraGroups = [ "wheel" "adbusers" "disk" "docker" "libvirtd" "lp" "lxd" "podman" "scanner" "vboxusers" ];
         passwordFile = config.age.secrets.markus.path;
         shell = pkgs.fish;
       };
