@@ -15,6 +15,7 @@
     # docker.enable = true;
     fonts.enable = true;
     gnome.enable = true;
+    homeOverlay.enable = true;
     kvm.enable = true;
     # lxd.enable = true;
     # libreoffice.enable = true;
@@ -73,16 +74,6 @@
       device = "/dev/pool/shared.data";
       fsType = "ext4";
       options = [ "noatime" ];
-    };
-    "/data/overlays/home/mnt" = {
-      fsType = "overlay";
-      device = "overlay";
-      options = [
-        "lowerdir=/home"
-        "upperdir=/data/overlays/home/upper"
-        "workdir=/data/overlays/home/work"
-        "x-systemd.requires-mounts-for=/home"
-      ];
     };
   };
 

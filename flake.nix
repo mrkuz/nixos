@@ -153,6 +153,7 @@
         fonts = import ./modules/nixos/fonts.nix;
         gnome = import ./modules/nixos/gnome.nix;
         grubEfi = import ./modules/nixos/grub-efi.nix;
+        homeOverlay = import ./modules/nixos/home-overlay.nix;
         kde = import ./modules/nixos/kde.nix;
         kodi = import ./modules/nixos/kodi.nix;
         kvm = import ./modules/nixos/kvm.nix;

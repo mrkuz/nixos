@@ -106,6 +106,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `grub-efi` - Configures [GRUB](https://www.gnu.org/software/grub/) for UEFI systems
 - `kodi` - Adds [Kodi](https://kodi.tv/)
 - `kvm` - Support for [KVM](https://www.linux-kvm.org/)
+- `home-overlay` - Creates an overlay for /home
 - `libreoffice` - Adds [LibreOffice](https://www.libreoffice.org/)
 - `lxd` - Support for [LXD](https://linuxcontainers.org/lxd/)
 - `nvidia` -  Configures proprietary NVIDIA drivers
