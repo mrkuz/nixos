@@ -17,7 +17,7 @@
     gnome.enable = true;
     homeOverlay.enable = true;
     kvm.enable = true;
-    # lxd.enable = true;
+    lxd.enable = true;
     # libreoffice.enable = true;
     opengl.enable = true;
     pipewire.enable = true;

@@ -27,22 +27,28 @@ let
     '')
   ];
 
-  firmware = super.linkFarm "lxd-firmware" [
-    {
-      name = "share/OVMF/OVMF_CODE.fd";
-      path = "${pkgs.OVMFFull.fd}/FV/OVMF_CODE.fd";
-    }
-    {
-      name = "share/OVMF/OVMF_VARS.fd";
-      path = "${pkgs.OVMFFull.fd}/FV/OVMF_VARS.fd";
-    }
-    {
-      name = "share/OVMF/OVMF_VARS.ms.fd";
-      path = "${pkgs.OVMFFull.fd}/FV/OVMF_VARS.fd";
-    }
-  ];
+  ovmfUbuntu = super.stdenv.mkDerivation rec {
+    pname = "ovmf-ubuntu";
+    version = "2022.05-4";
 
-  LXD_OVMF_PATH = "${firmware}/share/OVMF";
+    src = super.fetchurl {
+      url = "http://security.ubuntu.com/ubuntu/pool/main/e/edk2/ovmf_${version}_all.deb";
+      sha256 = "ONuX/Iij769tWyIOvY7AzaFpqG8P0Bv/pn3i7Q1JXW0=";
+    };
+
+    nativeBuildInputs = [ pkgs.dpkg ];
+
+    dontStrip = true;
+    unpackPhase = "dpkg -x $src ./";
+    installPhase = ''
+      mkdir -p $out/share/OVMF
+      cp ./usr/share/OVMF/OVMF_CODE.fd $out/share/OVMF/
+      cp ./usr/share/OVMF/OVMF_VARS.fd $out/share/OVMF/
+      cp ./usr/share/OVMF/OVMF_VARS.ms.fd $out/share/OVMF/
+    '';
+  };
+
+  LXD_OVMF_PATH = "${ovmfUbuntu}/share/OVMF";
 in
 {
   lxd = super.lxd.overrideAttrs (old: {
