@@ -15,6 +15,7 @@ in
   config = mkIf cfg.enable {
 
     boot.kernelModules = [ "vhost-vsock" ];
+    networking.firewall.trustedInterfaces = [ "lxdbr0" ];
 
     virtualisation.lxd.enable = true;
 

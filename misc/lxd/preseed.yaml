@@ -1,0 +1,23 @@
+config: {}
+networks:
+- name: lxdbr0
+  config:
+    ipv4.address: 192.168.77.1/24
+    ipv4.nat: "true"
+    ipv6.address: auto
+storage_pools:
+- name: default
+  config: {}
+  driver: dir
+profiles:
+- name: default
+  config: {}
+  devices:
+    eth0:
+      name: eth0
+      network: lxdbr0
+      type: nic
+    root:
+      path: /
+      pool: default
+      type: disk

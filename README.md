@@ -195,6 +195,10 @@ Create development shells for running phoronix-test-suite.
 nix develop
 ```
 
+## `scripts/`
+
+Stuff that doesn't fit anywhere else.
+
 # Appendix A: Example NixOS installation (qemu-kvm, UEFI, LUKS/BTRFS or LVM/ext4, systemd-boot)
 
 ## Preparation
