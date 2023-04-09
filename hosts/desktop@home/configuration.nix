@@ -7,7 +7,6 @@
   ];
 
   modules = {
-    # avahi.enable = true;
     amdGpu.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
@@ -22,14 +21,9 @@
     opengl.enable = true;
     pipewire.enable = true;
     podman.enable = true;
-    # resolved.enable = true;
+    resolved.enable = true;
     systemdBoot.enable = true;
-    # tap = {
-    #   enable = true;
-    #   owner = "markus";
-    #   externalInterface = "wlp5s0";
-    # };
-    # wayland.enable = true;
+    wayland.enable = true;
     x11.enable = true;
   };
 
