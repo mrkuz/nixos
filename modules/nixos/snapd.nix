@@ -3,6 +3,11 @@
 with lib;
 let
   cfg = config.modules.snapd;
+
+  mountSquashfuse = pkgs.runCommandLocal "mount-squashfuse" { } ''
+    mkdir -p $out/bin/
+    ln -s ${pkgs.squashfuse}/bin/squashfuse "$out/bin/mount.fuse.squashfuse"
+  '';
 in
 {
   options.modules.snapd = {
@@ -18,7 +23,7 @@ in
       kernelModules = [ "overlay " ];
     };
 
-    environment.systemPackages = [ pkgs.snapd pkgs.squashfsTools ];
+    environment.systemPackages = [ pkgs.snapd pkgs.squashfsTools pkgs.squashfuse mountSquashfuse ];
     services.dbus.packages = [ pkgs.snapd ];
 
     systemd = {
