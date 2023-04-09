@@ -132,6 +132,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 
 - `crosvm-quest` - Prepares host to run [crosvm](https://github.com/google/crosvm) guest
 - `docker-container` - Prepares host to run as [Docker](https://www.docker.com/) container
+- `lxd-container` - Prepares host to run as [LXD](https://linuxcontainers.org/lxd/) container
 - `qemu-quest` - Prepares host to run [QEMU](https://www.qemu.org/) guest
 
 ### `home-manager/`
@@ -618,7 +619,16 @@ Stuff that doesn't fit anywhere else.
   sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
   ```
 
-# Appendix G: Naming conventions
+# Appendix E: Build and run LXD container
+
+  ```shell
+  nix build .#lxd-import
+  ./result/bin/import-image
+
+  lxd launch nixos --console
+  ```
+
+# Appendix H: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -626,7 +636,7 @@ Stuff that doesn't fit anywhere else.
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix H: File structures
+# Appendix I: File structures
 
 ## Hosts
 

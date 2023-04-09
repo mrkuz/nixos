@@ -7,6 +7,7 @@ let
   dockerConfig = (import "${nixpkgs}/nixos/lib/eval-config.nix" {
     system = vars.currentSystem;
     modules = modules ++ [
+      "${nixpkgs}/nixos/modules/virtualisation/docker-image.nix"
       {
         boot = {
           isContainer = true;
@@ -20,7 +21,6 @@ let
         environment.noXlibs = mkOverride 900 false;
         users.allowNoPasswordLogin = true;
       }
-      "${nixpkgs}/nixos/modules/virtualisation/docker-image.nix"
     ];
   }).config;
 in

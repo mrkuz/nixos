@@ -109,6 +109,11 @@
             name = "crosvm";
             system = "x86_64-linux";
           }).config.system.build.crosvmRun;
+          lxd-import = (utils.setUpNixOS {
+            name = "lxd";
+            system = "x86_64-linux";
+          }).config.system.build.lxdImport;
+
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           lxd-agent = (utils.callPkg ./pkgs/tools/admin/lxd-agent);
@@ -180,6 +185,7 @@
         # Virtualization
         crosvmGuest = import ./modules/nixos/virtualization/crosvm-guest.nix;
         dockerContainer = import ./modules/nixos/virtualization/docker-container.nix;
+        lxdContainer = import ./modules/nixos/virtualization/lxd-container.nix;
         qemuGuest = import ./modules/nixos/virtualization/qemu-guest.nix;
       };
 

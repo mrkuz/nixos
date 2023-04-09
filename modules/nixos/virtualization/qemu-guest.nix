@@ -7,6 +7,7 @@ let
   qemuConfig = (import "${nixpkgs}/nixos/lib/eval-config.nix" {
     system = vars.currentSystem;
     modules = modules ++ [
+      "${nixpkgs}/nixos/modules/virtualisation/qemu-vm.nix"
       {
         virtualisation = {
           diskImage = null;
@@ -19,7 +20,6 @@ let
           };
         };
       }
-      "${nixpkgs}/nixos/modules/virtualisation/qemu-vm.nix"
     ];
   }).config;
 

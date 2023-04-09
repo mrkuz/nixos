@@ -14,7 +14,7 @@
   systemd.coredump.enable = false;
   systemd.oomd.enable = false;
 
-  services.logrotate.enable = false;
+  services.logrotate.enable = lib.mkDefault false;
   services.timesyncd.enable = false;
   services.udisks2.enable = lib.mkDefault false;
 
@@ -23,11 +23,11 @@
   programs.command-not-found.enable = false;
 
   documentation = {
-    enable = false;
+    enable = lib.mkForce false;
     doc.enable = false;
     info.enable = false;
     man.enable = false;
-    nixos.enable = false;
+    nixos.enable = lib.mkForce false;
   };
 
   xdg = {
