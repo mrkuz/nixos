@@ -21,6 +21,7 @@ in
 
     environment.systemPackages = with pkgs; [
       xclip
+      xorg.xhost
       xorg.xkill
       # xpra
     ];

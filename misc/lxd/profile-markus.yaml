@@ -1,0 +1,85 @@
+name: markus
+config:
+  raw.idmap: both 1000 1000
+  user.user-data: |
+    #cloud-config
+    users:
+      - name: markus
+        uid: 1000
+        no_create_home: true
+        shell: /usr/bin/bash
+        sudo: ALL=(ALL) NOPASSWD:ALL
+    write_files:
+      - path: /etc/systemd/system/startup.service
+        content: |
+          [Unit]
+          After=local-fs.target
+          [Service]
+          Type=oneshot
+          ExecStart=/usr/local/bin/startup.sh
+          [Install]
+          WantedBy=default.target
+      - path: /usr/local/bin/startup.sh
+        permissions: 0755
+        content: |
+          #!/bin/sh
+          touch /run/.containerenv
+
+          UID=1000
+          GID=1000
+          mkdir -p /run/user/$UID
+          chmod 700 /run/user/$UID
+          chown $UID:$GID /run/user/$UID
+          ln -sfv /mnt/wayland-socket /run/user/$UID/wayland-0
+
+          mkdir -p /tmp/.X11-unix
+          ln -sfv /mnt/x11-socket /tmp/.X11-unix/X0
+      - path: /etc/profile.d/graphics.sh
+        content: |
+          export WAYLAND_DISPLAY=wayland-0
+          export XDG_SESSION_TYPE=wayland
+          export DISPLAY=:0
+    runcmd:
+      - systemctl daemon-reload
+      - systemctl enable startup.service
+      - systemctl start startup.service
+description: ""
+devices:
+  eth0:
+    name: eth0
+    network: lxdbr0
+    type: nic
+  gpu:
+    gid: "44"
+    type: gpu
+  home:
+    type: disk
+    source: /data/overlays/home/mnt/markus
+    path: /home/markus
+  nix:
+    type: disk
+    source: /nix
+    path: /nix
+    readonly: "true"
+  root:
+    type: disk
+    pool: default
+    path: /
+  wayland-socket:
+    type: proxy
+    bind: container
+    connect: unix:/run/user/1000/wayland-0
+    security.uid: "1000"
+    security.gid: "1000"
+    listen: unix:/mnt/wayland-socket
+    uid: "1000"
+    gid: "1000"
+  x11-socket:
+    type: proxy
+    bind: container
+    connect: unix:/tmp/.X11-unix/X0
+    security.uid: "1000"
+    security.gid: "1000"
+    listen: unix:/mnt/x11-socket
+    uid: "1000"
+    gid: "1000"
