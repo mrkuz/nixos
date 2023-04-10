@@ -14,6 +14,7 @@ let
     gzip
     iproute2
     iptables
+    kmod
     lxd-agent
     nftables
     qemu-utils
@@ -24,6 +25,10 @@ let
     xz
     (super.writeShellScriptBin "apparmor_parser" ''
       exec '${apparmor-parser}/bin/apparmor_parser' -I '${apparmor-profiles}/etc/apparmor.d' "$@"
+    '')
+    (super.runCommandLocal "virtfs-proxy-helper" { } ''
+      mkdir -p $out/bin/
+      ln -s ${pkgs.qemu_kvm}/libexec/virtfs-proxy-helper "$out/bin/virtfs-proxy-helper"
     '')
   ];
 

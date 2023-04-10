@@ -18,6 +18,8 @@ in
       extraOptions = ''
         experimental-features = nix-command flakes
         narinfo-cache-positive-ttl = 86400
+        keep-outputs = true
+        keep-derivations = true
         auto-optimise-store = true
       '';
 
