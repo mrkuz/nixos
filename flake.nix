@@ -204,6 +204,7 @@
         nixos = import ./modules/home-manager/nixos.nix;
         nonNixos = import ./modules/home-manager/non-nixos.nix;
         vscodeProfiles = import ./modules/home-manager/vscode-profiles.nix;
+        waypipe = import ./modules/home-manager/waypipe.nix;
       };
 
       overlays = {

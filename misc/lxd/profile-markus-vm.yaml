@@ -1,0 +1,86 @@
+name: markus
+config:
+  raw.idmap: both 1000 1000
+  user.user-data: |
+    #cloud-config
+    users:
+      - name: markus
+        uid: 1000
+        no_create_home: true
+        shell: /usr/bin/bash
+        sudo: ALL=(ALL) NOPASSWD:ALL
+    packages:
+      - mesa-utils
+      - socat
+      - waypipe
+    write_files:
+      - path: /usr/local/bin/startup.sh
+        permissions: 0755
+        content: |
+          #!/bin/sh
+          touch /run/.containerenv
+
+          UID=1000
+          GID=1000
+          mkdir -p /run/user/$UID
+          chmod 700 /run/user/$UID
+          chown $UID:$GID /run/user/$UID
+      - path: /etc/systemd/system/startup.service
+        content: |
+          [Unit]
+          After=local-fs.target
+          [Service]
+          Type=oneshot
+          ExecStart=/usr/local/bin/startup.sh
+          [Install]
+          WantedBy=default.target
+      - path: /etc/systemd/system/waypipe-vsock.service
+        content: |
+          [Unit]
+          Description=waypipe - vsock
+          After=startup.service
+          [Install]
+          WantedBy=default.target
+          [Service]
+          User=1000
+          ExecStart=/usr/bin/socat VSOCK-CONNECT:2:4321 unix-listen:/run/user/1000/waypipe.sock
+          Restart=always
+      - path: /etc/systemd/system/waypipe.service
+        content: |
+          [Unit]
+          Description=waypipe
+          After=waypipe-vsock.service
+          [Install]
+          WantedBy=default.target
+          [Service]
+          User=1000
+          ExecStart=/usr/bin/waypipe --socket /run/user/1000/waypipe.sock --display /run/user/1000/wayland-0 server -- sleep inf
+          Restart=always
+      - path: /etc/profile.d/graphics.sh
+        content: |
+          export WAYLAND_DISPLAY=wayland-0
+          export XDG_SESSION_TYPE=wayland
+          export DISPLAY=:0
+    runcmd:
+      - systemctl daemon-reload
+      - systemctl enable startup.service waypipe-vsock.service waypipe.service
+      - systemctl start startup.service waypipe-vsock.service waypipe.service
+description: ""
+devices:
+  eth0:
+    type: nic
+    name: eth0
+    network: lxdbr0
+  home:
+    type: disk
+    source: /data/overlays/home/mnt/markus
+    path: /home/markus
+  nix:
+    type: disk
+    source: /nix
+    path: /nix
+    readonly: "true"
+  root:
+    type: disk
+    pool: default
+    path: /

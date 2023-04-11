@@ -151,6 +151,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `non-nixos` - Use if other Linux OS than NixOS
 - `nixos` - NixOS configuration and additions
 - `vscode-profiles` - Adds [VSCode](https://code.visualstudio.com/) with multiple profiles
+- `waypipe` - Connects host wayland to VM via waypipe, socat and vsocks
 
 ## `overlays/`
 
