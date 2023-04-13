@@ -23,7 +23,7 @@ in
       xclip
       xorg.xhost
       xorg.xkill
-      # xpra
+      xpra
     ];
   };
 }

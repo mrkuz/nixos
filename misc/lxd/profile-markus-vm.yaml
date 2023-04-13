@@ -25,6 +25,9 @@ config:
           mkdir -p /run/user/$UID
           chmod 700 /run/user/$UID
           chown $UID:$GID /run/user/$UID
+
+          # Hack to get GUEST_CID: lxd-agent is already running and will quit with an error containing the cid
+          /run/lxd_agent/lxd-agent 2>&1 | sed -n 's/Error.*vsock vm(\([0-9]\+\)).*/GUEST_CID=\1/;T;p' >> /etc/default/xpra
       - path: /etc/systemd/system/startup.service
         content: |
           [Unit]
@@ -55,6 +58,18 @@ config:
           [Service]
           User=1000
           ExecStart=/usr/bin/waypipe --socket /run/user/1000/waypipe.sock --display /run/user/1000/wayland-0 server -- sleep inf
+          Restart=always
+      - path: /etc/systemd/system/xpra.service
+        content: |
+          [Unit]
+          Description=xpra
+          After=startup.service
+          [Install]
+          WantedBy=default.target
+          [Service]
+          User=1000
+          EnvironmentFile=/etc/default/xpra
+          ExecStart=/usr/bin/xpra start :0 --bind-vsock=${GUEST_CID}:4322 --no-daemon
           Restart=always
       - path: /etc/profile.d/graphics.sh
         content: |
