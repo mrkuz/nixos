@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "eonpatapon",
         "repo": "gnome-shell-extension-caffeine",
-        "rev": "5c06a781f92fdcf814ff509b2eecb69d70803686",
-        "sha256": "0w7ylmmiw1ad2ssvsvygapvw3dhyy2lj37f4ymk7x7n9ca1h29xf",
+        "rev": "54eb758c3b7fccb52f395180d91212b5da8cb70a",
+        "sha256": "05cd88kanvnzj19bskxx03all7hky7s86wbyss559vf1x5pfa734",
         "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/5c06a781f92fdcf814ff509b2eecb69d70803686.tar.gz",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/54eb758c3b7fccb52f395180d91212b5da8cb70a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:dynamic-panel-transparency": {
@@ -95,10 +95,10 @@
         "homepage": null,
         "owner": "christopher-l",
         "repo": "space-bar",
-        "rev": "a58372bc64816306065529cbeaaa8e7fbe0ce49e",
-        "sha256": "0610bbjdccd4qvqln9jbv99drxcsknn0xpxn8hj8vm90q08g63xr",
+        "rev": "9ceeb076e89947190f698a38bfb098c1aee847d4",
+        "sha256": "1mc4va1dqglf8n99y81k4np7h8dig2i0gd15l7lwyxbx1313cziy",
         "type": "tarball",
-        "url": "https://github.com/christopher-l/space-bar/archive/a58372bc64816306065529cbeaaa8e7fbe0ce49e.tar.gz",
+        "url": "https://github.com/christopher-l/space-bar/archive/9ceeb076e89947190f698a38bfb098c1aee847d4.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:workspaces-bar": {
@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "82b79b4322cc7db5f71cddade57120bd60183524",
-        "sha256": "1gv9shj5s5n823c0gl8x8g7rrc44wb5hfyapj8xp0fhb9v609b0a",
+        "rev": "bc7b610452d4c5b0284c2ac298441434c93cb4f8",
+        "sha256": "0dfxnrbl9cnx7s5zmscdsdggj8cdf4cx59lp6b6sbsklincywy8f",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/82b79b4322cc7db5f71cddade57120bd60183524.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/bc7b610452d4c5b0284c2ac298441434c93cb4f8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
