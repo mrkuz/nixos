@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "eonpatapon",
         "repo": "gnome-shell-extension-caffeine",
-        "rev": "54eb758c3b7fccb52f395180d91212b5da8cb70a",
-        "sha256": "05cd88kanvnzj19bskxx03all7hky7s86wbyss559vf1x5pfa734",
+        "rev": "f8697930243f409cd82cb71c492d91d3e9dfdf5e",
+        "sha256": "159q7v1cjdarjryd393axsg25ivlg486l5gma1hj802y7p44qbp1",
         "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/54eb758c3b7fccb52f395180d91212b5da8cb70a.tar.gz",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/f8697930243f409cd82cb71c492d91d3e9dfdf5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:dynamic-panel-transparency": {
@@ -95,10 +95,10 @@
         "homepage": null,
         "owner": "christopher-l",
         "repo": "space-bar",
-        "rev": "9ceeb076e89947190f698a38bfb098c1aee847d4",
-        "sha256": "1mc4va1dqglf8n99y81k4np7h8dig2i0gd15l7lwyxbx1313cziy",
+        "rev": "3c69507a83000d4cbab2d5dde25a46c102aafcee",
+        "sha256": "1py27lmaj7ixyvl28yhl7z7wnhwvs8xp9nvjjx18h67f143pf7sz",
         "type": "tarball",
-        "url": "https://github.com/christopher-l/space-bar/archive/9ceeb076e89947190f698a38bfb098c1aee847d4.tar.gz",
+        "url": "https://github.com/christopher-l/space-bar/archive/3c69507a83000d4cbab2d5dde25a46c102aafcee.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:workspaces-bar": {
@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "bc7b610452d4c5b0284c2ac298441434c93cb4f8",
-        "sha256": "0dfxnrbl9cnx7s5zmscdsdggj8cdf4cx59lp6b6sbsklincywy8f",
+        "rev": "023c8eae4423c09cbb0f87c4ff6c658362f550e2",
+        "sha256": "08fr6xln4h9lc3pvyqnx94670dhxymnb8rxq7z0amrcsh0ih2wnl",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/bc7b610452d4c5b0284c2ac298441434c93cb4f8.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/023c8eae4423c09cbb0f87c4ff6c658362f550e2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
@@ -229,11 +229,11 @@
     "vscode:aws-toolkit-vscode": {
         "name": "aws-toolkit-vscode",
         "publisher": "AmazonWebServices",
-        "sha256": "0mwfwm3ymdzblvsy15vr1i4kd46n0i60x41qahf8d0v3g1gaxpqr",
+        "sha256": "1vyb9x2prhjh83hqb29b4zp62s0nc85k79s3an2aili2gg7nw0k1",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.67.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.68.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.67.0"
+        "version": "1.68.0"
     },
     "vscode:black-formatter": {
         "name": "black-formatter",
@@ -274,11 +274,11 @@
     "vscode:java": {
         "name": "java",
         "publisher": "redhat",
-        "sha256": "1b249sqjin9gpblyv206hbblzkzh0zpg9i3qvvrj388040z291g8",
+        "sha256": "0banhycnlkp9q4klchyaknilsj4izlvqd0cqqzx650qwsd39lhx2",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.16.0/vspackage?targetPlatform=linux-x64",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/redhat/vsextensions/java/1.17.0/vspackage?targetPlatform=linux-x64",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage?targetPlatform=linux-x64",
-        "version": "1.16.0"
+        "version": "1.17.0"
     },
     "vscode:javascriptsnippets": {
         "name": "javascriptsnippets",
@@ -292,11 +292,11 @@
     "vscode:jupyter": {
         "name": "jupyter",
         "publisher": "ms-toolsai",
-        "sha256": "1dzgvxkx33i9dcpm08wpz7s5gh5y54mvfmrx8mgv5hfwrx9qgmcw",
+        "sha256": "1isar4c69n1n1ihk94bvpdx6nk4qp7jdjk1pg8ydznhchvzh3533",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter/2023.3.1000892223/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-toolsai/vsextensions/jupyter/2023.3.1201040234/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2023.3.1000892223"
+        "version": "2023.3.1201040234"
     },
     "vscode:jupyter-keymap": {
         "name": "jupyter-keymap",
@@ -373,11 +373,11 @@
     "vscode:remote-ssh": {
         "name": "remote-ssh",
         "publisher": "ms-vscode-remote",
-        "sha256": "0xjlkbrhnwvmvhxzsb34wywcpcrlcdmlqpb7paw3i2kp00hsi69q",
+        "sha256": "082gp9z83krngva664dnj8gvzc6gh285p03m4p0vc5axfn1g134j",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.98.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode-remote/vsextensions/remote-ssh/0.100.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "0.98.0"
+        "version": "0.100.0"
     },
     "vscode:sonarlint-vscode": {
         "name": "sonarlint-vscode",
@@ -472,11 +472,11 @@
     "vscode:vscode-icons": {
         "name": "vscode-icons",
         "publisher": "vscode-icons-team",
-        "sha256": "12s5br0s9n99vjn6chivzdsjb71p0lai6vnif7lv13x497dkw4rz",
+        "sha256": "0virk431i4b3gpj4gdnnydg5dmgpzfvxq9p4h414dwpk6mi00qzg",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/12.2.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/12.3.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "12.2.0"
+        "version": "12.3.0"
     },
     "vscode:vscode-java-debug": {
         "name": "vscode-java-debug",
@@ -562,11 +562,11 @@
     "vscode:vscode-pylance": {
         "name": "vscode-pylance",
         "publisher": "ms-python",
-        "sha256": "17s60qlp9k8x4rfz2p3idgi3d1zqjr8zk49nfjzwi2rg1lk1dlg2",
+        "sha256": "0sfl50d42sas005xk6n24gjq57z3y7m6gqqr2biybx0msppks57v",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/vscode-pylance/2023.4.10/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/vscode-pylance/2023.4.20/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2023.4.10"
+        "version": "2023.4.20"
     },
     "vscode:vscode-spring-boot": {
         "name": "vscode-spring-boot",

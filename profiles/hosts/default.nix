@@ -6,7 +6,6 @@
   };
 
   boot = {
-    cleanTmpDir = true;
     consoleLogLevel = 0;
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
@@ -26,6 +25,7 @@
       "vm.max_map_count" = 262144;
       "vm.swappiness" = 10;
     };
+    tmp.cleanOnBoot = true;
   };
 
   i18n = {

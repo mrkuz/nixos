@@ -28,7 +28,7 @@ in
     };
 
     environment.systemPackages = with pkgs; [
-      guestfs-tools
+      # guestfs-tools
       qemu_kvm
       qemu-utils
       virt-manager
