@@ -1,8 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    mrkuz.url = "github:mrkuz/nixos";
   };
-  outputs = { self, nixpkgs }:
+  outputs = { self, mrkuz, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages."${system}";

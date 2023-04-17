@@ -175,27 +175,9 @@ These repositories are added as [Git submodules](https://git-scm.com/book/en/v2/
 - `emacs.d` - My Emacs [configuration](https://github.com/mrkuz/emacs.d)
 - `dotfiles` - My [dotfiles](https://github.com/mrkuz/dotfiles)
 
-## `examples/docker/`
+## `examples/`
 
-Builds a simple Docker image from Nix expressions.
-
-```shell
-nix build --impure
-docker load < result
-docker run --rm -ti hello-docker:latest
-```
-
-## `examples/docker-java/`
-
-Builds a Docker image with minimal Java runtime.
-
-## `examples/pts/`
-
-Create development shells for running phoronix-test-suite.
-
-```shell
-nix develop
-```
+Collection of examples, each with it's own README.
 
 ## `scripts/`
 
