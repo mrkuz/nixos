@@ -5,7 +5,7 @@
   outputs = { self, mrkuz, nixpkgs }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages."${system}";
+      pkgs = mrkuz.utils.mkPkgs system;
     in
     {
       defaultPackage."${system}" = pkgs.dockerTools.buildImage {

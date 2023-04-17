@@ -5,10 +5,7 @@
   outputs = { self, mrkuz, nixpkgs }:
     let
       system = "x86_64-linux";
-      pkgs = (import nixpkgs {
-        inherit system;
-        # config.allowBroken = true;
-      });
+      pkgs = mrkuz.utils.mkPkgs system;
       pkgsMusl = pkgs.pkgsMusl;
       sourcePerArch = {
         packageType = "jdk";

@@ -25,7 +25,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.vscode.enable = true;
     home.packages = (map createPackage cfg.shells);
   };
 }
