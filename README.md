@@ -130,7 +130,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 
 ### `nixos/virtualization`
 
-- `crosvm-quest` - Prepares host to run [crosvm](https://github.com/google/crosvm) guest
+- `crosvm-guest` - Prepares host to run [crosvm](https://github.com/google/crosvm) guest
 - `docker-container` - Prepares host to run as [Docker](https://www.docker.com/) container
 - `lxd-container` - Prepares host to run as [LXD](https://linuxcontainers.org/lxd/) container
 - `qemu-quest` - Prepares host to run [QEMU](https://www.qemu.org/) guest
@@ -589,20 +589,7 @@ Stuff that doesn't fit anywhere else.
   ./result/bin/start-vm
   ```
 
-# Appendix F: Build and run crosvm image
-
-  ```shell
-  nix build .#croscm-run
-  ./result/bin/start-vm
-  ```
-
-  ```shell
-  # Inside VM
-  sommelier weston-terminal
-  sommelier -X --xwayland-path=/run/current-system/sw/bin/Xwayland xeyes
-  ```
-
-# Appendix E: Build and run LXD container
+# Appendix F: Build and run LXD container
 
   ```shell
   nix build .#lxd-import
@@ -611,7 +598,7 @@ Stuff that doesn't fit anywhere else.
   lxd launch nixos --console
   ```
 
-# Appendix H: Naming conventions
+# Appendix G: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -619,7 +606,7 @@ Stuff that doesn't fit anywhere else.
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix I: File structures
+# Appendix H: File structures
 
 ## Hosts
 

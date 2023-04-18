@@ -105,10 +105,6 @@
             name = "microvm";
             system = "x86_64-linux";
           }).config.system.build.qemuRun;
-          crosvm-run = (utils.setUpNixOS {
-            name = "crosvm";
-            system = "x86_64-linux";
-          }).config.system.build.crosvmRun;
           lxd-import = (utils.setUpNixOS {
             name = "lxd";
             system = "x86_64-linux";
