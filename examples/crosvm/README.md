@@ -1,6 +1,6 @@
 # Description
 
-Builds a crosvm image.
+Creates a crosvm image and start script.
 
 ```shell
 nix build

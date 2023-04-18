@@ -101,10 +101,6 @@
             system = "x86_64-linux";
           }).config.system.build.dockerTar;
           # VMs
-          microvm-run = (utils.setUpNixOS {
-            name = "microvm";
-            system = "x86_64-linux";
-          }).config.system.build.qemuRun;
           lxd-import = (utils.setUpNixOS {
             name = "lxd";
             system = "x86_64-linux";

@@ -19,7 +19,7 @@
       useGlobalPkgs = true;
       useUserPackages = false;
       extraSpecialArgs = {
-        inherit inputs nixpkgs;
+        inherit nixpkgs;
         inherit (self) vars sources;
       };
       sharedModules = self.utils.attrsToValues self.homeManagerModules;

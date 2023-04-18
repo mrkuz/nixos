@@ -582,14 +582,7 @@ Stuff that doesn't fit anywhere else.
   docker exec -ti nixos /run/current-system/sw/bin/bash
   ```
 
-# Appendix E: Build and run microvm
-
-  ```shell
-  nix build .#microvm-run
-  ./result/bin/start-vm
-  ```
-
-# Appendix F: Build and run LXD container
+# Appendix E: Build and run LXD container
 
   ```shell
   nix build .#lxd-import
@@ -598,7 +591,7 @@ Stuff that doesn't fit anywhere else.
   lxd launch nixos --console
   ```
 
-# Appendix G: Naming conventions
+# Appendix F: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -606,7 +599,7 @@ Stuff that doesn't fit anywhere else.
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix H: File structures
+# Appendix G: File structures
 
 ## Hosts
 
