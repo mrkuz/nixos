@@ -92,10 +92,6 @@
           # home-manager
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Docker images
-          "dockerized" = (utils.setUpNixOS {
-            name = "dockerized";
-            system = "x86_64-linux";
-          }).config.system.build.dockerTar;
           "dockerized-desktop" = (utils.setUpNixOS {
             name = "dockerized-desktop";
             system = "x86_64-linux";

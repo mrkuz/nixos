@@ -1,4 +1,4 @@
-{ config, lib, pkgs, sources, nixpkgs, modules, vars, ... }:
+{ config, lib, pkgs, sources, nixpkgs, modules, vars, profilesPath, ... }:
 
 with lib;
 let
@@ -6,6 +6,7 @@ let
 
   dockerConfig = (import "${nixpkgs}/nixos/lib/eval-config.nix" {
     system = vars.currentSystem;
+    specialArgs.profilesPath = profilesPath;
     modules = modules ++ [
       "${nixpkgs}/nixos/modules/virtualisation/docker-image.nix"
       {

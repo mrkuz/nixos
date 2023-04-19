@@ -187,18 +187,7 @@ Documentation and guides.
 
 Stuff that doesn't fit anywhere else.
 
-# Appendix A: Build and run Docker image
-
-  ```shell
-  nix build .#dockerized
-  docker import result/tarball/nixos-system-x86_64-linux.tar.xz nixos
-  docker run --rm -t --privileged --name nixos --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro nixos /init
-
-  # Other terminal
-  docker exec -ti nixos /run/current-system/sw/bin/bash
-  ```
-
-# Appendix B: Build and run LXD container
+# Appendix A: Build and run LXD container
 
   ```shell
   nix build .#lxd-import
@@ -207,7 +196,7 @@ Stuff that doesn't fit anywhere else.
   lxd launch nixos --console
   ```
 
-# Appendix C: Naming conventions
+# Appendix B: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
