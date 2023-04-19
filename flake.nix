@@ -91,17 +91,6 @@
         x86_64-linux = {
           # home-manager
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
-          # Docker images
-          "dockerized-desktop" = (utils.setUpNixOS {
-            name = "dockerized-desktop";
-            system = "x86_64-linux";
-          }).config.system.build.dockerTar;
-          # VMs
-          lxd-import = (utils.setUpNixOS {
-            name = "lxd";
-            system = "x86_64-linux";
-          }).config.system.build.lxdImport;
-
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           lxd-agent = (utils.callPkg ./pkgs/tools/admin/lxd-agent);

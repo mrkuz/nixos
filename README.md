@@ -187,16 +187,7 @@ Documentation and guides.
 
 Stuff that doesn't fit anywhere else.
 
-# Appendix A: Build and run LXD container
-
-  ```shell
-  nix build .#lxd-import
-  ./result/bin/import-image
-
-  lxd launch nixos --console
-  ```
-
-# Appendix B: Naming conventions
+# Appendix A: Naming conventions
 
 - File names: kebab-case
 - Package names: kebab-case
@@ -204,7 +195,7 @@ Stuff that doesn't fit anywhere else.
 - Module options: camel-case
 - Functions: kebab-case
 
-# Appendix D: File structures
+# Appendix B: File structures
 
 ## Hosts
 
