@@ -1,8 +1,8 @@
-{ config, lib, pkgs, sources, ... }:
+{ config, lib, pkgs, sources, profilesPath, ... }:
 
 {
   imports = [
-    ../../profiles/hosts/minimal.nix
+    "${profilesPath}/hosts/minimal.nix"
   ];
 
   modules = {
@@ -44,6 +44,4 @@
       };
     };
   };
-
-  home-manager.users.user = ../../users/user/home.nix;
 }
