@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "eonpatapon",
         "repo": "gnome-shell-extension-caffeine",
-        "rev": "f8697930243f409cd82cb71c492d91d3e9dfdf5e",
-        "sha256": "159q7v1cjdarjryd393axsg25ivlg486l5gma1hj802y7p44qbp1",
+        "rev": "2ca1ef0c078d73825ffee5841eedd9f2eeba7c66",
+        "sha256": "1v3p448d51828jq3a8mxvz0086mmk0vvhv4dkyg1pv00pgd6c410",
         "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/f8697930243f409cd82cb71c492d91d3e9dfdf5e.tar.gz",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/2ca1ef0c078d73825ffee5841eedd9f2eeba7c66.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:dynamic-panel-transparency": {
@@ -74,7 +74,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "4f14e7eb1e544e0afc67fbf64ec54a31a19f9b84",
+        "rev": "f812f4bc96ea89bd5ec459059478c8eb2e8ef29d",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "023c8eae4423c09cbb0f87c4ff6c658362f550e2",
-        "sha256": "08fr6xln4h9lc3pvyqnx94670dhxymnb8rxq7z0amrcsh0ih2wnl",
+        "rev": "5f761c75b2c4dd414fa0a9e81a317f353ef004a9",
+        "sha256": "0d9l01y7fgnwdchbfmla39kinhdn632z0vpdvx7c47vjwwvpl6s2",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/023c8eae4423c09cbb0f87c4ff6c658362f550e2.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/5f761c75b2c4dd414fa0a9e81a317f353ef004a9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
