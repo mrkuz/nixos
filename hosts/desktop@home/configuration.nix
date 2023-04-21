@@ -79,12 +79,23 @@
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.amd.updateMicrocode = true;
 
+  hardware.bluetooth = {
+    enable = true;
+    settings = {
+      General = {
+        Experimental = true;
+        KernelExperimental = true;
+      };
+    };
+  };
+
   # hardware.sane = {
   #   enable = true;
   #   extraBackends = [ pkgs.hplipWithPlugin ];
   # };
 
   services = {
+    avahi.enable = false;
     fstrim.enable = true;
     printing = {
       enable = true;

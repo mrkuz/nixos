@@ -54,13 +54,10 @@ in
       # gjs
       gnomeExtensions.appindicator
       gnomeExtensions.window-is-ready-remover
-      gnome-shell-extensions.always-indicator
-      gnome-shell-extensions.caffeine
-      gnome-shell-extensions.dynamic-panel-transparency
-      gnome-shell-extensions.instant-workspace-switcher
-      gnome-shell-extensions.just-perfection
-      gnome-shell-extensions.space-bar
-      gnome-shell-extensions.quick-settings-tweaks
+      gnomeExtensions.always-indicator
+      gnomeExtensions.caffeine
+      gnomeExtensions.dynamic-panel-transparency
+      gnomeExtensions.move-clock
       # Ubuntu look & feel
       yaru-theme
     ];

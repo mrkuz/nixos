@@ -45,6 +45,7 @@
   # Speed up boot / shut down
   systemd.services.systemd-udev-settle.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.services.plymouth-quit.enable = false;
   systemd.extraConfig = "DefaultTimeoutStopSec=30s";
 
   # Delete old logs
