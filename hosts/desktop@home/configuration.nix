@@ -89,17 +89,17 @@
     };
   };
 
-  # hardware.sane = {
-  #   enable = true;
-  #   extraBackends = [ pkgs.hplipWithPlugin ];
-  # };
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.hplipWithPlugin ];
+  };
 
   services = {
     avahi.enable = false;
     fstrim.enable = true;
     printing = {
       enable = true;
-      # drivers = [ pkgs.hplipWithPlugin ];
+      drivers = [ pkgs.hplipWithPlugin ];
     };
     tuptime.enable = true;
   };
