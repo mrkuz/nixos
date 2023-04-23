@@ -98,7 +98,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `btrfs` - Configures [btrfs](https://btrfs.wiki.kernel.org/)
 - `command-not-found` - Adds simple `command-not-found` script
 - `compatibility` - Adds some tools for better compatibility with other Linux distributions
-- `desktop` - Essential packages for desktop environments
+- `desktop` - Essential packages for [desktop environments](https://www.freedesktop.org/)
 - `docker` - Adds [Docker](https://www.docker.com/) and utilities
 - `ecryptfs` - Support for [eCryptfs](https://www.ecryptfs.org/)
 - `fonts` - Adds some fonts

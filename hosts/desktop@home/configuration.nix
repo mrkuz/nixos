@@ -8,9 +8,10 @@
 
   modules = {
     amdGpu.enable = true;
+    avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
-    # desktop.enable = true;
+    desktop.enable = true;
     # docker.enable = true;
     fonts.enable = true;
     gnome.enable = true;
@@ -95,7 +96,6 @@
   };
 
   services = {
-    avahi.enable = false;
     fstrim.enable = true;
     printing = {
       enable = true;

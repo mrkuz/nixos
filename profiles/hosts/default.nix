@@ -51,6 +51,10 @@
   # Delete old logs
   services.journald.extraConfig = "MaxRetentionSec=14day";
 
+  systemd.tmpfiles.rules = [
+    "d  /mnt  0755  root  root  -  -"
+  ];
+
   documentation = {
     enable = true;
     doc.enable = false;
