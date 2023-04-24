@@ -6,5 +6,5 @@ Builds a LXD container.
 nix build
 ./result/bin/import-image
 
-lxc launch --ephemeral nixos --console
+lxc launch nixos nixos --ephemeral --console
 ```
