@@ -163,6 +163,7 @@
         crosvmGuest = import ./modules/nixos/virtualization/crosvm-guest.nix;
         dockerContainer = import ./modules/nixos/virtualization/docker-container.nix;
         lxdContainer = import ./modules/nixos/virtualization/lxd-container.nix;
+        lxdVm = import ./modules/nixos/virtualization/lxd-vm.nix;
         qemuGuest = import ./modules/nixos/virtualization/qemu-guest.nix;
       };
 

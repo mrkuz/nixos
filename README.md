@@ -133,6 +133,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `crosvm-guest` - Prepares host to run [crosvm](https://github.com/google/crosvm) guest
 - `docker-container` - Prepares host to run as [Docker](https://www.docker.com/) container
 - `lxd-container` - Prepares host to run as [LXD](https://linuxcontainers.org/lxd/) container
+- `lxd-vm` - Prepares host to run as [LXD](https://linuxcontainers.org/lxd/) VM
 - `qemu-quest` - Prepares host to run [QEMU](https://www.qemu.org/) guest
 
 ### `home-manager/`
