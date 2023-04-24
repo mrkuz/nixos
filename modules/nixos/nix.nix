@@ -45,11 +45,6 @@ in
 
       systemd.services.nix-daemon.enable = true;
       systemd.sockets.nix-daemon.enable = true;
-
-      system.name = systemName;
-      system.stateVersion = vars.stateVersion;
-      system.configurationRevision = self.rev or "dirty";
-
     }
     (mkIf (!cfg.minimal) {
       # Use local nixpkgs

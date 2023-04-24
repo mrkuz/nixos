@@ -47,7 +47,15 @@ in
 
   config = mkIf cfg.enable {
 
-    boot.loader.grub.enable = false;
+    boot = {
+      initrd = {
+        checkJournalingFS = false;
+        availableKernelModules = lib.mkForce [ ];
+        kernelModules = lib.mkForce [ ];
+      };
+      kernelPackages = pkgs.linuxKernel.packagesFor pkgs.linux-cros;
+      loader.grub.enable = false;
+    };
 
     fileSystems."/" = {
       device = "tmpfs";

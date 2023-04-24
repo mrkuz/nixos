@@ -1,4 +1,4 @@
-{ config, lib, pkgs, sources, ... }:
+{ config, lib, pkgs, sources, self, vars, systemName, ... }:
 
 {
   modules = {
@@ -71,4 +71,8 @@
       };
     };
   };
+
+  system.name = systemName;
+  system.stateVersion = vars.stateVersion;
+  system.configurationRevision = self.rev or "dirty";
 }

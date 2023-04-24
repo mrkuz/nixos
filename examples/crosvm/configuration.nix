@@ -9,15 +9,6 @@
     crosvmGuest.enable = true;
   };
 
-  boot = {
-    kernelPackages = pkgs.linuxKernel.packagesFor pkgs.linux-cros;
-    initrd = {
-      checkJournalingFS = false;
-      availableKernelModules = lib.mkForce [ ];
-      kernelModules = lib.mkForce [ ];
-    };
-  };
-
   networking.dhcpcd.enable = false;
   systemd.network = {
     enable = true;
