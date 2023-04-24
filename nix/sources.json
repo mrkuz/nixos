@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "edc",
         "repo": "bass",
-        "rev": "2fd3d2157d5271ca3575b13daec975ca4c10577a",
-        "sha256": "0mb01y1d0g8ilsr5m8a71j6xmqlyhf8w4xjf00wkk8k41cz3ypky",
+        "rev": "f3a547b0239cf8529d35c1922dd242bacf751d3b",
+        "sha256": "1gpcanqfs6sqv5pw7dqxsfw40zs3w6kw08fvgj30yzc658b6aqfy",
         "type": "tarball",
-        "url": "https://github.com/edc/bass/archive/2fd3d2157d5271ca3575b13daec975ca4c10577a.tar.gz",
+        "url": "https://github.com/edc/bass/archive/f3a547b0239cf8529d35c1922dd242bacf751d3b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "fish:fish-kubectl-completions": {
@@ -148,7 +148,7 @@
     },
     "linux-cros": {
         "rev": "e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327",
-        "sha256": "03q5z6ggby4k1k5nrzp0fh51daqwlasiv3j1j73zizxc3kl20bik",
+        "sha256": "1d3miikqavcsh2m1wiiz41m7nwmr59arbsb3xlxd8kj1ka1ipz5x",
         "type": "file",
         "url": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/e4d8bb91e6397d74bcf30d0c0be6fcfb6c4b1327.tar.gz",
         "url_template": "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/<rev>.tar.gz",
@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "b0e9d792aa880ce886cfbbe4457e94887d053de0",
-        "sha256": "0971f9q2iyhs0lkcksvhzx7n4w5fjvsv3ys9ha7lzn4hdcx03pl5",
+        "rev": "4b9a90afc6e75d5a9d85b1e84a0b281bfe46803f",
+        "sha256": "1qxny8vfy88vs9bfav4rz1db4x4npx3x0x9wrgj2ck3gb1ad814h",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/b0e9d792aa880ce886cfbbe4457e94887d053de0.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/4b9a90afc6e75d5a9d85b1e84a0b281bfe46803f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },

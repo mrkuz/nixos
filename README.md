@@ -2,13 +2,15 @@
 
 Welcome to my modular [NixOS](https://nixos.org/) system configuration.
 
-There are three essential components: hosts, users and modules.
+There are four essential building blocks: hosts, users, modules and profiles.
 
 A host expression represents a physical or virtual machine. A host has one or more users and imports their configuration.
 
-User configrations are handled by [Home Manager](https://github.com/nix-community/home-manager).
+User configurations are handled by [Home Manager](https://github.com/nix-community/home-manager).
 
 Modules are regular NixOS/Home Manager [modules](https://nixos.wiki/wiki/Module) used by host and user expressions.
+
+Profiles are reusable snippets used by host and user expressions or modules.
 
 ## Additions to `/nix`
 
