@@ -11,6 +11,7 @@ let
       "${nixpkgs}/nixos/modules/virtualisation/qemu-vm.nix"
       {
         virtualisation = {
+          bootLoaderDevice = "/dev/vda";
           diskImage = null;
           # writableStore = false;
           sharedDirectories = lib.mkForce {
@@ -73,9 +74,7 @@ in
   };
 
   config = mkIf cfg.enable {
-
     boot = {
-      kernelPackages = pkgs.linuxPackages_latest;
       initrd = {
         availableKernelModules = [ "virtio_net" "virtio_pci" "virtio_mmio" "virtio_blk" "virtio_scsi" "9p" "9pnet_virtio" ];
         kernelModules = [ "virtio_balloon" "virtio_console" "virtio_rng" ];
