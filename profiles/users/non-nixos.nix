@@ -2,7 +2,7 @@
 
 {
   modules = {
-    nonNixos.enable = true;
+    nonNixOs.enable = true;
   };
 
   home.stateVersion = vars.stateVersion;
