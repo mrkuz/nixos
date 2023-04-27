@@ -30,6 +30,7 @@
         currentSystem = "x86_64-linux";
         stateVersion = "22.11";
         ageIdentityFile = "/home/markus/.ssh/id_rsa";
+        rev = self.rev or "dirty";
       };
 
       utils = {

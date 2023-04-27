@@ -1,4 +1,4 @@
-{ config, lib, pkgs, sources, self, vars, systemName, ... }:
+{ config, lib, pkgs, sources, vars, systemName, ... }:
 
 {
   boot.enableContainers = false;
@@ -40,5 +40,5 @@
 
   system.name = systemName;
   system.stateVersion = vars.stateVersion;
-  system.configurationRevision = self.rev or "dirty";
+  system.configurationRevision = vars.rev;
 }

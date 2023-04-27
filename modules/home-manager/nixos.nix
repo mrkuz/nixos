@@ -1,4 +1,4 @@
-{ config, lib, pkgs, sources, nixpkgs, ... }:
+{ config, lib, pkgs, sources, vars, nixpkgs, ... }:
 
 with lib;
 let
@@ -23,6 +23,11 @@ in
       nixpkgs-fmt
       rnix-lsp
     ];
+
+    home.file.".nix".text = ''
+      system.stateVersion = "${vars.stateVersion}";
+      system.configurationRevision = "${vars.rev}";
+    '';
 
     systemd.user.tmpfiles.rules = [
       "d   %h/.nix-defexpr        0755 ${user} ${user}  -  -"

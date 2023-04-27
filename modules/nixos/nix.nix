@@ -92,6 +92,7 @@ in
 
         system.name = "${systemName}";
         system.stateVersion = "${vars.stateVersion}";
+        system.configurationRevision = "${vars.rev}";
       '';
 
       environment.etc."nixos/current".source = self;
