@@ -95,10 +95,10 @@
         "homepage": null,
         "owner": "christopher-l",
         "repo": "space-bar",
-        "rev": "bde20de053998c29ed1ea6aef3520e8175e0f35f",
-        "sha256": "0gciissa48qqq0x5k1h318gv30rmacb1i4pnv0dxn26apzkb97kk",
+        "rev": "d671f4bd0320f90b244808443ac4ca8fcc0ff2d1",
+        "sha256": "1anydrzbzwbid8q9c62iygn63y7shig8kd7m97rcdy6p21zq937v",
         "type": "tarball",
-        "url": "https://github.com/christopher-l/space-bar/archive/bde20de053998c29ed1ea6aef3520e8175e0f35f.tar.gz",
+        "url": "https://github.com/christopher-l/space-bar/archive/d671f4bd0320f90b244808443ac4ca8fcc0ff2d1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:workspaces-bar": {
@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "cab52024f3d6d55cc4cf8d7a2ada4c99107b8751",
-        "sha256": "14fqvcadvwpx7b3dh7qfq71jh88xdw1bb3mzl53024vwgqxgi4n2",
+        "rev": "46059f8feeea0f21b9a8b8660a026ab718928fa5",
+        "sha256": "0ds9a45allj9hvbjqwg45kn7gwj386w4ycv8d0ljalfr4l4wz9vy",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/cab52024f3d6d55cc4cf8d7a2ada4c99107b8751.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/46059f8feeea0f21b9a8b8660a026ab718928fa5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
@@ -229,11 +229,11 @@
     "vscode:aws-toolkit-vscode": {
         "name": "aws-toolkit-vscode",
         "publisher": "AmazonWebServices",
-        "sha256": "0mhsj25s95s1l563j8sm61ypyv7zmih9cl25yzqd6wgdxjilx97h",
+        "sha256": "1vm3xm5xm8xk9mhbsp5vk3g37cp7pz97ihmymwqwywx26hdzg1bp",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.70.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.71.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.70.0"
+        "version": "1.71.0"
     },
     "vscode:black-formatter": {
         "name": "black-formatter",
