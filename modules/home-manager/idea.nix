@@ -23,7 +23,7 @@ in
       type = types.package;
     };
     version = mkOption {
-      default = "IdeaIC2022.3";
+      default = "IdeaIC2023.1";
       type = types.str;
     };
     plugins = mkOption {
