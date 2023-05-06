@@ -75,6 +75,7 @@ in
       tunctl
       unrar
       unzip
+      usbutils
       vim
       wget
       xfsprogs
