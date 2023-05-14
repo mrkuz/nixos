@@ -95,6 +95,7 @@
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
           lxd-agent = (utils.callPkg ./pkgs/tools/admin/lxd-agent);
+          revealjs = (utils.callPkg ./pkgs/misc/revealjs);
           snapd = (utils.callPkg ./pkgs/tools/package-management/snapd);
           toolbox = (utils.callPkg ./pkgs/applications/virtualization/toolbox);
           # Kernels

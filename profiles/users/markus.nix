@@ -30,6 +30,7 @@ in
     "d  %h/etc           0755 ${user} ${user}  -  -"
     "d  %h/opt           0755 ${user} ${user}  -  -"
     "d  %h/org           0755 ${user} ${user}  -  -"
+    "d  %h/org/archive   0755 ${user} ${user}  -  -"
     "d  %h/org/calendar  0755 ${user} ${user}  -  -"
     "d  %h/org/journal   0755 ${user} ${user}  -  -"
     "d  %h/org/lists     0755 ${user} ${user}  -  -"
