@@ -143,6 +143,7 @@
         kvm = import ./modules/nixos/kvm.nix;
         libreoffice = import ./modules/nixos/libreoffice.nix;
         lxd = import ./modules/nixos/lxd.nix;
+        lutris = import ./modules/nixos/lutris.nix;
         nix = import ./modules/nixos/nix.nix;
         nvidia = import ./modules/nixos/nvidia.nix;
         opengl = import ./modules/nixos/opengl.nix;

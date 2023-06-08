@@ -111,6 +111,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `home-overlay` - Creates an overlay for /home
 - `libreoffice` - Adds [LibreOffice](https://www.libreoffice.org/)
 - `lxd` - Support for [LXD](https://linuxcontainers.org/lxd/)
+- `lutris` - Adds [Lutris](https://lutris.net/)
 - `nvidia` -  Configures proprietary NVIDIA drivers
 - `nix` - Nix configuration and additions
 - `opengl` - Configures [OpenGL](https://www.opengl.org/)

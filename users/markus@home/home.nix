@@ -80,8 +80,6 @@ in
     android-studio
     # audacity
     gimp
-    # lutris
-    # mangohud
     # steam
     whatsapp-for-linux
     zoom-us
