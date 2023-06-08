@@ -28,7 +28,7 @@
 
       vars = {
         currentSystem = "x86_64-linux";
-        stateVersion = "22.11";
+        stateVersion = "23.05";
         ageIdentityFile = "/home/markus/.ssh/id_rsa";
         rev = self.rev or "dirty";
       };
