@@ -19,6 +19,7 @@ in
         enable = true;
         dates = "daily";
       };
+      # dockerCompat.enable = config.modules.docker.enable == false;
       dockerSocket.enable = config.modules.docker.enable == false;
     };
 

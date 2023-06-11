@@ -96,6 +96,8 @@
     extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
+  programs.nix-ld.enable = true;
+
   services = {
     fstrim.enable = true;
     printing = {

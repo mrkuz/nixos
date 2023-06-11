@@ -26,6 +26,7 @@ in
     devShells = {
       enable = true;
       shells = [
+        (import ../../profiles/dev-shells/devops.nix)
         (import ../../profiles/dev-shells/java.nix)
         (import ../../profiles/dev-shells/sdkman.nix)
       ];

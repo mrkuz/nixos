@@ -179,10 +179,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "42bcf1097d169f90fb3513904a8f6e4f96c92614",
-        "sha256": "1n7gyyvf3v779gij7s0i7y2yicr7hy4iqcbhj9mawaimfj7wnw8x",
+        "rev": "9c79c6011e7a9121b5095baa5b89320b8b46d5f3",
+        "sha256": "0i6ylac1va999zrw06w79vi9wqw21lvdw4cznkizqknsg4gw5x9i",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/42bcf1097d169f90fb3513904a8f6e4f96c92614.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/9c79c6011e7a9121b5095baa5b89320b8b46d5f3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
@@ -192,10 +192,10 @@
         "homepage": "https://containertoolbx.org/",
         "owner": "containers",
         "repo": "toolbox",
-        "rev": "8dcd5d7cb414773765f942c78d63aba280b9b34d",
-        "sha256": "1dyzd5ks8l5gqy9l4y0624s62yw6vxm4rcf97r7nzihk9y71ibnj",
+        "rev": "28913fad1da2871287c51eceba43ad62c60f17b2",
+        "sha256": "100c5kii803mrd71xapj5g6l0dm4q1mxjpsqab5shy57vf7zys8l",
         "type": "tarball",
-        "url": "https://github.com/containers/toolbox/archive/8dcd5d7cb414773765f942c78d63aba280b9b34d.tar.gz",
+        "url": "https://github.com/containers/toolbox/archive/28913fad1da2871287c51eceba43ad62c60f17b2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "9ifnqIA4s4KNs0WrSh/fu4+OzRZLm8LV8BYeLYXT/PU="
     },
@@ -364,11 +364,11 @@
     "vscode:python": {
         "name": "python",
         "publisher": "ms-python",
-        "sha256": "0wlzibxdljs8cdbrisglp7n989abianbyfg7zrlw7adrgmi0wf7c",
+        "sha256": "135is31qrgg6ax7b442b63k1zj111fpzcga1c8af8cna0xcpv849",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2023.8.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2023.10.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "2023.8.0"
+        "version": "2023.10.0"
     },
     "vscode:remote-ssh": {
         "name": "remote-ssh",
@@ -535,11 +535,11 @@
     "vscode:vscode-kubernetes-tools": {
         "name": "vscode-kubernetes-tools",
         "publisher": "ms-kubernetes-tools",
-        "sha256": "046z0jykgj7yiqszsrvxzbvpxclb7rn7p4za7z0mqm1hhaaczwvv",
+        "sha256": "14r16wqbz69n5sixw7178zpv8jx6pf316gdv0h8pk1biijss9cg3",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.12/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-kubernetes-tools/vsextensions/vscode-kubernetes-tools/1.3.13/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.3.12"
+        "version": "1.3.13"
     },
     "vscode:vscode-lombok": {
         "name": "vscode-lombok",

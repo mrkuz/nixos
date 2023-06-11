@@ -15,7 +15,7 @@ in
       type = types.bool;
     };
     package = mkOption {
-      default = pkgs.emacsPgtk;
+      default = pkgs.emacs-pgtk;
       type = types.package;
     };
   };
