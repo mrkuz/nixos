@@ -97,6 +97,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 - `android` - Support for Android devices
 - `avahi` - Configures [avahi](https://www.avahi.org/)
 - `base-packages` - Collection of essential CLI tools
+- `bridge` - Configures network bridge
 - `btrfs` - Configures [btrfs](https://btrfs.wiki.kernel.org/)
 - `command-not-found` - Adds simple `command-not-found` script
 - `compatibility` - Adds some tools for better compatibility with other Linux distributions

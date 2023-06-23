@@ -1,0 +1,10 @@
+name: unmanaged
+devices:
+  eth0:
+    type: nic
+    nictype: bridged
+    parent: lxdbr1
+  root:
+    path: /
+    pool: default
+    type: disk

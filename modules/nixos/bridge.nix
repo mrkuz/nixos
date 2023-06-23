@@ -2,20 +2,16 @@
 
 with lib;
 let
-  cfg = config.modules.tap;
+  cfg = config.modules.bridge;
 in
 {
-  options.modules.tap = {
+  options.modules.bridge = {
     enable = mkOption {
       default = false;
       type = types.bool;
     };
     name = mkOption {
-      default = "tap0";
-      type = types.str;
-    };
-    owner = mkOption {
-      default = "root";
+      default = "br0";
       type = types.str;
     };
     address = mkOption {
@@ -39,9 +35,9 @@ in
         trustedInterfaces = [ cfg.name ];
       };
 
+      bridges."${cfg.name}".interfaces = [ ];
+
       interfaces."${cfg.name}" = {
-        virtual = true;
-        virtualOwner = cfg.owner;
         ipv4.addresses = [
           {
             address = cfg.address;

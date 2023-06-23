@@ -128,6 +128,7 @@
         android = import ./modules/nixos/android.nix;
         avahi = import ./modules/nixos/avahi.nix;
         basePackages = import ./modules/nixos/base-packages.nix;
+        bridge = import ./modules/nixos/bridge.nix;
         btrfs = import ./modules/nixos/btrfs.nix;
         commandNotFound = import ./modules/nixos/command-not-found.nix;
         compatibility = import ./modules/nixos/compatibility.nix;
