@@ -32,6 +32,7 @@
   boot = {
     initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" ];
     kernelModules = [ "kvm-amd" ];
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" ];
   };
 
