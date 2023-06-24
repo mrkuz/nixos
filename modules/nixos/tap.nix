@@ -39,15 +39,17 @@ in
         trustedInterfaces = [ cfg.name ];
       };
 
-      interfaces."${cfg.name}" = {
-        virtual = true;
-        virtualOwner = cfg.owner;
-        ipv4.addresses = [
-          {
-            address = cfg.address;
-            prefixLength = cfg.prefixLength;
-          }
-        ];
+      interfaces = {
+        tap0 = {
+          virtual = true;
+          virtualOwner = cfg.owner;
+          ipv4.addresses = [
+            {
+              address = cfg.address;
+              prefixLength = cfg.prefixLength;
+            }
+          ];
+        };
       };
 
       nat = {
