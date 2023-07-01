@@ -8,6 +8,7 @@
 
   modules = {
     amdGpu.enable = true;
+    android.enable = true;
     avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
@@ -32,7 +33,7 @@
   boot = {
     initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" ];
     kernelModules = [ "kvm-amd" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" ];
   };
 
@@ -76,7 +77,14 @@
 
   swapDevices = [{ device = "/dev/pool/host.swap"; }];
 
-  networking.hostName = "nixos";
+  networking = {
+    hostName = "nixos";
+    firewall = {
+      # Syncthing
+      allowedTCPPorts = [ 22000 ];
+      allowedUDPPorts = [ 22000 21027 ];
+    };
+  };
 
   powerManagement.cpuFreqGovernor = "ondemand";
   hardware.enableRedistributableFirmware = true;
