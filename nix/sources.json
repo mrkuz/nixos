@@ -667,6 +667,18 @@
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
         "version": "1.9.0"
     },
+    "gse:wintile": {
+        "branch": "master",
+        "description": "Windows 10 window tiling for GNOME",
+        "homepage": null,
+        "owner": "fmstrat",
+        "repo": "wintile",
+        "rev": "3e43c62dd5f25aa32e28a65f2c4777b03b6ca3ee",
+        "sha256": "1ac1sijxw2lrvx73w3j2yz6z4qgm8a2z09jw702rmyy2g6w6cgc4",
+        "type": "tarball",
+        "url": "https://github.com/fmstrat/wintile/archive/3e43c62dd5f25aa32e28a65f2c4777b03b6ca3ee.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "yaru-colors-themes": {
         "branch": "master",
         "description": "A fork of Ubuntu's Yaru theme -  in different colors",

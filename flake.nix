@@ -109,6 +109,7 @@
             just-perfection = (utils.callPkg ./pkgs/desktops/gnome/extensions/just-perfection);
             space-bar = (utils.callPkg ./pkgs/desktops/gnome/extensions/space-bar);
             quick-settings-tweaks = (utils.callPkg ./pkgs/desktops/gnome/extensions/quick-settings-tweaks);
+            wintile = (utils.callPkg ./pkgs/desktops/gnome/extensions/wintile);
           };
           # IDEA plugins
           idea-plugins = {
