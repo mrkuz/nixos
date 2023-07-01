@@ -58,6 +58,8 @@ in
       gnomeExtensions.caffeine
       gnomeExtensions.dynamic-panel-transparency
       gnomeExtensions.move-clock
+      gnomeExtensions.gtile
+      gnomeExtensions.tiling-assistant
       # Ubuntu look & feel
       yaru-theme
     ];
