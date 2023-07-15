@@ -17,10 +17,24 @@ in
     boot.kernelModules = [ "vhost-vsock" ];
     networking.firewall.trustedInterfaces = [ "lxdbr0" ];
 
-    virtualisation.lxd.enable = true;
+    virtualisation.lxd = {
+      enable = true;
+      ui.enable = true;
+    };
 
     environment.systemPackages = with pkgs; [
       virt-viewer
     ];
+
+    systemd.services.lxd-ui = {
+      description = "Enable LXD UI";
+      serviceConfig = {
+        ExecStart = "${pkgs.lxd}/bin/lxc config set core.https_address localhost:8443";
+        Type = "oneshot";
+      };
+      after = [ "lxd.service" ];
+      wantedBy = [ "multi-user.target" ];
+    };
+
   };
 }
