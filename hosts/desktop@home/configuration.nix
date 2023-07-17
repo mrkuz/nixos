@@ -13,7 +13,7 @@
     basePackages.enable = true;
     commandNotFound.enable = true;
     desktop.enable = true;
-    # docker.enable = true;
+    docker.enable = true;
     fonts.enable = true;
     gnome.enable = true;
     homeOverlay.enable = true;
