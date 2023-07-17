@@ -142,8 +142,8 @@
         homeOverlay = import ./modules/nixos/home-overlay.nix;
         kde = import ./modules/nixos/kde.nix;
         kodi = import ./modules/nixos/kodi.nix;
-        kvm = import ./modules/nixos/kvm.nix;
         libreoffice = import ./modules/nixos/libreoffice.nix;
+        libvirtd = import ./modules/nixos/libvirtd.nix;
         lxd = import ./modules/nixos/lxd.nix;
         lutris = import ./modules/nixos/lutris.nix;
         nix = import ./modules/nixos/nix.nix;

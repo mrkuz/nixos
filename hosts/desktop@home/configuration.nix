@@ -17,7 +17,6 @@
     fonts.enable = true;
     gnome.enable = true;
     homeOverlay.enable = true;
-    kvm.enable = true;
     lxd.enable = true;
     libreoffice.enable = true;
     lutris.enable = true;

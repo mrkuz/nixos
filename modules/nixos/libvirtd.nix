@@ -2,10 +2,10 @@
 
 with lib;
 let
-  cfg = config.modules.kvm;
+  cfg = config.modules.libvirtd;
 in
 {
-  options.modules.kvm = {
+  options.modules.libvirtd = {
     enable = mkOption {
       default = false;
       type = types.bool;
