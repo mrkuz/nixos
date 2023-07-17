@@ -94,6 +94,7 @@
           "user@ubuntu" = self.homeManagerConfigurations."user@ubuntu".activationPackage;
           # Packages
           agenix = inputs.agenix.packages.x86_64-linux.default;
+          deezer = (utils.callPkg ./pkgs/applications/audio/deezer);
           lxd-agent = (utils.callPkg ./pkgs/tools/admin/lxd-agent);
           revealjs = (utils.callPkg ./pkgs/misc/revealjs);
           snapd = (utils.callPkg ./pkgs/tools/package-management/snapd);

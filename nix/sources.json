@@ -1,4 +1,11 @@
 {
+    "deezer": {
+        "sha256": "014mjpkn44i8f1r02jcfdafapikscipr1fdyl0lqsz192m79nix1",
+        "type": "file",
+        "url": "https://www.deezer.com/desktop/download/artifact/win32/x86/5.30.580",
+        "url_template": "https://www.deezer.com/desktop/download/artifact/win32/x86/<version>",
+        "version": "5.30.580"
+    },
     "fish:bass": {
         "branch": "master",
         "description": "Make Bash utilities usable in Fish shell",
