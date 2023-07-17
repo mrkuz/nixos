@@ -68,6 +68,7 @@ in
   };
 
   home.packages = with pkgs; [
+    deezer
     exiftool
     gitAndTools.diff-so-fancy
     gitAndTools.gitFull
