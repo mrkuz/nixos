@@ -48,10 +48,10 @@
         "homepage": null,
         "owner": "eonpatapon",
         "repo": "gnome-shell-extension-caffeine",
-        "rev": "413179c2c0d2b824f2aa6e360d8086f8489b8f04",
-        "sha256": "1d976svjya8mggpjamp9lwkb4fsv6hghkbjymxs93361ncncf98w",
+        "rev": "bede31689a9568ce908eb17ff44a404503f2e63b",
+        "sha256": "1scl4yr64pnpgw4grqv5m45h2svy71plx73xm5dp8pj4mvjkrs80",
         "type": "tarball",
-        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/413179c2c0d2b824f2aa6e360d8086f8489b8f04.tar.gz",
+        "url": "https://github.com/eonpatapon/gnome-shell-extension-caffeine/archive/bede31689a9568ce908eb17ff44a404503f2e63b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:dynamic-panel-transparency": {
@@ -198,10 +198,10 @@
         "homepage": "",
         "owner": "snapcore",
         "repo": "snapd",
-        "rev": "392589b1f7af4cf6f1be8ca214e8a64e32d46929",
-        "sha256": "0jm04l30q2h6bwl6h7xr13hzk9ws22rni04m39jv0rf7vl2xgvrx",
+        "rev": "9431b3f822846deec013c7449ff4de0b5c9b7b15",
+        "sha256": "0fyhyj0r4mzgp55bk2mp0srb2nnckv5yxnws6jjjlnbazspikbml",
         "type": "tarball",
-        "url": "https://github.com/snapcore/snapd/archive/392589b1f7af4cf6f1be8ca214e8a64e32d46929.tar.gz",
+        "url": "https://github.com/snapcore/snapd/archive/9431b3f822846deec013c7449ff4de0b5c9b7b15.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "aNKH4Gu2H6o1bQSis3u5vUrATJvv5YMluNVHpXUqwUo="
     },
@@ -211,10 +211,10 @@
         "homepage": "https://containertoolbx.org/",
         "owner": "containers",
         "repo": "toolbox",
-        "rev": "c846b6d8444d15212e29784b6c21d228ed65f5a3",
-        "sha256": "1mjf6xn4anwfpn93d9dlm59hw49s00p0pj8sx0wpz7q7rdpfrxjl",
+        "rev": "341ae55f9ddc9ad3d135fced1066e48540ca8990",
+        "sha256": "1a48azzsrxn4xnvzap65hzs55ibcxqszn250hf000fbd0j96yvyg",
         "type": "tarball",
-        "url": "https://github.com/containers/toolbox/archive/c846b6d8444d15212e29784b6c21d228ed65f5a3.tar.gz",
+        "url": "https://github.com/containers/toolbox/archive/341ae55f9ddc9ad3d135fced1066e48540ca8990.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "vendorSha256": "9ifnqIA4s4KNs0WrSh/fu4+OzRZLm8LV8BYeLYXT/PU="
     },
@@ -248,11 +248,11 @@
     "vscode:aws-toolkit-vscode": {
         "name": "aws-toolkit-vscode",
         "publisher": "AmazonWebServices",
-        "sha256": "12y6nzfcb06vsnpb737k94pwp6s00rhaa6nmgw6wmw5ix5y53x4a",
+        "sha256": "1y8w0ss45zc9kr4j7sk95mgbj81l3c2j1dqx8mk6kp79414f498y",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.80.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/AmazonWebServices/vsextensions/aws-toolkit-vscode/1.81.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.80.0"
+        "version": "1.81.0"
     },
     "vscode:black-formatter": {
         "name": "black-formatter",
@@ -446,11 +446,11 @@
     "vscode:volar": {
         "name": "volar",
         "publisher": "vue",
-        "sha256": "0l0p810rlcfxw20wlhbqgwnfdnln2yiv2qff95872zd73kvk6b9v",
+        "sha256": "1a1w2d2511lf1pl8yi04nbwjq0sy3v2qi768pab1isan14b10hh0",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/volar/1.8.4/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/volar/1.8.5/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.8.4"
+        "version": "1.8.5"
     },
     "vscode:vscode-boot-dev-pack": {
         "name": "vscode-boot-dev-pack",
@@ -464,11 +464,11 @@
     "vscode:vscode-docker": {
         "name": "vscode-docker",
         "publisher": "ms-azuretools",
-        "sha256": "1vy5q7zvh23gqfwc6nmgx1jy42hrkqb8y650zk6xybvkxaaadnmq",
+        "sha256": "0fsmyxi0iwr0qr9fl86hsfqw8qlj3s9dzp25smx778zcvqxwlha6",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.25.2/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-azuretools/vsextensions/vscode-docker/1.26.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.25.2"
+        "version": "1.26.0"
     },
     "vscode:vscode-emacs-friendly": {
         "name": "vscode-emacs-friendly",
@@ -635,11 +635,11 @@
     "vscode:vscode-typescript-vue-plugin": {
         "name": "vscode-typescript-vue-plugin",
         "publisher": "vue",
-        "sha256": "04jdj9kpbvnijv8kdd768s4lriz881lp1dzs53wphawbd9pixmls",
+        "sha256": "16r0isynfqaq69ph9prnyl3s3cj75in4nx2canplg4ih7ipxq6gq",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/vscode-typescript-vue-plugin/1.8.4/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vue/vsextensions/vscode-typescript-vue-plugin/1.8.5/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "1.8.4"
+        "version": "1.8.5"
     },
     "vscode:vscode-xml": {
         "name": "vscode-xml",

@@ -3,7 +3,7 @@
 pkgs.buildGoPackage rec {
   name = "lxd-agent";
   version = "5.12";
-  src = pkgs.lxd.src;
+  src = pkgs.lxd-unwrapped.src;
 
   goPackagePath = "github.com/lxc/lxd";
   ldflags = [ "-s" "-w" "-extldflags '-static'" ];

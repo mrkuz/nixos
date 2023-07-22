@@ -56,8 +56,9 @@ let
   LXD_OVMF_PATH = "${ovmfUbuntu}/share/OVMF";
 in
 {
-  lxd = super.lxd.overrideAttrs (old: {
+  lxd = super.lxd-unwrapped.overrideAttrs (old: {
     doCheck = false;
+    nativeBuildInputs = old.nativeBuildInputs ++ [ pkgs.makeWrapper ];
     postInstall = ''
       wrapProgram $out/bin/lxd --prefix PATH : ${super.lib.makeBinPath binPath} --set LXD_OVMF_PATH ${LXD_OVMF_PATH}
       installShellCompletion --bash --name lxd ./scripts/bash/lxd-client
