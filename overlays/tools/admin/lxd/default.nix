@@ -9,12 +9,14 @@ let
     btrfs-progs
     criu
     dnsmasq
+    e2fsprogs
     gnutar
     gptfdisk
     gzip
     iproute2
     iptables
     kmod
+    lvm2
     lxd-agent
     nftables
     qemu-utils

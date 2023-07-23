@@ -1,0 +1,29 @@
+config:
+  core.https_address: localhost:8443
+networks:
+- name: lxdbr0
+  type: bridge
+  config:
+    ipv4.address: 192.168.77.1/24
+    ipv4.nat: "true"
+    ipv6.address: auto
+    ipv6.nat: "true"
+storage_pools:
+- name: default
+  driver: lvm
+  config:
+    source: ssd-lxd
+    lvm.vg_name: ssd-lxd
+    lvm.thinpool_name: lxd-thinpool
+profiles:
+- name: default
+  config: {}
+  devices:
+    eth0:
+      name: eth0
+      network: lxdbr0
+      type: nic
+    root:
+      path: /
+      pool: default
+      type: disk
