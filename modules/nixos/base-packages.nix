@@ -43,6 +43,7 @@ in
       jq
       lm_sensors
       lsof
+      lvm2
       lzip
       mkpasswd
       most
@@ -69,6 +70,7 @@ in
       socat
       strace
       # tldr
+      thin-provisioning-tools
       tmux
       trashy
       tree
