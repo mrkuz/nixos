@@ -18,9 +18,11 @@ for path in /nix/var/nix/profiles/per-user/*; do
     clean /nix/var/nix/profiles/per-user/$user/channels
     clean /nix/var/nix/profiles/per-user/$user/profile
     clean /home/$user/.nix-profile
+    clean /home/$user/.local/state/nix/profiles/home-manager
 done
 
 clean /root/.nix-profile
+clean /root/.local/state/nix/profiles/home-manager
 clean /nix/var/nix/profiles/system
 
 sudo env "PATH=$PATH" nix-collect-garbage
