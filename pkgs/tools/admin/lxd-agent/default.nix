@@ -1,13 +1,12 @@
 { stdenv, lib, pkgs, sources, ... }:
 
-pkgs.buildGoPackage rec {
+pkgs.buildGoModule rec {
   name = "lxd-agent";
-  version = "5.12";
   src = pkgs.lxd-unwrapped.src;
+  vendorHash = null;
 
-  goPackagePath = "github.com/lxc/lxd";
   ldflags = [ "-s" "-w" "-extldflags '-static'" ];
-  subPackages = [ "lxd-agent" ];
+  modRoot = "./lxd-agent";
 
   postConfigure = ''
     export CGO_ENABLED=0
