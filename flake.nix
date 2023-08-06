@@ -128,6 +128,7 @@
       nixosModules = {
         amdGpu = import ./modules/nixos/amd-gpu.nix;
         android = import ./modules/nixos/android.nix;
+        apx = import ./modules/nixos/apx.nix;
         avahi = import ./modules/nixos/avahi.nix;
         basePackages = import ./modules/nixos/base-packages.nix;
         btrfs = import ./modules/nixos/btrfs.nix;

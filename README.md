@@ -95,6 +95,7 @@ Scripts to simplify the work with IntelliJ IDEA plugins.
 
 - `amd-gpu` - Support for AMD GPUs
 - `android` - Support for Android devices
+- `apx` - Adds the [APX package manager](https://documentation.vanillaos.org/docs/apx/)
 - `avahi` - Configures [avahi](https://www.avahi.org/)
 - `base-packages` - Collection of essential CLI tools
 - `btrfs` - Configures [btrfs](https://btrfs.wiki.kernel.org/)
