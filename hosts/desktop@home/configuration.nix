@@ -68,7 +68,7 @@
       neededForBoot = true;
     };
     "/data" = {
-      device = "/dev/pool/shared.data";
+      device = "/dev/ssd-pool/shared.data";
       fsType = "ext4";
       options = [ "noatime" ];
     };
