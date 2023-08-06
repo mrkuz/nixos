@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
 
-    boot.kernelModules = [ "vhost-vsock" "dm-snapshot" "dm-thin-pool" ];
+    boot.kernelModules = [ "vhost-vsock" ];
     networking.firewall.trustedInterfaces = [ "lxdbr0" ];
 
     virtualisation.lxd = {

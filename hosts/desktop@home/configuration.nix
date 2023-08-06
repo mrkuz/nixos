@@ -9,7 +9,6 @@
   modules = {
     amdGpu.enable = true;
     android.enable = true;
-    apx.enable = true;
     avahi.enable = true;
     basePackages.enable = true;
     commandNotFound.enable = true;
@@ -20,6 +19,7 @@
     homeOverlay.enable = true;
     lxd.enable = true;
     libreoffice.enable = true;
+    libvirtd.enable = true;
     lutris.enable = true;
     opengl.enable = true;
     pipewire.enable = true;
@@ -109,6 +109,10 @@
 
   services = {
     fstrim.enable = true;
+    lvm = {
+      enable = true;
+      boot.thin.enable = true;
+    };
     printing = {
       enable = true;
       drivers = [ pkgs.hplipWithPlugin ];

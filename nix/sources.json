@@ -81,7 +81,7 @@
     "gse:just-perfection": {
         "branch": "main",
         "repo": "https://gitlab.gnome.org/jrahmatzadeh/just-perfection",
-        "rev": "43a7c8b88a2035aaf6c4ca848b477c900a5d4595",
+        "rev": "beb725b29dc5bcc4eeab2dfb8a3bcaf2bb1de284",
         "type": "git"
     },
     "gse:quick-settings-tweaks": {
@@ -102,10 +102,10 @@
         "homepage": null,
         "owner": "christopher-l",
         "repo": "space-bar",
-        "rev": "363a130b49632aebe3c4be98fd88670c5a71be5f",
-        "sha256": "0pvnam6s6jh2k83w4ry6jxp5c5rc8p9g58b5f1dvnff03scwbfwq",
+        "rev": "3cfe12cd6815a6c00a25ee555346b9d3a6bdfb3c",
+        "sha256": "1c7pm92l328b3v6nvl7sscijw55imn0czxjbbiykgbwi97dpjgfn",
         "type": "tarball",
-        "url": "https://github.com/christopher-l/space-bar/archive/363a130b49632aebe3c4be98fd88670c5a71be5f.tar.gz",
+        "url": "https://github.com/christopher-l/space-bar/archive/3cfe12cd6815a6c00a25ee555346b9d3a6bdfb3c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gse:wintile": {
@@ -136,12 +136,12 @@
         "file_name": "CheckStyle-IDEA",
         "name": "CheckStyle-IDEA",
         "plugin_id": "1065",
-        "sha256": "1v46rwlivjy90bdn60kz06b221h05sfnaah95y2n4h4xl6mak6wd",
+        "sha256": "1yylyab0gsabsg68b4d5ps0aqwjadw39qxcnj92n9k6zb96rcaki",
         "type": "file",
-        "url": "https://plugins.jetbrains.com/files/1065/354784/CheckStyle-IDEA-5.81.0.zip",
+        "url": "https://plugins.jetbrains.com/files/1065/372955/CheckStyle-IDEA-5.82.0.zip",
         "url_template": "https://plugins.jetbrains.com/files/<plugin_id>/<version_code>/<file_name>-<version>.zip",
-        "version": "5.81.0",
-        "version_code": "354784"
+        "version": "5.82.0",
+        "version_code": "372955"
     },
     "idea:kotest": {
         "file_name": "kotest-plugin-intellij",
@@ -491,11 +491,11 @@
     "vscode:vscode-icons": {
         "name": "vscode-icons",
         "publisher": "vscode-icons-team",
-        "sha256": "0a0bp3ixvkmhfnxyn8jafgvvp35mzsax7192ax4az35hc09rmg83",
+        "sha256": "0fqawpfwqmj7hiv1g20z3zhs2rv3a9insqd93ad9416mhj89mcry",
         "type": "file",
-        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/12.4.0/vspackage",
+        "url": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscode-icons-team/vsextensions/vscode-icons/12.5.0/vspackage",
         "url_template": "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/<publisher>/vsextensions/<name>/<version>/vspackage",
-        "version": "12.4.0"
+        "version": "12.5.0"
     },
     "vscode:vscode-java-debug": {
         "name": "vscode-java-debug",
