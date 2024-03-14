@@ -1,3 +1,5 @@
+> ⚠️ This configuration is currenlty not maintained, as I switched to MacOS -> See my nix-darwin [configuration](https://github.com/mrkuz/macos-config).
+
 # Introduction
 
 Welcome to my modular [NixOS](https://nixos.org/) system configuration.
