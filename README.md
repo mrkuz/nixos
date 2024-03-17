@@ -1,4 +1,4 @@
-> ⚠️ This configuration is currenlty not maintained, as I switched to MacOS -> See my nix-darwin [configuration](https://github.com/mrkuz/macos-config).
+> ⚠️ This configuration is currently not maintained, as I switched to MacOS -> See my nix-darwin [configuration](https://github.com/mrkuz/macos-config).
 
 # Introduction
 
